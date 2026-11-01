@@ -1,0 +1,87 @@
+{
+  "eyebrow": "Boutique",
+  "title": "Choisissez le bon outil",
+  "subtitle": "Comparez notre toolkit EVRIMA à trois utilitaires sous licences séparées. Vérifiez périmètre et exigences avant le paiement.",
+  "trust": [
+    "EVRIMA uniquement",
+    "Windows 10 / 11",
+    "Mensuel ou à vie",
+    "Vérifiez les exigences"
+  ],
+  "featuredEyebrow": "Produit principal",
+  "from": "À partir de",
+  "priceLabel": "Prix",
+  "lifetime": "À vie",
+  "perMonth": "/ mois",
+  "utilitiesEyebrow": "Utilitaires",
+  "utilitiesTitle": "Des utilitaires à objectif précis",
+  "utilitiesDesc": "Identifiants matériels, recours et cosmétiques locaux répondent à des besoins différents. Chaque outil possède ses capacités, exigences et licence.",
+  "chooserEyebrow": "Pas sûr ?",
+  "chooserTitle": "Choisissez le bon outil",
+  "chooserDesc": "Comparez notre toolkit EVRIMA à trois utilitaires sous licences séparées. Vérifiez périmètre et exigences avant le paiement.",
+  "scenarios": [
+    {
+      "slug": "elite",
+      "need": "ESP des dinosaures, radar, ressources et Bite Assist réglable pour EVRIMA. Vérifiez toutes les exigences avant de choisir.",
+      "answer": "The Isle Cheats"
+    },
+    {
+      "slug": "hwid-spoofer",
+      "need": "Notre HWID Spoofer réécrit numéros de disque, adresses MAC, identifiants GPU et autres empreintes avec nettoyage inclus. Les sanctions de compte restent distinctes.",
+      "answer": "HWID Spoofer"
+    },
+    {
+      "slug": "ugc",
+      "need": "Notre service UGC associe modèles et étapes de contestation automatisées pour profils restreints sur jeux, réseaux et places de marché. Vous préparez le dossier ; la plateforme décide.",
+      "answer": "UGC"
+    },
+    {
+      "slug": "skin-changer",
+      "need": "Explorez finitions d’armes, tenues et variantes de couteaux dans les titres compatibles. Le client léger affiche des cosmétiques locaux sans acheter chaque objet.",
+      "answer": "Skin Changer"
+    }
+  ],
+  "compareEyebrow": "Comparer",
+  "compareTitle": "Choisissez le bon outil",
+  "compareDesc": "Identifiants matériels, recours et cosmétiques locaux répondent à des besoins différents. Chaque outil possède ses capacités, exigences et licence.",
+  "compareRows": [
+    {
+      "label": "Explorez les fonctions",
+      "values": {
+        "elite": "ESP des dinosaures, Radar 2D, Bite Assist",
+        "hwid-spoofer": "Renouvelez les identifiants du PC.",
+        "ugc": "Structurez votre recours.",
+        "skin-changer": "Composez votre aperçu local."
+      }
+    },
+    {
+      "label": "Vérifiez les exigences",
+      "values": {
+        "elite": "Cloud DMA nécessaire pour toutes les fonctions. Confirmez la configuration exacte avant l’achat.",
+        "hwid-spoofer": "Windows 10/11 · 64-bit · Admin · HVCI · TPM · Secure Boot",
+        "ugc": "Windows 10/11 · 64-bit · HVCI · TPM · Secure Boot",
+        "skin-changer": "Windows 10/11 · 64-bit · HVCI · TPM · Secure Boot"
+      }
+    },
+    {
+      "label": "Confirmez l’édition",
+      "values": {
+        "elite": "Vérifiez EVRIMA et tout l’équipement avant de payer. Auto Finish, Auto Stamina et l’assistance aux carcasses dépendent de l’édition ; confirmez le contenu.",
+        "hwid-spoofer": "Les modifications matérielles ne retirent pas les sanctions de compte. Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE et Javelin sont cités ; la compatibilité évolue. Le spoofing peut enfreindre les conditions et entraîner des sanctions.",
+        "ugc": "Le rétablissement n’est pas garanti. Les suspensions permanentes restent en place. Les examinateurs décident chaque cas et des preuves faibles limitent le recours.",
+        "skin-changer": "Les cosmétiques ne sont pas des objets possédés ou échangeables. Ils disparaissent à la fermeture du client. Les mises à jour changent la couverture et l’utilisation peut enfreindre les règles et entraîner des sanctions."
+      }
+    }
+  ],
+  "ctaTitle": "Assistance produits The Isle",
+  "ctaDesc": "Clarifiez une exigence avant de payer ou préparez une question précise sur une commande ou le loader.",
+  "ctaSupport": "Contacter l’assistance",
+  "menuHeading": "Produits",
+  "menuViewAll": "Comparer tous les produits",
+  "menuTaglines": {
+    "elite": "ESP des dinosaures · Radar 2D · Bite Assist",
+    "hwid-spoofer": "Renouvelez les identifiants du PC.",
+    "ugc": "Structurez votre recours.",
+    "skin-changer": "Composez votre aperçu local."
+  }
+}

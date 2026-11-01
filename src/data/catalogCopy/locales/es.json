@@ -1,0 +1,87 @@
+{
+  "eyebrow": "Tienda",
+  "title": "Elige la herramienta adecuada",
+  "subtitle": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago.",
+  "trust": [
+    "Solo EVRIMA",
+    "Windows 10 / 11",
+    "Mensual o vitalicio",
+    "Revisa los requisitos"
+  ],
+  "featuredEyebrow": "Producto principal",
+  "from": "Desde",
+  "priceLabel": "Precio",
+  "lifetime": "De por vida",
+  "perMonth": "/ mes",
+  "utilitiesEyebrow": "Utilidades",
+  "utilitiesTitle": "Utilidades con un objetivo concreto",
+  "utilitiesDesc": "Identificadores, apelaciones y cosméticos responden a necesidades distintas. Cada utilidad tiene capacidades, requisitos y licencia propios.",
+  "chooserEyebrow": "¿No está seguro?",
+  "chooserTitle": "Elige la herramienta adecuada",
+  "chooserDesc": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago.",
+  "scenarios": [
+    {
+      "slug": "elite",
+      "need": "ESP de dinosaurios, radar, recursos y Bite Assist ajustable para EVRIMA. Revisa todos los requisitos antes de elegir el plan.",
+      "answer": "The Isle Cheats"
+    },
+    {
+      "slug": "hwid-spoofer",
+      "need": "Nuestro HWID Spoofer reescribe series de disco, direcciones MAC, IDs de GPU y otras huellas, con limpieza de rastros incluida. Las sanciones de cuenta son independientes.",
+      "answer": "HWID Spoofer"
+    },
+    {
+      "slug": "ugc",
+      "need": "Nuestro servicio UGC combina plantillas con pasos de disputa automatizados para perfiles restringidos en juegos, redes y mercados. Tú organizas el caso; la plataforma decide.",
+      "answer": "UGC"
+    },
+    {
+      "slug": "skin-changer",
+      "need": "Explora nuestra biblioteca de acabados de armas, atuendos y cuchillos en títulos compatibles. El cliente ligero muestra cosméticos locales sin comprar cada objeto.",
+      "answer": "Skin Changer"
+    }
+  ],
+  "compareEyebrow": "Comparar",
+  "compareTitle": "Elige la herramienta adecuada",
+  "compareDesc": "Identificadores, apelaciones y cosméticos responden a necesidades distintas. Cada utilidad tiene capacidades, requisitos y licencia propios.",
+  "compareRows": [
+    {
+      "label": "Explora las funciones",
+      "values": {
+        "elite": "ESP de dinosaurios, Radar 2D, Bite Assist",
+        "hwid-spoofer": "Renueva los identificadores del equipo.",
+        "ugc": "Da estructura a tu apelación.",
+        "skin-changer": "Elige tu vista local."
+      }
+    },
+    {
+      "label": "Revisa los requisitos",
+      "values": {
+        "elite": "Cloud DMA necesario para todas las funciones. Confirma la configuración exacta antes de comprar.",
+        "hwid-spoofer": "Windows 10/11 · 64-bit · Admin · HVCI · TPM · Secure Boot",
+        "ugc": "Windows 10/11 · 64-bit · HVCI · TPM · Secure Boot",
+        "skin-changer": "Windows 10/11 · 64-bit · HVCI · TPM · Secure Boot"
+      }
+    },
+    {
+      "label": "Confirma la edición",
+      "values": {
+        "elite": "Confirma EVRIMA y todo el equipo antes de pagar. Auto Finish, Auto Stamina y la asistencia con cadáveres dependen de la edición; consulta qué incluye.",
+        "hwid-spoofer": "Los cambios de hardware no retiran sanciones de cuenta. Se enumeran Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE y Javelin; la compatibilidad cambia. El uso puede infringir condiciones y provocar sanciones.",
+        "ugc": "La recuperación no está garantizada. Las suspensiones permanentes siguen vigentes. Los revisores deciden cada caso y la falta de pruebas limita la apelación.",
+        "skin-changer": "Los cosméticos no son inventario propio ni se pueden intercambiar. Desaparecen al cerrar el cliente. Las actualizaciones cambian la cobertura y el uso puede infringir normas y provocar sanciones."
+      }
+    }
+  ],
+  "ctaTitle": "Soporte de productos The Isle",
+  "ctaDesc": "Resuelve un requisito antes de pagar o prepara una consulta concreta sobre pedidos o el loader.",
+  "ctaSupport": "Contactar con soporte",
+  "menuHeading": "Productos",
+  "menuViewAll": "Comparar todos los productos",
+  "menuTaglines": {
+    "elite": "ESP de dinosaurios · Radar 2D · Bite Assist",
+    "hwid-spoofer": "Renueva los identificadores del equipo.",
+    "ugc": "Da estructura a tu apelación.",
+    "skin-changer": "Elige tu vista local."
+  }
+}

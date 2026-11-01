@@ -1,0 +1,31 @@
+---
+import'../../styles/forum.css';import BaseLayout from'../../layouts/BaseLayout.astro';import Breadcrumbs from'../../components/Breadcrumbs.astro';import ForumSidebar from'../../components/ForumSidebar.astro';import Icon from'../../components/icons/Icon.astro';import{Button}from'@/components/starwind/button';import{useLocale}from'../../i18n';import{getForumPosts,forumCategoryId}from'../../data/forum/locale';import{forumCopy}from'../../data/forum/copy';import{resolvePageSeo}from'../../config/seo';import{breadcrumbSchema,webPageSchema}from'../../utils/schema';
+const{locale,t,lp}=useLocale(Astro.currentLocale),c=forumCopy[locale],posts=getForumPosts(locale),categories=[...new Set(posts.map(p=>p.category))],seo=resolvePageSeo('/forum/',locale);
+const breadcrumbs=[{name:t.common.breadcrumbHome,path:'/'},{name:c.label,path:'/forum/'}],categoryLabel=(category:string)=>(c.categoriesMap as Record<string,string>)[category]??category;
+const dateLabel=(date:string)=>new Intl.DateTimeFormat(locale,{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
+---
+<BaseLayout title={seo.title} description={seo.description} canonicalPath={lp('/forum/')} jsonLd={[webPageSchema({name:c.title,description:c.intro,url:lp('/forum/'),locale}),breadcrumbSchema(breadcrumbs,locale)]}>
+ <section class="forum-page py-8 md:py-12" data-forum-hub><div class="mx-auto max-w-6xl px-5">
+  <Breadcrumbs items={breadcrumbs}/>
+  <header class="forum-hero"><p class="forum-eyebrow">{c.archive}</p><h1>{c.title}</h1><p>{c.intro}</p><div class="forum-hero__actions"><Button as="a" href={lp('/cheats/')}>{c.products}</Button><Button as="a" href={lp('/support/')} variant="primary" class="forum-support-cta"><Icon name="headphones" size={16}/>{c.support}</Button></div></header>
+  <div class="forum-layout"><div class="forum-main">
+   <h2 class="sr-only">{c.heading}</h2><p class="mb-3 text-sm leading-relaxed text-muted-foreground">{c.description}</p><p class="mb-6 text-xs leading-relaxed text-muted-foreground">{c.notice}</p>
+   <div class="forum-toolbar" role="group" aria-label={c.topics}>{[['latest',c.latest],['discussed',c.discussed],['original',c.original]].map(([key,label])=><button type="button" data-forum-sort={key} aria-pressed={key==='latest'}>{label}</button>)}</div>
+   <div class="forum-categories" role="group" aria-label={c.categories}><button type="button" class="forum-category-pill" data-forum-category="all" aria-pressed="true">{c.all}</button>{categories.map(category=><button type="button" class="forum-category-pill" id={forumCategoryId(category)} data-forum-category={category} aria-pressed="false">{categoryLabel(category)}</button>)}</div>
+   <p class="forum-result-count" aria-live="polite"><span data-forum-result-count>{posts.length}</span> {c.topics}</p>
+   <div data-forum-grid>{posts.map((post,index)=><article class="forum-post-card" data-forum-card data-category={post.category} data-published={post.published} data-replies={post.commentsCount} data-order={index}>
+    <div class="forum-vote" role="group" aria-label={`${post.commentsCount} ${c.replies}`}><Icon name="messageCircle" size={16}/><strong>{post.commentsCount}</strong></div>
+    <div class="forum-post-content"><div class="forum-post-meta"><span class="forum-community-avatar"><Icon name="users" size={15}/></span><span class="forum-community-name">{categoryLabel(post.category)}</span></div><div class="forum-post-meta mt-2"><Icon name="userRound" size={12}/><span>{post.author==='Original poster'?c.originalPoster:post.author}</span><span>·</span><time datetime={post.published}>{dateLabel(post.published)}</time></div>
+     <h3 class="forum-post-title" lang="en"><a href={lp(`/forum/${post.slug}/`)}>{post.title}</a></h3><p class="forum-post-excerpt">{post.excerpt}</p>
+     <div class="forum-post-actions"><span class="forum-flair">{c.closed}</span><a href={`${lp(`/forum/${post.slug}/`)}#comments`}><Icon name="messageCircle" size={15}/>{post.commentsCount} {c.replies}</a><a class="forum-read-link" href={lp(`/forum/${post.slug}/`)}>{c.read}<Icon name="arrowRight" size={14}/></a></div>
+    </div>
+   </article>)}</div><p class="text-sm text-muted-foreground" data-forum-empty hidden>{c.noResults}</p>
+  </div><ForumSidebar/></div>
+ </div></section>
+</BaseLayout>
+<script>
+ const hub=document.querySelector<HTMLElement>('[data-forum-hub]');
+ if(hub){const grid=hub.querySelector<HTMLElement>('[data-forum-grid]')!,cards=Array.from(hub.querySelectorAll<HTMLElement>('[data-forum-card]'));let category='all',sort='latest';
+ const apply=()=>{const sorted=[...cards].sort((a,b)=>sort==='discussed'?Number(b.dataset.replies)-Number(a.dataset.replies):sort==='original'?Number(a.dataset.order)-Number(b.dataset.order):Date.parse(b.dataset.published!)-Date.parse(a.dataset.published!));let count=0;for(const card of sorted){card.hidden=category!=='all'&&card.dataset.category!==category;if(!card.hidden)count++;grid.append(card);}hub.querySelector('[data-forum-result-count]')!.textContent=String(count);(hub.querySelector('[data-forum-empty]')as HTMLElement).hidden=count>0;hub.querySelectorAll<HTMLElement>('[data-forum-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.forumCategory===category)));hub.querySelectorAll<HTMLElement>('[data-forum-sort]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.forumSort===sort)));};
+ hub.querySelectorAll<HTMLElement>('[data-forum-category]').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.forumCategory!;apply();}));hub.querySelectorAll<HTMLElement>('[data-forum-sort]').forEach(b=>b.addEventListener('click',()=>{sort=b.dataset.forumSort!;apply();}));const readHash=()=>{if(location.hash.startsWith('#category-')){try{const button=document.getElementById(decodeURIComponent(location.hash.slice(1)));category=button?.dataset.forumCategory??'all';}catch{category='all';}apply();}};window.addEventListener('hashchange',readHash);readHash();apply();}
+</script>

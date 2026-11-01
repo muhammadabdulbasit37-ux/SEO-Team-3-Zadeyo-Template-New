@@ -1,0 +1,880 @@
+{
+  "site": {
+    "name": "{siteName}",
+    "domain": "{siteDomain}",
+    "title": "Trucos para The Isle | ESP, radar y Bite Assist",
+    "description": "Localiza dinosaurios con ESP, consulta la actividad cercana en el radar y ajusta Bite Assist a tus preferencias. Explora nuestro toolkit para EVRIMA y elige un plan adecuado para tu equipo."
+  },
+  "nav": [
+    {
+      "id": "products",
+      "href": "/products/",
+      "label": "Productos",
+      "shortLabel": "Productos",
+      "sheetLabel": "Ver productos"
+    },
+    {
+      "id": "blog",
+      "href": "/blog/",
+      "label": "Blog",
+      "sheetLabel": "Leer el blog"
+    },
+    {
+      "id": "forum",
+      "href": "/forum/",
+      "label": "Foro",
+      "sheetLabel": "Abrir el foro"
+    },
+    {
+      "id": "faq",
+      "href": "/faq/",
+      "label": "FAQ",
+      "sheetLabel": "Preguntas antes de comprar"
+    },
+    {
+      "id": "reviews",
+      "href": "/reviews/",
+      "label": "Reseñas",
+      "sheetLabel": "Abrir reseñas"
+    },
+    {
+      "id": "support",
+      "href": "/support/",
+      "label": "Soporte",
+      "sheetLabel": "Abrir mesa de soporte"
+    }
+  ],
+  "hero": {
+    "status": "Confirma EVRIMA y todo el equipo antes de pagar. Auto Finish, Auto Stamina y la asistencia con cadáveres dependen de la edición; consulta qué incluye.",
+    "eyebrow": "Domina la isla, no te limites a sobrevivir",
+    "titleLead": "Trucos para ",
+    "titleAccent": "The Isle",
+    "subtitle": "Localiza dinosaurios con ESP, consulta la actividad cercana en el radar y ajusta Bite Assist a tus preferencias. Explora nuestro toolkit para EVRIMA y elige un plan adecuado para tu equipo.",
+    "ctaPrimary": "Explorar productos",
+    "metrics": [
+      {
+        "strong": "EVRIMA",
+        "label": "Solo EVRIMA"
+      },
+      {
+        "strong": "Windows",
+        "label": "10 / 11 · 64-bit"
+      },
+      {
+        "strong": "31",
+        "label": "días de acceso mensual"
+      },
+      {
+        "strong": "Cloud DMA",
+        "label": "Revisa los requisitos"
+      }
+    ],
+    "statusPills": [
+      "ESP de dinosaurios",
+      "Radar 2D",
+      "Bite Assist",
+      "Appearance Changer",
+      "ESP de recursos",
+      "Controles de captura",
+      "Configuraciones en la nube",
+      "Utilidades por edición",
+      "Perfiles por especie"
+    ]
+  },
+  "features": {
+    "eyebrow": "Características",
+    "title": "Más información. Tu configuración.",
+    "subtitle": "Nuestro toolkit reúne datos de dinosaurios, marcadores de recursos y asistencia configurable para The Isle en Steam.",
+    "items": [
+      {
+        "title": "ESP de dinosaurios",
+        "subtitle": "Información entre la vegetación.",
+        "desc": "Localiza dinosaurios a través del terreno y la vegetación con especie, salud, distancia, peso, crecimiento y esqueletos.",
+        "bullets": [
+          "Especie y crecimiento",
+          "Salud, peso y distancia",
+          "Esqueletos"
+        ],
+        "tags": [
+          "ESP de dinosaurios"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-12 lg:col-start-1 lg:row-start-1"
+      },
+      {
+        "title": "Radar 2D",
+        "subtitle": "Otra vista de la actividad cercana.",
+        "desc": "Consulta dinosaurios cercanos, nidos y cadáveres en una vista superpuesta 2D.",
+        "bullets": [
+          "Dinosaurios cercanos",
+          "Nidos y cadáveres"
+        ],
+        "tags": [
+          "Radar 2D"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-8 lg:col-start-1 lg:row-start-2"
+      },
+      {
+        "title": "Bite Assist",
+        "subtitle": "Ajusta la asistencia.",
+        "desc": "Personaliza suavizado, alcance, prioridad de huesos y predicción de movimiento con perfiles por especie.",
+        "bullets": [
+          "Suavizado y alcance",
+          "Prioridad de huesos",
+          "Predicción"
+        ],
+        "tags": [
+          "Bite Assist"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-6 lg:col-start-1 lg:row-start-3"
+      },
+      {
+        "title": "Appearance Changer",
+        "subtitle": "Prueba un aspecto local.",
+        "desc": "Previsualiza pieles y patrones de dinosaurios, guarda favoritos y exporta conjuntos.",
+        "bullets": [
+          "Pieles y patrones",
+          "Favoritos",
+          "Exportar conjuntos"
+        ],
+        "tags": [
+          "Appearance Changer"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-6 lg:col-start-7 lg:row-start-3"
+      },
+      {
+        "title": "ESP de recursos",
+        "subtitle": "Recursos del entorno a la vista.",
+        "desc": "Resalta comida, agua, hierbas, frutas y nidos con marcadores de distancia.",
+        "bullets": [
+          "Comida y agua",
+          "Hierbas y frutas",
+          "Distancia a nidos"
+        ],
+        "tags": [
+          "ESP de recursos"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-8 lg:row-span-2 lg:col-start-1 lg:row-start-4"
+      },
+      {
+        "title": "Controles de captura",
+        "subtitle": "Revisa tus grabaciones.",
+        "desc": "Incluye opciones para ocultar overlays en OBS y Xbox Game Bar. Comprueba el resultado; no protegen frente al anticheat.",
+        "bullets": [
+          "OBS",
+          "Xbox Game Bar"
+        ],
+        "tags": [
+          "Controles de captura"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-4 lg:row-span-2 lg:col-start-9 lg:row-start-4"
+      },
+      {
+        "title": "Configuraciones en la nube",
+        "subtitle": "Conserva tus preferencias.",
+        "desc": "Guarda ajustes y presets en la nube para volver a tu configuración.",
+        "bullets": [
+          "Ajustes guardados",
+          "Presets almacenados"
+        ],
+        "tags": [
+          "Configuraciones en la nube"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-6 lg:col-start-1 lg:row-start-6"
+      },
+      {
+        "title": "Utilidades por edición",
+        "subtitle": "Confirma lo incluido.",
+        "desc": "Auto Finish, Auto Stamina y la asistencia con cadáveres dependen de la edición. Confirma su inclusión antes del pago.",
+        "bullets": [
+          "Auto Finish",
+          "Auto Stamina",
+          "Asistencia con cadáveres"
+        ],
+        "tags": [
+          "Utilidades por edición"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-6 lg:col-start-7 lg:row-start-6"
+      },
+      {
+        "title": "Perfiles por especie",
+        "subtitle": "Contexto para tus ajustes.",
+        "desc": "Combina perfiles por especie con los controles de Bite Assist. Un perfil no garantiza resultados en combate.",
+        "bullets": [
+          "Perfiles por especie",
+          "Controles de Bite Assist"
+        ],
+        "tags": [
+          "Perfiles por especie"
+        ],
+        "bento": "sm:col-span-2 lg:col-span-4 lg:col-start-9 lg:row-start-2"
+      }
+    ]
+  },
+  "whyUs": {
+    "eyebrow": "Por qué nosotros",
+    "title": "Información pensada para dinosaurios",
+    "subtitle": "Compara nuestras visualizaciones y configuraciones con una sesión sin estas herramientas. El funcionamiento y la detección no se han verificado de forma independiente.",
+    "usLabel": "Nuestro toolkit",
+    "otherLabel": "Sin estas herramientas",
+    "rows": [
+      {
+        "title": "ESP de dinosaurios",
+        "desc": "Localiza dinosaurios a través del terreno y la vegetación con especie, salud, distancia, peso, crecimiento y esqueletos."
+      },
+      {
+        "title": "Radar 2D",
+        "desc": "Consulta dinosaurios cercanos, nidos y cadáveres en una vista superpuesta 2D."
+      },
+      {
+        "title": "Bite Assist",
+        "desc": "Personaliza suavizado, alcance, prioridad de huesos y predicción de movimiento con perfiles por especie."
+      },
+      {
+        "title": "Appearance Changer",
+        "desc": "Previsualiza pieles y patrones de dinosaurios, guarda favoritos y exporta conjuntos."
+      },
+      {
+        "title": "ESP de recursos",
+        "desc": "Resalta comida, agua, hierbas, frutas y nidos con marcadores de distancia."
+      },
+      {
+        "title": "Configuraciones en la nube",
+        "desc": "Guarda ajustes y presets en la nube para volver a tu configuración."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "EVRIMA",
+        "title": "Solo EVRIMA",
+        "desc": "The Isle en Steam: solo EVRIMA. La ficha actual no admite Legacy."
+      },
+      {
+        "value": "31",
+        "title": "Mensual o vitalicio",
+        "desc": "Selecciona $35 por 31 días o $150 de acceso vitalicio. Confirma edición, condiciones del vitalicio y compras de hardware antes del pago."
+      },
+      {
+        "value": "4",
+        "title": "Elige la herramienta adecuada",
+        "desc": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago."
+      }
+    ]
+  },
+  "setup": {
+    "eyebrow": "Guía de configuración",
+    "titleLead": "Prepara",
+    "titleHighlight": "tu equipo",
+    "intro": "The Isle en Steam: solo EVRIMA. La ficha actual no admite Legacy. Windows 10 u 11 de 64 bits. HVCI y Aislamiento del núcleo activados. TPM y Arranque seguro activados. Cloud DMA necesario para todas las funciones. Confirma la configuración exacta antes de comprar.",
+    "ctaPrimary": "Explorar el toolkit",
+    "ctaSecondary": "Preguntas de compra de The Isle",
+    "ctaPrimaryHref": "/cheats/",
+    "ctaSecondaryHref": "/faq/",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Revisa el equipo",
+        "desc": "Confirma EVRIMA, Windows 10/11 de 64 bits y todos los requisitos de seguridad y Cloud DMA."
+      },
+      {
+        "step": "2",
+        "title": "Elige el plan",
+        "desc": "Revisa la edición y selecciona acceso mensual o vitalicio. Conserva los datos del pedido."
+      },
+      {
+        "step": "3",
+        "title": "Usa las instrucciones actuales",
+        "desc": "Sigue la guía suministrada y confirma la compatibilidad antes de iniciar."
+      }
+    ]
+  },
+  "compatibility": {
+    "eyebrow": "Soporte de plataforma",
+    "title": "Revisa los requisitos",
+    "subtitle": "Cloud DMA necesario para todas las funciones. Confirma la configuración exacta antes de comprar.",
+    "items": [
+      "Windows 10 / 11 · 64-bit",
+      "Solo EVRIMA",
+      "HVCI / Core Isolation",
+      "TPM / Secure Boot",
+      "Cloud DMA"
+    ]
+  },
+  "cheats": {
+    "eyebrow": "Producto principal",
+    "title": "The Isle Cheats",
+    "subtitle": "ESP de dinosaurios, radar, recursos y Bite Assist ajustable para EVRIMA. Revisa todos los requisitos antes de elegir el plan.",
+    "viewAll": "Ver detalles del producto",
+    "explore": "Explorar",
+    "items": [
+      {
+        "badge": "EVRIMA",
+        "tier": "Nuestro toolkit",
+        "name": "The Isle Cheats",
+        "title": "The Isle Cheats para EVRIMA",
+        "desc": "Explora nuestros overlays de dinosaurios y recursos, configura Bite Assist y conserva tus presets. El acceso mensual cuesta $35 por 31 días; el vitalicio, $150.",
+        "homeDesc": "Explora nuestros overlays de dinosaurios y recursos, configura Bite Assist y conserva tus presets. El acceso mensual cuesta $35 por 31 días; el vitalicio, $150.",
+        "heroDesc": "ESP de dinosaurios, radar, recursos y Bite Assist ajustable para EVRIMA. Revisa todos los requisitos antes de elegir el plan.",
+        "features": [
+          "ESP de dinosaurios",
+          "Radar 2D",
+          "Bite Assist",
+          "Appearance Changer",
+          "ESP de recursos",
+          "Controles de captura"
+        ],
+        "more": 3,
+        "href": "/cheats/",
+        "variant": "essential"
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Tienda",
+    "title": "Elige la herramienta adecuada",
+    "subtitle": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago.",
+    "viewAll": "Ver todos los cheats",
+    "backToCheats": "Volver al producto",
+    "showcaseHeading": "Capturas de The Isle",
+    "experience": {
+      "eyebrow": "Experiencia",
+      "title": "Conoce el toolkit en detalle",
+      "subtitle": "Explora las visualizaciones y los controles junto a los requisitos de tu equipo.",
+      "previewLabel": "Juego y menús",
+      "accessDividerTop": "Vista previa",
+      "accessDividerBottom": "Acceso"
+    },
+    "hwidPage": {
+      "showcaseHeading": "Capturas del panel",
+      "overviewSubtitle": "Nuestro HWID Spoofer reescribe series de disco, direcciones MAC, IDs de GPU y otras huellas, con limpieza de rastros incluida. Las sanciones de cuenta son independientes.",
+      "highlights": {
+        "eyebrow": "De un vistazo",
+        "title": "Un flujo centrado en hardware",
+        "desc": "Gestiona identificadores de disco, red y GPU desde una utilidad y ejecuta la limpieza incluida en el orden de la guía."
+      },
+      "featuresSection": {
+        "eyebrow": "Filas listadas",
+        "title": "HWID Spoofer",
+        "desc": "Los cambios de hardware no retiran sanciones de cuenta. Se enumeran Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE y Javelin; la compatibilidad cambia. El uso puede infringir condiciones y provocar sanciones."
+      },
+      "experience": {
+        "eyebrow": "Tras el pago",
+        "title": "Un flujo centrado en hardware",
+        "subtitle": "Nuestro HWID Spoofer reescribe series de disco, direcciones MAC, IDs de GPU y otras huellas, con limpieza de rastros incluida. Las sanciones de cuenta son independientes.",
+        "previewLabel": "Capturas del panel",
+        "accessDividerTop": "Panel",
+        "accessDividerBottom": "Orden"
+      },
+      "highlightsMore": "{count} filas más están en la tabla de funciones más abajo en la página."
+    },
+    "utilityPages": {
+      "ugc": {
+        "showcaseHeading": "Fotogramas del flujo",
+        "overviewSubtitle": "Nuestro servicio UGC combina plantillas con pasos de disputa automatizados para perfiles restringidos en juegos, redes y mercados. Tú organizas el caso; la plataforma decide.",
+        "highlights": {
+          "eyebrow": "En resumen",
+          "title": "Prepara el caso con UGC",
+          "desc": "Convierte pruebas de titularidad y una cronología clara en un flujo de apelación. Repite pasos de disputa para organizar el proceso en plataformas compatibles."
+        },
+        "featuresSection": {
+          "eyebrow": "Incluido",
+          "title": "UGC",
+          "desc": "La recuperación no está garantizada. Las suspensiones permanentes siguen vigentes. Los revisores deciden cada caso y la falta de pruebas limita la apelación."
+        },
+        "experience": {
+          "eyebrow": "Cuando la licencia está activa",
+          "title": "Prepara el caso con UGC",
+          "subtitle": "Nuestro servicio UGC combina plantillas con pasos de disputa automatizados para perfiles restringidos en juegos, redes y mercados. Tú organizas el caso; la plataforma decide.",
+          "previewLabel": "Fotogramas",
+          "accessDividerTop": "Fotogramas",
+          "accessDividerBottom": "Orden"
+        },
+        "highlightsMore": "{count} filas de capacidad más están más abajo en esta página."
+      },
+      "skin-changer": {
+        "showcaseHeading": "Fotogramas del cliente",
+        "overviewSubtitle": "Explora nuestra biblioteca de acabados de armas, atuendos y cuchillos en títulos compatibles. El cliente ligero muestra cosméticos locales sin comprar cada objeto.",
+        "highlights": {
+          "eyebrow": "Biblioteca",
+          "title": "Una biblioteca en tu pantalla",
+          "desc": "Elige acabados, atuendos y cuchillos compatibles desde un cliente. La vista permanece en tu pantalla y no se añade al inventario de la cuenta."
+        },
+        "featuresSection": {
+          "eyebrow": "Grupos",
+          "title": "Skin Changer",
+          "desc": "Los cosméticos no son inventario propio ni se pueden intercambiar. Desaparecen al cerrar el cliente. Las actualizaciones cambian la cobertura y el uso puede infringir normas y provocar sanciones."
+        },
+        "experience": {
+          "eyebrow": "Cuando llega el acceso",
+          "title": "Una biblioteca en tu pantalla",
+          "subtitle": "Explora nuestra biblioteca de acabados de armas, atuendos y cuchillos en títulos compatibles. El cliente ligero muestra cosméticos locales sin comprar cada objeto.",
+          "previewLabel": "Capturas",
+          "accessDividerTop": "Fotogramas",
+          "accessDividerBottom": "Acceso"
+        },
+        "highlightsMore": "{count} filas cosméticas continúan más abajo en esta página."
+      }
+    },
+    "swipeHint": "Desliza para ver más capturas",
+    "checkoutEyebrow": "Pago",
+    "checkoutSelect": "Seleccionar suscripción",
+    "checkoutSingle": "Opción de compra",
+    "checkoutTotal": "Total",
+    "bestValue": "Mejor valor",
+    "planWeekly": "1 semana",
+    "planWeeklyNote": "7 días",
+    "planMonthly": "Mensual",
+    "planLifetime": "De por vida",
+    "planOneTime": "Acceso único",
+    "planPerMonth": "31 días de acceso",
+    "planOneTimeNote": "Acceso ilimitado",
+    "get": "Obtener",
+    "explore": "Explorar",
+    "buyNow": "Comprar ahora",
+    "viewDetails": "Ver detalles",
+    "items": [
+      {
+        "badge": "Utilidad",
+        "category": "Utilidad de hardware",
+        "title": "HWID Spoofer",
+        "subtitle": "Renueva los identificadores del equipo.",
+        "desc": "Nuestro HWID Spoofer reescribe series de disco, direcciones MAC, IDs de GPU y otras huellas, con limpieza de rastros incluida. Las sanciones de cuenta son independientes.",
+        "features": [
+          "Reescritura de serial de disco",
+          "Reescritura de MAC",
+          "Reescritura de ID de GPU",
+          "Limpiador en la licencia"
+        ],
+        "more": 0,
+        "href": "/hwid-spoofer/"
+      },
+      {
+        "badge": "Utilidad",
+        "category": "Apelaciones de cuenta",
+        "title": "UGC",
+        "subtitle": "Da estructura a tu apelación.",
+        "desc": "Nuestro servicio UGC combina plantillas con pasos de disputa automatizados para perfiles restringidos en juegos, redes y mercados. Tú organizas el caso; la plataforma decide.",
+        "features": [
+          "Apelaciones por flujo",
+          "Presentación automática de disputas",
+          "Varias plataformas",
+          "Juegos, redes, marketplaces"
+        ],
+        "more": 0,
+        "href": "/ugc/"
+      },
+      {
+        "badge": "Utilidad",
+        "category": "Cosméticos en pantalla",
+        "title": "Skin Changer",
+        "subtitle": "Elige tu vista local.",
+        "desc": "Explora nuestra biblioteca de acabados de armas, atuendos y cuchillos en títulos compatibles. El cliente ligero muestra cosméticos locales sin comprar cada objeto.",
+        "features": [
+          "Aspectos de acabado de arma",
+          "Aspectos de atuendo",
+          "Aspectos de estilo de cuchillo",
+          "Títulos principales cubiertos"
+        ],
+        "more": 0,
+        "href": "/skin-changer/"
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Guías de productos The Isle",
+    "subtitle": "Consulta funciones, compatibilidad con EVRIMA, requisitos y comparaciones de licencias.",
+    "latestTitle": "Guías de productos The Isle",
+    "latestSubtitle": "Consulta funciones, compatibilidad con EVRIMA, requisitos y comparaciones de licencias.",
+    "filterAll": "Todos los artículos",
+    "emptyFilter": "Ningún artículo coincide con este filtro.",
+    "emptyArchive": "Aún no hay artículos. Las nuevas guías aparecerán aquí.",
+    "viewAll": "Ver todos los artículos",
+    "read": "Leer el artículo completo",
+    "articleActionsAria": "Seguir leyendo",
+    "buyCta": "Explorar el toolkit",
+    "buyHwidCta": "Comprar la licencia HWID",
+    "moreArticles": "Más artículos",
+    "sidebarAria": "Barra lateral del artículo",
+    "tocTitle": "En este artículo",
+    "relatedTitle": "Guías relacionadas",
+    "filterToolbarAria": "Filtrar artículos por tema",
+    "items": []
+  },
+  "workflow": {
+    "eyebrow": "Cómo funciona",
+    "badge": "4 pasos sencillos",
+    "titleBefore": "Prepara",
+    "titleHighlight": "tu equipo",
+    "subtitle": "Confirma EVRIMA y todo el equipo antes de pagar. Auto Finish, Auto Stamina y la asistencia con cadáveres dependen de la edición; consulta qué incluye.",
+    "ctaLabel": "Explorar el toolkit",
+    "ctaHref": "/cheats/",
+    "ctaSecondary": "FAQ de configuración",
+    "ctaSecondaryHref": "/faq/",
+    "items": [
+      {
+        "num": "01",
+        "phase": "Revisa el equipo",
+        "title": "Revisa el equipo",
+        "desc": "Confirma EVRIMA, Windows 10/11 de 64 bits y todos los requisitos de seguridad y Cloud DMA."
+      },
+      {
+        "num": "02",
+        "phase": "Elige el plan",
+        "title": "Elige el plan",
+        "desc": "Revisa la edición y selecciona acceso mensual o vitalicio. Conserva los datos del pedido."
+      },
+      {
+        "num": "03",
+        "phase": "Usa las instrucciones actuales",
+        "title": "Usa las instrucciones actuales",
+        "desc": "Sigue la guía suministrada y confirma la compatibilidad antes de iniciar."
+      },
+      {
+        "num": "04",
+        "phase": "Conserva tus ajustes",
+        "title": "Conserva tus ajustes",
+        "desc": "Guarda ajustes y presets. Revisa la compatibilidad tras una actualización."
+      }
+    ],
+    "titleAfter": ""
+  },
+  "support": {
+    "eyebrow": "Soporte",
+    "title": "Soporte de productos The Isle",
+    "subtitle": "Resuelve un requisito antes de pagar o prepara una consulta concreta sobre pedidos o el loader.",
+    "channels": [
+      {
+        "icon": "users",
+        "title": "Elige la herramienta adecuada",
+        "desc": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago.",
+        "linkLabel": "Explorar productos",
+        "href": "/products/"
+      },
+      {
+        "icon": "headphones",
+        "title": "Contactar con soporte",
+        "desc": "Incluye producto, correo del pedido, versión del juego y error exacto. Oculta contraseñas y datos de tarjeta en las capturas.",
+        "linkLabel": "Abrir soporte de compra",
+        "href": "https://zadeyo.com/support"
+      },
+      {
+        "icon": "navFaq",
+        "title": "Preguntas de compra de The Isle",
+        "desc": "Comprueba rama, hardware, licencia y alcance antes de elegir un plan.",
+        "linkLabel": "Ver toda la FAQ",
+        "href": "/faq/"
+      }
+    ],
+    "ticketTitle": "Incluir en tu ticket",
+    "ticketItems": [
+      {
+        "title": "Revisa el equipo",
+        "desc": "The Isle en Steam: solo EVRIMA. La ficha actual no admite Legacy."
+      },
+      {
+        "title": "Elige el plan",
+        "desc": "Revisa la edición y selecciona acceso mensual o vitalicio. Conserva los datos del pedido."
+      },
+      {
+        "title": "Al comunicar un problema",
+        "desc": "Incluye producto, correo del pedido, versión del juego y error exacto. Oculta contraseñas y datos de tarjeta en las capturas."
+      }
+    ],
+    "pageSections": [
+      {
+        "heading": "Antes de elegir un plan",
+        "paragraphs": [
+          "Indica rama del juego, versión de Windows y función deseada. Confirma Cloud DMA y la edición del toolkit antes del pago."
+        ]
+      },
+      {
+        "heading": "Al comunicar un problema",
+        "paragraphs": [
+          "Incluye producto, correo del pedido, versión del juego y error exacto. Oculta contraseñas y datos de tarjeta en las capturas."
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Preguntas de compra de The Isle",
+    "subtitle": "Comprueba rama, hardware, licencia y alcance antes de elegir un plan.",
+    "items": [
+      {
+        "num": "01",
+        "q": "¿Cómo confirmo la compatibilidad actual?",
+        "a": "Revisa la ficha y consulta tu versión exacta de EVRIMA antes de pagar o iniciar. Este sitio no ofrece un estado de detección en vivo verificado de forma independiente."
+      },
+      {
+        "num": "02",
+        "q": "¿Qué debo conservar tras el pago?",
+        "a": "Guarda la referencia del pedido y usa las instrucciones suministradas. Confirma la entrega antes del pago si dependes de un plazo concreto."
+      },
+      {
+        "num": "03",
+        "q": "¿Pueden sancionarme por usar herramientas de terceros?",
+        "a": "Sí. Pueden infringir normas del juego o servidor y provocar sanciones. Ninguna función ni preset garantiza protección."
+      },
+      {
+        "num": "04",
+        "q": "¿El toolkit admite Legacy?",
+        "a": "La ficha actual es solo EVRIMA en Steam, con Windows 10/11 de 64 bits. HVCI, Aislamiento del núcleo, TPM y Arranque seguro deben estar activados. Cloud DMA es necesario para todas las funciones."
+      },
+      {
+        "num": "05",
+        "q": "¿Puedo trasladar la licencia a otro PC?",
+        "a": "Confirma límites de dispositivos, posibilidad de traslado y condiciones de reset antes del pago. No prometemos traslados ilimitados."
+      },
+      {
+        "num": "06",
+        "q": "¿Dónde comparo los cuatro productos?",
+        "a": "Explora la página de productos: The Isle Cheats, HWID Spoofer, UGC y Skin Changer. Cada uno tiene alcance y compra propios."
+      }
+    ]
+  },
+  "footer": {
+    "homeLink": "{siteName}",
+    "tagline": "ESP de dinosaurios, radar, recursos y Bite Assist ajustable para EVRIMA. Revisa todos los requisitos antes de elegir el plan.",
+    "trademark": "{game} es una marca comercial de su respectivo titular. {siteDomain} no está afiliado ni respaldado por ese titular.",
+    "explore": "Explorar",
+    "exploreLinks": [
+      {
+        "id": "products",
+        "href": "/",
+        "label": "Resumen de funciones",
+        "ariaLabel": "Funciones",
+        "scrollTarget": "features"
+      },
+      {
+        "id": "products",
+        "href": "/products/",
+        "label": "Todos los productos",
+        "ariaLabel": "Todos los productos"
+      },
+      {
+        "id": "products",
+        "href": "/cheats/",
+        "label": "Planes y módulos del cheat",
+        "ariaLabel": "{cheatProduct}"
+      },
+      {
+        "id": "hwidSpoofer",
+        "href": "/hwid-spoofer/",
+        "label": "Panel HWID",
+        "ariaLabel": "HWID Spoofer"
+      },
+      {
+        "id": "products",
+        "href": "/ugc/",
+        "label": "Apelaciones UGC",
+        "ariaLabel": "UGC"
+      },
+      {
+        "id": "products",
+        "href": "/skin-changer/",
+        "label": "Cliente de skins",
+        "ariaLabel": "Skin Changer"
+      },
+      {
+        "id": "blog",
+        "href": "/blog/",
+        "label": "Guías y artículos",
+        "ariaLabel": "Blog"
+      },
+      {
+        "id": "reviews",
+        "href": "/reviews/",
+        "label": "Reseñas",
+        "ariaLabel": "Reseñas"
+      },
+      {
+        "id": "forum",
+        "href": "/forum/",
+        "label": "Foro",
+        "ariaLabel": "Foro"
+      }
+    ],
+    "supportLinks": [
+      {
+        "href": "/faq/",
+        "label": "FAQ antes de comprar",
+        "ariaLabel": "FAQ"
+      },
+      {
+        "href": "/support/",
+        "label": "Contactar soporte",
+        "ariaLabel": "Soporte"
+      }
+    ],
+    "support": "Soporte",
+    "legal": "Legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "about": "Acerca de"
+  },
+  "legalPages": {
+    "about": {
+      "title": "Acerca de CHEATS FOR THE ISLE",
+      "description": "Reunimos productos para The Isle, utilidades y guías de compra en un catálogo comercial.",
+      "sections": [
+        {
+          "heading": "Nuestros productos",
+          "paragraphs": [
+            "Explora ESP de dinosaurios, recursos, radar y Bite Assist para EVRIMA. HWID Spoofer, UGC y Skin Changer tienen objetivos y licencias independientes."
+          ]
+        },
+        {
+          "heading": "Decisiones claras antes del pago",
+          "paragraphs": [
+            "Diferenciamos vistas locales de propiedad y apelaciones de cambios de hardware. Las guías explican alcance y requisitos para comparar funciones antes de elegir una licencia."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "description": "Analítica, cookies y el correo que envías con un ticket de soporte en {siteDomain}.",
+      "sections": [
+        {
+          "heading": "Información que recopilamos",
+          "paragraphs": [
+            "Si Google Analytics está activo, puede registrar visitas a páginas, tipo de dispositivo, navegador y una región aproximada. El pago y la entrega de la licencia corren en páginas de pago externas. {siteDomain} no guarda números de tarjeta de pago."
+          ]
+        },
+        {
+          "heading": "Cómo usamos los datos",
+          "paragraphs": [
+            "Esos datos muestran qué guías y páginas de producto se usan, para corregir enlaces rotos y páginas pobres. Un ticket de soporte puede conservar el correo y el mensaje hasta cerrar ese asunto."
+          ]
+        },
+        {
+          "heading": "Cookies",
+          "paragraphs": [
+            "Las cookies en este sitio se limitan a analítica. Bloquéalas en el navegador y las páginas siguen cargando."
+          ]
+        },
+        {
+          "heading": "Soporte",
+          "paragraphs": [
+            "Las preguntas de privacidad van por la página de Soporte. Las reglas de compra y reembolso están en Términos y condiciones."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos y condiciones",
+      "description": "Qué compras, cómo funcionan las licencias, cuándo puede valorarse un reembolso y la sanción de cuenta que aceptas en {siteDomain}.",
+      "sections": [
+        {
+          "heading": "Acuerdo",
+          "paragraphs": [
+            "Última actualización: septiembre de 2026. Usar {siteDomain}, o terminar el pago de un producto listado aquí, significa que aceptas estos Términos y condiciones y la Política de privacidad."
+          ]
+        },
+        {
+          "heading": "Qué compras",
+          "paragraphs": [
+            "Los productos son {cheatProduct} y las utilidades de la página de productos. La entrega es un portal de operador y un cargador en Windows.",
+            "Cada página de producto indica qué incluye esa compra en el momento en que pagas. Una actualización de The Isle o del anti-cheat puede cambiar los módulos."
+          ]
+        },
+        {
+          "heading": "Pago y entrega",
+          "paragraphs": [
+            "El pago y la licencia se gestionan en páginas de pago externas. {siteDomain} no procesa ni almacena números de tarjeta de pago.",
+            "Tras pagar, abre el portal del operador desde el flujo del pedido y descarga el cargador y la guía de configuración actuales antes de iniciar The Isle."
+          ]
+        },
+        {
+          "heading": "Uso de la licencia",
+          "paragraphs": [
+            "Una licencia es solo para ti. No compartas archivos del cargador, accesos al portal ni claves de licencia. Los límites de HWID y dispositivo siguen el nivel y se aplican en el portal."
+          ]
+        },
+        {
+          "heading": "Reembolsos y compras",
+          "paragraphs": [
+            "Revisa requisitos y condiciones de compra antes del pago. Las herramientas de terceros pueden provocar sanciones y cambiar de compatibilidad.",
+            "Revisa requisitos y condiciones de compra antes del pago. Las herramientas de terceros pueden provocar sanciones y cambiar de compatibilidad.",
+            "Soporte puede ofrecer una corrección, acceso de reemplazo o reembolso parcial o total cuando la falla es nuestra. Soporte no tiene que aprobar cada solicitud."
+          ]
+        },
+        {
+          "heading": "Disponibilidad y riesgo",
+          "paragraphs": [
+            "Las herramientas de terceros para The Isle pueden dejar de funcionar tras una actualización del juego o del anti-cheat. Usarlas puede llevar a acción sobre la cuenta.",
+            "Revisa requisitos y condiciones de compra antes del pago. Las herramientas de terceros pueden provocar sanciones y cambiar de compatibilidad."
+          ]
+        },
+        {
+          "heading": "Cambios",
+          "paragraphs": [
+            "Estos términos pueden actualizarse. La fecha de última actualización arriba cambia cuando ocurre. Usar el sitio después de esa fecha significa que aceptas los términos revisados."
+          ]
+        },
+        {
+          "heading": "Soporte",
+          "paragraphs": [
+            "Preguntas de términos, facturación o cargador van por los botones de la página de Soporte. La Política de privacidad cubre cómo se tratan los datos del sitio."
+          ]
+        }
+      ]
+    },
+    "support": {
+      "title": "Soporte de productos The Isle",
+      "description": "Resuelve un requisito antes de pagar o prepara una consulta concreta sobre pedidos o el loader."
+    }
+  },
+  "common": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbProducts": "Productos",
+    "breadcrumbBlog": "Blog",
+    "breadcrumbFaq": "FAQ",
+    "breadcrumbAbout": "Acerca de",
+    "breadcrumbPrivacy": "Privacidad",
+    "breadcrumbTerms": "Términos",
+    "breadcrumbSupport": "Soporte",
+    "contactSupport": "Contactar soporte",
+    "breadcrumbReviews": "Reseñas"
+  },
+  "notFound": {
+    "metaDescription": "Esta dirección no es una página en {siteDomain}. Abra la portada o la lista de productos para seguir.",
+    "title": "Página no encontrada",
+    "documentTitle": "Esta dirección no es una página",
+    "body": "Esa dirección no existe. Vuelve al inicio o abre la lista de productos.",
+    "backHome": "Volver al inicio",
+    "viewProducts": "Ver productos",
+    "viewElite": "Ver página del producto"
+  },
+  "pages": {
+    "faq": {
+      "eyebrow": "Centro de ayuda",
+      "title": "Preguntas de compra de The Isle",
+      "description": "Comprueba rama, hardware, licencia y alcance antes de elegir un plan.",
+      "schemaName": "Preguntas de compra de The Isle",
+      "schemaDescription": "Comprueba rama, hardware, licencia y alcance antes de elegir un plan."
+    },
+    "utilities": {
+      "title": "HWID Spoofer",
+      "description": "Nuestro HWID Spoofer reescribe series de disco, direcciones MAC, IDs de GPU y otras huellas, con limpieza de rastros incluida. Las sanciones de cuenta son independientes.",
+      "viewDetails": "Abrir la página de la utilidad",
+      "includes": "En la licencia:",
+      "schemaName": "HWID Spoofer"
+    }
+  },
+  "ui": {
+    "skipLink": "Saltar al contenido principal",
+    "browseCheatsNav": "Ver planes",
+    "browseCheatsNavMobile": "Planes",
+    "homeAria": "Trucos para The Isle",
+    "menuOpen": "Abrir menú",
+    "themeLight": "Cambiar a modo claro",
+    "languageSwitcherLabel": "Idioma",
+    "languageNames": {
+      "en": "English",
+      "es": "Español",
+      "de": "Deutsch",
+      "fr": "Français"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "status": "integrated",
+  "site": "https://cheatsfortheisle.com",
+  "supplied": [
+    {
+      "source": "C:/Users/Ryzen/Downloads/isle ss.webp",
+      "path": "public/images/gameplay/the-isle-dinosaur-esp-gameplay.webp",
+      "bytes": 266528,
+      "sha256": "c687f539d6d5d3b92745c781ce78177be96297e1e2a79b402bf4a1b2fc7feee6",
+      "width": 1672,
+      "height": 941,
+      "responsiveWidths": [
+        400,
+        512,
+        640,
+        800,
+        960,
+        1280
+      ]
+    },
+    {
+      "source": "C:/Users/Ryzen/Downloads/menu isle.webp",
+      "path": "public/images/gameplay/the-isle-combat-assist-menu.webp",
+      "bytes": 40046,
+      "sha256": "22db372d68c94f902c2e1699ad493a4de985077feb37130ab9ad958fb9dc31d9",
+      "width": 1448,
+      "height": 1086,
+      "responsiveWidths": [
+        400,
+        512,
+        640,
+        800,
+        960,
+        1280
+      ]
+    },
+    {
+      "source": "C:/Users/Ryzen/Downloads/isle menu 2.webp",
+      "path": "public/images/gameplay/the-isle-player-esp-menu.webp",
+      "bytes": 39896,
+      "sha256": "aaf3efc309ee144dfb72a6a9e5e3dc955ba2f15021e1ba1436dfb5cae70ed3ea",
+      "width": 1448,
+      "height": 1086,
+      "responsiveWidths": [
+        400,
+        512,
+        640,
+        800,
+        960,
+        1280
+      ]
+    }
+  ],
+  "displayPolicy": "Copied original bytes; responsive variants preserve aspect ratio without cropping. Fixed display frames contain the complete screenshot.",
+  "brand": {
+    "assetSupplied": false,
+    "action": "Keep existing violet emblem and all favicon files. Screenshots are not standalone brand artwork."
+  },
+  "protectedUtilityMedia": {
+    "action": "unchanged",
+    "hashPolicy": "src/config/protected-media.json"
+  },
+  "editorialMapping": [
+    "ESP/radar, branch compatibility and plan guides: dinosaur gameplay",
+    "Requirements and resource guide: ESP menu",
+    "Bite Assist guide: combat menu",
+    "Appearance comparison: existing protected Skin Changer artwork",
+    "Hardware/account comparison: existing protected HWID panel"
+  ],
+  "socialPreview": "Supplied dinosaur gameplay; correct intrinsic dimensions and localized alt text",
+  "cleanup": [
+    "public/images/gameplay/modern-warfare-4-aimbot-menu-400.webp",
+    "public/images/gameplay/modern-warfare-4-aimbot-menu-512.webp",
+    "public/images/gameplay/modern-warfare-4-aimbot-menu-640.webp",
+    "public/images/gameplay/modern-warfare-4-aimbot-menu-800.webp",
+    "public/images/gameplay/modern-warfare-4-aimbot-menu-960.webp",
+    "public/images/gameplay/modern-warfare-4-aimbot-menu.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu-400.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu-512.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu-640.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu-800.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu-960.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp-400.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp-512.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp-640.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp-800.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp-960.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp.webp",
+    "public/images/gameplay/modern-warfare-4-aimbot-menu-1280.webp",
+    "public/images/gameplay/modern-warfare-4-esp-menu-1280.webp",
+    "public/images/gameplay/modern-warfare-4-match-esp-1280.webp"
+  ],
+  "remainingMediaRequirements": []
+}

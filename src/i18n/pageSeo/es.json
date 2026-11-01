@@ -1,0 +1,58 @@
+{
+  "/": {
+    "title": "Trucos para The Isle | ESP, radar y Bite Assist",
+    "description": "Trucos para The Isle EVRIMA: ESP de dinosaurios, radar, recursos y Bite Assist. Compara planes y requisitos"
+  },
+  "/cheats/": {
+    "title": "The Isle Cheats | Funciones, requisitos y planes",
+    "description": "Revisa funciones EVRIMA, Windows y Cloud DMA. Elige $35 por 31 días o $150 de acceso vitalicio"
+  },
+  "/hwid-spoofer/": {
+    "title": "HWID Spoofer | Identificadores y limpieza",
+    "description": "Reescribe identificadores de disco, MAC y GPU con HWID Spoofer y limpieza incluida. Revisa requisitos y planes"
+  },
+  "/products/": {
+    "title": "Comparar productos y utilidades | The Isle",
+    "description": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago"
+  },
+  "/ugc/": {
+    "title": "UGC | Flujos de apelación de cuentas",
+    "description": "Organiza pruebas con plantillas UGC y disputas automatizadas. La plataforma decide el resultado del recurso"
+  },
+  "/skin-changer/": {
+    "title": "Skin Changer | Vistas cosméticas locales",
+    "description": "Explora acabados, atuendos y cuchillos locales en títulos compatibles. Confirma el juego antes de comprar"
+  },
+  "/blog/": {
+    "title": "Guías The Isle | Funciones y compra",
+    "description": "Consulta funciones, compatibilidad con EVRIMA, requisitos y comparaciones de licencias"
+  },
+  "/faq/": {
+    "title": "FAQ The Isle | Planes y requisitos",
+    "description": "Comprueba rama, hardware, licencia y alcance antes de elegir un plan."
+  },
+  "/terms/": {
+    "title": "Condiciones de venta | Licencias y reembolsos",
+    "description": "Las ventas son finales tras el pago. Límites de licencia, excepciones de reembolso y sanciones de cuenta para productos en {siteDomain}"
+  },
+  "/privacy/": {
+    "title": "Política de privacidad | Analítica, cookies y tickets",
+    "description": "Qué recopila {siteDomain} en analítica, qué cookies usa y cuánto conserva el correo de un ticket de soporte"
+  },
+  "/about/": {
+    "title": "Acerca de CHEATS FOR THE ISLE",
+    "description": "Reunimos productos para The Isle, utilidades y guías de compra en un catálogo comercial"
+  },
+  "/support/": {
+    "title": "Soporte The Isle | Configuración y pedidos",
+    "description": "Resuelve un requisito antes de pagar o prepara una consulta concreta sobre pedidos o el loader"
+  },
+  "/reviews/": {
+    "title": "Reseñas de The Isle Cheats",
+    "description": "Lee reseñas de la comunidad sobre The Isle Cheats, HWID Spoofer, Skin Changer y UGC"
+  },
+  "/forum/": {
+    "title": "Foro de The Isle",
+    "description": "Explora conversaciones sobre The Isle Cheats, configuración, planes y nuestras herramientas"
+  }
+}

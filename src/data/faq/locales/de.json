@@ -1,0 +1,152 @@
+[
+  {
+    "id": "status",
+    "q": "Wie bestätige ich die aktuelle Kompatibilität?",
+    "a": "Prüfe Produktdetails und frage vor Kauf oder Start nach deinem genauen EVRIMA-Build. Diese Seite bietet keinen unabhängig geprüften Live-Erkennungsstatus."
+  },
+  {
+    "id": "after-buy",
+    "q": "Was sollte ich nach dem Kauf aufbewahren?",
+    "a": "Bewahre die Bestellreferenz auf und nutze die gelieferten Anleitungen. Kläre Lieferdetails vorab, wenn du von einem Zeitpunkt abhängig bist."
+  },
+  {
+    "id": "ban-risk",
+    "q": "Können Drittanbieter-Werkzeuge zu Sperren führen?",
+    "a": "Ja. Sie können Spiel- oder Serverregeln verletzen und Kontosanktionen auslösen. Keine Funktion und kein Preset garantiert Schutz."
+  },
+  {
+    "id": "platforms",
+    "q": "Unterstützt das Toolkit Legacy?",
+    "a": "Aktuell nur EVRIMA auf Steam mit Windows 10/11 und 64 Bit. HVCI, Kernisolierung, TPM und Secure Boot müssen aktiviert sein. Cloud DMA ist für volle Funktion erforderlich."
+  },
+  {
+    "id": "license-move",
+    "q": "Kann ich die Lizenz auf einen anderen PC übertragen?",
+    "a": "Kläre Gerätebegrenzung, Übertragbarkeit und Resetbedingungen vor dem Kauf. Unbegrenzte Wechsel werden nicht versprochen."
+  },
+  {
+    "id": "products-page",
+    "q": "Wo vergleiche ich die vier Produkte?",
+    "a": "Auf der Produktseite findest du The Isle Cheats, HWID Spoofer, UGC und Skin Changer mit eigenem Umfang und Checkout."
+  },
+  {
+    "id": "ugc-what",
+    "q": "Was organisiert unser UGC-Dienst?",
+    "a": "Einspruchsvorlagen und wiederholbare automatisierte Streitfallschritte für eingeschränkte Spiel-, Sozial- und Marktplatzprofile."
+  },
+  {
+    "id": "ugc-guarantee",
+    "q": "Garantiert UGC eine Kontowiederherstellung?",
+    "a": "Nein. Plattformprüfer entscheiden den Fall; dauerhafte Sperren bleiben bestehen."
+  },
+  {
+    "id": "ugc-vs-hwid",
+    "q": "Wie unterscheiden sich UGC und HWID Spoofer?",
+    "a": "UGC organisiert Einsprüche. HWID Spoofer ändert Hardwaremerkmale. Beides stellt die Ursache einer Einschränkung nicht fest."
+  },
+  {
+    "id": "skin-visible",
+    "q": "Werden lokale Looks zu Inventarobjekten?",
+    "a": "Nein. Skin Changer zeichnet unterstützte Kosmetik lokal. Sie ist nicht handelbar und verschwindet beim Beenden des Clients."
+  },
+  {
+    "id": "skin-games",
+    "q": "Unterstützt der separate Skin Changer The Isle?",
+    "a": "Die bereitgestellten Fakten bestätigen das nicht. Kläre Spiel und Kosmetik. Das Haupttoolkit enthält separat lokale Dinosaurier-Skins und Muster."
+  },
+  {
+    "id": "utility-requirements",
+    "q": "Welche Voraussetzungen haben die Werkzeuge?",
+    "a": "Windows 10/11 mit 64 Bit sowie aktivierte HVCI, Kernisolierung, TPM und Secure Boot. HWID braucht Administratorrechte und Internet; UGC Internet; Skin Changer Internet und Loader."
+  },
+  {
+    "id": "what-is-esp",
+    "q": "Welche Daten zeigt Dinosaurier-ESP?",
+    "a": "Art, Gesundheit, Entfernung, Gewicht, Wachstum und Skelette sowie Positionen durch Gelände und Vegetation."
+  },
+  {
+    "id": "esp-vs-aim",
+    "q": "Wie unterscheiden sich ESP und Bite Assist?",
+    "a": "ESP zeigt Informationen. Bite Assist bietet Glättung, Reichweite, Knochenpriorität, Vorhersage und Tierprofile."
+  },
+  {
+    "id": "elite-slots",
+    "q": "Welche Hauptproduktpläne gibt es?",
+    "a": "The Isle Cheats kostet $35 für 31 Tage oder $150 als Lifetime mit unbegrenztem Zugang laut Beschreibung. Kläre Bedingungen und editionsabhängige Werkzeuge."
+  },
+  {
+    "id": "stream-proof",
+    "q": "Lässt sich das Overlay in Aufnahmen ausblenden?",
+    "a": "Optionen für OBS und Xbox Game Bar sind genannt. Prüfe das tatsächliche Ergebnis; es ist keine Erkennungsgarantie."
+  },
+  {
+    "id": "build-status",
+    "q": "Sind Updates und Erkennungsstatus garantiert?",
+    "a": "Nein. Funktion und Erkennung wurden nicht unabhängig geprüft. Spiel- oder Anti-Cheat-Updates können Kompatibilität ändern."
+  },
+  {
+    "id": "esp-safer",
+    "q": "Ist eine Funktion garantiert sicherer?",
+    "a": "Wir bestätigen kein geringeres Risiko für ESP, Radar oder Bite Assist. Jedes Drittanbieter-Werkzeug kann Sanktionen auslösen."
+  },
+  {
+    "id": "hwid-when",
+    "q": "Was ändert unser HWID Spoofer?",
+    "a": "Festplattenseriennummern, MAC-Adressen, GPU-IDs und verwandte Merkmale, mit Spurenreiniger. Kontosanktionen werden nicht entfernt."
+  },
+  {
+    "id": "external-loader",
+    "q": "Ist bestimmte Cloud-DMA-Hardware enthalten?",
+    "a": "Das Angebot nennt kein enthaltenes Hardwarepaket oder vollständiges Setup. Kläre Ausstattung und Zusatzkäufe vor der Softwarebestellung."
+  },
+  {
+    "id": "blog-vs-cheats",
+    "q": "Bestätigen Leitfäden den Live-Status?",
+    "a": "Sie erklären Umfang und Kaufaspekte, bestätigen aber keine aktuelle Funktion und ersetzen keine neue Kompatibilitätsprüfung."
+  },
+  {
+    "id": "blog-setup",
+    "q": "Wo stehen Funktionen und Voraussetzungen?",
+    "a": "Auf der Hauptproduktseite für EVRIMA mit Planwahl oder auf der jeweiligen Werkzeugseite."
+  },
+  {
+    "id": "who-cheats",
+    "q": "Für wen kommt das Haupttoolkit infrage?",
+    "a": "Für Käufer mit vollständig passendem EVRIMA- und Windows-Setup, die Umfang, Editionsgrenzen und Risiken verstehen."
+  },
+  {
+    "id": "vac-update",
+    "q": "Was prüfe ich nach einem Patch?",
+    "a": "Notiere den neuen Build und bestätige Kompatibilität vor dem Start. Alte Presets oder Bilder belegen keinen aktuellen Support."
+  },
+  {
+    "id": "discord-help",
+    "q": "Was gehört in eine Einrichtungsfrage?",
+    "a": "Produkt, Edition, Windows, Spielversion und genauer Fehler. Gegebenenfalls Bestellreferenz, aber keine Passwörter oder Kartendaten."
+  },
+  {
+    "id": "pmc-scav-raids",
+    "q": "Erteilen Serverpresets eine Nutzungserlaubnis?",
+    "a": "Nein. Official und Community benennen Konfigurationen, keine Freigaben. Aktuell wird nur EVRIMA unterstützt."
+  },
+  {
+    "id": "zoom-hack",
+    "q": "Welche Ressourcen nennt das ESP?",
+    "a": "Nahrung, Wasser, Kräuter, Früchte und Nester mit Entfernungen. Das Radar nennt nahe Dinosaurier, Nester und Kadaver."
+  },
+  {
+    "id": "trigger-bot",
+    "q": "Enthält jeder Plan Auto Finish und Auto Stamina?",
+    "a": "Diese Werkzeuge und die Kadaverhilfe hängen von der Edition ab. Kläre die genaue Edition vor dem Kauf."
+  },
+  {
+    "id": "private-cheats",
+    "q": "Bedeutet privat auch unentdeckt?",
+    "a": "Nein. Privat belegt weder Schutz noch begrenzte Verfügbarkeit. Der Erkennungsstatus wurde nicht unabhängig geprüft."
+  },
+  {
+    "id": "faq-more",
+    "q": "Wo finde ich alle Antworten?",
+    "a": "Die FAQ bietet Themen zu Kauf, Funktionen, Werkzeugen und Einrichtung."
+  }
+]

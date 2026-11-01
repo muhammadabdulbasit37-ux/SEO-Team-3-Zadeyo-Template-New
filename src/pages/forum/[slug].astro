@@ -1,0 +1,28 @@
+---
+import'../../styles/forum.css';import BaseLayout from'../../layouts/BaseLayout.astro';import Breadcrumbs from'../../components/Breadcrumbs.astro';import ForumSidebar from'../../components/ForumSidebar.astro';import Icon from'../../components/icons/Icon.astro';import{useLocale}from'../../i18n';import{getForumPost,getForumPosts,forumCategoryId}from'../../data/forum/locale';import{forumCopy}from'../../data/forum/copy';import{pageTitle}from'../../config/seo';import{breadcrumbSchema,discussionForumPostingSchema}from'../../utils/schema';
+export function getStaticPaths(){return getForumPosts('en').map(post=>({params:{slug:post.slug}}));}
+const{locale,t,lp}=useLocale(Astro.currentLocale),c=forumCopy[locale],post=getForumPost(Astro.params.slug!,locale);
+if(!post)return Astro.redirect(lp('/forum/'));
+const path=`/forum/${post.slug}/`,categoryLabel=(c.categoriesMap as Record<string,string>)[post.category]??post.category,breadcrumbs=[{name:t.common.breadcrumbHome,path:'/'},{name:c.label,path:'/forum/'},{name:post.title,path}];
+const authorLabel=post.author==='Original poster'?c.originalPoster:post.author,related=getForumPosts(locale).filter(p=>p.slug!==post.slug&&p.category===post.category).slice(0,3);
+const date=new Intl.DateTimeFormat(locale,{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(post.published+'T12:00:00Z'));
+const posting={...discussionForumPostingSchema({name:post.title,text:post.body.join('\n\n'),url:lp(path),author:post.author,authorType:'Person',comments:post.commentsCount,published:post.published,locale}),inLanguage:'en'};
+---
+<BaseLayout title={pageTitle(post.metaTitle??post.title,undefined,locale)} description={post.excerpt} canonicalPath={lp(path)} jsonLd={[posting,breadcrumbSchema(breadcrumbs,locale)]}>
+ <section class="forum-page py-8 md:py-12"><div class="mx-auto max-w-6xl px-5"><Breadcrumbs items={breadcrumbs}/>
+  <div class="forum-layout mt-6"><div class="forum-main"><article class="forum-detail-card">
+   <div class="forum-vote" role="group" aria-label={`${post.commentsCount} ${c.replies}`}><Icon name="messageCircle" size={16}/><strong>{post.commentsCount}</strong></div>
+   <div class="forum-detail-content"><div class="forum-post-meta"><span class="forum-community-avatar"><Icon name="users" size={15}/></span><a class="forum-community-name" href={`${lp('/forum/')}${'#'+forumCategoryId(post.category)}`}>{categoryLabel}</a><span>·</span><span>{c.archive}</span></div>
+    <h1 lang="en">{post.title}</h1><span class="forum-flair">{c.closed}</span><p class="forum-archive-note">{c.notice}</p>
+    <div class="forum-comment__meta"><span class="forum-comment__avatar">{post.author.charAt(0).toUpperCase()}</span><b>{authorLabel}</b><span>·</span><time datetime={post.published}>{date}</time><span>· {c.originalPost}</span></div>
+    <div class="forum-detail-copy" lang="en" data-original-post>{post.body.map(paragraph=><p>{paragraph}</p>)}</div>
+    <div class="forum-post-actions"><a href="#comments"><Icon name="messageCircle" size={15}/>{post.commentsCount} {c.replies}</a><a href={lp('/forum/')}>{c.back}<Icon name="arrowRight" size={14}/></a></div>
+    <section class="forum-comments" id="comments" aria-labelledby="comments-title"><div class="forum-comments__heading"><h2 id="comments-title">{post.commentsCount} {c.replies}</h2><span>{c.closed}</span></div>
+     {post.comments.map(comment=><article class="forum-comment" data-forum-comment><div class="forum-comment__rail"><span class="forum-comment__avatar">{comment.author.charAt(0).toUpperCase()}</span><span class="forum-comment__line"></span></div><div class="forum-comment__body"><div class="forum-comment__meta"><b>{comment.author}</b>{comment.author===post.author&&<span class="forum-flair">{c.originalPoster}</span>}</div><div class="forum-reply-copy" lang="en">{comment.body.split(/\n\s*\n/).map(paragraph=><p>{paragraph}</p>)}</div></div></article>)}
+    </section>
+    <section class="forum-related-links" aria-labelledby="product-info"><h2 id="product-info">{c.resources}</h2><ul>{post.resourceLinks?.map(link=><li><a href={lp(link.href)}>{link.label}</a></li>)}</ul></section>
+    {related.length>0&&<section class="forum-related-links"><h2>{c.related}</h2><ul>{related.map(p=><li><a href={lp(`/forum/${p.slug}/`)} lang="en">{p.title}</a></li>)}</ul></section>}
+   </div>
+  </article></div><ForumSidebar/></div>
+ </div></section>
+</BaseLayout>

@@ -1,0 +1,297 @@
+{
+  "sharedGoodToKnow": "Vérifiez EVRIMA et tout l’équipement avant de payer. Auto Finish, Auto Stamina et l’assistance aux carcasses dépendent de l’édition ; confirmez le contenu.",
+  "sharedLimitations": "Les outils tiers peuvent entraîner des sanctions de compte. Fonctionnement et détection n’ont pas été vérifiés indépendamment. Les mises à jour changent la compatibilité ; un preset ne vaut pas autorisation serveur.",
+  "acquisitionSteps": [
+    {
+      "num": "01",
+      "title": "Vérifier l’équipement",
+      "desc": "Confirmez EVRIMA, Windows 10/11 en 64 bits et toutes les exigences de sécurité et Cloud DMA."
+    },
+    {
+      "num": "02",
+      "title": "Choisir la formule",
+      "desc": "Vérifiez l’édition puis choisissez mensuel ou à vie. Conservez les détails de commande."
+    },
+    {
+      "num": "03",
+      "title": "Suivre les instructions actuelles",
+      "desc": "Utilisez le guide fourni et confirmez la compatibilité avant le lancement."
+    },
+    {
+      "num": "04",
+      "title": "Conserver les réglages",
+      "desc": "Enregistrez réglages et presets. Vérifiez la compatibilité après une mise à jour."
+    }
+  ],
+  "systemRequirements": [
+    "The Isle sur Steam : EVRIMA uniquement. La fiche actuelle ne prend pas Legacy en charge.",
+    "Windows 10 ou 11 en 64 bits.",
+    "HVCI et isolation du noyau activés.",
+    "TPM et démarrage sécurisé activés.",
+    "Cloud DMA nécessaire pour toutes les fonctions. Confirmez la configuration exacte avant l’achat."
+  ],
+  "gallery": [
+    {
+      "alt": "Scène forestière de The Isle avec étiquettes de dinosaures, santé, lignes rouges et carte superposée.",
+      "caption": "ESP des dinosaures en forêt",
+      "captionDesc": "La scène montre des données de dinosaures, leur santé, des lignes rouges et une carte superposée."
+    },
+    {
+      "alt": "Menu Combat de The Isle avec assistance à la visée, os Head, lissage et distance maximale.",
+      "caption": "Réglages de combat",
+      "captionDesc": "La vue Combat montre touches d’attaque, préférences de cible, visibilité, prédiction et lissage."
+    },
+    {
+      "alt": "Menu ESP Players de The Isle avec contrôles des cadres, distances, noms, santé et os.",
+      "caption": "Contrôles ESP des joueurs",
+      "captionDesc": "La vue ESP Players présente styles de cadre, noms, distances, barres de santé et épaisseur des os."
+    }
+  ],
+  "tiers": {
+    "elite": {
+      "about": [],
+      "body": [
+        {
+          "type": "h2",
+          "text": "Choisir la durée d’accès"
+        },
+        {
+          "type": "p",
+          "text": "Choisissez $35 pour 31 jours ou $150 à vie. Confirmez édition, conditions à vie et achats de matériel avant de payer."
+        },
+        {
+          "type": "h2",
+          "text": "Aperçus locaux et capture"
+        },
+        {
+          "type": "p",
+          "text": "Les changements d’apparence sont des aperçus locaux. Vérifiez le masquage des overlays dans OBS et Xbox Game Bar sur une capture. Aucune fonction ne garantit une protection contre la détection."
+        }
+      ],
+      "overview": {
+        "title": "Votre toolkit pour EVRIMA",
+        "paragraphs": [
+          "Visualisez position, santé et croissance des dinosaures. Le radar organise animaux proches, nids et carcasses ; l’ESP des ressources ajoute nourriture, eau, herbes, fruits et nids avec distances.",
+          "Réglez lissage, portée, priorité des os et prédiction de Bite Assist. Les aperçus locaux incluent peaux, motifs, favoris et exports. Le cloud conserve réglages et presets."
+        ]
+      },
+      "goodToKnow": "Vérifiez EVRIMA et tout l’équipement avant de payer. Auto Finish, Auto Stamina et l’assistance aux carcasses dépendent de l’édition ; confirmez le contenu.",
+      "limitations": "Les outils tiers peuvent entraîner des sanctions de compte. Fonctionnement et détection n’ont pas été vérifiés indépendamment. Les mises à jour changent la compatibilité ; un preset ne vaut pas autorisation serveur.",
+      "acquisitionTitle": "Préparez votre équipement",
+      "fullFeatures": [
+        "ESP des dinosaures",
+        "Radar 2D",
+        "Bite Assist",
+        "Appearance Changer",
+        "ESP des ressources",
+        "Contrôles de capture",
+        "Configurations cloud",
+        "Utilitaires selon l’édition",
+        "Profils par espèce"
+      ]
+    }
+  },
+  "utilities": {
+    "hwid-spoofer": {
+      "body": [
+        {
+          "type": "h2",
+          "text": "Préparer la machine"
+        },
+        {
+          "type": "p",
+          "text": "Windows 10/11 en 64 bits, droits administrateur, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé activés sont nécessaires."
+        },
+        {
+          "type": "h2",
+          "text": "Connaître les limites"
+        },
+        {
+          "type": "p",
+          "text": "Les modifications matérielles ne retirent pas les sanctions de compte. Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE et Javelin sont cités ; la compatibilité évolue. Le spoofing peut enfreindre les conditions et entraîner des sanctions."
+        }
+      ],
+      "overview": {
+        "title": "Un travail ciblé sur le matériel",
+        "paragraphs": [
+          "Gérez identifiants de disque, réseau et GPU dans un outil, puis exécutez le nettoyage inclus selon l’ordre du guide actuel.",
+          "La licence coûte $50 pour 31 jours ou $150 à vie. Les outils sont identiques. Confirmez la couverture actuelle du jeu et de l’anticheat avant l’achat."
+        ]
+      },
+      "goodToKnow": "Windows 10/11 en 64 bits, droits administrateur, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé activés sont nécessaires.",
+      "limitations": "Les modifications matérielles ne retirent pas les sanctions de compte. Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE et Javelin sont cités ; la compatibilité évolue. Le spoofing peut enfreindre les conditions et entraîner des sanctions.",
+      "acquisitionTitle": "Préparez votre équipement",
+      "acquisitionSteps": [
+        {
+          "num": "01",
+          "title": "Un travail ciblé sur le matériel",
+          "desc": "Gérez identifiants de disque, réseau et GPU dans un outil, puis exécutez le nettoyage inclus selon l’ordre du guide actuel."
+        },
+        {
+          "num": "02",
+          "title": "Mensuel ou à vie",
+          "desc": "La licence coûte $50 pour 31 jours ou $150 à vie. Les outils sont identiques. Confirmez la couverture actuelle du jeu et de l’anticheat avant l’achat."
+        },
+        {
+          "num": "03",
+          "title": "Préparer la machine",
+          "desc": "Windows 10/11 en 64 bits, droits administrateur, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé activés sont nécessaires."
+        },
+        {
+          "num": "04",
+          "title": "Connaître les limites",
+          "desc": "Les modifications matérielles ne retirent pas les sanctions de compte. Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE et Javelin sont cités ; la compatibilité évolue. Le spoofing peut enfreindre les conditions et entraîner des sanctions."
+        }
+      ],
+      "systemRequirements": [
+        "Windows 10 ou 11, 64 bits.",
+        "Dans Sécurité Windows, HVCI et Core Isolation activés.",
+        "Droits administrateur pour spoof et nettoyeur.",
+        "Internet stable pour activation et mises à jour.",
+        "TPM et Secure Boot activés dans BIOS/UEFI."
+      ],
+      "gallery": [
+        {
+          "alt": "Fenêtre Device listant DISK, MOBO, Display, UUID, GPU et Network en Changed ou Unchanged.",
+          "caption": "Lignes de contrôle de séries",
+          "captionDesc": "Après un cycle de spoof, chaque ligne indique si cette valeur matérielle a changé."
+        },
+        {
+          "alt": "Fenêtre Device avec Permanent Spoof, GPU spoof actif, ethernet off et un champ seed.",
+          "caption": "Contrôles firmware",
+          "captionDesc": "Depuis cet écran firmware vous pouvez basculer spoof GPU ou ethernet, saisir un seed et appliquer un changement permanent."
+        }
+      ]
+    },
+    "ugc": {
+      "body": [
+        {
+          "type": "h2",
+          "text": "Préparer les éléments"
+        },
+        {
+          "type": "p",
+          "text": "Réunissez preuves de propriété et notification de restriction. Le client exige Windows 10/11 en 64 bits, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé."
+        },
+        {
+          "type": "h2",
+          "text": "Comprendre le résultat"
+        },
+        {
+          "type": "p",
+          "text": "Le rétablissement n’est pas garanti. Les suspensions permanentes restent en place. Les examinateurs décident chaque cas et des preuves faibles limitent le recours."
+        }
+      ],
+      "overview": {
+        "title": "Construire le dossier avec UGC",
+        "paragraphs": [
+          "Transformez preuves de propriété et chronologie claire en procédure de recours. Des étapes répétables aident à organiser le processus sur les plateformes compatibles.",
+          "Choisissez $35 pour 31 jours ou $150 à vie. Les capacités sont identiques. UGC ne change pas les identifiants matériels et ne contourne pas les contrôles de sécurité."
+        ]
+      },
+      "goodToKnow": "Réunissez preuves de propriété et notification de restriction. Le client exige Windows 10/11 en 64 bits, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé.",
+      "limitations": "Le rétablissement n’est pas garanti. Les suspensions permanentes restent en place. Les examinateurs décident chaque cas et des preuves faibles limitent le recours.",
+      "acquisitionTitle": "Préparez votre équipement",
+      "acquisitionSteps": [
+        {
+          "num": "01",
+          "title": "Construire le dossier avec UGC",
+          "desc": "Transformez preuves de propriété et chronologie claire en procédure de recours. Des étapes répétables aident à organiser le processus sur les plateformes compatibles."
+        },
+        {
+          "num": "02",
+          "title": "Mensuel ou à vie",
+          "desc": "Choisissez $35 pour 31 jours ou $150 à vie. Les capacités sont identiques. UGC ne change pas les identifiants matériels et ne contourne pas les contrôles de sécurité."
+        },
+        {
+          "num": "03",
+          "title": "Préparer les éléments",
+          "desc": "Réunissez preuves de propriété et notification de restriction. Le client exige Windows 10/11 en 64 bits, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé."
+        },
+        {
+          "num": "04",
+          "title": "Comprendre le résultat",
+          "desc": "Le rétablissement n’est pas garanti. Les suspensions permanentes restent en place. Les examinateurs décident chaque cas et des preuves faibles limitent le recours."
+        }
+      ],
+      "systemRequirements": [
+        "Windows 10 ou 11, 64 bits.",
+        "Sécurité Windows avec HVCI et Core Isolation activés.",
+        "BIOS/UEFI avec TPM et Secure Boot activés.",
+        "Internet après l'achat, pour le client d'appel."
+      ],
+      "gallery": [
+        {
+          "alt": "Marque produit UGC : engrenage cramoisi, cadran d'horloge et lignes de vitesse.",
+          "caption": "Marque UGC",
+          "captionDesc": "La marque représente la bibliothèque de modèles et les exécuteurs de litige utilisés sur profils limités."
+        }
+      ]
+    },
+    "skin-changer": {
+      "body": [
+        {
+          "type": "h2",
+          "text": "Préparer le client cosmétique"
+        },
+        {
+          "type": "p",
+          "text": "Utilisez Windows 10/11 en 64 bits, internet et accès au loader, avec HVCI, isolation du noyau, TPM et démarrage sécurisé activés."
+        },
+        {
+          "type": "h2",
+          "text": "Situer les aperçus locaux"
+        },
+        {
+          "type": "p",
+          "text": "Les cosmétiques ne sont pas des objets possédés ou échangeables. Ils disparaissent à la fermeture du client. Les mises à jour changent la couverture et l’utilisation peut enfreindre les règles et entraîner des sanctions."
+        }
+      ],
+      "overview": {
+        "title": "Une bibliothèque sur votre écran",
+        "paragraphs": [
+          "Choisissez finitions, tenues et couteaux compatibles dans un client. L’aperçu reste sur votre écran et ne rejoint pas l’inventaire du compte.",
+          "La licence coûte $35 pour 31 jours ou $150 à vie. Les deux utilisent la même bibliothèque. Confirmez titre et cosmétique ; la prise en charge de The Isle par cet outil séparé n’est pas établie."
+        ]
+      },
+      "goodToKnow": "Utilisez Windows 10/11 en 64 bits, internet et accès au loader, avec HVCI, isolation du noyau, TPM et démarrage sécurisé activés.",
+      "limitations": "Les cosmétiques ne sont pas des objets possédés ou échangeables. Ils disparaissent à la fermeture du client. Les mises à jour changent la couverture et l’utilisation peut enfreindre les règles et entraîner des sanctions.",
+      "acquisitionTitle": "Préparez votre équipement",
+      "acquisitionSteps": [
+        {
+          "num": "01",
+          "title": "Une bibliothèque sur votre écran",
+          "desc": "Choisissez finitions, tenues et couteaux compatibles dans un client. L’aperçu reste sur votre écran et ne rejoint pas l’inventaire du compte."
+        },
+        {
+          "num": "02",
+          "title": "Mensuel ou à vie",
+          "desc": "La licence coûte $35 pour 31 jours ou $150 à vie. Les deux utilisent la même bibliothèque. Confirmez titre et cosmétique ; la prise en charge de The Isle par cet outil séparé n’est pas établie."
+        },
+        {
+          "num": "03",
+          "title": "Préparer le client cosmétique",
+          "desc": "Utilisez Windows 10/11 en 64 bits, internet et accès au loader, avec HVCI, isolation du noyau, TPM et démarrage sécurisé activés."
+        },
+        {
+          "num": "04",
+          "title": "Situer les aperçus locaux",
+          "desc": "Les cosmétiques ne sont pas des objets possédés ou échangeables. Ils disparaissent à la fermeture du client. Les mises à jour changent la couverture et l’utilisation peut enfreindre les règles et entraîner des sanctions."
+        }
+      ],
+      "systemRequirements": [
+        "Windows 10 ou 11, 64 bits.",
+        "Core Isolation et HVCI activés dans Sécurité Windows.",
+        "Secure Boot et TPM activés dans BIOS/UEFI.",
+        "Internet, plus accès loader, après achat."
+      ],
+      "gallery": [
+        {
+          "alt": "Blason marqué Skin Changer, avec fusils croisés, revolvers et surbrillance en étoile.",
+          "caption": "Marque cosmétique",
+          "captionDesc": "Finitions d'armes, tenues de personnage et styles de couteau sont dessinés sur votre écran seulement."
+        }
+      ]
+    }
+  }
+}

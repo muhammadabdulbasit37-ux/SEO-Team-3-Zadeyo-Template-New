@@ -1,0 +1,9 @@
+---
+import{useLocale}from'../i18n';import{getForumPosts,forumCategoryId}from'../data/forum/locale';import{forumCopy}from'../data/forum/copy';
+const{locale,lp}=useLocale(Astro.currentLocale),c=forumCopy[locale],posts=getForumPosts(locale),categories=[...new Set(posts.map(p=>p.category))];
+const label=(category:string)=>(c.categoriesMap as Record<string,string>)[category]??category;
+---
+<aside class="forum-sidebar">
+ <section class="forum-side-card"><div class="forum-side-banner"></div><div class="forum-side-content"><h2>{c.about}</h2><p>{c.aboutText}</p><div class="forum-side-stats"><span><b>{posts.length}</b>{c.topics}</span><span><b>{posts.reduce((n,p)=>n+p.commentsCount,0)}</b>{c.replies}</span></div><a class="text-sm text-primary" href={lp('/forum/')}>{c.back}</a></div></section>
+ <section class="forum-side-card"><div class="forum-side-content"><h2>{c.categories}</h2><ul class="forum-side-list">{categories.map(category=><li><a href={`${lp('/forum/')}${'#'+forumCategoryId(category)}`}><span>{label(category)}</span><span>{posts.filter(p=>p.category===category).length}</span></a></li>)}</ul></div></section>
+</aside>

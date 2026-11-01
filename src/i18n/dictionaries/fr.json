@@ -219,27 +219,27 @@
     "rows": [
       {
         "title": "ESP des dinosaures",
-        "desc": "Repérez les dinosaures à travers terrain et végétation avec espèce, santé, distance, poids, croissance et squelettes."
+        "desc": "Évaluez l'espèce et la croissance d'un dinosaure proche avant de décider de vous approcher."
       },
       {
         "title": "Radar 2D",
-        "desc": "Regroupez dinosaures proches, nids et carcasses dans une vue superposée 2D."
+        "desc": "Consultez l'activité proche dans une seule vue lorsque les étiquettes de la scène sont plus difficiles à suivre."
       },
       {
         "title": "Bite Assist",
-        "desc": "Personnalisez lissage, portée, priorité des os et prédiction avec des profils par espèce."
+        "desc": "Adaptez le ciblage avec les profils par espèce, puis choisissez la portée et le lissage qui conviennent à votre configuration."
       },
       {
         "title": "Appearance Changer",
-        "desc": "Prévisualisez peaux et motifs de dinosaures, enregistrez des favoris et exportez vos ensembles."
+        "desc": "Essayez les combinaisons de peaux et de motifs dans la vue locale, puis conservez vos styles favoris pour plus tard."
       },
       {
         "title": "ESP des ressources",
-        "desc": "Affichez nourriture, eau, herbes, fruits et nids avec des distances."
+        "desc": "Préparez votre prochain arrêt pour manger ou boire grâce aux emplacements des ressources et aux marqueurs de distance."
       },
       {
         "title": "Configurations cloud",
-        "desc": "Enregistrez réglages et presets dans le cloud pour retrouver votre configuration."
+        "desc": "Gardez une base réutilisable pour vos réglages et retrouvez les configurations cloud enregistrées lorsque vous modifiez votre installation."
       }
     ],
     "metrics": [
@@ -256,7 +256,7 @@
       {
         "value": "4",
         "title": "Choisissez le bon outil",
-        "desc": "Comparez notre toolkit EVRIMA à trois utilitaires sous licences séparées. Vérifiez périmètre et exigences avant le paiement."
+        "desc": "Chaque licence correspond à un produit. Choisissez le toolkit ou l'outil prévu pour votre usage et vérifiez ses propres prérequis."
       }
     ]
   },

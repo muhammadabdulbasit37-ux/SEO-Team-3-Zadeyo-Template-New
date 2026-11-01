@@ -219,27 +219,27 @@
     "rows": [
       {
         "title": "ESP de dinosaurios",
-        "desc": "Localiza dinosaurios a través del terreno y la vegetación con especie, salud, distancia, peso, crecimiento y esqueletos."
+        "desc": "Valora la especie y el crecimiento de un dinosaurio cercano antes de decidir si te acercas."
       },
       {
         "title": "Radar 2D",
-        "desc": "Consulta dinosaurios cercanos, nidos y cadáveres en una vista superpuesta 2D."
+        "desc": "Consulta la actividad cercana en una sola vista cuando las etiquetas de la escena resultan difíciles de seguir."
       },
       {
         "title": "Bite Assist",
-        "desc": "Personaliza suavizado, alcance, prioridad de huesos y predicción de movimiento con perfiles por especie."
+        "desc": "Adapta la asistencia a tu dinosaurio con perfiles por especie y ajustes de alcance y suavizado."
       },
       {
         "title": "Appearance Changer",
-        "desc": "Previsualiza pieles y patrones de dinosaurios, guarda favoritos y exporta conjuntos."
+        "desc": "Prueba combinaciones de pieles y patrones en la vista local y guarda los estilos que quieras volver a usar."
       },
       {
         "title": "ESP de recursos",
-        "desc": "Resalta comida, agua, hierbas, frutas y nidos con marcadores de distancia."
+        "desc": "Planifica tu siguiente parada para comer o beber con la ubicación y distancia de los recursos."
       },
       {
         "title": "Configuraciones en la nube",
-        "desc": "Guarda ajustes y presets en la nube para volver a tu configuración."
+        "desc": "Conserva un punto de partida para tus ajustes y recupera presets guardados cuando quieras retomar una configuración."
       }
     ],
     "metrics": [
@@ -256,7 +256,7 @@
       {
         "value": "4",
         "title": "Elige la herramienta adecuada",
-        "desc": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago."
+        "desc": "Las licencias corresponden a cada producto. Elige el toolkit o la utilidad que vas a usar y comprueba sus requisitos de preparación."
       }
     ]
   },

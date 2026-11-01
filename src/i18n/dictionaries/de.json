@@ -219,27 +219,27 @@
     "rows": [
       {
         "title": "Dinosaurier-ESP",
-        "desc": "Erfasse Dinosaurier durch Gelände und Vegetation mit Art, Gesundheit, Entfernung, Gewicht, Wachstum und Skeletten."
+        "desc": "Schätze Art und Wachstum eines nahen Dinosauriers ein, bevor du entscheidest, ob du dich näherst."
       },
       {
         "title": "2D-Radar",
-        "desc": "Sieh nahe Dinosaurier, Nester und Kadaver in einer 2D-Ansicht."
+        "desc": "Prüfe die Aktivität in deiner Nähe in einer Ansicht, wenn Beschriftungen in der Spielszene schwerer zu verfolgen sind."
       },
       {
         "title": "Bite Assist",
-        "desc": "Passe Glättung, Reichweite, Knochenpriorität und Bewegungsvorhersage mit artspezifischen Profilen an."
+        "desc": "Passe das Zielverhalten mit Artprofilen an und wähle Reichweite und Glättung für deine bevorzugte Konfiguration."
       },
       {
         "title": "Appearance Changer",
-        "desc": "Erkunde Dinosaurier-Skins und Muster lokal, speichere Favoriten und exportiere Loadouts."
+        "desc": "Probiere Skins und Muster in der lokalen Vorschau aus und bewahre bevorzugte Looks für später auf."
       },
       {
         "title": "Ressourcen-ESP",
-        "desc": "Markiere Nahrung, Wasser, Kräuter, Früchte und Nester mit Entfernungsangaben."
+        "desc": "Plane den nächsten Stopp für Nahrung oder Wasser anhand der Ressourcenorte und Entfernungsmarkierungen."
       },
       {
         "title": "Cloud-Konfigurationen",
-        "desc": "Speichere Einstellungen und Presets in der Cloud für deine nächste Konfiguration."
+        "desc": "Behalte einen wiederverwendbaren Ausgangspunkt für deine Einstellungen und greife bei Änderungen auf gespeicherte Cloud-Konfigurationen zurück."
       }
     ],
     "metrics": [
@@ -256,7 +256,7 @@
       {
         "value": "4",
         "title": "Das passende Werkzeug auswählen",
-        "desc": "Vergleiche unser EVRIMA-Toolkit mit drei separat lizenzierten Werkzeugen. Stimme Umfang und Anforderungen vor dem Kauf auf dein Ziel ab."
+        "desc": "Lizenzen gelten jeweils für ein Produkt. Wähle das benötigte Toolkit oder Hilfsprodukt und prüfe dessen eigene Voraussetzungen."
       }
     ]
   },

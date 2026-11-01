@@ -221,27 +221,27 @@ export const en: Translations = {
     "rows": [
       {
         "title": "Dinosaur ESP",
-        "desc": "Locate dinosaurs through terrain and foliage with species, health, distance, weight, growth and skeleton information."
+        "desc": "Judge a nearby dinosaur by its species and growth before deciding whether to approach."
       },
       {
         "title": "2D radar",
-        "desc": "Keep nearby dinosaurs, nests and carcasses together on a 2D overlay."
+        "desc": "Use the radar to check nearby activity in one view when labels in the game scene are harder to follow."
       },
       {
         "title": "Bite Assist",
-        "desc": "Customize smoothness, targeting range, bone priority and movement prediction with species-specific profiles."
+        "desc": "Use species profiles to shape targeting behavior, then adjust range and smoothness for your preferred setup."
       },
       {
         "title": "Appearance Changer",
-        "desc": "Preview dinosaur skins and patterns locally, save favorites and export loadouts."
+        "desc": "Explore skin and pattern combinations in your local preview, then keep favorite looks for later."
       },
       {
         "title": "Resource ESP",
-        "desc": "Highlight food, water, herbs, fruits and nests with distance markers."
+        "desc": "Plan your next food or water stop using resource locations and distance markers."
       },
       {
         "title": "Cloud configurations",
-        "desc": "Save settings and presets in cloud storage for a configuration you can return to."
+        "desc": "Keep a reusable starting point for your settings and revisit saved cloud configurations when you change your setup."
       }
     ],
     "metrics": [
@@ -258,7 +258,7 @@ export const en: Translations = {
       {
         "value": "4",
         "title": "Choose the right tool",
-        "desc": "Compare our EVRIMA toolkit with three separately licensed utilities. Match the feature scope and requirements to your goal before checkout."
+        "desc": "Licenses are product-specific. Match your purchase to the toolkit or utility you intend to use, and check its own setup requirements."
       }
     ]
   },

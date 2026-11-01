@@ -113,7 +113,7 @@ const productBase = PRODUCT_BASE;
 const hwidAcquisitionSteps: AcquisitionStep[] = [
   {
     "num": "01",
-    "title": "A focused hardware workflow",
+    "title": "Review the hardware tools",
     "desc": "Work with disk, network and GPU identifiers from one hardware utility, then run the included trace cleaner in the order given by the setup guide."
   },
   {
@@ -123,12 +123,12 @@ const hwidAcquisitionSteps: AcquisitionStep[] = [
   },
   {
     "num": "03",
-    "title": "Prepare the machine",
+    "title": "Confirm Windows prerequisites",
     "desc": "Use 64-bit Windows 10/11 with administrator rights, internet, HVCI and Core Isolation on, plus TPM and Secure Boot on."
   },
   {
     "num": "04",
-    "title": "Know the boundary",
+    "title": "Check coverage and limitations",
     "desc": "Hardware changes do not remove account sanctions. Listed coverage includes Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE and Javelin; compatibility may change. Spoofing can conflict with publisher terms and lead to penalties."
   }
 ];
@@ -136,7 +136,7 @@ const hwidAcquisitionSteps: AcquisitionStep[] = [
 const ugcAcquisitionSteps: AcquisitionStep[] = [
   {
     "num": "01",
-    "title": "Build the case with UGC",
+    "title": "Review the appeal workflow",
     "desc": "Turn account evidence and a clear timeline into an appeal workflow. Repeatable dispute steps help you organize the process across supported platforms."
   },
   {
@@ -146,12 +146,12 @@ const ugcAcquisitionSteps: AcquisitionStep[] = [
   },
   {
     "num": "03",
-    "title": "Prepare your evidence",
+    "title": "Gather account and system details",
     "desc": "Collect ownership evidence and the restriction notice. The client requires 64-bit Windows 10/11, internet, HVCI and Core Isolation on, plus TPM and Secure Boot on."
   },
   {
     "num": "04",
-    "title": "Understand the outcome",
+    "title": "Check appeal limitations",
     "desc": "Recovery is not guaranteed. Permanent suspensions remain in place. Platform reviewers decide each case, and weak evidence limits an appeal."
   }
 ];
@@ -159,7 +159,7 @@ const ugcAcquisitionSteps: AcquisitionStep[] = [
 const skinChangerAcquisitionSteps: AcquisitionStep[] = [
   {
     "num": "01",
-    "title": "A cosmetic library on your screen",
+    "title": "Review the available previews",
     "desc": "Choose supported weapon finishes, outfits and knife looks through one client. The preview stays on your screen and is not added to your account inventory."
   },
   {
@@ -169,12 +169,12 @@ const skinChangerAcquisitionSteps: AcquisitionStep[] = [
   },
   {
     "num": "03",
-    "title": "Prepare the cosmetic client",
+    "title": "Confirm client requirements",
     "desc": "Use 64-bit Windows 10/11, internet and loader access with HVCI and Core Isolation on, plus TPM and Secure Boot on."
   },
   {
     "num": "04",
-    "title": "Keep local previews in perspective",
+    "title": "Check cosmetic ownership limits",
     "desc": "Cosmetics are not owned inventory and cannot be traded. They disappear when the client exits. Game or Windows updates can affect coverage; using a cosmetic client can conflict with game terms and lead to penalties."
   }
 ];

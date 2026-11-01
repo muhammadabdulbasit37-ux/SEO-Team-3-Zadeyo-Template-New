@@ -83,7 +83,7 @@
   },
   "features": {
     "eyebrow": "Fonctionnalités",
-    "title": "Plus de détails. Vos réglages.",
+    "title": "Explorez ESP dinosaures, radar et Bite Assist",
     "subtitle": "Notre toolkit réunit données des dinosaures, marqueurs de ressources et assistance configurable pour The Isle sur Steam.",
     "items": [
       {
@@ -212,7 +212,7 @@
   },
   "whyUs": {
     "eyebrow": "Pourquoi nous",
-    "title": "Des outils centrés sur les dinosaures",
+    "title": "Un toolkit conçu pour The Isle",
     "subtitle": "Comparez nos affichages et réglages à une session sans ces outils. Leur fonctionnement et leur détection n’ont pas été vérifiés indépendamment.",
     "usLabel": "Notre toolkit",
     "otherLabel": "Sans ces outils",
@@ -348,17 +348,17 @@
       "overviewSubtitle": "Notre HWID Spoofer réécrit numéros de disque, adresses MAC, identifiants GPU et autres empreintes avec nettoyage inclus. Les sanctions de compte restent distinctes.",
       "highlights": {
         "eyebrow": "En bref",
-        "title": "Un travail ciblé sur le matériel",
+        "title": "Les identifiants matériels en bref",
         "desc": "Gérez identifiants de disque, réseau et GPU dans un outil, puis exécutez le nettoyage inclus selon l’ordre du guide actuel."
       },
       "featuresSection": {
         "eyebrow": "Lignes listées",
-        "title": "HWID Spoofer",
+        "title": "Fonctions de HWID Spoofer",
         "desc": "Les modifications matérielles ne retirent pas les sanctions de compte. Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE et Javelin sont cités ; la compatibilité évolue. Le spoofing peut enfreindre les conditions et entraîner des sanctions."
       },
       "experience": {
         "eyebrow": "Après le paiement",
-        "title": "Un travail ciblé sur le matériel",
+        "title": "Aperçu de l'interface HWID Spoofer",
         "subtitle": "Notre HWID Spoofer réécrit numéros de disque, adresses MAC, identifiants GPU et autres empreintes avec nettoyage inclus. Les sanctions de compte restent distinctes.",
         "previewLabel": "Captures panneau",
         "accessDividerTop": "Panneau",
@@ -372,17 +372,17 @@
         "overviewSubtitle": "Notre service UGC associe modèles et étapes de contestation automatisées pour profils restreints sur jeux, réseaux et places de marché. Vous préparez le dossier ; la plateforme décide.",
         "highlights": {
           "eyebrow": "En bref",
-          "title": "Construire le dossier avec UGC",
+          "title": "Les outils de recours en bref",
           "desc": "Transformez preuves de propriété et chronologie claire en procédure de recours. Des étapes répétables aident à organiser le processus sur les plateformes compatibles."
         },
         "featuresSection": {
           "eyebrow": "Inclus",
-          "title": "UGC",
+          "title": "Fonctions de recours UGC",
           "desc": "Le rétablissement n’est pas garanti. Les suspensions permanentes restent en place. Les examinateurs décident chaque cas et des preuves faibles limitent le recours."
         },
         "experience": {
           "eyebrow": "Licence active",
-          "title": "Construire le dossier avec UGC",
+          "title": "Aperçu du processus UGC",
           "subtitle": "Notre service UGC associe modèles et étapes de contestation automatisées pour profils restreints sur jeux, réseaux et places de marché. Vous préparez le dossier ; la plateforme décide.",
           "previewLabel": "Images",
           "accessDividerTop": "Images",
@@ -395,17 +395,17 @@
         "overviewSubtitle": "Explorez finitions d’armes, tenues et variantes de couteaux dans les titres compatibles. Le client léger affiche des cosmétiques locaux sans acheter chaque objet.",
         "highlights": {
           "eyebrow": "Bibliothèque",
-          "title": "Une bibliothèque sur votre écran",
+          "title": "Options cosmétiques locales",
           "desc": "Choisissez finitions, tenues et couteaux compatibles dans un client. L’aperçu reste sur votre écran et ne rejoint pas l’inventaire du compte."
         },
         "featuresSection": {
           "eyebrow": "Groupes",
-          "title": "Skin Changer",
+          "title": "Fonctions cosmétiques de Skin Changer",
           "desc": "Les cosmétiques ne sont pas des objets possédés ou échangeables. Ils disparaissent à la fermeture du client. Les mises à jour changent la couverture et l’utilisation peut enfreindre les règles et entraîner des sanctions."
         },
         "experience": {
           "eyebrow": "À l'arrivée de l'accès",
-          "title": "Une bibliothèque sur votre écran",
+          "title": "Aperçu de l'interface Skin Changer",
           "subtitle": "Explorez finitions d’armes, tenues et variantes de couteaux dans les titres compatibles. Le client léger affiche des cosmétiques locaux sans acheter chaque objet.",
           "previewLabel": "Captures",
           "accessDividerTop": "Images",
@@ -482,9 +482,9 @@
   "blog": {
     "eyebrow": "Blog",
     "title": "Guides produits The Isle",
-    "subtitle": "Consultez fonctions, compatibilité EVRIMA, exigences et comparaisons de licences.",
+    "subtitle": "Explorez nos guides The Isle sur l'ESP dinosaures, la compatibilité EVRIMA, les prérequis Cloud DMA et les formules avant de préparer votre configuration.",
     "latestTitle": "Guides produits The Isle",
-    "latestSubtitle": "Consultez fonctions, compatibilité EVRIMA, exigences et comparaisons de licences.",
+    "latestSubtitle": "Explorez nos guides The Isle sur l'ESP dinosaures, la compatibilité EVRIMA, les prérequis Cloud DMA et les formules avant de préparer votre configuration.",
     "filterAll": "Tous les articles",
     "emptyFilter": "Aucun article ne correspond à ce filtre.",
     "emptyArchive": "Aucun article pour l'instant. De nouveaux guides apparaîtront ici.",
@@ -503,8 +503,8 @@
   "workflow": {
     "eyebrow": "Comment ça marche",
     "badge": "4 étapes faciles",
-    "titleBefore": "Préparez",
-    "titleHighlight": "votre équipement",
+    "titleBefore": "Choisissez votre",
+    "titleHighlight": "formule",
     "subtitle": "Vérifiez EVRIMA et tout l’équipement avant de payer. Auto Finish, Auto Stamina et l’assistance aux carcasses dépendent de l’édition ; confirmez le contenu.",
     "ctaLabel": "Explorer le toolkit",
     "ctaHref": "/cheats/",
@@ -540,8 +540,8 @@
   },
   "support": {
     "eyebrow": "Support",
-    "title": "Assistance produits The Isle",
-    "subtitle": "Clarifiez une exigence avant de payer ou préparez une question précise sur une commande ou le loader.",
+    "title": "Assistance The Isle Cheats",
+    "subtitle": "Vérifiez les prérequis de votre configuration ou préparez une question de commande pour l'équipe d'assistance du prestataire de paiement.",
     "channels": [
       {
         "icon": "users",
@@ -553,7 +553,7 @@
       {
         "icon": "headphones",
         "title": "Contacter l’assistance",
-        "desc": "Précisez produit, e-mail de commande, version du jeu et erreur exacte. Retirez identifiants et données bancaires des captures.",
+        "desc": "Pour le paiement, la livraison, l'activation ou les licences, contactez l'assistance d'achat. Préparez la référence de commande et le produit.",
         "linkLabel": "Ouvrir l’assistance d’achat",
         "href": "https://zadeyo.com/support"
       },
@@ -582,15 +582,21 @@
     ],
     "pageSections": [
       {
-        "heading": "Avant de choisir une formule",
+        "heading": "Clarifier les prérequis avant l'achat",
         "paragraphs": [
-          "Indiquez branche, version de Windows et fonction souhaitée. Confirmez Cloud DMA et l’édition avant l’achat du toolkit."
+          "Confirmez la branche du jeu et la version de Windows. Le [guide de compatibilité EVRIMA](/blog/evrima-compatibility/) explique les branches ; le [guide Windows et Cloud DMA](/blog/windows-and-cloud-dma/) décrit la préparation requise. Vérifiez l'édition exacte avant de choisir une formule."
         ]
       },
       {
-        "heading": "Signaler un problème",
+        "heading": "Obtenir de l'aide pour une commande ou un produit",
         "paragraphs": [
-          "Précisez produit, e-mail de commande, version du jeu et erreur exacte. Retirez identifiants et données bancaires des captures."
+          "Les achats sont finalisés sur le site du partenaire de paiement via nos liens de parrainage. Utilisez le canal ci-dessus pour les questions de paiement, livraison, activation ou licence. Gardez la confirmation de commande et décrivez le problème avec le nom du produit et la référence de commande."
+        ]
+      },
+      {
+        "heading": "Fournir les détails utiles à un signalement",
+        "paragraphs": [
+          "Indiquez la version de Windows, la branche et le build du jeu, le produit choisi et le message d'erreur exact. Expliquez le résultat attendu et ce qui s'est passé. Retirez mots de passe, clés de licence et données bancaires des captures avant de les partager."
         ]
       }
     ]
@@ -715,25 +721,32 @@
   "legalPages": {
     "about": {
       "title": "À propos de CHEATS FOR THE ISLE",
-      "description": "Nous réunissons produits The Isle, utilitaires et guides d’achat dans un catalogue commercial.",
+      "description": "CHEATS FOR THE ISLE réunit informations produit, comparaisons et guides d'achat pratiques pour les joueurs de The Isle.",
       "sections": [
         {
-          "heading": "Nos produits",
+          "heading": "Notre sélection The Isle et outils complémentaires",
           "paragraphs": [
-            "Découvrez ESP des dinosaures, ressources, radar et Bite Assist pour EVRIMA. HWID Spoofer, UGC et Skin Changer ont chacun leur rôle et leur licence."
+            "Explorez notre [toolkit The Isle Cheats](/cheats/) pour EVRIMA avec ESP dinosaures, radar, marqueurs de ressources et Bite Assist. HWID Spoofer, UGC et Skin Changer ont des rôles distincts et des licences séparées. Consultez la [comparaison des produits](/products/) pour choisir les fonctions adaptées."
           ]
         },
         {
-          "heading": "Choisir clairement avant de payer",
+          "heading": "Le fonctionnement des achats par parrainage",
           "paragraphs": [
-            "Nous distinguons aperçu local et propriété, recours et modifications matérielles. Nos guides expliquent périmètre et exigences pour comparer les fonctions avant de choisir une licence."
+            "Consultez les fonctions et comparez les formules ici, puis achetez sur le site du partenaire de paiement via nos liens de parrainage. Nous pouvons percevoir une commission sur les achats réalisés via ces liens. Conservez votre confirmation de commande et suivez les instructions de livraison ou d'activation fournies avec l'achat."
+          ]
+        },
+        {
+          "heading": "Choisir en connaissance de cause avant de payer",
+          "paragraphs": [
+            "Nos [guides de fonctions et de préparation](/blog/) expliquent EVRIMA, Windows, Cloud DMA et les conditions d'accès. Aperçus cosmétiques locaux, identifiants matériels et recours de compte sont des fonctions distinctes. Consultez la [FAQ d'achat](/faq/) et clarifiez édition et compatibilité avant le paiement.",
+            "Pour la facturation, la livraison ou les licences, utilisez le canal d'achat sur notre [page d'assistance](/support/). Nous ne garantissons aucun statut de détection, disponibilité continue ou sécurité du compte. Les prérequis et la compatibilité peuvent changer après une mise à jour du jeu."
           ]
         }
       ]
     },
     "privacy": {
       "title": "Politique de confidentialité",
-      "description": "Analyses, cookies et e-mail envoyé avec un ticket support sur {siteDomain}.",
+      "description": "Préférences du navigateur, analyse facultative et données envoyées aux pages externes d'achat ou d'assistance.",
       "sections": [
         {
           "heading": "Informations collectées",
@@ -744,59 +757,56 @@
         {
           "heading": "Usage des données",
           "paragraphs": [
-            "Ces analyses montrent quels guides et pages produits sont utilisés, pour corriger liens cassés et pages faibles. Un ticket peut garder e-mail et message jusqu'à clôture du dossier."
+            "L'analyse facultative aide à comprendre quelles pages sont utilisées. Les données de commande et d'assistance envoyées sur des pages externes sont traitées par ces services."
           ]
         },
         {
           "heading": "Cookies",
           "paragraphs": [
-            "Les cookies ici se limitent aux analyses. Bloquez-les dans le navigateur et les pages se chargent quand même."
+            "Ce site conserve des préférences d'affichage, comme le thème choisi, dans votre navigateur. Si l'analyse est activée, son prestataire peut utiliser des cookies. Les services externes d'achat et d'assistance ont leurs propres pratiques."
           ]
         },
         {
           "heading": "Support",
           "paragraphs": [
-            "Questions confidentialité via la page Support. Achats et remboursements sont dans les Conditions générales."
+            "La page d'assistance fournit le contact d'achat pour la facturation, la livraison et les licences. Les services externes expliquent leurs pratiques de données dans leurs propres politiques."
           ]
         }
       ]
     },
     "terms": {
       "title": "Conditions générales",
-      "description": "Ce que vous achetez, fonctionnement des licences, remboursements possibles et sanction de compte acceptée sur {siteDomain}.",
+      "description": "Comment ce site présente les produits, dirige les achats vers un service externe et oriente les questions de commande.",
       "sections": [
         {
           "heading": "Accord",
           "paragraphs": [
-            "Dernière mise à jour : septembre 2026. Utiliser {siteDomain}, ou finir le paiement d'un produit listé ici, signifie accepter ces Conditions générales et la Politique de confidentialité."
+            "Mise à jour : 1er novembre 2026. Ces pages expliquent le site et les achats par parrainage. Les achats suivent les conditions affichées par le prestataire de paiement."
           ]
         },
         {
           "heading": "Ce que vous achetez",
           "paragraphs": [
-            "Les produits sont {cheatProduct} et les utilitaires de la page produits. Livraison via portail opérateur et chargeur Windows.",
-            "Chaque page produit indique ce que l'achat inclut au moment du paiement. Une mise à jour The Isle ou anti-triche peut changer les modules."
+            "Le catalogue comprend The Isle Cheats et des outils sous licences distinctes. Vérifiez l'édition, les fonctions, les prérequis et la durée avant de finaliser un achat."
           ]
         },
         {
           "heading": "Paiement et livraison",
           "paragraphs": [
-            "Paiement et licence sont gérés sur des pages externes. {siteDomain} ne traite ni ne stocke les numéros de carte.",
-            "Après paiement, ouvrez le portail opérateur depuis le flux commande et téléchargez chargeur et guide avant de lancer The Isle."
+            "Les achats sont finalisés sur le site du partenaire de paiement via nos liens de parrainage. Nous pouvons percevoir une commission sur ces achats. Ce site ne traite pas les numéros de cartes bancaires.",
+            "Suivez les instructions de commande pour la livraison et l'activation. Pour les questions de commande ou de licence, utilisez l'assistance d'achat."
           ]
         },
         {
           "heading": "Usage de la licence",
           "paragraphs": [
-            "Une licence est pour vous seul. Ne partagez pas fichiers chargeur, connexions portail ou clés. Limites HWID et appareils suivent le forfait et sont appliquées dans le portail."
+            "Vérifiez avant paiement les conditions de licence, dont la durée, les restrictions d'appareil et les logiciels couverts. Gardez vos mots de passe et clés privés."
           ]
         },
         {
           "heading": "Remboursements et achats",
           "paragraphs": [
-            "Vérifiez exigences et conditions avant de payer. Les outils tiers peuvent entraîner des sanctions et leur compatibilité peut changer.",
-            "Vérifiez exigences et conditions avant de payer. Les outils tiers peuvent entraîner des sanctions et leur compatibilité peut changer.",
-            "Le support peut proposer correction, accès de remplacement ou remboursement partiel ou total quand la faute est de notre côté. Le support n'a pas à approuver chaque demande."
+            "Pour les questions de remboursement ou d'annulation, contactez l'assistance d'achat avec la référence de commande. Consultez la politique avant d'acheter ; ce site ne publie aucune garantie de remboursement distincte."
           ]
         },
         {
@@ -809,13 +819,13 @@
         {
           "heading": "Modifications",
           "paragraphs": [
-            "Ces conditions peuvent être mises à jour. La date Dernière mise à jour en tête change quand cela arrive. Utiliser le site après cette date signifie accepter les conditions révisées."
+            "Les informations produit et les textes du site peuvent changer. Revérifiez prérequis et conditions avant chaque achat. La date ci-dessus indique cette mise à jour."
           ]
         },
         {
           "heading": "Support",
           "paragraphs": [
-            "Questions conditions, facturation ou chargeur via les boutons de la page Support. La Politique de confidentialité couvre les données du site."
+            "La page d'assistance fournit le contact d'achat pour la facturation, la livraison et les licences. Les services externes expliquent leurs pratiques de données dans leurs propres politiques."
           ]
         }
       ]

@@ -51,7 +51,7 @@
       ]
     }
   ],
-  "displayPolicy": "Copied original bytes; responsive variants preserve aspect ratio without cropping. Fixed display frames contain the complete screenshot.",
+  "displayPolicy": "Original bytes and responsive variant aspect ratios are preserved. At the owner's 2026-11-02 request, both menu screenshots display stretched across 16:9 frames without side gaps or cropped controls. The homepage slider now uses a 16:9 frame. Gameplay captures retain contain-fit; utility media and favicons remain unchanged.",
   "brand": {
     "assetSupplied": false,
     "action": "Keep existing violet emblem and all favicon files. Screenshots are not standalone brand artwork."

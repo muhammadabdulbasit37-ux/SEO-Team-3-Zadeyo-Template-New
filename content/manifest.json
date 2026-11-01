@@ -3,7 +3,7 @@
   "forumEnabled": true,
   "origin": "https://cheatsfortheisle.com",
   "originalOrigin": "https://mw4cheat.net",
-  "inputHash": "7cd21193b29094341fa7c05df8369aa60a53ca6af0db1e069e3170c2bab944aa",
+  "inputHash": "187230cf9269e6f7fb24562ab223505d07d3fddb310dcacab7a4290b880c54c8",
   "publicationDate": "2026-11-01",
   "sources": [
     {
@@ -47,6 +47,12 @@
       "kind": "owner",
       "reference": "Owner supplied 15 original forum discussions in Pasted text.txt and confirmed genuine discussions plus permission to republish in this task",
       "verifiedOn": "2026-11-01"
+    },
+    {
+      "id": "commerce-owner-confirmed",
+      "kind": "owner",
+      "reference": "Existing checkout-redirects.mjs and support links; owner confirms independent affiliate website with Zadeyo checkout in this conversation; SEO clarification authorized 2026-11-01",
+      "verifiedOn": "2026-11-01"
     }
   ],
   "facts": [
@@ -76,6 +82,13 @@
       "text": "15 owner-supplied historical forum discussions, with original posts, supplied replies and dates. Owner confirms genuine discussions and republication permission; user reports are not product specifications.",
       "sourceIds": [
         "owner-forum-archive"
+      ]
+    },
+    {
+      "id": "commerce.referrals",
+      "text": "CHEATS FOR THE ISLE is independently branded. Purchases use BASIT referral links to Zadeyo checkout; commissions may be earned. Order and product support use the existing Zadeyo support channel.",
+      "sourceIds": [
+        "commerce-owner-confirmed"
       ]
     },
     {
@@ -569,7 +582,7 @@
   ],
   "plan": {
     "version": 1,
-    "inputHash": "7cd21193b29094341fa7c05df8369aa60a53ca6af0db1e069e3170c2bab944aa",
+    "inputHash": "187230cf9269e6f7fb24562ab223505d07d3fddb310dcacab7a4290b880c54c8",
     "pages": [
       {
         "path": "/",
@@ -1076,10 +1089,13 @@
           "skin-changer.requirements.3",
           "skin-changer.limitations.0",
           "skin-changer.plan.monthly",
-          "skin-changer.plan.lifetime"
+          "skin-changer.plan.lifetime",
+          "commerce.referrals"
         ],
         "links": [
-          "/products/"
+          "/products/",
+          "/blog/evrima-compatibility/",
+          "/blog/windows-and-cloud-dma/"
         ]
       },
       {
@@ -1159,11 +1175,15 @@
           "skin-changer.requirements.3",
           "skin-changer.limitations.0",
           "skin-changer.plan.monthly",
-          "skin-changer.plan.lifetime"
+          "skin-changer.plan.lifetime",
+          "commerce.referrals"
         ],
         "links": [
           "/products/",
-          "/support/"
+          "/support/",
+          "/cheats/",
+          "/blog/",
+          "/faq/"
         ]
       },
       {
@@ -1281,7 +1301,8 @@
         ],
         "links": [
           "/cheats/",
-          "/blog/evrima-compatibility/"
+          "/blog/evrima-compatibility/",
+          "/blog/resource-esp-markers/"
         ]
       },
       {
@@ -1349,7 +1370,8 @@
         ],
         "links": [
           "/cheats/",
-          "/blog/bite-assist-controls/"
+          "/blog/bite-assist-controls/",
+          "/faq/"
         ]
       },
       {
@@ -1383,7 +1405,8 @@
         ],
         "links": [
           "/cheats/",
-          "/blog/resource-esp-markers/"
+          "/blog/resource-esp-markers/",
+          "/blog/esp-and-radar/"
         ]
       },
       {
@@ -1548,7 +1571,8 @@
         ],
         "links": [
           "/cheats/",
-          "/blog/esp-and-radar/"
+          "/blog/esp-and-radar/",
+          "/blog/windows-and-cloud-dma/"
         ]
       },
       {
@@ -1827,11 +1851,11 @@
       "kind": "commercial",
       "h1": "The Isle Cheats",
       "title": "The Isle Cheats | ESP, Radar and Bite Assist",
-      "description": "The Isle Cheats for EVRIMA: explore dinosaur ESP, radar, resources and Bite Assist. Compare plans and requirements",
+      "description": "Explore The Isle Cheats for EVRIMA with dinosaur ESP, radar and Bite Assist. Compare access plans and check Windows and Cloud DMA requirements",
       "textHashes": [
-        "6a96e26928f477dac127265515961fc7723136ccf4ecc3cf1260d1a5300a12b0",
+        "76e7d1303b34955fe73857ed8192b7185eb3ab738417531671084c0b02d6ade2",
         "c30b618080df97c1ba0a8c0541cd17f16f3fd42f72fff5bc69cb2f29ad201f55",
-        "9261b4c382e66c253fcf15c8deb2cbbf7c5693466e04c79bccee51e9356ba261",
+        "1eb4d6b506e5a3d08d181f45fd4e7c1b2d5c2476a2b72ff752b6d29a8deff43a",
         "1cf1582456a426e6c44eab3b68d8654058da02e7254ffd6237db268ac2c5b826"
       ],
       "links": [
@@ -1916,11 +1940,11 @@
     },
     "/products/": {
       "kind": "commercial",
-      "h1": "Choose the right tool",
-      "title": "Compare Cheats and Utilities | The Isle",
-      "description": "Compare our EVRIMA toolkit with three separately licensed utilities. Match the feature scope and requirements to your goal before checkout",
+      "h1": "Compare The Isle cheats and utilities",
+      "title": "Compare The Isle Cheats and Utility Products",
+      "description": "Compare The Isle Cheats, HWID Spoofer, UGC and Skin Changer. Review each product's purpose, requirements and separate license before checkout",
       "textHashes": [
-        "78e264dde2e05abb14aa482bede1dac40fe8a889a886b1fb0da5453fd14f22fe",
+        "9b0c22f37b864f829250e66194030cf978cc1198ea7b675c946188ee577e3d9f",
         "fe5ac1ed0c2062b50d8e85493b2dfb9c5c5d3868229e721be1aa9e21d9c27236",
         "4977eece6f92bf510dd3167159cc304599869431f75a60508da09ac4d10c4c43",
         "6dd54e7da10eb13463b21a1bdc8f6f3461804427d562f05ae70bfbf768cbdaae"
@@ -2007,8 +2031,8 @@
     "/cheats/": {
       "kind": "commercial",
       "h1": "The Isle Cheats for EVRIMA",
-      "title": "The Isle Cheats | Features, Requirements and Plans",
-      "description": "Review our EVRIMA toolkit, Windows and Cloud DMA requirements. Choose $35 for 31 days or $150 lifetime",
+      "title": "Buy The Isle Cheats for EVRIMA | Plans & Requirements",
+      "description": "Choose The Isle Cheats for EVRIMA: $35 for 31 days or $150 lifetime. Explore ESP and Bite Assist, then check Windows and Cloud DMA requirements",
       "textHashes": [
         "da53f35b673836fdb48e1f1b7c780942ffa5c1dcd2c5e0550c9168543879af02",
         "a532107a0bdf24c265a05aafd67995dadb6e27d08c9f74bc23abfb1a8c8818ce",
@@ -2100,7 +2124,7 @@
       "kind": "commercial",
       "h1": "HWID Spoofer",
       "title": "HWID Spoofer | Hardware IDs and Trace Cleanup",
-      "description": "Rewrite disk, MAC and GPU identifiers with our HWID Spoofer and included trace cleaner. Review requirements and plans",
+      "description": "Explore HWID Spoofer for disk, MAC and GPU identifiers with trace cleanup. Compare licenses and confirm current game coverage",
       "textHashes": [
         "a77a8e7bca9d8dfcd60f84dcffc709146734eadfb620ccd4706685549b55d513",
         "376791e5a9c762fcbb717c74eb33bfe741f684c647d78aab2526e85a84022170",
@@ -2140,8 +2164,8 @@
     "/ugc/": {
       "kind": "commercial",
       "h1": "UGC",
-      "title": "UGC | Account Appeal Workflows",
-      "description": "Organize account evidence with our UGC appeal templates and automated dispute workflows. Platform reviewers decide outcomes",
+      "title": "UGC Account Appeals | Templates and Workflows",
+      "description": "Organize account evidence with UGC appeal templates and dispute workflows. Check supported platforms; platforms decide outcomes",
       "textHashes": [
         "1bdbe07ce25d05c7108f6e3bec74e9bd598e40b20da752b3ad578d95968ac5f0",
         "1de6109cecc88be9225431d8b55057dd6060a209356021b3ad0c93fb81254a9f",
@@ -2178,8 +2202,8 @@
     "/skin-changer/": {
       "kind": "commercial",
       "h1": "Skin Changer",
-      "title": "Skin Changer | Local Cosmetic Previews",
-      "description": "Explore local weapon finishes, outfits and knife previews in supported titles. Confirm the game before choosing a license",
+      "title": "Skin Changer | Local Cosmetic Previews and Plans",
+      "description": "Explore Skin Changer for local weapon finishes, outfits and knife previews. Check supported titles and compare license terms before purchasing",
       "textHashes": [
         "48b7315ac9e04eb162596b4ae06802caba7fe2e2d4f86fea0f8c2d385a92f321",
         "7319b244411eaa2be88b5d4a6c60f39c0c14e12641cce03f684e7b52ab169ff5",
@@ -2216,8 +2240,8 @@
     "/faq/": {
       "kind": "commercial",
       "h1": "The Isle purchase FAQ",
-      "title": "The Isle FAQ | Plans and Requirements",
-      "description": "Check the branch, hardware requirements, license terms and product scope before choosing your plan",
+      "title": "The Isle Cheats FAQ | Compatibility, Plans & Setup",
+      "description": "Find answers about The Isle Cheats, EVRIMA support, Cloud DMA and access plans. Check product scope and requirements before completing checkout",
       "textHashes": [
         "40d88a3653f1ba045e75d4bbdf7dca5ee9041f316af25cae888019f145019185",
         "6b832fe1aed3222ccc33e057d38d3ec69fa9938b78ed8f2292bb84927d989a9f",
@@ -2306,17 +2330,21 @@
     },
     "/support/": {
       "kind": "commercial",
-      "h1": "The Isle product support",
-      "title": "The Isle Support | Setup and Order Questions",
-      "description": "Resolve a setup dependency before you pay, or prepare a precise order or loader question",
+      "h1": "The Isle Cheats support",
+      "title": "The Isle Cheats Support | Setup and Order Help",
+      "description": "Get help with The Isle product requirements and order questions. Check EVRIMA and Cloud DMA, then prepare the details checkout support needs",
       "textHashes": [
-        "463192d9ed467449360adcc9c6cb72118e1464ecaef4c89055da30c544b31d89",
-        "cbb8a204f21a332eaaed9abcf0e46163dbe8c18530fbbbb8337bff733da6b050",
-        "c73fb5306489cdcf34c1a6e74d945e9710848469cc0132d79f6bd297e799286b",
-        "f29520f39b17ff192f81d07753e6b7df488d35a52284f3fdfc12bfc3abdfc52d"
+        "8bc9ea15513d4ff94547b042f64bc7b93350981e23ba711b53f27c238e6edee3",
+        "0cb6413db1da8d743444c3e670075bb1761a6d011351e9f54517c63c319c7338",
+        "f4d106c8cc43fb7cdc240355508b5347afbc3cc354c3a0ff89fb4bac275623a6",
+        "65910671b19917b307190963c234b0a33b8ce9ca0e55555402afc069311dfc7a",
+        "242840b0bb33b8e0ecd84b1f290f2e25a638ad480b3ff1a6ca8d423f76aa407a",
+        "7b84c44a084705e4bfdf7573408d6a39204e0e93707019dd7e0f134bc4f3b1d3"
       ],
       "links": [
-        "/products/"
+        "/products/",
+        "/blog/evrima-compatibility/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "game.identity",
@@ -2387,7 +2415,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Products",
@@ -2397,17 +2426,23 @@
     "/about/": {
       "kind": "commercial",
       "h1": "About CHEATS FOR THE ISLE",
-      "title": "About CHEATS FOR THE ISLE",
-      "description": "We bring The Isle product details, utility choices and practical buying guides into one commercial catalog",
+      "title": "About CHEATS FOR THE ISLE | Products and Checkout",
+      "description": "Meet CHEATS FOR THE ISLE: explore our product focus, buying guides and referral checkout process. Learn where to get help with product orders",
       "textHashes": [
-        "f47c3dcd593d91a0c8c7386dcaead0f321c85adf8269536c3ef08ab78565ca03",
-        "bce4badf533daced98c8fc3cb2e646eb58ab10e916d90845f87195fbfff46c63",
-        "da7525b373ce532c39b01c99d8132b3c60fbf003a4d470a5d7228b13a125365e",
-        "a6cc0986f9f31f5377cc2e3270a56d47d642291b6b362b1416c6e010644455e2"
+        "c33c16e6ba02677e556986a81926500a72e5f7de997447019143d63e3624d726",
+        "c180ccacc2902f86699519e4ac533540b2264a70cc686df9a132aca956c53f7d",
+        "6212f673f1b479753ea3ed98026c92a50c5c5ec3084510015bdc2724d1e5dd8b",
+        "882b2f4b87baca67b98326ae3c5ef2662b7cb461192747ae9195595a06fa7e56",
+        "4f8144e37bcd61412cfd269efd48a73d0cf601a1a3da6e6be10c4487dbfa78fc",
+        "8b50d56d64e494437023c4044b3095c1c91617ff1919223850a04c3c005c6dc8",
+        "ab1c14407327261b3a168b9ebb99406663c39c08495cff931529a196137fb19f"
       ],
       "links": [
         "/products/",
-        "/support/"
+        "/support/",
+        "/cheats/",
+        "/blog/",
+        "/faq/"
       ],
       "factIds": [
         "game.identity",
@@ -2478,7 +2513,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Contact support",
@@ -2488,11 +2524,11 @@
     "/blog/": {
       "kind": "commercial",
       "h1": "The Isle product guides",
-      "title": "The Isle Guides | Features and Buying Advice",
-      "description": "Explore feature explanations, EVRIMA compatibility, setup requirements and license comparisons",
+      "title": "The Isle Cheats Guides | Features and EVRIMA Setup",
+      "description": "Read The Isle guides on ESP, radar, Bite Assist, EVRIMA and Cloud DMA. Compare setup requirements and access plans before buying",
       "textHashes": [
         "bd0638cc663d685375e6d41f0946fb947a62933d77f7cdc33c2eb3b23b027d33",
-        "19f2b501514c16353bee4852b80165b613d02713a5253ae5ef4db3ff6fc2d2a7"
+        "b61e4e853052aa1dda299e8cb5a0ecaee108f0a5e82af5a0d1937a7152694b7b"
       ],
       "links": [
         "/products/",
@@ -2577,8 +2613,8 @@
     "/reviews/": {
       "kind": "commercial",
       "h1": "The Isle Cheats Reviews",
-      "title": "The Isle Cheats Reviews",
-      "description": "Read community reviews of The Isle Cheats, HWID Spoofer, Skin Changer and UGC",
+      "title": "The Isle Cheats and Utility Reviews",
+      "description": "Read ten shared reviews of The Isle Cheats, HWID Spoofer, Skin Changer and UGC. Browse product feedback in a read-only collection",
       "textHashes": [
         "a6582e3df224ce5e90f524fcf7d51f6451b2b04778342ef9f08bd2f22a258a3a",
         "f46351f111c99a18d935bf93d817d1a249e9304f8075beee9395bb73b5607a42",
@@ -2600,8 +2636,8 @@
     "/forum/": {
       "kind": "commercial",
       "h1": "The Isle Forum",
-      "title": "The Isle Forum",
-      "description": "Browse discussions about The Isle Cheats, setup, plans and our utility products",
+      "title": "The Isle Cheats Forum | Setup and Product Discussions",
+      "description": "Browse archived The Isle Cheats discussions and replies about EVRIMA, setup, plans and utilities. Check current product details before purchasing",
       "textHashes": [
         "0bf506a8ef4957ee4ec6517970069a8d4bbdc50ffd920de7e6a2dc79208393c8",
         "d4b24d13092b62fef072bbb5365068432c39b0c8765ee36108ee86a36b522a4b",
@@ -2628,11 +2664,13 @@
         "a2081bc6cdf11fd285ad46f0d96b575f66d970903c3fcef9a21063e64526d487",
         "e2ce125963476f0a3767db64967b1a01d7c3fdcef9f22970fa99ac10ac888de7",
         "26bd8ee4cae2a21b650167ba6e0652db61c1807a07e2d62e0b37dd1bc00a2359",
-        "9d09d3c90d1496c448d8413e700ba083d8e8a1a71fa2aec7cbffeea7a5f4d732"
+        "9d09d3c90d1496c448d8413e700ba083d8e8a1a71fa2aec7cbffeea7a5f4d732",
+        "0df927ef9bc6c48d760fef90cef274d2cdf2a07ab63a84231ddce57e0947be10"
       ],
       "links": [
         "/cheats/",
-        "/blog/evrima-compatibility/"
+        "/blog/evrima-compatibility/",
+        "/blog/resource-esp-markers/"
       ],
       "factIds": [
         "elite.features.0",
@@ -2704,11 +2742,13 @@
         "50384aefda14b32860da84388648c9dd9794b023fc0d2bddb5090394ca2548f0",
         "b5c6aab1103d40bf4b760a57b942f760f9738ffe4c62bf5ea548fdc8736f0877",
         "f15a6f90d9c6912c5d8a08bd7d1dbfd64fc0446a28cc04a155de4004d07d6b1c",
-        "6a39a252cdb9d4401253ee112915b28d0abc1a7e05383de02b35c416bea60fd8"
+        "6a39a252cdb9d4401253ee112915b28d0abc1a7e05383de02b35c416bea60fd8",
+        "eee09d57834ff978aae2a3a9742fae05cf0f90e494889d1825e83288fa4ef835"
       ],
       "links": [
         "/cheats/",
-        "/blog/bite-assist-controls/"
+        "/blog/bite-assist-controls/",
+        "/faq/"
       ],
       "factIds": [
         "elite.features.0",
@@ -2742,11 +2782,13 @@
         "21b9ffbdc0251a78581255ee68dcc0576470e9d86645cac3a9605ff9d9d36169",
         "fcf0ba023740ce12c94964749ef4737eaf44df3cb4c98b9314fb0cf247e98fcd",
         "2c79294a9538ef8a9f481d4bd677bb2e3620f249dfd9fe76d175e9bd6f8379d0",
-        "956f18b03730139d345413ae6b4923fc8e4e24d234a513932c6b4dd9c846f8e9"
+        "956f18b03730139d345413ae6b4923fc8e4e24d234a513932c6b4dd9c846f8e9",
+        "aed39d8b7ebfcf348e2c3150b3d56eebbaf5efe0d39d1b75f2aa3caf4a0695b9"
       ],
       "links": [
         "/cheats/",
-        "/blog/resource-esp-markers/"
+        "/blog/resource-esp-markers/",
+        "/blog/esp-and-radar/"
       ],
       "factIds": [
         "elite.features.0",
@@ -2923,11 +2965,13 @@
         "e744a5fa8404744b7b4ca0c1825f9285db32e58b4c134689b45844b1b3bfba82",
         "b5addecee7fbb32d86b00752f2c8e0fa7c4dc57f10ff032527761721f6fed940",
         "58b7ac7d28d3beaaca2ee143160b4149e823c528f69266767fdf209b7380b5ad",
-        "4590bca18091f640bb05f947179b6e4ccd63eaa4c9efde58d3c4cf7ae887e13f"
+        "4590bca18091f640bb05f947179b6e4ccd63eaa4c9efde58d3c4cf7ae887e13f",
+        "c0d0c73eae571902ac3206b2dbefa410ae9a6ec5a5c92bfdf061e52f73fa0dee"
       ],
       "links": [
         "/cheats/",
-        "/blog/esp-and-radar/"
+        "/blog/esp-and-radar/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "elite.features.0",
@@ -3343,11 +3387,11 @@
       "kind": "commercial",
       "h1": "Trucos para The Isle",
       "title": "Trucos para The Isle | ESP, radar y Bite Assist",
-      "description": "Trucos para The Isle EVRIMA: ESP de dinosaurios, radar, recursos y Bite Assist. Compara planes y requisitos",
+      "description": "Explora nuestros trucos para The Isle EVRIMA con ESP, radar y Bite Assist. Compara planes y revisa los requisitos de Windows y Cloud DMA",
       "textHashes": [
-        "4fa0e866b72dce3eefb8796a57170c07718baf9a9e5b3279d94b35f915d75dd4",
+        "80f2a60a1cf70c6babdaa0ead1d5b697d0a3218d80d0601ac7cd92b7cd35acae",
         "23e7c2a45dce2db33065eb0b02a115e545951cdd07dbce403d0243c62701bb12",
-        "1fb739c99a654edf81021b6f480c763edcd1db93449d50ce824a5670c1339bdd",
+        "62b6d1e34c381b84fc8c14bbcb68a25f53e31f86ff84ba2e1bb9a2f6034815d6",
         "5bc5daf624213d2bad81351d942dd854c9eb169a05b7ccb0502b34447b47af8f"
       ],
       "links": [
@@ -3432,11 +3476,11 @@
     },
     "/es/products/": {
       "kind": "commercial",
-      "h1": "Elige la herramienta adecuada",
-      "title": "Comparar productos y utilidades | The Isle",
-      "description": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago",
+      "h1": "Compara trucos de The Isle y herramientas",
+      "title": "Comparar trucos para The Isle y herramientas",
+      "description": "Compara The Isle Cheats, HWID Spoofer, UGC y Skin Changer. Revisa la finalidad, los requisitos y la licencia de cada producto antes de comprar",
       "textHashes": [
-        "2caa98d99c5ef39a49ce0dff801b1073f84f2a6c9d05b9aa9881dd3c21959040",
+        "d9a3106423f6081583067dab6d2bfc8725283dc3173967986e626b538efde256",
         "050010b991b42a7d0a73ef35ece3da084b21ecca42fb1f8545488a5b754565d5",
         "3a35e3af6911e6966c45031ebc801fa2300599661344c535fcb103091382f653",
         "7749263e5c918075d9e38d72fcee5e703591ce85af1637197f18bc50110c85a3"
@@ -3523,8 +3567,8 @@
     "/es/cheats/": {
       "kind": "commercial",
       "h1": "The Isle Cheats para EVRIMA",
-      "title": "The Isle Cheats | Funciones, requisitos y planes",
-      "description": "Revisa funciones EVRIMA, Windows y Cloud DMA. Elige $35 por 31 días o $150 de acceso vitalicio",
+      "title": "Comprar trucos para The Isle EVRIMA | Planes y requisitos",
+      "description": "Elige trucos para The Isle EVRIMA: $35 por 31 días o $150 de por vida. Consulta ESP, Bite Assist y los requisitos de Windows y Cloud DMA",
       "textHashes": [
         "fe09cce12d0e6722619f46b163d599e20ff9127891ec8bc64021f5d72b439253",
         "6b67c17a95b1514e4246db87f20050d621b03724ad0a72f2c74a943c888013d9",
@@ -3615,8 +3659,8 @@
     "/es/hwid-spoofer/": {
       "kind": "commercial",
       "h1": "HWID Spoofer",
-      "title": "HWID Spoofer | Identificadores y limpieza",
-      "description": "Reescribe identificadores de disco, MAC y GPU con HWID Spoofer y limpieza incluida. Revisa requisitos y planes",
+      "title": "HWID Spoofer | Identificadores y limpieza de rastros",
+      "description": "Explora HWID Spoofer para identificadores de disco, MAC y GPU con limpieza de rastros. Compara licencias y confirma la cobertura del juego",
       "textHashes": [
         "ab8aad926c09168809f216b7b90cd4b9fade15d543e6a6190707dc33ab780b86",
         "edf76c65ad08ff3dd96101976a383c2aee5491c16016f9c67702d102f7d32781",
@@ -3656,8 +3700,8 @@
     "/es/ugc/": {
       "kind": "commercial",
       "h1": "UGC",
-      "title": "UGC | Flujos de apelación de cuentas",
-      "description": "Organiza pruebas con plantillas UGC y disputas automatizadas. La plataforma decide el resultado del recurso",
+      "title": "UGC | Plantillas y procesos de apelación de cuentas",
+      "description": "Organiza pruebas de tu cuenta con plantillas y procesos de apelación UGC. Consulta plataformas y requisitos; cada plataforma decide el resultado",
       "textHashes": [
         "5a98b1ac122a1f129c9bcbfdbe5943ae62bb7ff17e17d51ec2e950715c5482a7",
         "4a91631c6560e7d6a5184fdd030fbefb40a63087dd56762f8242cecbe87cbb0a",
@@ -3694,8 +3738,8 @@
     "/es/skin-changer/": {
       "kind": "commercial",
       "h1": "Skin Changer",
-      "title": "Skin Changer | Vistas cosméticas locales",
-      "description": "Explora acabados, atuendos y cuchillos locales en títulos compatibles. Confirma el juego antes de comprar",
+      "title": "Skin Changer | Vistas cosméticas locales y planes",
+      "description": "Explora vistas locales de armas, atuendos y cuchillos con Skin Changer. Confirma los juegos compatibles y compara las licencias",
       "textHashes": [
         "e6497bc5a1a648b58a0225ba52e960152af47388390c37ff5149a8d1fa30e0a6",
         "42a154cb3f535afeb4b7de44df7b71afda0089ff86e666cac8290d5b59dfc59e",
@@ -3732,8 +3776,8 @@
     "/es/faq/": {
       "kind": "commercial",
       "h1": "Preguntas de compra de The Isle",
-      "title": "FAQ The Isle | Planes y requisitos",
-      "description": "Comprueba rama, hardware, licencia y alcance antes de elegir un plan.",
+      "title": "FAQ de trucos para The Isle | Compatibilidad y planes",
+      "description": "Resuelve dudas sobre trucos para The Isle, EVRIMA, Cloud DMA y planes. Comprueba requisitos y funciones antes de pagar",
       "textHashes": [
         "2f52925d45fc44118a0c689ad43aede133344f4cfb578e08ecef3aaeb73edaff",
         "5ca928183579768c20f8c46454b58dbcecb660b7ed4804d055be0852bcf3a042",
@@ -3822,17 +3866,21 @@
     },
     "/es/support/": {
       "kind": "commercial",
-      "h1": "Soporte de productos The Isle",
-      "title": "Soporte The Isle | Configuración y pedidos",
-      "description": "Resuelve un requisito antes de pagar o prepara una consulta concreta sobre pedidos o el loader",
+      "h1": "Soporte de The Isle Cheats",
+      "title": "Soporte de The Isle Cheats | Preparación y pedidos",
+      "description": "Consulta requisitos de The Isle y dudas sobre pedidos. Revisa EVRIMA y Cloud DMA, y prepara la información que necesita el soporte de compras",
       "textHashes": [
-        "d3f430cdb529c5b16243a679ba1c2df256970debefda915986f2da2e32eaa1b0",
-        "32b6f378670c8da1ab149ffe52f01f6a14b9b3150b025c5190cf81e42960ff6b",
-        "0caa0f307414c72bdb48e57794bc53b678082a384537a3f81c88c8efdfa58675",
-        "c943d996a7ed531562440c94bfdefa31540e2d13c44c0162776e44ed751ee306"
+        "446fff1f458fe8ce7f1984e1d0ccb87f355d797df712774a96e38600ab889ec1",
+        "57941d5d980fa7fa903d02a6c070bf79b04053e664b7881638dac2bc53d98579",
+        "c6c5629c463b83f90169518af356df4aa76971c221f394bb1d2e7c33b1c447a6",
+        "eb1585b07f3889e359f6af65b9df99f9b0a859e7b34e61f8e0d9c6ddd0a90363",
+        "b082c7720597507fd7c30fad63e6ae57ad9f6191dab07f404b0b40396e905863",
+        "4874b41435d1e778285300ed50467e394fa5392def49f1c55cadaad7cdfb430a"
       ],
       "links": [
-        "/products/"
+        "/products/",
+        "/blog/evrima-compatibility/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "game.identity",
@@ -3903,7 +3951,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Productos",
@@ -3913,17 +3962,23 @@
     "/es/about/": {
       "kind": "commercial",
       "h1": "Acerca de CHEATS FOR THE ISLE",
-      "title": "Acerca de CHEATS FOR THE ISLE",
-      "description": "Reunimos productos para The Isle, utilidades y guías de compra en un catálogo comercial",
+      "title": "Acerca de CHEATS FOR THE ISLE | Productos y compras",
+      "description": "Conoce CHEATS FOR THE ISLE, sus guías y el proceso de compra mediante enlaces de referido. Descubre dónde pedir ayuda con productos y pedidos",
       "textHashes": [
-        "acaef4d60ec7fa6fe1ee009ec7e507da8c79c2dd80271fdc5f9a6ac6d4bb5795",
-        "d90610a0a84d5c8f53160f24010cfbb8a3cee57071b23332c47b441afc55b380",
-        "bc64bf914a746262caed24ff14ed8329b0305d6d595fc7cd3a577ca324c8763a",
-        "6c7cf6f72d814985a84a2c9199ea50794ed9e8b352a18d88e0a4ee2b6f7023d2"
+        "94778ce7f2ff01270f48e9afdeb49b48ecca85e4f0dac1368e775df978488f06",
+        "13f83a13864e2184b2be192337dccce0efd6f80f7cbbbb4296e943dc0df80760",
+        "25a608780e5d3e870c7098b408ff623e28450694e8832d91abba3dcf1ab50b6b",
+        "2d59e0fb7071ee24be4690ccd4fcea6b0e71989f4df47de0f043749960c771a5",
+        "58f57f6c4b7bb034a6b961af4a271e9160f2aab124201e5ae601b4ac52f33285",
+        "7d32b861be46cee443a1b42537590b28d2ff40e9774da3d9e0774799fbe8586d",
+        "0b548b8334216fc6e9fcecfea2492c74f49fbc58a0a4e1f702e1561a9af2d2b5"
       ],
       "links": [
         "/products/",
-        "/support/"
+        "/support/",
+        "/cheats/",
+        "/blog/",
+        "/faq/"
       ],
       "factIds": [
         "game.identity",
@@ -3994,7 +4049,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Contactar soporte",
@@ -4004,11 +4060,11 @@
     "/es/blog/": {
       "kind": "commercial",
       "h1": "Guías de productos The Isle",
-      "title": "Guías The Isle | Funciones y compra",
-      "description": "Consulta funciones, compatibilidad con EVRIMA, requisitos y comparaciones de licencias",
+      "title": "Guías de The Isle | Funciones y preparación de EVRIMA",
+      "description": "Lee guías de The Isle sobre ESP, radar, Bite Assist, EVRIMA y Cloud DMA. Compara los requisitos y planes de acceso antes de comprar",
       "textHashes": [
         "3d2f44f2f10a10f0642e7460171351a9c8b7c0c58d03586c2bb62739c6731cf9",
-        "d28b7b1e5851642f21bcd3c56ae40fc4f3b3848a1925257b728206570144cd62"
+        "0def9783e23ed7701d0d6feb683bf0996035722edc74db2f5d3441d308b1532f"
       ],
       "links": [
         "/products/",
@@ -4093,8 +4149,8 @@
     "/es/reviews/": {
       "kind": "commercial",
       "h1": "Reseñas de The Isle Cheats",
-      "title": "Reseñas de The Isle Cheats",
-      "description": "Lee reseñas de la comunidad sobre The Isle Cheats, HWID Spoofer, Skin Changer y UGC",
+      "title": "Reseñas de The Isle Cheats y herramientas",
+      "description": "Lee diez reseñas sobre The Isle Cheats, HWID Spoofer, Skin Changer y UGC. Consulta opiniones por producto en esta colección cerrada",
       "textHashes": [
         "6724cec807c922d968b8c4d02e646d7b5d123d07759e0a1b3c0775ac0734780b",
         "efe9d2db593bebe4fe382238e6f3fa963ba7668ff1477c6393507ce1baada652",
@@ -4116,8 +4172,8 @@
     "/es/forum/": {
       "kind": "commercial",
       "h1": "Foro de The Isle",
-      "title": "Foro de The Isle",
-      "description": "Explora conversaciones sobre The Isle Cheats, configuración, planes y nuestras herramientas",
+      "title": "Foro de The Isle Cheats | Configuración y productos",
+      "description": "Explora conversaciones archivadas sobre The Isle Cheats, EVRIMA, configuración, planes y herramientas. Confirma los datos actuales antes de comprar",
       "textHashes": [
         "d0432eac60315e8233bc112b8c1240733ce08f8028e85bad298fd0261b977323",
         "5dea54bda64b959e3b67f27218dd16b8f58292f51e18b9d5e2c5b879edb96744",
@@ -4144,11 +4200,13 @@
         "5b6fef18ffbd0387d36e65e823da9e80a87224ac068c25c20c6a0c99f2396517",
         "bd67b9fab7f854dda9c5209620e78124da28591cadc294d3b7c60d24c014dcd0",
         "2aa821f2ea768fd01a4507bf79a79044bc0115f7ee2982145d9152ad0bc07b9c",
-        "6f2ea2a69fe10260093d0c22ad010bbf3d741fbe5245423949c3bd01b5a93c45"
+        "6f2ea2a69fe10260093d0c22ad010bbf3d741fbe5245423949c3bd01b5a93c45",
+        "40a4198be2f881ec297a1701aeedd127740194c9f2afaeada643d004ca5254ec"
       ],
       "links": [
         "/cheats/",
-        "/blog/evrima-compatibility/"
+        "/blog/evrima-compatibility/",
+        "/blog/resource-esp-markers/"
       ],
       "factIds": [
         "elite.features.0",
@@ -4220,11 +4278,13 @@
         "cf6a7f8a84da640e2fcfd3c6d316dc346fa430fce12871585b453633a33e45d1",
         "e154190c861fcd994c41e40012afabaf10fe131a6c27b3e0c83081c667cf7001",
         "4686d4199ae7e8625b37791374173b9aee02990c162877063133afc2d1096f68",
-        "a56b040e4da245c8623a2805b5d7d331f4dda3ba0f859e9531160de5b247c4b6"
+        "a56b040e4da245c8623a2805b5d7d331f4dda3ba0f859e9531160de5b247c4b6",
+        "5eee304a22c41c7eec9af22256e84912a38a8052cb42f87178cf74e9cdec641f"
       ],
       "links": [
         "/cheats/",
-        "/blog/bite-assist-controls/"
+        "/blog/bite-assist-controls/",
+        "/faq/"
       ],
       "factIds": [
         "elite.features.0",
@@ -4258,11 +4318,13 @@
         "31d540415efd625e515eafd161f634097a6d782774dcaff69d7fb50d589a2b22",
         "68f7bcaad1d0bff8f2eec1b6cfd12dccf44ddc84e52e32cc49728729a7688bb4",
         "5bdb757d598b6ee48947a32bdaff778e1ebf2e43b8faf6bd06457987d06f0f10",
-        "ba7e1ec6f1cc6f443adf86264759b8d857b78c8e6ab758b66686843c795d52e0"
+        "ba7e1ec6f1cc6f443adf86264759b8d857b78c8e6ab758b66686843c795d52e0",
+        "0650825cc22f5c72ab866f700fdb7192e7f2d81d84a826aae696ec1d962b5701"
       ],
       "links": [
         "/cheats/",
-        "/blog/resource-esp-markers/"
+        "/blog/resource-esp-markers/",
+        "/blog/esp-and-radar/"
       ],
       "factIds": [
         "elite.features.0",
@@ -4439,11 +4501,13 @@
         "3c7d93768fb4c0624be198b7e2857d5f325e760b4e2dc02ab4e490aa41b0c52a",
         "2c53078ca8e42724457af86a90d61570f97a66a4531b39f6bc0653e5369d1a2b",
         "86cb6d37829bf48ca61292d91225fb3144fa885c14147db2f846f4a568c95b41",
-        "7bacb106940ad0ea2ed9e9bdff69cf01d3f05b5b1f5e3c7b20312e683c95a244"
+        "7bacb106940ad0ea2ed9e9bdff69cf01d3f05b5b1f5e3c7b20312e683c95a244",
+        "6cfccc18baa7698c1d72177076f7b7a414bd538fa8bdd1db75f8276dff4f4373"
       ],
       "links": [
         "/cheats/",
-        "/blog/esp-and-radar/"
+        "/blog/esp-and-radar/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "elite.features.0",
@@ -4859,11 +4923,11 @@
       "kind": "commercial",
       "h1": "Cheats für The Isle",
       "title": "Cheats für The Isle | ESP, Radar und Bite Assist",
-      "description": "Cheats für The Isle EVRIMA: Dinosaurier-ESP, Radar, Ressourcen und Bite Assist. Vergleiche Pläne und Voraussetzungen",
+      "description": "Entdecke Cheats für The Isle EVRIMA mit Dino-ESP, Radar und Bite Assist. Vergleiche Tarife und prüfe die Anforderungen an Windows und Cloud DMA",
       "textHashes": [
-        "37fd3dcb6a18ce1cdf1a0731af591d541a5b379e8c49abeb7767048f11a1db85",
+        "8eba69b0f7c3a5afc15eeb18a37c2dc6006c85b5d789fb967b609a2ca78ef372",
         "0be967e3c259af151cc85ecd56500c8c15c1eaa5e5b7e6ffc67ab4c8f586e64c",
-        "127ee8f984f2ab409d999e34e64570e5530db176eb2afdf09484af40dd54de02",
+        "28222f097e7db01f31c165c4ea5237d6a9a93fde3942cd4c24560415452a92ef",
         "418258c22a81965ad42991304fee0a30536fe14e22f2e0c396e9bef373421f2e"
       ],
       "links": [
@@ -4948,11 +5012,11 @@
     },
     "/de/products/": {
       "kind": "commercial",
-      "h1": "Das passende Werkzeug auswählen",
-      "title": "Cheats und Werkzeuge vergleichen | The Isle",
-      "description": "Vergleiche unser EVRIMA-Toolkit mit drei separat lizenzierten Werkzeugen. Stimme Umfang und Anforderungen vor dem Kauf auf dein Ziel ab",
+      "h1": "The Isle Cheats und Hilfsprodukte vergleichen",
+      "title": "The Isle Cheats und Hilfsprodukte vergleichen",
+      "description": "Vergleiche The Isle Cheats, HWID Spoofer, UGC und Skin Changer. Prüfe Zweck, Voraussetzungen und separate Lizenzen vor dem Kauf",
       "textHashes": [
-        "88e91e326571ed0e62236ec87eec8704555bc55e7017329d9c0906b01c041e6c",
+        "b1ca7b8adbb31d8b36f397cb7f4bbe30ad560530d498cbe492ef5d25b8964958",
         "73cc6ac4e0ec4138e3c48393ec96d7c71a4b2b14f52cc405a5d02c319e0b0585",
         "e8c27c274bbb56e877b070d0da5450ead15a79e8c5de7579e17037db2c5390cc",
         "1cb7c4b9984d81a6edf4ba9ba6618810f7ff732d33160207a7f8381d9f6379ee"
@@ -5039,8 +5103,8 @@
     "/de/cheats/": {
       "kind": "commercial",
       "h1": "The Isle Cheats für EVRIMA",
-      "title": "The Isle Cheats | Funktionen und Pläne",
-      "description": "Prüfe EVRIMA-Funktionen, Windows und Cloud DMA. Wähle $35 für 31 Tage oder $150 für Lifetime",
+      "title": "The Isle Cheats für EVRIMA kaufen | Tarife und Setup",
+      "description": "Wähle The Isle Cheats für EVRIMA: $35 für 31 Tage oder $150 auf Lebenszeit. Entdecke ESP und Bite Assist und prüfe Windows sowie Cloud DMA",
       "textHashes": [
         "bf63b3b140802964b817c7d7b3ee77b90b0c77fd2c856685a9c1fd73bb79939d",
         "3af5c66cdee12e658eba16bb1f15ccb131ecc66ca0c67c6dfc31dd90767c8c58",
@@ -5131,8 +5195,8 @@
     "/de/hwid-spoofer/": {
       "kind": "commercial",
       "h1": "HWID Spoofer",
-      "title": "HWID Spoofer | Kennungen und Spurenreinigung",
-      "description": "Ändere Datenträger-, MAC- und GPU-Kennungen mit HWID Spoofer und Spurenreiniger. Prüfe Anforderungen und Pläne",
+      "title": "HWID Spoofer | Hardware-Kennungen und Spurenbereinigung",
+      "description": "Entdecke HWID Spoofer für Datenträger-, MAC- und GPU-Kennungen samt Spurenbereinigung. Vergleiche Lizenzen und prüfe die aktuelle Spielabdeckung",
       "textHashes": [
         "70e827b0ae1620a0c7d7df50e0a603558872deec1fcbc799108b388fff0f8dd2",
         "5daced1113c2a00e143eebfe0fac3312c1edb679b65cf83524d322c025292564",
@@ -5172,8 +5236,8 @@
     "/de/ugc/": {
       "kind": "commercial",
       "h1": "UGC",
-      "title": "UGC | Abläufe für Kontoeinsprüche",
-      "description": "Ordne Belege mit UGC-Einspruchsvorlagen und automatisierten Abläufen. Die Plattform entscheidet das Ergebnis",
+      "title": "UGC | Vorlagen und Abläufe für Kontoeinsprüche",
+      "description": "Ordne Kontobelege mit UGC-Vorlagen und Einspruchsabläufen. Prüfe unterstützte Plattformen und Anforderungen; die Plattform entscheidet das Ergebnis",
       "textHashes": [
         "0eb45aa71a1e34a52790cb1d010dd74f2bf199e4021619376e1fb8c0dfeadc1b",
         "66a2f3db8e1dda7dadc2183e93e8097f2607e9df47b1dfe138f2331eda7046e4",
@@ -5210,8 +5274,8 @@
     "/de/skin-changer/": {
       "kind": "commercial",
       "h1": "Skin Changer",
-      "title": "Skin Changer | Lokale Kosmetikvorschau",
-      "description": "Entdecke lokale Waffenoberflächen, Outfits und Messer in unterstützten Titeln. Kläre das Spiel vor dem Kauf",
+      "title": "Skin Changer | Lokale Kosmetikvorschau und Tarife",
+      "description": "Entdecke lokale Waffen-, Outfit- und Messervorschauen mit Skin Changer. Prüfe unterstützte Spiele und vergleiche die Lizenzbedingungen vor dem Kauf",
       "textHashes": [
         "db6b586ebc3e8e4cec64f3b60d00de7288aace252011919e58c3622ffcbe7894",
         "be7b1a1b075f35067499893e9e509ca3b9a36a229742fb9af13e137c75d1c699",
@@ -5248,8 +5312,8 @@
     "/de/faq/": {
       "kind": "commercial",
       "h1": "The Isle Fragen vor dem Kauf",
-      "title": "The Isle FAQ | Pläne und Voraussetzungen",
-      "description": "Prüfe Spielzweig, Hardware, Lizenz und Funktionsumfang vor deiner Auswahl",
+      "title": "The Isle Cheats FAQ | Kompatibilität und Einrichtung",
+      "description": "Finde Antworten zu The Isle Cheats, EVRIMA, Cloud DMA und Tarifen. Prüfe Produktumfang und Anforderungen vor der Bestellung",
       "textHashes": [
         "3a8df70bd9b2ce0522360fd499ef69c37112b7acace7162e14cf3ca07ce12cab",
         "d6872d1b6bd3f6d4a3baba494381bc1f18758736ae6f1e74b8296876e9c4edfa",
@@ -5338,17 +5402,21 @@
     },
     "/de/support/": {
       "kind": "commercial",
-      "h1": "The Isle Produktsupport",
-      "title": "The Isle Support | Einrichtung und Bestellungen",
-      "description": "Kläre Voraussetzungen vor der Zahlung oder bereite eine genaue Frage zu Bestellung oder Loader vor",
+      "h1": "Support für The Isle Cheats",
+      "title": "The Isle Cheats Support | Einrichtung und Bestellungen",
+      "description": "Kläre Anforderungen und Bestellfragen zu The Isle. Prüfe EVRIMA und Cloud DMA und halte die Angaben für den Support des Checkout-Anbieters bereit",
       "textHashes": [
-        "39765129d412e9d9aab20f6c9f418177bd69678f0e9d8f0df88a63da8015d8f7",
-        "c03568420614b92f28c7dc1a7fc9b9ed8fdc1e71b9936c3d6ab4f549d99ef28d",
-        "9fad74c8f55d6a74a64f5740debd120f93af8a3d3bfdc2a243c8478f73755c42",
-        "a229c55d2e009c2d725ea8e30b1d3b67fa741493132da8bf3bef944f7f8d7b70"
+        "e7990cc16acba9150655587ccafa886570bc3c92e9fcfab0a07503d62f0d8a18",
+        "037129159f9e9173a6a2b3906142bfb11d1eb0e8c1c3f01be60434ad4c149597",
+        "2d2f4d6da7a83189f5e1fbf1acf8c1d87d16242cb9d7990713522e2eca2b74c1",
+        "ae575496d76b07c295284d4c1cb9b4a8ae21c87b2d453c6cf32074c335dc07eb",
+        "2fc67b6653a930eab97dd2078399823e3ab5c78f6c15dd61bbbad39d0ae280b0",
+        "469451cdaad29b6289218a286fbba38d31414622350713596e475a80fb1a0467"
       ],
       "links": [
-        "/products/"
+        "/products/",
+        "/blog/evrima-compatibility/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "game.identity",
@@ -5419,7 +5487,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Produkte",
@@ -5429,17 +5498,23 @@
     "/de/about/": {
       "kind": "commercial",
       "h1": "Über CHEATS FOR THE ISLE",
-      "title": "Über CHEATS FOR THE ISLE",
-      "description": "Wir bündeln The-Isle-Produkte, Werkzeuge und praktische Kaufberatung in einem kommerziellen Katalog",
+      "title": "Über CHEATS FOR THE ISLE | Produkte und Kaufablauf",
+      "description": "Lerne CHEATS FOR THE ISLE, unsere Ratgeber und den Kauf über Empfehlungslinks kennen. Erfahre, wo du Bestellhilfe erhältst",
       "textHashes": [
-        "f8acefdcaac3eddf839ad048038a42bc12fe8a6b13598ed2d239ec845661d2a9",
-        "3c7bccb4687fad3da06db6814e3d834f59b3168b9c85241f679a76741625a600",
-        "a1baf2fa8586d0c1d07e39ddad30c10f4e210ee580b50bd076f7d124c2e79b62",
-        "2a92e7659e84a984b7c0aabb9b4f90698c8e4c0833548eaf91556d82eaee6f2a"
+        "54821a070b89ef4c2f34d8501a694a945f6a0f9b48a851d1e2108bc25c7d6127",
+        "612afb4555d1679157fa119837ce0b0c1e9ff4ae25fb22704a1b5cf8426ba5ad",
+        "ebbe49e57ed5f07eccad4c15e89d621cd0d94457757ad1ea3293cd257092362d",
+        "ec71c45946e4e0b178473930e309df4d3169882e2791d1301c6664178169c220",
+        "29d6f640eb42edffb6dc06a68f1e2dccb3941b301d98b506a93ce52a5959934f",
+        "c3c47268f1cab2c79fe6e090eae7ba966816f15e430f9350b7cac7afb1a90d11",
+        "bc6d571f294583b7b2226a01fa99b843326abac6d35eae532a0669edbc9155c9"
       ],
       "links": [
         "/products/",
-        "/support/"
+        "/support/",
+        "/cheats/",
+        "/blog/",
+        "/faq/"
       ],
       "factIds": [
         "game.identity",
@@ -5510,7 +5585,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Support kontaktieren",
@@ -5520,11 +5596,11 @@
     "/de/blog/": {
       "kind": "commercial",
       "h1": "The Isle Produktleitfäden",
-      "title": "The Isle Leitfäden | Funktionen und Kauf",
-      "description": "Lies Funktionserklärungen, EVRIMA-Kompatibilität, Voraussetzungen und Lizenzvergleiche",
+      "title": "The Isle Guides | Funktionen und EVRIMA-Einrichtung",
+      "description": "Lies The Isle Guides zu ESP, Radar, Bite Assist, EVRIMA und Cloud DMA. Vergleiche Voraussetzungen und Zugangsbedingungen vor der Tarifwahl",
       "textHashes": [
         "71b4ff4eafd548794a8a8db5ae3f8d97d4327d70ee01e778a526fbd0b2a5ed65",
-        "217594807febe06e97f0e66a82c4592b5e2940d28da1f58e409c7fda7a36c2b9"
+        "cf1cc287abaa3401096d08006df1ba521375df7b1558f72f6599cebcb1d9fd6e"
       ],
       "links": [
         "/products/",
@@ -5609,8 +5685,8 @@
     "/de/reviews/": {
       "kind": "commercial",
       "h1": "The Isle Cheats Bewertungen",
-      "title": "The Isle Cheats Bewertungen",
-      "description": "Lies Community-Bewertungen zu The Isle Cheats, HWID Spoofer, Skin Changer und UGC",
+      "title": "The Isle Cheats und Hilfsprodukte | Bewertungen",
+      "description": "Lies zehn Bewertungen zu The Isle Cheats, HWID Spoofer, Skin Changer und UGC. Entdecke Produktmeinungen in unserer Sammlung",
       "textHashes": [
         "bf613e2bc58a933ab8c3cc5576f7ce5daa60450a2162f559d60c3f9301df7da4",
         "33b03abb21e618598eb879cf63f60810656fa3491695d97ba9969f191831aef5",
@@ -5632,8 +5708,8 @@
     "/de/forum/": {
       "kind": "commercial",
       "h1": "The Isle Forum",
-      "title": "The Isle Forum",
-      "description": "Lies Diskussionen zu The Isle Cheats, Einrichtung, Tarifen und unseren Hilfsprodukten",
+      "title": "The Isle Cheats Forum | Einrichtung und Produkte",
+      "description": "Lies archivierte Beiträge und Antworten zu The Isle Cheats, EVRIMA, Einrichtung, Tarifen und Hilfsprodukten. Prüfe aktuelle Angaben vor dem Kauf",
       "textHashes": [
         "41f5da21b4a7036efc30a679e7780b80119a3ec3eec991b41b84073a6e99dbfb",
         "90e1a6c058ef2a9ff90e69d2ac64a6107f2c791ce69f63e9498afdb4397f12f1",
@@ -5660,11 +5736,13 @@
         "0d656e5322ea817b625988b8398c882e14cbb33df94c33c5d75e7846b8572531",
         "93d042625190dcac2cb49d2e728996e9c60c54070758bc73a7eb15660d61b1d3",
         "13a1d8c4168b5f1b52f8d41c36e6a4aa3a5691f1986acd8ec031f56820310244",
-        "7a544e06088c2e547818fb36addee0d68098019b64e52765d8f979c3411585e1"
+        "7a544e06088c2e547818fb36addee0d68098019b64e52765d8f979c3411585e1",
+        "cb9134d8703531ce5777e7f9789f1425ae7380e9ec1374f816b3e2f836783396"
       ],
       "links": [
         "/cheats/",
-        "/blog/evrima-compatibility/"
+        "/blog/evrima-compatibility/",
+        "/blog/resource-esp-markers/"
       ],
       "factIds": [
         "elite.features.0",
@@ -5736,11 +5814,13 @@
         "abc29b960589a39d8acb14b40b8f96f94df8a3fb1051daedad7268600a63e2c3",
         "1d3619a8168b9c6075eb3f10fef93da32ccdd0972ac0b75f92df86bbd91ff3f4",
         "d87c6497c793f9c01cc935391edf863960a951aff6a000bf31ad74848e63036f",
-        "e4a29ad03f962b265c50df5b278de7290c0cbb9cb7a776d029a926ccf25c0a7d"
+        "e4a29ad03f962b265c50df5b278de7290c0cbb9cb7a776d029a926ccf25c0a7d",
+        "5ab1f7110966352e86bdb685a5606c50f9d4f5834cc777b7a7ef5f75f94cfe72"
       ],
       "links": [
         "/cheats/",
-        "/blog/bite-assist-controls/"
+        "/blog/bite-assist-controls/",
+        "/faq/"
       ],
       "factIds": [
         "elite.features.0",
@@ -5774,11 +5854,13 @@
         "14d11cf81abb5a47303701d3dd1ba9f82cb0a45dfa3fc4bf2799deb4342b1b0c",
         "dc38a48a9f2025cb0f76c640d497d795e288b8fe0fb27554834a3eafcea83faa",
         "1a56b3a824a5e493534b2a210c65bab74bfc0ef27d5b2aa37be424335369637a",
-        "6e25230c24f635c09276725e5aa540fbc39f4ff8c15b0cd216ee154ab4302e25"
+        "6e25230c24f635c09276725e5aa540fbc39f4ff8c15b0cd216ee154ab4302e25",
+        "bbf1649759abbdc2c8e8edc753124456f831d2960a3119c8e620bcc6b1e41a25"
       ],
       "links": [
         "/cheats/",
-        "/blog/resource-esp-markers/"
+        "/blog/resource-esp-markers/",
+        "/blog/esp-and-radar/"
       ],
       "factIds": [
         "elite.features.0",
@@ -5955,11 +6037,13 @@
         "a1b63c84ba107c23f46982b4f8586c643d7a82c96cb4b8c3b209cba1072ea575",
         "b5b331931bbd6b52b2c5d67ecf200a2ff8113605cbf20d7031360327031d298f",
         "bfd15e3aafba7149497f40453b2ac55ef47854d9f27e7f020f85079b07546bb1",
-        "8ba6433fb5b4566e2f4bf0673dfcf7fdac639dfaff4309852d0e1ef7865c8ae3"
+        "8ba6433fb5b4566e2f4bf0673dfcf7fdac639dfaff4309852d0e1ef7865c8ae3",
+        "cc80439e165f5693195e7e55349a003636ea73bfaf8b284e4401fb9c5d2e482f"
       ],
       "links": [
         "/cheats/",
-        "/blog/esp-and-radar/"
+        "/blog/esp-and-radar/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "elite.features.0",
@@ -6374,12 +6458,12 @@
     "/fr/": {
       "kind": "commercial",
       "h1": "Triches The Isle",
-      "title": "Triches The Isle | ESP, radar et Bite Assist",
-      "description": "Triches The Isle EVRIMA : ESP des dinosaures, radar, ressources et Bite Assist. Comparez formules et exigences",
+      "title": "Cheats The Isle | ESP, radar et Bite Assist",
+      "description": "Découvrez nos cheats The Isle EVRIMA avec ESP, radar et Bite Assist. Comparez les formules et vérifiez les prérequis Windows et Cloud DMA",
       "textHashes": [
-        "78980b686081bcf478e5c409d7e926af2783943eb53ab6945878a3268eef7cd7",
+        "79e4bc48344b0cf1c7a7f02dae66a119eeafb5041ade2367a039f4b3e6fdfba8",
         "12d6325ca6db9d80e3bd7e59d32d56a042e118d16237e0a699dc4b88609759f8",
-        "b66dc9faa2104f551bed3849b74a13729ae338aa9baa7266ae720b7902ff3299",
+        "396c1297314550daa387c31bb53429d191da307e78a20cdf21110e1f46ba27a3",
         "5fa7e4aa1145a5bf9e4565adb4157ee8446b5a71acbd2c34147d7bae2cc9dcb6"
       ],
       "links": [
@@ -6464,11 +6548,11 @@
     },
     "/fr/products/": {
       "kind": "commercial",
-      "h1": "Choisissez le bon outil",
-      "title": "Comparer produits et utilitaires | The Isle",
-      "description": "Comparez notre toolkit EVRIMA à trois utilitaires sous licences séparées. Vérifiez périmètre et exigences avant le paiement",
+      "h1": "Comparez The Isle Cheats et les outils",
+      "title": "Comparer The Isle Cheats et les outils complémentaires",
+      "description": "Comparez The Isle Cheats, HWID Spoofer, UGC et Skin Changer. Vérifiez le rôle, les prérequis et la licence de chaque produit avant l'achat",
       "textHashes": [
-        "e1d3953964c30b0f1d013cd9d1bbf64756270d48436833e4a57221bba0a81e0e",
+        "dfed1c35cb15d93246845c3a56fb18b4ddf52f03ef23197d43fef933056ffb05",
         "bc9dd512f6c44287b76ebbe87946adece5c518e476663a85a78101e7fa32f9f8",
         "edbb556d17d46d4172982b0b26d09c1c02414e9e81ec39bfa648ac873bad48b6",
         "b9ca306948126614e5d2193c9201b576019279dda28608f5f32b4ae45081b02d"
@@ -6555,8 +6639,8 @@
     "/fr/cheats/": {
       "kind": "commercial",
       "h1": "The Isle Cheats pour EVRIMA",
-      "title": "The Isle Cheats | Fonctions et formules",
-      "description": "Consultez fonctions EVRIMA, Windows et Cloud DMA. Choisissez $35 pour 31 jours ou $150 à vie",
+      "title": "Acheter The Isle Cheats EVRIMA | Formules et prérequis",
+      "description": "Choisissez The Isle Cheats EVRIMA : $35 pour 31 jours ou $150 à vie. Explorez ESP et Bite Assist, puis vérifiez Windows et Cloud DMA",
       "textHashes": [
         "737ecc08cd9c4afb203a2e66e00a8b7f7c6a79f470742950ca52427787a04a55",
         "27743853052edb00fc728bfde0b058df6acb149ee8effb6307e0dd76f1a46ffa",
@@ -6647,8 +6731,8 @@
     "/fr/hwid-spoofer/": {
       "kind": "commercial",
       "h1": "HWID Spoofer",
-      "title": "HWID Spoofer | Identifiants et nettoyage",
-      "description": "Modifiez identifiants disque, MAC et GPU avec HWID Spoofer et nettoyage inclus. Consultez exigences et formules",
+      "title": "HWID Spoofer | Identifiants et nettoyage des traces",
+      "description": "Explorez HWID Spoofer pour les identifiants disque, MAC et GPU avec nettoyage des traces. Comparez les licences et confirmez les jeux couverts",
       "textHashes": [
         "c3d2ae36690ab6fe438caf4a025aa57690f90269263e71c6dd3d548e52e4648b",
         "0bacc1b99dc7439d1bd3f1cb5474e122076a64898f3c8c47c795e4e99a2d973d",
@@ -6688,8 +6772,8 @@
     "/fr/ugc/": {
       "kind": "commercial",
       "h1": "UGC",
-      "title": "UGC | Procédures de recours de compte",
-      "description": "Organisez vos preuves avec modèles de recours UGC et contestations automatisées. La plateforme décide du résultat",
+      "title": "UGC | Modèles et procédures de recours de compte",
+      "description": "Organisez les preuves du compte avec les modèles et procédures UGC. Vérifiez plateformes et prérequis ; les plateformes décident du résultat",
       "textHashes": [
         "582ecc8fb8def2dbe90d2d8f2c0b4ad154dbb54a33ab60515148ca443a9b42f8",
         "4796b4cbff04bb19f9658e4697a08be1645eb96be598733979ceb657d607c3a5",
@@ -6726,8 +6810,8 @@
     "/fr/skin-changer/": {
       "kind": "commercial",
       "h1": "Skin Changer",
-      "title": "Skin Changer | Aperçus cosmétiques locaux",
-      "description": "Explorez finitions, tenues et couteaux locaux dans les titres compatibles. Confirmez le jeu avant l’achat",
+      "title": "Skin Changer | Aperçus cosmétiques locaux et formules",
+      "description": "Explorez les aperçus locaux d'armes, de tenues et de couteaux avec Skin Changer. Vérifiez les jeux couverts et comparez les conditions de licence",
       "textHashes": [
         "2f65a5dc47dbbe57f2dd38a1f5e9444024199ad52a063fa390231626e019adef",
         "0b16cbbc750c65299c5541834c59bf0bb5984b29eb22b76beb1573acb7fa5c38",
@@ -6764,8 +6848,8 @@
     "/fr/faq/": {
       "kind": "commercial",
       "h1": "FAQ achat The Isle",
-      "title": "FAQ The Isle | Formules et exigences",
-      "description": "Vérifiez branche, matériel, licence et périmètre avant de choisir une formule",
+      "title": "FAQ The Isle Cheats | Compatibilité et formules",
+      "description": "Trouvez des réponses sur The Isle Cheats, EVRIMA, Cloud DMA et les formules d'accès. Vérifiez prérequis et fonctions avant de finaliser l'achat",
       "textHashes": [
         "e6b2f9cfc49561a5eb77046c8ecc5a303f0ba6c72dab1541b32dbf2b883bb122",
         "9b2a7eaf20a1c68a1696ba48f0685126c6b01e43f95cc4d7899e926b474a0f50",
@@ -6854,17 +6938,21 @@
     },
     "/fr/support/": {
       "kind": "commercial",
-      "h1": "Assistance produits The Isle",
-      "title": "Assistance The Isle | Configuration et commandes",
-      "description": "Clarifiez une exigence avant de payer ou préparez une question précise sur une commande ou le loader",
+      "h1": "Assistance The Isle Cheats",
+      "title": "Assistance The Isle Cheats | Installation et commandes",
+      "description": "Consultez les prérequis The Isle et l'aide aux commandes. Vérifiez EVRIMA et Cloud DMA, puis préparez les détails utiles à l'assistance d'achat",
       "textHashes": [
-        "00ba5460ac3408e1031ca5202871df5698dc8de1b9b6c89e771f0cc5ea120097",
-        "bfb65c7bc3c5ea4aadfbd977ccebe4542d277efa29391cb54e9b60b0069e8498",
-        "2f156427f1196f77bf0a9e0e75843b0cc5516cacfb4ec20c242d059b2872c5cd",
-        "66dabad4c902852dc76cf56c5ae14b7dd18f1cf47e0cab8eb2e97eb424162f17"
+        "13976e1e2c9b99703efdbb8ef545c229b6dee0b2113c231f7777e80f90e78716",
+        "91229c49d6e645c131033ab6cf6cf82b58019e3e047bccec762c279b3a737d9a",
+        "4f66ac4eb0142eac98589180b60fc4eb65fbc720d64fd943b41b3b302c587c8c",
+        "e96f0933197eaefb177f17daf18e309ab378f4b0f0d2875b51d63d8d620b6b4a",
+        "2fef8f565aed34bdd72150ce28622cc676069624c8b5cc530bf14e0ae0dac0dc",
+        "52dcbf8df8de7d40f115ba2f2f61f64126fde4f9f8fd7aa5432b9f1a0aaeed60"
       ],
       "links": [
-        "/products/"
+        "/products/",
+        "/blog/evrima-compatibility/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "game.identity",
@@ -6935,7 +7023,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Produits",
@@ -6945,17 +7034,23 @@
     "/fr/about/": {
       "kind": "commercial",
       "h1": "À propos de CHEATS FOR THE ISLE",
-      "title": "À propos de CHEATS FOR THE ISLE",
-      "description": "Nous réunissons produits The Isle, utilitaires et guides d’achat dans un catalogue commercial",
+      "title": "À propos de CHEATS FOR THE ISLE | Produits et achats",
+      "description": "Découvrez CHEATS FOR THE ISLE, nos guides et les achats par liens de parrainage. Consultez les démarches d'aide pour les produits et commandes",
       "textHashes": [
-        "00fe173d86ea2b54d4a660bb9a8a563bae58623bbd632eb5057dcc8d239b9973",
-        "bc36743f0ac1733be5117eaa3c88be7b9176be3dfe80229d3441178d723543f2",
-        "c6194dd8ea84b64efb38c04be85af5f22f650eff17ab67f321989d822663cf86",
-        "3256eb8d7b731fe4d354246ef78d940eaab4b0c047a969d2cd756678a2f3c45a"
+        "1294d16d14dd5c3d79c0a8fde418287e979a3fcde21093c5a60b2982fb29839a",
+        "ce1d7f598a0737d33ccae784b482cae47effe9a8cefa0b82752e63e443d02226",
+        "eabd1a45be6321a77bc3e99c74ca9e21e715065b6cafc311aa1a4beb6b727543",
+        "09633ffbff9979085aba4042b0e28fc34d7af59d5ac6da2eaf05e90834f69af1",
+        "4eb23bdcfffe1a231ae6204e1546b7a9ff271fd7f3867be1731a505ae5421e25",
+        "53293128bbf68e09909d0f0d909bd70409ccf95e3b5b738b007b108b52b7f4e6",
+        "39e99efd7e9963ccc41307f2b4f8fe160b0c81d92b3accdce07234fcc9eb21a5"
       ],
       "links": [
         "/products/",
-        "/support/"
+        "/support/",
+        "/cheats/",
+        "/blog/",
+        "/faq/"
       ],
       "factIds": [
         "game.identity",
@@ -7026,7 +7121,8 @@
         "skin-changer.requirements.3",
         "skin-changer.limitations.0",
         "skin-changer.plan.monthly",
-        "skin-changer.plan.lifetime"
+        "skin-changer.plan.lifetime",
+        "commerce.referrals"
       ],
       "cta": {
         "label": "Contacter l'assistance",
@@ -7036,11 +7132,11 @@
     "/fr/blog/": {
       "kind": "commercial",
       "h1": "Guides produits The Isle",
-      "title": "Guides The Isle | Fonctions et achat",
-      "description": "Consultez fonctions, compatibilité EVRIMA, exigences et comparaisons de licences",
+      "title": "Guides The Isle | Fonctions et préparation EVRIMA",
+      "description": "Lisez nos guides The Isle sur ESP, radar, Bite Assist, EVRIMA et Cloud DMA. Comparez prérequis et conditions d'accès avant de choisir une formule",
       "textHashes": [
         "8fd3afefc86bde5dfc4ef92cbe9d99768c9eb52091084541cf1f91469d57418e",
-        "0a1db1213580520612d46cace01778ffe43c9db56bed3774cdd4e27db8663384"
+        "60a3334e38ca07157d258bee8e5aebfc6939bad582d2d88f89cb5f5d4bda6125"
       ],
       "links": [
         "/products/",
@@ -7125,8 +7221,8 @@
     "/fr/reviews/": {
       "kind": "commercial",
       "h1": "Avis sur The Isle Cheats",
-      "title": "Avis sur The Isle Cheats",
-      "description": "Lisez les avis sur The Isle Cheats, HWID Spoofer, Skin Changer et UGC",
+      "title": "Avis sur The Isle Cheats et les outils complémentaires",
+      "description": "Lisez dix avis sur The Isle Cheats, HWID Spoofer, Skin Changer et UGC. Consultez les retours dans une collection en lecture seule",
       "textHashes": [
         "756d3a64587eab79b9fdcdf75180d50d98909fccc722d4d779d9de3f1f2f25cd",
         "bf568cb216312f1a6d87d7a2df58d26df975f62cb38234ad8b524eb73a7a10ca",
@@ -7148,8 +7244,8 @@
     "/fr/forum/": {
       "kind": "commercial",
       "h1": "Forum The Isle",
-      "title": "Forum The Isle",
-      "description": "Parcourez les discussions sur The Isle Cheats, la configuration, les formules et nos utilitaires",
+      "title": "Forum The Isle Cheats | Configuration et produits",
+      "description": "Lisez les échanges archivés sur The Isle Cheats, EVRIMA, les formules et outils. Vérifiez les données actuelles avant achat",
       "textHashes": [
         "b019fd8e0a5dcbf629687fae7740d73bb68817bdefdbb9caa61178356adc8a7b",
         "b966dfe0ea6da7e4c360540cfac7eff09d1ce711793896dae77ec361fa01564d",
@@ -7176,11 +7272,13 @@
         "b771e66e1b1fe3b3d28cdb5f9f9ac350b95e7885ed3205353a591d4143bf2cd6",
         "d3d2e8d69aac7288cb9c26d439ccc53bc93cd74d258fea761e63b5f64e0d3aab",
         "30d2dfca16e6c5ab8cc76d781a8f35231f8b64d8a15a40adfae0cf2e5b1a8722",
-        "e3d930336b59a00c801ca620b1e75056780b9e78ed9780e698c65710d314e2b3"
+        "e3d930336b59a00c801ca620b1e75056780b9e78ed9780e698c65710d314e2b3",
+        "5a534dc11890cfce74e59ff57757f81b441b1a842c36c9104c7672f24ab88854"
       ],
       "links": [
         "/cheats/",
-        "/blog/evrima-compatibility/"
+        "/blog/evrima-compatibility/",
+        "/blog/resource-esp-markers/"
       ],
       "factIds": [
         "elite.features.0",
@@ -7252,11 +7350,13 @@
         "a18f94dace9982e416b106bb87d3f173328e287573d5d30fda35d1efc24982e7",
         "ceceece53dd33b05a26b764ede975ad4d2238c42d34ecae293e30c7b9cbfa74d",
         "9c46001fe3cac76ad7ae74e7d5f10d8c2d0de52096800642efdcb53bc09de3c6",
-        "48c3f04d6bbd770cb0b20b1e16b33aaec28cfb1d2239ab184689ec5d0f8effd0"
+        "48c3f04d6bbd770cb0b20b1e16b33aaec28cfb1d2239ab184689ec5d0f8effd0",
+        "81bee1dfea0b900423c922885dbad6fb5808c8534d61513857596f9206f7cb12"
       ],
       "links": [
         "/cheats/",
-        "/blog/bite-assist-controls/"
+        "/blog/bite-assist-controls/",
+        "/faq/"
       ],
       "factIds": [
         "elite.features.0",
@@ -7290,11 +7390,13 @@
         "3761079dce7c89dd0cea81dc6c0cabe264933438717dbca8b4b0c123ea09dbba",
         "f876b62cd552c2be9763d33533bd1c99f02603f42544029aff5d12b450894926",
         "1a85619fef71e91c3a9141a9744b26217b3bb2d44b58da1f01fc2b5c61e0c6e5",
-        "8a6f1027e44dc9cb61fa2098615a845e0af947f02302bfa55d81e623c33beb38"
+        "8a6f1027e44dc9cb61fa2098615a845e0af947f02302bfa55d81e623c33beb38",
+        "fc732fbb0c61d244e5fc24e993185e1e5dc3baba7ddbe93c865ea6b64669c554"
       ],
       "links": [
         "/cheats/",
-        "/blog/resource-esp-markers/"
+        "/blog/resource-esp-markers/",
+        "/blog/esp-and-radar/"
       ],
       "factIds": [
         "elite.features.0",
@@ -7471,11 +7573,13 @@
         "99a9d2eff7a816740d81bcae228951b3a045c3074ed3ad2727840aac5198a2c7",
         "d991d095a976d7ae69bcb2ee65802f29c9249f7257f5286f1b5012b77a5d4639",
         "ffa211d6a4fc1780c425802c7d9630f338bdd374fb826c2c1ffbebf548121ce9",
-        "78d4337b870d335641744505e6e962f9630821766a2ae78c37f08705dcc1dc92"
+        "78d4337b870d335641744505e6e962f9630821766a2ae78c37f08705dcc1dc92",
+        "3db3bad9e3a64906d88f0b5b784747e138d937b1f5fe0e196db7492bbebe9a17"
       ],
       "links": [
         "/cheats/",
-        "/blog/esp-and-radar/"
+        "/blog/esp-and-radar/",
+        "/blog/windows-and-cloud-dma/"
       ],
       "factIds": [
         "elite.features.0",
@@ -7889,13 +7993,13 @@
     }
   },
   "fileHashes": {
-    "src/data/blog/posts/en-articles.ts": "d27030133098b2c9d12331079bdd4a4c2d582de05e19bab4bd41dac3316e2d80",
+    "src/data/blog/posts/en-articles.ts": "d641b17547de0ee06068dafa19d20a64f8c77d7bb084f8678444981bfcf0e8a8",
     "src/data/forum/en-posts.ts": "ef14dfaab26630a7969238d32e88797aef020645fe1ea4c99cefe05467354d81",
-    "src/data/blog/posts/es-articles.ts": "1305bc7ccd20b5903886c2b18a5abebe0ea51391bd61c21c3847942dcada80e3",
+    "src/data/blog/posts/es-articles.ts": "c6ddda2252f9e0641be32f100b69b8ca7759254c42e6ba1acbda7c1373ed237c",
     "src/data/forum/es-posts.ts": "58b00b852d5629b7f8c736c50f43566ff2b26f9745ae8128f7f1df0fbb34003b",
-    "src/data/blog/posts/de-articles.ts": "1c9c236bf6d648e8de7358b933678f67888bd745d6de2570ee71441f9a0715bf",
+    "src/data/blog/posts/de-articles.ts": "526adec47579d02fccd97069dbdb5c7d980506b74005e991ae9b7aab19c5c6ae",
     "src/data/forum/de-posts.ts": "3f814ae394a254c64649c98dc9523b2f4897a1ca5c3e35a2114e6b5f850f5ed2",
-    "src/data/blog/posts/fr-articles.ts": "a59ceb376930d857a478641933755c31774922e5b949861615ebb9c745f79d40",
+    "src/data/blog/posts/fr-articles.ts": "b10157129576d809dd2c356f12a4f00c41dc48175e275c0a051488b18372a426",
     "src/data/forum/fr-posts.ts": "2a296d775c6f76e309c7671f13d6a48bf47acb9c4942ed33892a19ab32aca1cf"
   }
 }

@@ -8,8 +8,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "ESP des dinosaures et radar : deux lectures",
     "tag": "Fonctions",
     "desc": "Comparez les étiquettes dans la scène et le radar 2D pour choisir les informations à afficher.",
-    "metaTitle": "ESP des dinosaures et radar : deux lectures",
-    "metaDescription": "Comparez les étiquettes dans la scène et le radar 2D pour choisir les informations à afficher.",
+    "metaTitle": "ESP et radar The Isle | Lire les données dinosaures",
+    "metaDescription": "Comparez l'ESP dinosaures au radar dans The Isle. Comprenez les données d'espèce, croissance et distance ainsi que le rôle de chaque affichage",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": true,
@@ -21,7 +21,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Lire les données près de l’animal"
+        "text": "Lire les informations ESP dinosaures en contexte"
       },
       {
         "type": "p",
@@ -48,6 +48,10 @@ export const frBlogArticles: BlogPostFull[] = [
         "text": "Poursuivez avec [Compatibilité EVRIMA : vérifier la branche](/blog/evrima-compatibility/)."
       },
       {
+        "type": "p",
+        "text": "Pour les marqueurs du monde, lisez le [guide Resource ESP](/blog/resource-esp-markers/). Il distingue la recherche d'eau et de nourriture des données dinosaures."
+      },
+      {
         "type": "cta",
         "title": "The Isle Cheats",
         "text": "ESP des dinosaures, radar, ressources et Bite Assist réglable pour EVRIMA. Vérifiez toutes les exigences avant de choisir.",
@@ -61,8 +65,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "Compatibilité EVRIMA : vérifier la branche",
     "tag": "Compatibilité",
     "desc": "La fiche actuelle prend uniquement EVRIMA en charge. Un preset ne confirme pas Legacy ou une autorisation serveur.",
-    "metaTitle": "Compatibilité EVRIMA : vérifier la branche",
-    "metaDescription": "La fiche actuelle prend uniquement EVRIMA en charge. Un preset ne confirme pas Legacy ou une autorisation serveur.",
+    "metaTitle": "The Isle Cheats | EVRIMA et limites de Legacy",
+    "metaDescription": "Vérifiez la compatibilité de The Isle Cheats avant l'achat. Comprenez les contrôles distincts pour EVRIMA, Legacy et les profils de serveur",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -74,7 +78,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Un preset ne prouve pas la compatibilité"
+        "text": "Compatibilité EVRIMA et profils de serveur"
       },
       {
         "type": "p",
@@ -114,8 +118,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "Windows et Cloud DMA : vérifier avant l’achat",
     "tag": "Configuration",
     "desc": "Contrôlez Windows, les réglages de sécurité et Cloud DMA avant de choisir une licence.",
-    "metaTitle": "Windows et Cloud DMA : vérifier avant l’achat",
-    "metaDescription": "Contrôlez Windows, les réglages de sécurité et Cloud DMA avant de choisir une licence.",
+    "metaTitle": "Installer The Isle Cheats | Windows et Cloud DMA",
+    "metaDescription": "Vérifiez Windows 10/11, HVCI, isolation du noyau, TPM, Secure Boot et Cloud DMA pour The Isle Cheats avant de choisir une formule d'accès",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -127,7 +131,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Vérifier toute la configuration"
+        "text": "Vérifier les prérequis Windows et Cloud DMA"
       },
       {
         "type": "p",
@@ -154,6 +158,10 @@ export const frBlogArticles: BlogPostFull[] = [
         "text": "Poursuivez avec [Bite Assist : comprendre les réglages](/blog/bite-assist-controls/)."
       },
       {
+        "type": "p",
+        "text": "Consultez la [FAQ d'achat](/faq/) pour vérifier les conditions d'accès et les fonctions du produit en complément des prérequis matériels."
+      },
+      {
         "type": "cta",
         "title": "The Isle Cheats",
         "text": "ESP des dinosaures, radar, ressources et Bite Assist réglable pour EVRIMA. Vérifiez toutes les exigences avant de choisir.",
@@ -167,8 +175,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "Bite Assist : comprendre les réglages",
     "tag": "Fonctions",
     "desc": "Lissage, portée, priorité des os et prédiction remplissent des rôles différents.",
-    "metaTitle": "Bite Assist : comprendre les réglages",
-    "metaDescription": "Lissage, portée, priorité des os et prédiction remplissent des rôles différents.",
+    "metaTitle": "Bite Assist The Isle | Portée, lissage et prédiction",
+    "metaDescription": "Comprenez les réglages Bite Assist de The Isle : lissage, portée, priorité des os et prédiction de mouvement. Examinez les options avant l'achat",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -180,7 +188,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Des décisions distinctes"
+        "text": "Le rôle de chaque réglage Bite Assist"
       },
       {
         "type": "p",
@@ -207,6 +215,10 @@ export const frBlogArticles: BlogPostFull[] = [
         "text": "Poursuivez avec [ESP des ressources : nourriture, eau et nids](/blog/resource-esp-markers/)."
       },
       {
+        "type": "p",
+        "text": "Lisez la [comparaison ESP et radar](/blog/esp-and-radar/) pour distinguer les informations affichées sur les dinosaures de l'assistance au ciblage."
+      },
+      {
         "type": "cta",
         "title": "The Isle Cheats",
         "text": "ESP des dinosaures, radar, ressources et Bite Assist réglable pour EVRIMA. Vérifiez toutes les exigences avant de choisir.",
@@ -220,8 +232,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "ESP des ressources : nourriture, eau et nids",
     "tag": "Fonctions",
     "desc": "Distinguez les marqueurs du monde des données des dinosaures et des utilitaires automatiques.",
-    "metaTitle": "ESP des ressources : nourriture, eau et nids",
-    "metaDescription": "Distinguez les marqueurs du monde des données des dinosaures et des utilitaires automatiques.",
+    "metaTitle": "Resource ESP The Isle | Nourriture, eau et nids",
+    "metaDescription": "Explorez nourriture, eau, herbes, fruits et nids dans Resource ESP de The Isle. Distinguez les marqueurs des utilitaires propres à chaque édition",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -233,7 +245,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Le périmètre des ressources"
+        "text": "Marqueurs de nourriture, d'eau et de nids dans Resource ESP"
       },
       {
         "type": "p",
@@ -273,8 +285,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "Aperçu d’apparence ou Skin Changer séparé ?",
     "tag": "Comparaisons",
     "desc": "Distinguez les aperçus de dinosaures du toolkit et notre utilitaire cosmétique indépendant.",
-    "metaTitle": "Aperçu d’apparence ou Skin Changer séparé ?",
-    "metaDescription": "Distinguez les aperçus de dinosaures du toolkit et notre utilitaire cosmétique indépendant.",
+    "metaTitle": "Apparence The Isle ou Skin Changer | Périmètres",
+    "metaDescription": "Comparez les aperçus locaux de dinosaures de The Isle Cheats au Skin Changer distinct. Vérifiez jeux couverts, fonctions cosmétiques et licences",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -286,7 +298,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Deux périmètres différents"
+        "text": "Aperçus dinosaures et périmètre de Skin Changer"
       },
       {
         "type": "p",
@@ -326,8 +338,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "Restrictions matérielles et recours de compte",
     "tag": "Outils",
     "desc": "Comparez HWID Spoofer et UGC sans assimiler chaque erreur de connexion à une sanction matérielle.",
-    "metaTitle": "Restrictions matérielles et recours de compte",
-    "metaDescription": "Comparez HWID Spoofer et UGC sans assimiler chaque erreur de connexion à une sanction matérielle.",
+    "metaTitle": "HWID Spoofer ou UGC | Matériel et recours de compte",
+    "metaDescription": "Comparez HWID Spoofer et les recours UGC. Identifiez la restriction et rassemblez les preuves avant de choisir un produit",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -339,7 +351,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Identifier le périmètre de la restriction"
+        "text": "Identifier les restrictions matérielles et sanctions de compte"
       },
       {
         "type": "p",
@@ -379,8 +391,8 @@ export const frBlogArticles: BlogPostFull[] = [
     "h1": "Mensuel ou à vie : comparer la durée d’accès",
     "tag": "Guides",
     "desc": "The Isle Cheats coûte $35 pour 31 jours ou $150 à vie. Clarifiez les conditions avant de payer.",
-    "metaTitle": "Mensuel ou à vie : comparer la durée d’accès",
-    "metaDescription": "The Isle Cheats coûte $35 pour 31 jours ou $150 à vie. Clarifiez les conditions avant de payer.",
+    "metaTitle": "Prix The Isle Cheats | 31 jours ou accès à vie",
+    "metaDescription": "Comparez The Isle Cheats à $35 pour 31 jours ou $150 à vie. Examinez la durée, les prérequis d'édition et les questions à régler avant le paiement",
     "date": "2026-11-01",
     "readTime": "3 min de lecture",
     "featured": false,
@@ -392,7 +404,7 @@ export const frBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Les prix confirmés"
+        "text": "Comparer les prix de 31 jours et de l'accès à vie"
       },
       {
         "type": "p",
@@ -417,6 +429,10 @@ export const frBlogArticles: BlogPostFull[] = [
       {
         "type": "p",
         "text": "Poursuivez avec [ESP des dinosaures et radar : deux lectures](/blog/esp-and-radar/)."
+      },
+      {
+        "type": "p",
+        "text": "Vérifiez les [prérequis Windows et Cloud DMA](/blog/windows-and-cloud-dma/) avant de comparer les durées d'accès. Clarifiez la configuration avant le paiement."
       },
       {
         "type": "cta",

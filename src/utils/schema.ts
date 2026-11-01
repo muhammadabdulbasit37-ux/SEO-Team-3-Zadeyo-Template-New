@@ -191,20 +191,12 @@ export function productSchema(input: {
     description: input.description,
     inLanguage: schemaLanguage(input.locale),
     sku: input.sku ?? input.url.replace(/\//g, '-'),
-    brand: {
-      '@type': 'Brand',
-      name: SITE_NAME,
-    },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     offers: {
       '@type': 'Offer',
       url: offerUrl(input.offerUrl),
       priceCurrency: 'USD',
       ...(input.priceUsd != null ? { price: input.priceUsd } : {}),
-      seller: {
-        '@type': 'Organization',
-        name: SITE_NAME,
-      },
     },
   };
 }

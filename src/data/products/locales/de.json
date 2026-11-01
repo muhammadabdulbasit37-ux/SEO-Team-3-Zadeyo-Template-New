@@ -124,7 +124,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Ein gezielter Hardwareablauf",
+          "title": "Hardware-Werkzeuge prüfen",
           "desc": "Bearbeite Datenträger-, Netzwerk- und GPU-Kennungen in einem Werkzeug. Führe danach den enthaltenen Reiniger gemäß der aktuellen Anleitung aus."
         },
         {
@@ -134,12 +134,12 @@
         },
         {
           "num": "03",
-          "title": "Den PC vorbereiten",
+          "title": "Windows-Voraussetzungen bestätigen",
           "desc": "Erforderlich sind Windows 10/11 mit 64 Bit, Administratorrechte, Internet sowie aktivierte HVCI, Kernisolierung, TPM und Secure Boot."
         },
         {
           "num": "04",
-          "title": "Die Grenze kennen",
+          "title": "Abdeckung und Einschränkungen prüfen",
           "desc": "Hardwareänderungen entfernen keine Kontosanktionen. Genannt sind Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE und Javelin; Kompatibilität kann wechseln. Spoofing kann Bedingungen verletzen und Sanktionen auslösen."
         }
       ],
@@ -195,7 +195,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Den Fall mit UGC aufbauen",
+          "title": "Einspruchsablauf prüfen",
           "desc": "Forme Eigentumsbelege und einen klaren Zeitverlauf zu einem Einspruchsablauf. Wiederholbare Schritte helfen bei der Organisation auf unterstützten Plattformen."
         },
         {
@@ -205,12 +205,12 @@
         },
         {
           "num": "03",
-          "title": "Belege vorbereiten",
+          "title": "Konto- und Systemangaben sammeln",
           "desc": "Sammle Eigentumsnachweise und die Einschränkungsmitteilung. Erforderlich sind Windows 10/11 mit 64 Bit, Internet sowie HVCI, Kernisolierung, TPM und Secure Boot."
         },
         {
           "num": "04",
-          "title": "Das Ergebnis einordnen",
+          "title": "Einspruchsgrenzen prüfen",
           "desc": "Wiederherstellung ist nicht garantiert. Dauerhafte Sperren bleiben bestehen. Plattformprüfer entscheiden jeden Fall; schwache Belege begrenzen den Einspruch."
         }
       ],
@@ -260,7 +260,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Eine Bibliothek auf deinem Bildschirm",
+          "title": "Verfügbare Vorschauen prüfen",
           "desc": "Wähle unterstützte Oberflächen, Outfits und Messerlooks in einem Client. Die Vorschau bleibt auf deinem Bildschirm und ergänzt nicht das Kontoinventar."
         },
         {
@@ -270,12 +270,12 @@
         },
         {
           "num": "03",
-          "title": "Den Kosmetikclient vorbereiten",
+          "title": "Client-Anforderungen bestätigen",
           "desc": "Nutze Windows 10/11 mit 64 Bit, Internet und Loaderzugang sowie aktivierte HVCI, Kernisolierung, TPM und Secure Boot."
         },
         {
           "num": "04",
-          "title": "Lokale Vorschauen richtig einordnen",
+          "title": "Kosmetische Eigentumsgrenzen prüfen",
           "desc": "Kosmetik ist kein handelbarer Inventarbesitz. Sie verschwindet beim Schließen des Clients. Updates können Abdeckung ändern; die Nutzung kann Spielbedingungen verletzen und Sanktionen auslösen."
         }
       ],

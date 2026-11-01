@@ -98,3 +98,7 @@ The owner requested removing the forum and replacing it with /reviews/. The curr
 
 The owner subsequently restored the forum and confirmed that fifteen supplied discussions and replies were genuine and authorized for republication. Current run: .content/7cd21193b2909434. The intake explicitly declares importedForumSourceIds and importedForumRecords. Imported rows must match their source-record hash exactly, retain supplied dates, have zero unprovided scores/ages, and count only supplied replies. Original English quotations are retained across localized interfaces; this declared imported mode does not bypass translation checks for generated editorial copy. Imported Person authors are checked against the approved manifest; ordinary generated starters still require Organization authorship and disclosure. The build verifies all reply paragraphs. Original-language schema exceptions apply only to the declared DiscussionForumPosting route. The ten reviews remain unchanged.
 
+## Current SEO refinement
+
+The active reviewed run is now `.content/187230cf9269e6f7`, prepared from the forum-restoration intake with an additional owner-confirmed checkout/referral fact. It revises commercial metadata, About/Support copy, guide metadata/headings and contextual links across all four locales. The source discussions, replies, reviews, product facts, prices and referral mappings remain unchanged. Install/check this run when maintaining the current copy; earlier runs are historical snapshots, not the latest approval contract.
+

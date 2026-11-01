@@ -1,8 +1,10 @@
 ---
 import '../styles/support-section.css';
 import { useLocale } from '../i18n';
+import { linkifyMarkdown } from '../utils/linkify';
+import { localizeInlineHtmlLinks } from '../utils/localizeHtmlLinks';
 
-const { t, lp } = useLocale(Astro.currentLocale);
+const { locale, t, lp } = useLocale(Astro.currentLocale);
 import Icon from './icons/Icon.astro';
 import type { IconName } from './icons/types';
 import { HWID_CHECKOUT_PATH, PRIMARY_CHECKOUT_PATH } from '../config/checkout';
@@ -94,7 +96,7 @@ const c = t.support;
             <div class="support-section__tips-item">
               <h2 class="support-section__tips-title">{section.heading}</h2>
               {section.paragraphs.map((paragraph) => (
-                <p class="support-section__tips-item-desc">{paragraph}</p>
+                <p class="support-section__tips-item-desc [&_a]:text-primary-text [&_a]:underline [&_a]:underline-offset-4" set:html={localizeInlineHtmlLinks(linkifyMarkdown(paragraph), locale)} />
               ))}
             </div>
           ))}

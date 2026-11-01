@@ -1,6 +1,6 @@
 {
   "eyebrow": "Tienda",
-  "title": "Elige la herramienta adecuada",
+  "title": "Compara trucos de The Isle y herramientas",
   "subtitle": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago.",
   "trust": [
     "Solo EVRIMA",
@@ -17,7 +17,7 @@
   "utilitiesTitle": "Utilidades con un objetivo concreto",
   "utilitiesDesc": "Identificadores, apelaciones y cosméticos responden a necesidades distintas. Cada utilidad tiene capacidades, requisitos y licencia propios.",
   "chooserEyebrow": "¿No está seguro?",
-  "chooserTitle": "Elige la herramienta adecuada",
+  "chooserTitle": "Elige el producto según tu objetivo",
   "chooserDesc": "Compara nuestro toolkit EVRIMA con tres utilidades de licencia independiente. Revisa alcance y requisitos antes del pago.",
   "scenarios": [
     {
@@ -42,7 +42,7 @@
     }
   ],
   "compareEyebrow": "Comparar",
-  "compareTitle": "Elige la herramienta adecuada",
+  "compareTitle": "Compara finalidad, requisitos y acceso",
   "compareDesc": "Identificadores, apelaciones y cosméticos responden a necesidades distintas. Cada utilidad tiene capacidades, requisitos y licencia propios.",
   "compareRows": [
     {

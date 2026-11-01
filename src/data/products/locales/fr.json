@@ -124,7 +124,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Un travail ciblé sur le matériel",
+          "title": "Examiner les outils matériels",
           "desc": "Gérez identifiants de disque, réseau et GPU dans un outil, puis exécutez le nettoyage inclus selon l’ordre du guide actuel."
         },
         {
@@ -134,12 +134,12 @@
         },
         {
           "num": "03",
-          "title": "Préparer la machine",
+          "title": "Confirmer les prérequis Windows",
           "desc": "Windows 10/11 en 64 bits, droits administrateur, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé activés sont nécessaires."
         },
         {
           "num": "04",
-          "title": "Connaître les limites",
+          "title": "Vérifier la couverture et les limites",
           "desc": "Les modifications matérielles ne retirent pas les sanctions de compte. Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE et Javelin sont cités ; la compatibilité évolue. Le spoofing peut enfreindre les conditions et entraîner des sanctions."
         }
       ],
@@ -195,7 +195,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Construire le dossier avec UGC",
+          "title": "Examiner le processus de recours",
           "desc": "Transformez preuves de propriété et chronologie claire en procédure de recours. Des étapes répétables aident à organiser le processus sur les plateformes compatibles."
         },
         {
@@ -205,12 +205,12 @@
         },
         {
           "num": "03",
-          "title": "Préparer les éléments",
+          "title": "Rassembler les données du compte et du système",
           "desc": "Réunissez preuves de propriété et notification de restriction. Le client exige Windows 10/11 en 64 bits, internet, HVCI, isolation du noyau, TPM et démarrage sécurisé."
         },
         {
           "num": "04",
-          "title": "Comprendre le résultat",
+          "title": "Vérifier les limites du recours",
           "desc": "Le rétablissement n’est pas garanti. Les suspensions permanentes restent en place. Les examinateurs décident chaque cas et des preuves faibles limitent le recours."
         }
       ],
@@ -260,7 +260,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Une bibliothèque sur votre écran",
+          "title": "Examiner les aperçus disponibles",
           "desc": "Choisissez finitions, tenues et couteaux compatibles dans un client. L’aperçu reste sur votre écran et ne rejoint pas l’inventaire du compte."
         },
         {
@@ -270,12 +270,12 @@
         },
         {
           "num": "03",
-          "title": "Préparer le client cosmétique",
+          "title": "Confirmer les prérequis du client",
           "desc": "Utilisez Windows 10/11 en 64 bits, internet et accès au loader, avec HVCI, isolation du noyau, TPM et démarrage sécurisé activés."
         },
         {
           "num": "04",
-          "title": "Situer les aperçus locaux",
+          "title": "Vérifier les limites de propriété cosmétique",
           "desc": "Les cosmétiques ne sont pas des objets possédés ou échangeables. Ils disparaissent à la fermeture du client. Les mises à jour changent la couverture et l’utilisation peut enfreindre les règles et entraîner des sanctions."
         }
       ],

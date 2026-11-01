@@ -4,6 +4,8 @@ Final local status: **READY FOR DEPLOYMENT**. See the [current pre-push release 
 
 Commercial Astro static website for **cheatsfortheisle.com**, supporting unprefixed English plus Spanish, German and French.
 
+The latest revision is the [SEO and content improvement pass](docs/seo-improvements-2026-11-01.md), with an [88-entry metadata inventory](docs/seo-metadata-inventory.csv). The report records local checks; deployed status must be verified separately.
+
 The four products are The Isle Cheats, HWID Spoofer, UGC and Skin Changer. Product data, pricing, checkout mappings and localization stay in the existing shared architecture. Start with [AGENTS.md](AGENTS.md), [architecture](docs/architecture.md), [keyword map](docs/the-isle-keyword-map.md) and the [media manifest](docs/media-replacement-manifest.json). Historical master reports remain provenance, not current product specifications.
 
 ## Local development
@@ -18,7 +20,7 @@ npm run dev -- --host 127.0.0.1
 ## Production checks
 
 ```sh
-npm run content:check -- --run .content/7cd21193b2909434
+npm run content:check -- --run .content/187230cf9269e6f7
 npm run typecheck
 npm run build
 npm test

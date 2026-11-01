@@ -4,6 +4,8 @@ import Icon from './icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import { useLocale } from '../i18n';
+import { linkifyMarkdown } from '../utils/linkify';
+import { localizeInlineHtmlLinks } from '../utils/localizeHtmlLinks';
 
 interface Props {
   title: string;
@@ -13,7 +15,7 @@ interface Props {
 }
 
 const { title, description, breadcrumbLabel, sections } = Astro.props;
-const { t, lp } = useLocale(Astro.currentLocale);
+const { locale, t, lp } = useLocale(Astro.currentLocale);
 ---
 
 <article class="py-8 md:py-12">
@@ -36,7 +38,7 @@ const { t, lp } = useLocale(Astro.currentLocale);
         <section class="mt-8">
           <h2>{section.heading}</h2>
           {section.paragraphs.map((paragraph) => (
-            <p>{paragraph}</p>
+            <p set:html={localizeInlineHtmlLinks(linkifyMarkdown(paragraph), locale)} />
           ))}
         </section>
       ))}

@@ -6,4 +6,5 @@ test('product offers preserve sourced price and plan without asserting unknown s
  vm.runInNewContext(js+'\nglobalThis.buildProduct = productSchema;',context);
  const result=context.buildProduct({name:'Fixture product',description:'Sourced fixture facts',url:'/cheats/',offerUrl:'/go/fixture/?plan=lifetime',priceUsd:150,image:'/image.webp'});
  assert.equal(result.offers.price,150);assert.equal(result.offers.url,'https://fixture.example/go/fixture/?plan=lifetime');assert.equal('availability'in result.offers,false);
+ assert.equal('seller'in result.offers,false);assert.equal('brand'in result,false);
 });

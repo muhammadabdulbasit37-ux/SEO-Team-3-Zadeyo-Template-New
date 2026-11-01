@@ -15,6 +15,7 @@ import { HWID_CHECKOUT_PATH, PRIMARY_CHECKOUT_PATH, resolveCheckoutHref } from '
 import { HWID_SPOOFER_SLUG, isUtilityEnabled } from '../../config/catalog';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ResponsiveImage from '../../components/ResponsiveImage.astro';
+import { gameplayImageFit } from '../../utils/responsiveImage';
 import BlogSidebar from '../../components/BlogSidebar.astro';
 import BlogPostTopBar from '../../components/BlogPostTopBar.astro';
 import { getBlogFaqs } from '../../data/faq';
@@ -123,8 +124,8 @@ const headline = post.h1 ?? post.title;
               sizes="(min-width: 1024px) 720px, calc(100vw - 2.5rem)"
               phoneWidth={400}
               widths={post.image.startsWith('/images/gameplay/') ? [640, 960, 1280] : undefined}
-              fit={post.image.startsWith('/images/gameplay/') ? 'contain' : undefined}
-              class="w-full object-cover"
+              fit={gameplayImageFit(post.image)}
+              class:list={['w-full object-cover', gameplayImageFit(post.image) === 'fill' && 'aspect-video h-auto']}
             />
           </figure>
 

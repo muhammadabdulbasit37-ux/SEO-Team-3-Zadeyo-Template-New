@@ -16,6 +16,14 @@ function splitAssetQuery(src: string): { path: string; query: string } {
   return { path: src.slice(0, q), query: src.slice(q) };
 }
 
+/** Owner-requested full-frame menu presentation; original screenshot bytes stay intact. */
+export function gameplayImageFit(src: string): 'fill' | 'contain' | undefined {
+  const { path } = splitAssetQuery(src);
+  if (path === '/images/gameplay/the-isle-combat-assist-menu.webp' ||
+      path === '/images/gameplay/the-isle-player-esp-menu.webp') return 'fill';
+  return path.startsWith('/images/gameplay/') ? 'contain' : undefined;
+}
+
 /** True when `src` points at a raster file, ignoring `?v=` cache-busters. */
 export function isRasterAsset(src: string): boolean {
   const { path } = splitAssetQuery(src);

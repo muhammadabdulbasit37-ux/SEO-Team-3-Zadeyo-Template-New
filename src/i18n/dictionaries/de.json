@@ -83,7 +83,7 @@
   },
   "features": {
     "eyebrow": "Funktionen",
-    "title": "Mehr erkennen. Gezielt konfigurieren.",
+    "title": "Entdecke Dino-ESP, Radar und Bite Assist",
     "subtitle": "Unser Toolkit verbindet Dinosaurierdaten, Ressourcenmarker und einstellbare Unterstützung für The Isle auf Steam.",
     "items": [
       {
@@ -212,7 +212,7 @@
   },
   "whyUs": {
     "eyebrow": "Warum wir",
-    "title": "Dinosaurierdaten als Grundlage",
+    "title": "Ein Toolkit für The Isle",
     "subtitle": "Vergleiche unsere aufgeführten Anzeigen und Konfigurationswerkzeuge mit einer Sitzung ohne diese Werkzeuge. Funktion und Erkennungsstatus wurden nicht unabhängig geprüft.",
     "usLabel": "Unser Toolkit",
     "otherLabel": "Ohne diese Werkzeuge",
@@ -348,17 +348,17 @@
       "overviewSubtitle": "Unser HWID Spoofer schreibt Festplattenseriennummern, MAC-Adressen, GPU-IDs und verwandte Merkmale neu, mit Spurenreinigung. Kontosanktionen bleiben getrennt.",
       "highlights": {
         "eyebrow": "Kurzüberblick",
-        "title": "Ein gezielter Hardwareablauf",
+        "title": "Hardware-Kennungen im Überblick",
         "desc": "Bearbeite Datenträger-, Netzwerk- und GPU-Kennungen in einem Werkzeug. Führe danach den enthaltenen Reiniger gemäß der aktuellen Anleitung aus."
       },
       "featuresSection": {
         "eyebrow": "Gelistete Zeilen",
-        "title": "HWID Spoofer",
+        "title": "Funktionen des HWID Spoofers",
         "desc": "Hardwareänderungen entfernen keine Kontosanktionen. Genannt sind Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE und Javelin; Kompatibilität kann wechseln. Spoofing kann Bedingungen verletzen und Sanktionen auslösen."
       },
       "experience": {
         "eyebrow": "Nach dem Checkout",
-        "title": "Ein gezielter Hardwareablauf",
+        "title": "Vorschau der HWID-Spoofer-Oberfläche",
         "subtitle": "Unser HWID Spoofer schreibt Festplattenseriennummern, MAC-Adressen, GPU-IDs und verwandte Merkmale neu, mit Spurenreinigung. Kontosanktionen bleiben getrennt.",
         "previewLabel": "Panel-Aufnahmen",
         "accessDividerTop": "Panel",
@@ -372,17 +372,17 @@
         "overviewSubtitle": "Unser UGC-Dienst verbindet Vorlagen mit automatisierten Streitfallschritten für eingeschränkte Spiel-, Sozial- und Marktplatzprofile. Du ordnest den Fall; die Plattform entscheidet.",
         "highlights": {
           "eyebrow": "Kurz",
-          "title": "Den Fall mit UGC aufbauen",
+          "title": "Kontoeinspruchswerkzeuge im Überblick",
           "desc": "Forme Eigentumsbelege und einen klaren Zeitverlauf zu einem Einspruchsablauf. Wiederholbare Schritte helfen bei der Organisation auf unterstützten Plattformen."
         },
         "featuresSection": {
           "eyebrow": "Enthalten",
-          "title": "UGC",
+          "title": "UGC-Einspruchsfunktionen",
           "desc": "Wiederherstellung ist nicht garantiert. Dauerhafte Sperren bleiben bestehen. Plattformprüfer entscheiden jeden Fall; schwache Belege begrenzen den Einspruch."
         },
         "experience": {
           "eyebrow": "Sobald die Lizenz live ist",
-          "title": "Den Fall mit UGC aufbauen",
+          "title": "Vorschau des UGC-Ablaufs",
           "subtitle": "Unser UGC-Dienst verbindet Vorlagen mit automatisierten Streitfallschritten für eingeschränkte Spiel-, Sozial- und Marktplatzprofile. Du ordnest den Fall; die Plattform entscheidet.",
           "previewLabel": "Rahmen",
           "accessDividerTop": "Rahmen",
@@ -395,17 +395,17 @@
         "overviewSubtitle": "Entdecke Waffenoberflächen, Outfits und Messervarianten für unterstützte Titel. Der leichte Client zeichnet Kosmetik lokal, ohne jedes Objekt einzeln zu kaufen.",
         "highlights": {
           "eyebrow": "Bibliothek",
-          "title": "Eine Bibliothek auf deinem Bildschirm",
+          "title": "Lokale Kosmetikoptionen",
           "desc": "Wähle unterstützte Oberflächen, Outfits und Messerlooks in einem Client. Die Vorschau bleibt auf deinem Bildschirm und ergänzt nicht das Kontoinventar."
         },
         "featuresSection": {
           "eyebrow": "Gruppen",
-          "title": "Skin Changer",
+          "title": "Kosmetikfunktionen des Skin Changers",
           "desc": "Kosmetik ist kein handelbarer Inventarbesitz. Sie verschwindet beim Schließen des Clients. Updates können Abdeckung ändern; die Nutzung kann Spielbedingungen verletzen und Sanktionen auslösen."
         },
         "experience": {
           "eyebrow": "Wenn der Zugang da ist",
-          "title": "Eine Bibliothek auf deinem Bildschirm",
+          "title": "Vorschau der Skin-Changer-Oberfläche",
           "subtitle": "Entdecke Waffenoberflächen, Outfits und Messervarianten für unterstützte Titel. Der leichte Client zeichnet Kosmetik lokal, ohne jedes Objekt einzeln zu kaufen.",
           "previewLabel": "Aufnahmen",
           "accessDividerTop": "Rahmen",
@@ -482,9 +482,9 @@
   "blog": {
     "eyebrow": "Blog",
     "title": "The Isle Produktleitfäden",
-    "subtitle": "Lies Funktionserklärungen, EVRIMA-Kompatibilität, Voraussetzungen und Lizenzvergleiche.",
+    "subtitle": "Entdecke The Isle Guides zu Dino-ESP, EVRIMA-Kompatibilität, Cloud-DMA-Anforderungen und Zugangstarifen, bevor du deine Einrichtung planst.",
     "latestTitle": "The Isle Produktleitfäden",
-    "latestSubtitle": "Lies Funktionserklärungen, EVRIMA-Kompatibilität, Voraussetzungen und Lizenzvergleiche.",
+    "latestSubtitle": "Entdecke The Isle Guides zu Dino-ESP, EVRIMA-Kompatibilität, Cloud-DMA-Anforderungen und Zugangstarifen, bevor du deine Einrichtung planst.",
     "filterAll": "Alle Artikel",
     "emptyFilter": "Keine Artikel passen zu diesem Filter.",
     "emptyArchive": "Noch keine Artikel. Neue Guides erscheinen hier.",
@@ -503,8 +503,8 @@
   "workflow": {
     "eyebrow": "So funktioniert es",
     "badge": "4 einfache Schritte",
-    "titleBefore": "Ausstattung",
-    "titleHighlight": "vorbereiten",
+    "titleBefore": "Wähle deinen",
+    "titleHighlight": "Zugang",
     "subtitle": "Prüfe EVRIMA und die gesamte Ausstattung vor dem Kauf. Auto Finish, Auto Stamina und Kadaverhilfe hängen von der Edition ab; kläre den enthaltenen Umfang.",
     "ctaLabel": "Toolkit entdecken",
     "ctaHref": "/cheats/",
@@ -540,8 +540,8 @@
   },
   "support": {
     "eyebrow": "Support",
-    "title": "The Isle Produktsupport",
-    "subtitle": "Kläre Voraussetzungen vor der Zahlung oder bereite eine genaue Frage zu Bestellung oder Loader vor.",
+    "title": "Support für The Isle Cheats",
+    "subtitle": "Prüfe die Anforderungen deiner Einrichtung oder bereite eine Bestellfrage für den Support des Checkout-Anbieters vor.",
     "channels": [
       {
         "icon": "users",
@@ -553,7 +553,7 @@
       {
         "icon": "headphones",
         "title": "Support kontaktieren",
-        "desc": "Nenne Produkt, Bestelladresse, Spielversion und genauen Fehler. Entferne Zugangsdaten und Kartendaten aus Screenshots.",
+        "desc": "Bei Fragen zu Zahlung, Lieferung, Aktivierung oder Lizenzen hilft der Checkout-Support. Halte Bestellreferenz und Produktname bereit.",
         "linkLabel": "Checkout-Support öffnen",
         "href": "https://zadeyo.com/support"
       },
@@ -582,15 +582,21 @@
     ],
     "pageSections": [
       {
-        "heading": "Vor der Planwahl",
+        "heading": "Kläre die Einrichtung vor dem Kauf",
         "paragraphs": [
-          "Nenne Spielzweig, Windows-Version und gewünschte Funktion. Kläre Cloud DMA und Edition vor der Bestellung des Toolkits."
+          "Bestätige den Spielzweig und deine Windows-Version. Der [EVRIMA-Kompatibilitätsratgeber](/blog/evrima-compatibility/) erklärt die Zweige; der [Windows- und Cloud-DMA-Ratgeber](/blog/windows-and-cloud-dma/) beschreibt die nötige Einrichtung. Prüfe die genaue Edition vor der Tarifwahl."
         ]
       },
       {
-        "heading": "Ein Problem melden",
+        "heading": "Hilfe zu Bestellungen und Produkten",
         "paragraphs": [
-          "Nenne Produkt, Bestelladresse, Spielversion und genauen Fehler. Entferne Zugangsdaten und Kartendaten aus Screenshots."
+          "Käufe werden auf der Website des Checkout-Partners über unsere Empfehlungslinks abgeschlossen. Nutze den obigen Checkout-Support für Fragen zu Zahlung, Lieferung, Aktivierung oder Lizenzen. Halte die Bestellbestätigung bereit und beschreibe das Problem mit Produktname und Bestellreferenz."
+        ]
+      },
+      {
+        "heading": "Nützliche Angaben für einen Fehlerbericht",
+        "paragraphs": [
+          "Nenne Windows-Version, Spielzweig und Build, das gewählte Produkt und die genaue Fehlermeldung. Erkläre, was du erwartet hast und was passiert ist. Entferne Passwörter, Lizenzschlüssel und Kartendaten aus Screenshots, bevor du sie teilst."
         ]
       }
     ]
@@ -715,25 +721,32 @@
   "legalPages": {
     "about": {
       "title": "Über CHEATS FOR THE ISLE",
-      "description": "Wir bündeln The-Isle-Produkte, Werkzeuge und praktische Kaufberatung in einem kommerziellen Katalog.",
+      "description": "CHEATS FOR THE ISLE bündelt Produktinformationen, Vergleiche und praktische Kaufratgeber für Spieler von The Isle.",
       "sections": [
         {
-          "heading": "Unser Produktfokus",
+          "heading": "Unser Schwerpunkt: The Isle und Hilfsprodukte",
           "paragraphs": [
-            "Entdecke Dinosaurier-ESP, Ressourcenmarker, Radar und Bite Assist für EVRIMA. HWID Spoofer, UGC und Skin Changer besitzen jeweils einen eigenen Zweck und eine Lizenz."
+            "Entdecke unser [The Isle Cheats Toolkit](/cheats/) für EVRIMA mit Dino-ESP, Radar, Ressourcenmarkierungen und Bite Assist. HWID Spoofer, UGC und Skin Changer haben unterschiedliche Aufgaben und separate Lizenzen. Nutze den [Produktvergleich](/products/), um den passenden Funktionsumfang auszuwählen."
           ]
         },
         {
-          "heading": "Klare Auswahl vor der Zahlung",
+          "heading": "So funktioniert der Kauf über Empfehlungslinks",
           "paragraphs": [
-            "Wir unterscheiden lokale Vorschauen von Inventarbesitz und Einsprüche von Hardwareänderungen. Unsere Beiträge erklären Umfang und Anforderungen für deine Lizenzwahl."
+            "Sieh dir Funktionen an und vergleiche Tarife hier; den Kauf schließt du auf der Website des Checkout-Partners über unsere Empfehlungslinks ab. Bei Käufen über diese Links können wir eine Provision erhalten. Bewahre die Bestellbestätigung auf und folge den mitgelieferten Hinweisen zur Lieferung oder Aktivierung."
+          ]
+        },
+        {
+          "heading": "Triff deine Entscheidung vor der Zahlung",
+          "paragraphs": [
+            "Unsere [Funktions- und Einrichtungsratgeber](/blog/) erklären EVRIMA-Kompatibilität, Windows, Cloud DMA und Zugangsbedingungen. Lokale Kosmetikvorschauen, Hardware-Kennungen und Kontoeinsprüche sind getrennte Funktionen. Lies die [Kauffragen](/faq/) und kläre Edition und Kompatibilität vor dem Checkout.",
+            "Für Fragen zu Abrechnung, Lieferung oder Lizenzen nutze den Checkout-Support auf unserer [Supportseite](/support/). Wir versprechen keinen bestimmten Erkennungsstatus, durchgehende Verfügbarkeit oder Kontosicherheit. Anforderungen und Kompatibilität können sich nach Spielupdates ändern."
           ]
         }
       ]
     },
     "privacy": {
       "title": "Datenschutz",
-      "description": "Analytics, Cookies und die E-Mail, die Sie mit einem Support-Ticket auf {siteDomain} senden.",
+      "description": "Browser-Einstellungen, optionale Analyse und Angaben auf externen Checkout- oder Supportseiten.",
       "sections": [
         {
           "heading": "Welche Daten wir erfassen",
@@ -744,59 +757,56 @@
         {
           "heading": "Wie wir Daten nutzen",
           "paragraphs": [
-            "Analytics zeigen, welche Guides und Produktseiten genutzt werden, damit defekte Links und dünne Seiten behoben werden können. Ein Support-Ticket kann E-Mail und Nachricht behalten, bis der Fall geschlossen ist."
+            "Optionale Analysen zeigen, welche Seiten genutzt werden. Bestell- und Ticketangaben auf externen Checkout- oder Supportseiten werden von diesen Diensten verarbeitet."
           ]
         },
         {
           "heading": "Cookies",
           "paragraphs": [
-            "Cookies auf dieser Seite beschränken sich auf Analytics. Im Browser blockieren und die Seiten laden weiter."
+            "Diese Website speichert Anzeigeeinstellungen wie das gewählte Design in deinem Browser. Bei aktivierter Analyse kann deren Anbieter Cookies verwenden. Für externe Checkout- und Supportdienste gelten eigene Datenpraktiken."
           ]
         },
         {
           "heading": "Support",
           "paragraphs": [
-            "Datenschutzfragen über die Support-Seite. Kauf- und Erstattungsregeln stehen in den AGB."
+            "Auf der Supportseite findest du den Checkout-Kontakt für Abrechnung, Lieferung und Lizenzen. Externe Dienste beschreiben ihre Datenverarbeitung in eigenen Richtlinien."
           ]
         }
       ]
     },
     "terms": {
       "title": "AGB",
-      "description": "Was Sie kaufen, wie Lizenzen funktionieren, wann eine Erstattung möglich ist und welche Kontosanktion Sie auf {siteDomain} akzeptieren.",
+      "description": "Wie diese Website Produkte beschreibt, zum externen Checkout weiterleitet und Bestellfragen zuordnet.",
       "sections": [
         {
           "heading": "Vereinbarung",
           "paragraphs": [
-            "Zuletzt aktualisiert: September 2026. Nutzung von {siteDomain} oder Checkout-Abschluss für ein hier gelistetes Produkt bedeutet Zustimmung zu diesen AGB und der Datenschutzerklärung."
+            "Aktualisiert: 1. November 2026. Diese Seiten erklären die Website und Käufe über Empfehlungslinks. Für Produktkäufe gelten die beim Checkout angezeigten Bedingungen."
           ]
         },
         {
           "heading": "Was Sie kaufen",
           "paragraphs": [
-            "Die Produkte sind {cheatProduct} und die Utilities auf der Produktseite. Lieferung erfolgt über Operator-Portal und Loader unter Windows.",
-            "Jede Produktseite beschreibt den Leistungsumfang zum Zeitpunkt der Zahlung. Ein The Isle-Update oder Anti-Cheat-Update kann Module ändern."
+            "Der Katalog umfasst The Isle Cheats und separat lizenzierte Hilfsprodukte. Prüfe genaue Edition, Funktionen, Anforderungen und Zugangsdauer vor dem Kaufabschluss."
           ]
         },
         {
           "heading": "Checkout und Lieferung",
           "paragraphs": [
-            "Zahlung und Lizenz laufen auf externen Checkout-Seiten. {siteDomain} verarbeitet oder speichert keine Kartennummern.",
-            "Nach der Zahlung Operator-Portal aus dem Bestellablauf öffnen und aktuellen Loader sowie Setup-Guide laden, bevor The Isle startet."
+            "Käufe werden auf der Website des Checkout-Partners über unsere Empfehlungslinks abgeschlossen. Dafür können wir eine Provision erhalten. Diese Website verarbeitet keine Zahlungskartennummern.",
+            "Folge für Lieferung und Aktivierung den Hinweisen deiner Bestellung. Wende dich bei Bestell- oder Lizenzfragen an den Checkout-Support."
           ]
         },
         {
           "heading": "Lizenznutzung",
           "paragraphs": [
-            "Eine Lizenz ist nur für Sie. Loader-Dateien, Portal-Logins oder Lizenzschlüssel nicht teilen. HWID- und Geräte-Limits folgen dem Tarif und werden im Portal durchgesetzt."
+            "Prüfe vor der Zahlung die Lizenzbedingungen, darunter Dauer, Gerätebeschränkungen und unterstützte Software. Halte Passwörter und Lizenzschlüssel privat."
           ]
         },
         {
           "heading": "Erstattungen und Käufe",
           "paragraphs": [
-            "Prüfe aktuelle Anforderungen und Kaufbedingungen vor der Zahlung. Drittanbieter-Werkzeuge können Sanktionen auslösen; Kompatibilität kann wechseln.",
-            "Prüfe aktuelle Anforderungen und Kaufbedingungen vor der Zahlung. Drittanbieter-Werkzeuge können Sanktionen auslösen; Kompatibilität kann wechseln.",
-            "Support kann nach Prüfung Reparatur, Ersatz-Zugang oder teilweise oder volle Erstattung anbieten, wenn der Fehler bei uns liegt. Support muss nicht jede Anfrage genehmigen."
+            "Bei Fragen zu Erstattung oder Stornierung kontaktiere den Checkout-Support mit deiner Bestellreferenz. Prüfe die Richtlinie vor dem Kauf; diese Website gibt keine eigene Erstattungsgarantie."
           ]
         },
         {
@@ -809,13 +819,13 @@
         {
           "heading": "Änderungen",
           "paragraphs": [
-            "Diese Bedingungen können aktualisiert werden. Das Datum oben ändert sich dann. Nutzung der Seite danach bedeutet Zustimmung zu den geänderten Bedingungen."
+            "Produktinformationen und Website-Texte können aktualisiert werden. Prüfe Anforderungen und Checkout-Bedingungen vor jedem Kauf erneut. Das Datum oben nennt diese Seitenaktualisierung."
           ]
         },
         {
           "heading": "Support",
           "paragraphs": [
-            "Fragen zu Bedingungen, Abrechnung oder Loader über die Schaltflächen auf der Support-Seite. Die Datenschutzerklärung beschreibt den Umgang mit Seitendaten."
+            "Auf der Supportseite findest du den Checkout-Kontakt für Abrechnung, Lieferung und Lizenzen. Externe Dienste beschreiben ihre Datenverarbeitung in eigenen Richtlinien."
           ]
         }
       ]

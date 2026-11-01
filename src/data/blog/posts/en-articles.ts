@@ -8,8 +8,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Dinosaur ESP and radar: two ways to read the scene",
     "tag": "Features",
     "desc": "Understand dinosaur labels, world-space ESP and the 2D radar before choosing your display settings.",
-    "metaTitle": "Dinosaur ESP and radar: two ways to read the scene",
-    "metaDescription": "Understand dinosaur labels, world-space ESP and the 2D radar before choosing your display settings.",
+    "metaTitle": "The Isle ESP and Radar | Dinosaur Labels Explained",
+    "metaDescription": "Compare dinosaur ESP with radar in The Isle. Understand species, growth and distance labels, map overlays and the information each view provides",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": true,
@@ -21,7 +21,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Read the animal in context"
+        "text": "Read dinosaur ESP information in context"
       },
       {
         "type": "p",
@@ -48,6 +48,10 @@ export const enBlogArticles: BlogPostFull[] = [
         "text": "Continue with [EVRIMA compatibility: check the branch first](/blog/evrima-compatibility/)."
       },
       {
+        "type": "p",
+        "text": "For world markers, read our [Resource ESP guide](/blog/resource-esp-markers/). It separates food and water tracking from dinosaur information."
+      },
+      {
         "type": "cta",
         "title": "The Isle Cheats",
         "text": "Dinosaur ESP, radar, resource markers and adjustable Bite Assist for EVRIMA. Review the complete setup requirements before choosing your plan.",
@@ -61,8 +65,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "EVRIMA compatibility: check the branch first",
     "tag": "Compatibility",
     "desc": "Our current listing supports EVRIMA only. Learn why Legacy and server presets require separate checks.",
-    "metaTitle": "EVRIMA compatibility: check the branch first",
-    "metaDescription": "Our current listing supports EVRIMA only. Learn why Legacy and server presets require separate checks.",
+    "metaTitle": "The Isle Cheats: EVRIMA Support and Legacy Limits",
+    "metaDescription": "Check The Isle Cheats compatibility before buying. Learn why EVRIMA support, Legacy and server presets need separate checks after game updates",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -74,7 +78,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "A preset is not branch support"
+        "text": "EVRIMA support and server presets"
       },
       {
         "type": "p",
@@ -114,8 +118,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Windows and Cloud DMA: a pre-purchase checklist",
     "tag": "Setup",
     "desc": "Check Windows, security settings and the Cloud DMA requirement before selecting a license.",
-    "metaTitle": "Windows and Cloud DMA: a pre-purchase checklist",
-    "metaDescription": "Check Windows, security settings and the Cloud DMA requirement before selecting a license.",
+    "metaTitle": "The Isle Cheats Setup | Windows and Cloud DMA",
+    "metaDescription": "Check Windows 10/11, HVCI, Core Isolation, TPM, Secure Boot and the Cloud DMA requirement for The Isle Cheats before selecting an access plan",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -127,7 +131,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Check the complete setup"
+        "text": "Check Windows and Cloud DMA requirements"
       },
       {
         "type": "p",
@@ -154,6 +158,10 @@ export const enBlogArticles: BlogPostFull[] = [
         "text": "Continue with [Bite Assist: understand the controls](/blog/bite-assist-controls/)."
       },
       {
+        "type": "p",
+        "text": "Use the [purchase FAQ](/faq/) to check access terms and product scope alongside your hardware requirements."
+      },
+      {
         "type": "cta",
         "title": "The Isle Cheats",
         "text": "Dinosaur ESP, radar, resource markers and adjustable Bite Assist for EVRIMA. Review the complete setup requirements before choosing your plan.",
@@ -167,8 +175,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Bite Assist: understand the controls",
     "tag": "Features",
     "desc": "Explore smoothness, range, bone priority and movement prediction without assuming universal settings.",
-    "metaTitle": "Bite Assist: understand the controls",
-    "metaDescription": "Explore smoothness, range, bone priority and movement prediction without assuming universal settings.",
+    "metaTitle": "The Isle Bite Assist | Range, Smoothing and Prediction",
+    "metaDescription": "Understand Bite Assist controls for The Isle: smoothness, targeting range, bone priority and movement prediction. Review settings before buying",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -180,7 +188,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Controls describe different decisions"
+        "text": "What each Bite Assist control changes"
       },
       {
         "type": "p",
@@ -207,6 +215,10 @@ export const enBlogArticles: BlogPostFull[] = [
         "text": "Continue with [Resource ESP: food, water and nest markers](/blog/resource-esp-markers/)."
       },
       {
+        "type": "p",
+        "text": "Read the [ESP and radar comparison](/blog/esp-and-radar/) to distinguish displayed dinosaur information from targeting assistance."
+      },
+      {
         "type": "cta",
         "title": "The Isle Cheats",
         "text": "Dinosaur ESP, radar, resource markers and adjustable Bite Assist for EVRIMA. Review the complete setup requirements before choosing your plan.",
@@ -220,8 +232,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Resource ESP: food, water and nest markers",
     "tag": "Features",
     "desc": "Separate world-resource markers from dinosaur labels, radar and edition-dependent carcass assistance.",
-    "metaTitle": "Resource ESP: food, water and nest markers",
-    "metaDescription": "Separate world-resource markers from dinosaur labels, radar and edition-dependent carcass assistance.",
+    "metaTitle": "The Isle Resource ESP | Food, Water and Nest Markers",
+    "metaDescription": "Explore food, water, herbs, fruit and nest markers in The Isle Resource ESP. Understand how displayed resources differ from edition-specific utilities",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -233,7 +245,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "What the resource list covers"
+        "text": "Food, water and nest markers in Resource ESP"
       },
       {
         "type": "p",
@@ -273,8 +285,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Appearance previews and the separate Skin Changer",
     "tag": "Comparisons",
     "desc": "Distinguish local dinosaur previews in the main toolkit from our separate cosmetic utility.",
-    "metaTitle": "Appearance previews and the separate Skin Changer",
-    "metaDescription": "Distinguish local dinosaur previews in the main toolkit from our separate cosmetic utility.",
+    "metaTitle": "The Isle Appearance Tool vs Skin Changer | Scope",
+    "metaDescription": "Compare local dinosaur previews in The Isle Cheats with Skin Changer. Check supported games, cosmetic features and license terms",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -286,7 +298,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Two products with different scopes"
+        "text": "Dinosaur appearance previews and Skin Changer scope"
       },
       {
         "type": "p",
@@ -326,8 +338,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Hardware flags and account appeals: different tools",
     "tag": "Tools",
     "desc": "Compare our HWID Spoofer with UGC without treating every login error as a hardware ban.",
-    "metaTitle": "Hardware flags and account appeals: different tools",
-    "metaDescription": "Compare our HWID Spoofer with UGC without treating every login error as a hardware ban.",
+    "metaTitle": "HWID Spoofer vs UGC | Hardware Flags and Account Appeals",
+    "metaDescription": "Compare HWID Spoofer hardware tools with UGC account appeal workflows. Identify the restriction and collect evidence before choosing a product",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -339,7 +351,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "Establish what the restriction concerns"
+        "text": "Identify hardware restrictions and account sanctions"
       },
       {
         "type": "p",
@@ -379,8 +391,8 @@ export const enBlogArticles: BlogPostFull[] = [
     "h1": "Monthly or lifetime: compare the access terms",
     "tag": "Guides",
     "desc": "The Isle Cheats is $35 for 31 days or $150 lifetime. Compare term length and questions to resolve before paying.",
-    "metaTitle": "Monthly or lifetime: compare the access terms",
-    "metaDescription": "The Isle Cheats is $35 for 31 days or $150 lifetime. Compare term length and questions to resolve before paying.",
+    "metaTitle": "The Isle Cheats Pricing | 31 Days vs Lifetime Access",
+    "metaDescription": "Compare The Isle Cheats at $35 for 31 days or $150 lifetime. Review access duration, edition requirements and questions to settle before payment",
     "date": "2026-11-01",
     "readTime": "3 min read",
     "featured": false,
@@ -392,7 +404,7 @@ export const enBlogArticles: BlogPostFull[] = [
     "body": [
       {
         "type": "h2",
-        "text": "The confirmed prices"
+        "text": "Compare 31-day and lifetime prices"
       },
       {
         "type": "p",
@@ -417,6 +429,10 @@ export const enBlogArticles: BlogPostFull[] = [
       {
         "type": "p",
         "text": "Continue with [Dinosaur ESP and radar: two ways to read the scene](/blog/esp-and-radar/)."
+      },
+      {
+        "type": "p",
+        "text": "Check the [Windows and Cloud DMA requirements](/blog/windows-and-cloud-dma/) before comparing access duration. Resolve setup dependencies before payment."
       },
       {
         "type": "cta",

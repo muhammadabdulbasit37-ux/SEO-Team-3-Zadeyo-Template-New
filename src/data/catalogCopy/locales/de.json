@@ -1,6 +1,6 @@
 {
   "eyebrow": "Shop",
-  "title": "Das passende Werkzeug auswählen",
+  "title": "The Isle Cheats und Hilfsprodukte vergleichen",
   "subtitle": "Vergleiche unser EVRIMA-Toolkit mit drei separat lizenzierten Werkzeugen. Stimme Umfang und Anforderungen vor dem Kauf auf dein Ziel ab.",
   "trust": [
     "Nur EVRIMA",
@@ -17,7 +17,7 @@
   "utilitiesTitle": "Werkzeuge mit klarem Zweck",
   "utilitiesDesc": "Hardwarekennungen, Einsprüche und lokale Kosmetik sind unterschiedliche Aufgaben. Jedes Werkzeug besitzt eigenen Umfang, Anforderungen und Lizenz.",
   "chooserEyebrow": "Unsicher?",
-  "chooserTitle": "Das passende Werkzeug auswählen",
+  "chooserTitle": "Wähle das Produkt für dein Ziel",
   "chooserDesc": "Vergleiche unser EVRIMA-Toolkit mit drei separat lizenzierten Werkzeugen. Stimme Umfang und Anforderungen vor dem Kauf auf dein Ziel ab.",
   "scenarios": [
     {
@@ -42,7 +42,7 @@
     }
   ],
   "compareEyebrow": "Vergleichen",
-  "compareTitle": "Das passende Werkzeug auswählen",
+  "compareTitle": "Zweck, Anforderungen und Zugang vergleichen",
   "compareDesc": "Hardwarekennungen, Einsprüche und lokale Kosmetik sind unterschiedliche Aufgaben. Jedes Werkzeug besitzt eigenen Umfang, Anforderungen und Lizenz.",
   "compareRows": [
     {

@@ -1,6 +1,6 @@
 ---
 import ResponsiveImage from './ResponsiveImage.astro';
-import { HERO_IMAGE_SIZES, HERO_IMAGE_WIDTHS } from '../utils/responsiveImage';
+import { HERO_IMAGE_SIZES, HERO_IMAGE_WIDTHS, gameplayImageFit } from '../utils/responsiveImage';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/starwind/carousel';
 import { useLocale } from '../i18n';
 
@@ -61,7 +61,7 @@ const panelId = (index: number) => `${id}-panel-${index}`;
           <CarouselItem class="hero-slider__item">
             <figure
               id={multiple ? panelId(i) : undefined}
-              class="hero-slider__slide aspect-[16/10] overflow-hidden rounded-lg bg-muted/30"
+              class="hero-slider__slide aspect-video overflow-hidden rounded-lg bg-muted/30"
               role={multiple ? 'tabpanel' : undefined}
               aria-roledescription={multiple ? 'slide' : undefined}
               aria-labelledby={multiple ? tabId(i) : undefined}
@@ -79,7 +79,7 @@ const panelId = (index: number) => `${id}-panel-${index}`;
                 fetchPriority={i === 0 ? 'high' : 'low'}
                 sizes={HERO_IMAGE_SIZES}
                 desktopOnly
-                fit="contain"
+                fit={gameplayImageFit(img.src) ?? 'contain'}
                 class="h-full w-full object-cover"
               />
             </figure>

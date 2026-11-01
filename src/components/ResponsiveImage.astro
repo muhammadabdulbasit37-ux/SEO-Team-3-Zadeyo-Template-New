@@ -21,8 +21,8 @@ interface Props {
   desktopOnly?: boolean;
   /** Width of the file phones should download. Tablets use 640w; desktop uses `widths`. */
   phoneWidth?: number;
-  /** Preserve complete screenshots inside fixed display frames. */
-  fit?: 'contain' | 'cover';
+  /** Fit screenshots to their frame; fill is reserved for owner-requested menu previews. */
+  fit?: 'contain' | 'cover' | 'fill';
 }
 
 const {

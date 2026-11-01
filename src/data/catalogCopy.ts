@@ -36,7 +36,7 @@ export interface CatalogCopy {
 
 const en: CatalogCopy = {
   "eyebrow": "Store",
-  "title": "Choose the right tool",
+  "title": "Compare The Isle cheats and utilities",
   "subtitle": "Compare our EVRIMA toolkit with three separately licensed utilities. Match the feature scope and requirements to your goal before checkout.",
   "trust": [
     "EVRIMA only",
@@ -53,7 +53,7 @@ const en: CatalogCopy = {
   "utilitiesTitle": "Purpose-built utilities",
   "utilitiesDesc": "Hardware identifiers, account appeals and local cosmetics are different jobs. Each utility has its own capabilities, requirements and license.",
   "chooserEyebrow": "Not sure?",
-  "chooserTitle": "Choose the right tool",
+  "chooserTitle": "Match the product to your goal",
   "chooserDesc": "Compare our EVRIMA toolkit with three separately licensed utilities. Match the feature scope and requirements to your goal before checkout.",
   "scenarios": [
     {
@@ -78,7 +78,7 @@ const en: CatalogCopy = {
     }
   ],
   "compareEyebrow": "Compare",
-  "compareTitle": "Choose the right tool",
+  "compareTitle": "Compare purpose, requirements and access",
   "compareDesc": "Hardware identifiers, account appeals and local cosmetics are different jobs. Each utility has its own capabilities, requirements and license.",
   "compareRows": [
     {

@@ -1,6 +1,7 @@
 ---
 import type { ProductSlide } from '../data/products';
 import ResponsiveImage from './ResponsiveImage.astro';
+import { gameplayImageFit } from '../utils/responsiveImage';
 import Icon from './icons/Icon.astro';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/starwind/carousel';
 import { useLocale } from '../i18n';
@@ -68,7 +69,7 @@ function isVideo(slide: ProductSlide) {
                   sizes="(min-width: 1024px) 760px, calc(100vw - 2.5rem)"
                   phoneWidth={400}
                   class="media-slider__media"
-                  fit={slide.src.startsWith('/images/gameplay/') ? 'contain' : undefined}
+                  fit={gameplayImageFit(slide.src)}
                 />
               )}
             </figure>

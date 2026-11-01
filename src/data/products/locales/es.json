@@ -124,7 +124,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Un flujo centrado en hardware",
+          "title": "Revisa las herramientas de hardware",
           "desc": "Gestiona identificadores de disco, red y GPU desde una utilidad y ejecuta la limpieza incluida en el orden de la guía."
         },
         {
@@ -134,12 +134,12 @@
         },
         {
           "num": "03",
-          "title": "Prepara el equipo",
+          "title": "Confirma los requisitos de Windows",
           "desc": "Requiere Windows 10/11 de 64 bits, permisos de administrador, internet, HVCI y Aislamiento del núcleo, TPM y Arranque seguro activados."
         },
         {
           "num": "04",
-          "title": "Conoce sus límites",
+          "title": "Comprueba la cobertura y los límites",
           "desc": "Los cambios de hardware no retiran sanciones de cuenta. Se enumeran Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, ACE y Javelin; la compatibilidad cambia. El uso puede infringir condiciones y provocar sanciones."
         }
       ],
@@ -195,7 +195,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Prepara el caso con UGC",
+          "title": "Revisa el proceso de apelación",
           "desc": "Convierte pruebas de titularidad y una cronología clara en un flujo de apelación. Repite pasos de disputa para organizar el proceso en plataformas compatibles."
         },
         {
@@ -205,12 +205,12 @@
         },
         {
           "num": "03",
-          "title": "Prepara las pruebas",
+          "title": "Reúne datos de la cuenta y del sistema",
           "desc": "Reúne pruebas de titularidad y el aviso de restricción. Requiere Windows 10/11 de 64 bits, internet, HVCI y Aislamiento del núcleo, TPM y Arranque seguro activados."
         },
         {
           "num": "04",
-          "title": "Comprende el resultado",
+          "title": "Comprueba los límites de apelación",
           "desc": "La recuperación no está garantizada. Las suspensiones permanentes siguen vigentes. Los revisores deciden cada caso y la falta de pruebas limita la apelación."
         }
       ],
@@ -260,7 +260,7 @@
       "acquisitionSteps": [
         {
           "num": "01",
-          "title": "Una biblioteca en tu pantalla",
+          "title": "Revisa las vistas disponibles",
           "desc": "Elige acabados, atuendos y cuchillos compatibles desde un cliente. La vista permanece en tu pantalla y no se añade al inventario de la cuenta."
         },
         {
@@ -270,12 +270,12 @@
         },
         {
           "num": "03",
-          "title": "Prepara el cliente cosmético",
+          "title": "Confirma los requisitos del cliente",
           "desc": "Requiere Windows 10/11 de 64 bits, internet y loader, HVCI y Aislamiento del núcleo, TPM y Arranque seguro activados."
         },
         {
           "num": "04",
-          "title": "Límites de las vistas locales",
+          "title": "Comprueba los límites de propiedad cosmética",
           "desc": "Los cosméticos no son inventario propio ni se pueden intercambiar. Desaparecen al cerrar el cliente. Las actualizaciones cambian la cobertura y el uso puede infringir normas y provocar sanciones."
         }
       ],

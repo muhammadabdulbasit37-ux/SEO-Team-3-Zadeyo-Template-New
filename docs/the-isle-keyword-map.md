@@ -43,3 +43,17 @@ Evidence: [current product listing](https://zadeyo.com/products/the-isle-novaxwa
 | /forum/skin-changer-vs-buying-skins/ | skin changer worth it | skin changer vs buying skins, has anyone actually done the math |
 
 The forum was restored at the owner's request with fifteen supplied discussions and 115 supplied replies. Thread keywords and questions are owner-provided; no new search-volume claims are made. Eight guides retain their existing informational roles, and the ten-review collection remains separate. Forum/review quotations stay in original English with localized interfaces and metadata.
+
+## SEO refinement and measurement
+
+The 2026-11-01 refinement keeps the URL ownership above. Homepage copy introduces the feature set; `/cheats/` owns buying, plans and full prerequisites; `/products/` compares different product purposes. About explains the publishing brand and referral checkout, Support routes order questions, and the read-only review/forum archives retain their supplied material. The checked content run is `.content/187230cf9269e6f7`, reflected in `content/manifest.json`.
+
+Use natural equivalents in each language: English **The Isle Cheats**, Spanish **trucos para The Isle**, German **Cheats für The Isle**, and French **cheats The Isle**. Purchase pages add buying/EVRIMA intent; guides answer specific ESP, compatibility, setup or access questions. These are editorial targeting choices, not measured search-volume or ranking claims. The grammatical words “para” and “für” are never standalone targets. Shared words across pages/languages do not justify redirects or cross-language canonicals.
+
+All eight guides have clearer feature-specific search titles/descriptions and section headings. Selected guides add contextual links to the resource guide, ESP/radar comparison, requirements or purchase FAQ. About and Support connect directly to relevant guides, product comparison and purchasing answers. Existing descriptive navigation labels remain consistent.
+
+After an authorized publication, verify the domain in Google Search Console and submit `https://cheatsfortheisle.com/sitemap.xml`. Inspect the homepage, main product, catalog, one guide and their language variants. Check Google-selected canonicals, indexing exclusions and live Core Web Vitals separately from local tests. The owner will perform Search Console setup after the site improvements; no property access or submission is claimed here.
+
+Once Search Console has useful impression data, compare queries and landing pages by language, country and device. Review cases where two pages compete for the same reader need; improve their content roles before considering consolidation. Evaluate title/description changes against relevant impressions, clicks and CTR, while accounting for position. Avoid constant keyword rewrites based on small samples or a tool score.
+
+For external authority, share useful original resources through genuine, relevant channels when separately authorized. Maintain accurate setup explanations and supplied screenshots; add independent test evidence only when it actually exists. Do not manufacture forum activity, endorsements, customer accounts, testing claims or link networks. No external promotion or backlink purchases were performed.

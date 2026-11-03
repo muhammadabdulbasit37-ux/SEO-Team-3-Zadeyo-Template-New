@@ -17,6 +17,7 @@ import { HWID_SPOOFER_SLUG } from '../config/catalog';
 import { getBlogPostsBySlugs } from '../data/blog';
 import ProductRelatedGuidesSection from './product/ProductRelatedGuidesSection.astro';
 import ProductCrossSell from './product/ProductCrossSell.astro';
+import ProductReviews from './product/ProductReviews.astro';
 import ProductMobileBuyBar from './product/ProductMobileBuyBar.astro';
 
 interface Props {
@@ -92,6 +93,7 @@ const showDescToggle = descriptionBlocks.length > 2;
   experience={utilityCopy?.experience}
 />
 
+<ProductReviews sku={product.slug} />
 <ProductCrossSell currentSlug={product.slug} />
 
 <SiteFaqSection

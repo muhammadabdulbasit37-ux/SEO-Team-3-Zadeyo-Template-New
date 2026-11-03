@@ -4,6 +4,7 @@ import { schemaLanguage } from '../i18n/localeTags';
 import { localizePath } from '../i18n/paths';
 import { SITE_NAME, SUPPORT_EMAIL } from '../config/site';
 import { BRAND_LOGO_SCHEMA } from '../config/brand';
+import { getProductReviewSummary } from '../data/reviews';
 import { SITE_ORIGIN, absoluteAssetUrl, canonicalUrl, getOrganizationSameAs } from '../config/seo';
 
 export interface BreadcrumbItem {
@@ -183,6 +184,7 @@ export function productSchema(input: {
   locale?: SchemaLocale;
   priceUsd?: number;
 }) {
+  const { entries, count, average } = getProductReviewSummary(input.sku ?? '');
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -192,10 +194,22 @@ export function productSchema(input: {
     inLanguage: schemaLanguage(input.locale),
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+    ...(count ? {
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: average, reviewCount: count },
+      review: entries.map((entry) => ({
+        '@type': 'Review',
+        author: { '@type': 'Person', name: entry.author },
+        datePublished: entry.date,
+        name: entry.title,
+        reviewBody: entry.text,
+        reviewRating: { '@type': 'Rating', ratingValue: entry.rating, bestRating: 5 },
+      })),
+    } : {}),
     offers: {
       '@type': 'Offer',
       url: offerUrl(input.offerUrl),
       priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
       ...(input.priceUsd != null ? { price: input.priceUsd } : {}),
     },
   };

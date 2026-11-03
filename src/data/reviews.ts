@@ -82,6 +82,20 @@ export const reviews = [
   }
 ] as const;
 
+const reviewProductBySku: Record<string, string> = {
+  elite: 'The Isle Cheats',
+  'hwid-spoofer': 'HWID Spoofer',
+  'skin-changer': 'Skin Changer',
+  ugc: 'UGC',
+};
+
+export function getProductReviewSummary(sku: string) {
+  const entries = reviews.filter((review) => review.product === reviewProductBySku[sku]);
+  const count = entries.length;
+  const average = count ? Math.round(entries.reduce((sum, review) => sum + review.rating, 0) / count * 100) / 100 : 0;
+  return { entries, count, average };
+}
+
 export const reviewCopy = {
  en: { label:'Reviews', title:'The Isle Cheats Reviews', intro:'Read community reviews of The Isle Cheats, HWID Spoofer, Skin Changer and UGC', heading:'What the community is saying', description:'A selection of reviews shared with permission. Read each perspective alongside our current product features and requirements.', closed:'Read-only reviews', note:'Review submissions are closed. Reviews are shown in their original English wording.', context:'These comments reflect individual opinions and feature interests. Check our product page for the current supported features and requirements.', cta:'Explore features and plans', count:'reviews', rating:'out of 5 stars', nav:'Open reviews' },
  es: { label:'Reseñas', title:'Reseñas de The Isle Cheats', intro:'Lee reseñas de la comunidad sobre The Isle Cheats, HWID Spoofer, Skin Changer y UGC', heading:'Lo que dice la comunidad', description:'Una selección de reseñas compartidas con permiso. Consulta cada opinión junto con las funciones y los requisitos actuales del producto.', closed:'Reseñas de solo lectura', note:'El envío de reseñas está cerrado. Mostramos el texto original en inglés.', context:'Estos comentarios reflejan opiniones e intereses individuales. Consulta la página del producto para comprobar las funciones y los requisitos actuales.', cta:'Ver funciones y planes', count:'reseñas', rating:'de 5 estrellas', nav:'Abrir reseñas' },

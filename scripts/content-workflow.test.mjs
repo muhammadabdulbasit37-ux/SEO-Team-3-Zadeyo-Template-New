@@ -172,6 +172,19 @@ test('plan validator runs before prose generation', () => {
   plan.pages[0].links = ['/not-in-map/']; assert.throws(() => checkPlan(brief, plan), /Unknown\/self planned link/);
 });
 
+test('new-origin build and installation cannot bypass the research receipt with a legacy pack', t => {
+  const { brief, plan, pack } = fixture();
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'research-content-test-'));
+  t.after(() => { assert.ok(root.startsWith(path.join(os.tmpdir(), 'research-content-test-'))); fs.rmSync(root, { recursive: true, force: true }); });
+  fs.mkdirSync(path.join(root, 'content'));
+  fs.writeFileSync(path.join(root, 'content/policy.json'), JSON.stringify({ requireSeoResearch: true, templateOrigin: ORIGINAL, legacyResearchOrigin: 'https://legacy.example' }));
+  assert.throws(() => installPack(brief, plan, pack, root, TARGET, TODAY), /imported forum records only/);
+  assert.equal(fs.existsSync(path.join(root, 'content/manifest.json')), false);
+  const manifest = compilePack(brief, plan, pack, TODAY).manifest;
+  fs.writeFileSync(path.join(root, 'content/manifest.json'), JSON.stringify(manifest));
+  assert.throws(() => verifyIntegratedContent(root, root, TARGET), /research receipt/);
+});
+
 test('genuine imported discussions require approved exact source records', () => {
   const f = fixture();
   f.brief.importedForumSourceIds = ['owner'];

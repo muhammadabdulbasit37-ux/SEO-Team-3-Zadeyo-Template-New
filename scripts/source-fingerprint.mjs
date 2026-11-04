@@ -19,5 +19,10 @@ export function sourceFingerprint(root = process.cwd()) {
   };
   for (const file of ['src', 'scripts', 'public', 'astro.config.mjs', 'tsconfig.json', 'package.json', 'package-lock.json', 'wrangler.toml']) visit(file);
   for (const file of ['content/policy.json', 'content/manifest.json']) if (fs.existsSync(path.join(root, file))) visit(file);
+  // Only checked research inputs affect builds; reporting documents remain editable after validation.
+  for (const file of ['research-evidence.json', 'keyword-research.md', 'keyword-map.md', 'competitor-analysis.md', 'content-strategy.md']) {
+    const relative = `docs/seo/${file}`;
+    if (fs.existsSync(path.join(root, relative))) visit(relative);
+  }
   return hash.digest('hex');
 }

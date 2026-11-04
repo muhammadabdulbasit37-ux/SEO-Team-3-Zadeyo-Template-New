@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { SITE_URL } from '../src/config/site-url.mjs';
 import { elements, textContent } from './html.mjs';
+import { checkResearch, requiresResearch, verifyResearchReceipt } from './seo-research.mjs';
 
 export const LOCALES = ['en', 'es', 'de', 'fr'];
 export const INTENTS = ['informational', 'research-comparison', 'commercial', 'features', 'compatibility', 'setup-troubleshooting', 'game-questions-updates'];
@@ -95,7 +96,7 @@ export function prepare(config, root, originalOrigin, today, priorBrief) {
   write(path.join(dir, 'brief.json'), brief);
   write(path.join(dir, 'plan.json'), { version: 1, inputHash: brief.inputHash, pages: [], shortfalls: {} });
   write(path.join(dir, 'pack.json'), { version: 1, inputHash: brief.inputHash, planHash: null, locales: Object.fromEntries(LOCALES.map((l) => [l, { commercial: [], blog: [], forum: [] }])), reviews: {} });
-  fs.writeFileSync(path.join(dir, 'NEXT.md'), 'Read docs/content-workflow.md once. Plan topics/keyword-to-URL ownership in plan.json, then run content:plan. Codex authors the pack in batches; these scripts do not call an LLM or write filler. Resume completed batches instead of regenerating them.\n');
+  fs.writeFileSync(path.join(dir, 'NEXT.md'), 'Read AGENTS.md and docs/seo/seo-research-workflow.md before drafting. Complete docs/seo/research-evidence.json and the four planning documents, reconcile them with plan.json, then run content:plan. Read docs/content-workflow.md for native pack contracts. Import owner-supplied discussions only; never generate forum/review content. Resume completed batches instead of regenerating them.\n');
   return dir;
 }
 
@@ -270,7 +271,9 @@ export function compilePack(brief, plan, pack, today) {
 
 export function installPack(brief, plan, pack, root, currentOrigin, today) {
   assert(currentOrigin === brief.origin && currentOrigin !== brief.originalOrigin, 'Install only after the NEW site origin is configured; current master content is protected');
+  if (requiresResearch(root, brief.origin)) assert(Object.values(pack.locales ?? {}).every(locale => (locale.forum ?? []).every(row => row.authorship === 'imported')), 'New conversions accept owner-supplied imported forum records only');
   const compiled = compilePack(brief, plan, pack, today);
+  if (requiresResearch(root, brief.origin)) compiled.manifest.researchReceipt = checkResearch(root, brief, plan, today);
   const previous = path.join(root, 'content/manifest.json');
   if (fs.existsSync(previous)) for (const [file, digest] of Object.entries(json(previous).fileHashes)) {
     const current = hash(fs.readFileSync(path.join(root, file), 'utf8').replaceAll('\r\n', '\n'));
@@ -295,6 +298,8 @@ export function verifyIntegratedContent(root, distDir, origin, relationships) {
     return { active: false };
   }
   const manifest = json(file);
+  verifyResearchReceipt(root, manifest, new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Karachi' }).format(new Date()));
+  if (manifest.researchReceipt?.status === 'provisional') console.warn('[SEO research] Provisional evidence: read docs/seo/research-evidence.json limitations; live research is not certified.');
   assert(manifest.origin === origin && manifest.origin !== manifest.originalOrigin, 'Content manifest belongs to another conversion origin');
   for (const [relative, expected] of Object.entries(manifest.fileHashes)) assert(hash(fs.readFileSync(path.join(root, relative), 'utf8').replaceAll('\r\n', '\n')) === expected, `Approved editorial source changed: ${relative}; update the reviewed pack, not just the manifest`);
   for (const [route, expected] of Object.entries(manifest.pages)) {
@@ -358,6 +363,11 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       const run = path.resolve(arg('--run') ?? '');
       assert(run.startsWith(path.join(root, '.content') + path.sep), 'Use --run <directory returned by content:prepare>');
       const brief = json(path.join(run, 'brief.json')), plan = json(path.join(run, 'plan.json'));
+      if (requiresResearch(root, brief.origin)) {
+        const receipt = checkResearch(root, brief, plan, today);
+        console.log({ researchStatus: receipt.status });
+        if (receipt.status === 'provisional') console.warn('[SEO research] Provisional evidence: report the recorded limitations; do not claim completed live SERP research.');
+      }
       if (command === 'plan') {
         const result = { ...checkPlan(brief, plan), planHash: hash(plan) };
         write(path.join(run, 'plan-receipt.json'), result);
@@ -365,6 +375,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       }
       else {
         const pack = json(path.join(run, 'pack.json'));
+        if (requiresResearch(root, brief.origin)) assert(Object.values(pack.locales ?? {}).every(locale => (locale.forum ?? []).every(row => row.authorship === 'imported')), 'New conversions accept owner-supplied imported forum records only');
         if (command === 'check') console.log(checkPack(brief, plan, pack, today));
         else if (command === 'install') console.log({ written: installPack(brief, plan, pack, root, SITE_URL, today), next: 'Integrate commercial copy in native data files, then build and validate. The content manifest blocks missing/incomplete translations.' });
         else throw new Error('Unknown content workflow command');

@@ -6,14 +6,18 @@ import { Button } from '@/components/starwind/button';
 import Icon from '../icons/Icon.astro';
 import { ROUTES } from '../../utils/path';
 import { useLocale } from '../../i18n';
+import ArchivedDiscussionNote from '../ArchivedDiscussionNote.astro';
+import { discussionResources } from '../../data/discussionResources';
 
 interface Props {
   posts: BlogPost[];
   productName: string;
+  productSlug?: string;
 }
 
-const { posts } = Astro.props;
+const { posts, productSlug } = Astro.props;
 const { t, lp } = useLocale(Astro.currentLocale);
+const discussionResource = discussionResources.find(resource => resource.productSlug === productSlug);
 
 ---
 
@@ -27,6 +31,8 @@ const { t, lp } = useLocale(Astro.currentLocale);
           desc={t.blog.latestSubtitle}
           titleId="related-guides-heading"
         />
+
+        {discussionResource && <ArchivedDiscussionNote resource={discussionResource} />}
 
         <div class="fill-grid mt-12 gap-8 lg:gap-y-10">
           {posts.map((post, i) => (

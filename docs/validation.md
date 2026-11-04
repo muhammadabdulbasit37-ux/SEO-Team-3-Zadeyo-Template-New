@@ -51,7 +51,15 @@ Tests include a passing fixture on a different domain with a different locale se
 
 This is a project validator, not a complete schema.org vocabulary validator, Rich Results Test, JavaScript browser test, external-link crawler or accessibility audit. It cannot establish vendor facts, translation fluency, actual checkout delivery, live Cloudflare behavior, Core Web Vitals, rankings or Search Console status. See the defect register for outstanding verification.
 
-## Browser and Cloudflare checks
+## Research and link-graph integration
+
+New conversion origins require `docs/seo/research-evidence.json`, the four research/planning documents and a manifest research receipt through the native content commands. The build rechecks target identity, plan agreement and document hashes. The original template origin and explicitly named current The Isle legacy origin retain their existing provenance; this is not an exemption for future targets. See [research contract](seo/seo-research-workflow.md). The source fingerprint now includes the checked research inputs when present, while final reporting documents remain editable after a build.
+
+Source validation configuration enables `scripts/internal-links.mjs` within `npm run validate`. The CLI writes `.astro/internal-links.json`: inventory, directed edges, per-page total/contextual counts, same-locale homepage reachability, findings and bounded local lexical suggestions. Orphans/unreachable indexable pages and unintended cross-locale links fail; underlinked commercial/hub pages and redundant/generic contextual anchors are review warnings. Existing broken-target/fragment/redirect/old-reference checks remain active. Shared navigation does not satisfy contextual counts or suppress suggestions for useful contextual links. Neither article link counts nor lexical scores are build quotas. See [link analysis limits](seo/internal-linking-workflow.md).
+
+Both systems check evidence structure and output behavior, not source truth or semantic relevance. Sources still require agent inspection and competitor/topic review; no verifier can prove that an asserted observation was actually made. Supplied community text is never edited, and graph suggestions exclude the site's marked original-post/reply/review bodies.
+
+## Browser and Cloudflare checks (local smoke suites)
 
 After the core checks, run `npm run validate:browser` and `npm run validate:cloudflare` for the pre-push suites added in Part 4.1. Both first validate the build. The browser command needs an installed Google Chrome; `QA_BROWSER_CHANNEL=msedge` can select an installed Edge instead. It launches an isolated headless profile, checks homepage/product layouts at 1440/768/390 CSS pixels, clicks localized desktop/mobile navigation, exercises both plans, and checks desktop/sticky mobile purchase clicks. Local checkout responses are fetched with redirects disabled, then intercepted with a local confirmation page. Partner destinations are never contacted. Screenshots/results remain under `.astro/browser-qa/`.
 

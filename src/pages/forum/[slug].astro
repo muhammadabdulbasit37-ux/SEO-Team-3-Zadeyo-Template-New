@@ -1,5 +1,7 @@
 ---
 import'../../styles/forum.css';import BaseLayout from'../../layouts/BaseLayout.astro';import Breadcrumbs from'../../components/Breadcrumbs.astro';import ForumSidebar from'../../components/ForumSidebar.astro';import Icon from'../../components/icons/Icon.astro';import{useLocale}from'../../i18n';import{getForumPost,getForumPosts,forumCategoryId}from'../../data/forum/locale';import{forumCopy}from'../../data/forum/copy';import{pageTitle}from'../../config/seo';import{breadcrumbSchema,discussionForumPostingSchema}from'../../utils/schema';
+import { discussionResources } from '../../data/discussionResources';
+import { getBlogPost } from '../../data/blog';
 export function getStaticPaths(){return getForumPosts('en').map(post=>({params:{slug:post.slug}}));}
 const{locale,t,lp}=useLocale(Astro.currentLocale),c=forumCopy[locale],post=getForumPost(Astro.params.slug!,locale);
 if(!post)return Astro.redirect(lp('/forum/'));
@@ -7,6 +9,10 @@ const path=`/forum/${post.slug}/`,categoryLabel=(c.categoriesMap as Record<strin
 const authorLabel=post.author==='Original poster'?c.originalPoster:post.author,related=getForumPosts(locale).filter(p=>p.slug!==post.slug&&p.category===post.category).slice(0,3);
 const date=new Intl.DateTimeFormat(locale,{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(post.published+'T12:00:00Z'));
 const posting={...discussionForumPostingSchema({name:post.title,text:post.body.join('\n\n'),url:lp(path),author:post.author,authorType:'Person',comments:post.commentsCount,published:post.published,locale}),inLanguage:'en'};
+const discussionResource = discussionResources.find(resource => resource.forumSlug === post.slug);
+const resourceGuide = discussionResource ? getBlogPost(discussionResource.guideSlug, locale) : undefined;
+const resourceLinks = [...(post.resourceLinks ?? [])];
+if (resourceGuide && !resourceLinks.some(link => link.href === `/blog/${resourceGuide.slug}/`)) resourceLinks.push({ href: `/blog/${resourceGuide.slug}/`, label: resourceGuide.title });
 ---
 <BaseLayout title={pageTitle(post.metaTitle??post.title,undefined,locale)} description={post.excerpt} canonicalPath={lp(path)} jsonLd={[posting,breadcrumbSchema(breadcrumbs,locale)]}>
  <section class="forum-page py-8 md:py-12"><div class="mx-auto max-w-6xl px-5"><Breadcrumbs items={breadcrumbs}/>
@@ -20,7 +26,7 @@ const posting={...discussionForumPostingSchema({name:post.title,text:post.body.j
     <section class="forum-comments" id="comments" aria-labelledby="comments-title"><div class="forum-comments__heading"><h2 id="comments-title">{post.commentsCount} {c.replies}</h2><span>{c.closed}</span></div>
      {post.comments.map(comment=><article class="forum-comment" data-forum-comment><div class="forum-comment__rail"><span class="forum-comment__avatar">{comment.author.charAt(0).toUpperCase()}</span><span class="forum-comment__line"></span></div><div class="forum-comment__body"><div class="forum-comment__meta"><b>{comment.author}</b>{comment.author===post.author&&<span class="forum-flair">{c.originalPoster}</span>}</div><div class="forum-reply-copy" lang="en">{comment.body.split(/\n\s*\n/).map(paragraph=><p>{paragraph}</p>)}</div></div></article>)}
     </section>
-    <section class="forum-related-links" aria-labelledby="product-info"><h2 id="product-info">{c.resources}</h2><ul>{post.resourceLinks?.map(link=><li><a href={lp(link.href)}>{link.label}</a></li>)}</ul></section>
+    <section class="forum-related-links" aria-labelledby="product-info"><h2 id="product-info">{c.resources}</h2><ul>{resourceLinks.map(link=><li><a href={lp(link.href)}>{link.label}</a></li>)}</ul></section>
     {related.length>0&&<section class="forum-related-links"><h2>{c.related}</h2><ul>{related.map(p=><li><a href={lp(`/forum/${p.slug}/`)} lang="en">{p.title}</a></li>)}</ul></section>}
    </div>
   </article></div><ForumSidebar/></div>

@@ -47,6 +47,17 @@ test('validator accepts a different configured domain, locale set and route coun
   assert.deepEqual(validateSite(dir, config), { ok: true, pages: 2, sitemapUrls: 2, errors: [], warnings: [] });
 });
 
+test('enabled graph audit integrates orphan, localized-destination and broken-link errors', t => {
+  const f = fixture(t);
+  f.config.internalLinks = { enabled: true };
+  f.change('</body>', '<main><p><a href="/missing/">Broken</a><a href="/">Wrong locale from Spanish</a></p></main></body>', 'es/index.html');
+  const result = validateSite(f.dir, f.config);
+  assert.ok(result.errors.some(e => e.includes('missing link target /missing/')));
+  assert.ok(result.errors.some(e => e.includes('incorrect localized destination')));
+  assert.ok(result.errors.some(e => e.includes('orphan indexable page')));
+  assert.equal(result.linkAudit.stats.configuredIndexable, 2);
+});
+
 test('original-language archive schema is allowed only for its declared discussion', t => {
   const f = fixture(t), file = path.join(f.dir, 'es', 'index.html'), original = fs.readFileSync(file,'utf8');
   const schema = {'@context':'https://schema.org','@type':'DiscussionForumPosting',url:f.config.origin+'/es/',inLanguage:'en',headline:'Supplied discussion',text:'Original supplied text',author:{'@type':'Person',name:'Supplied author'},datePublished:'2026-09-01'};

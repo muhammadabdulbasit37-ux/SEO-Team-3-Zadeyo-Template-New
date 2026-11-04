@@ -1,5 +1,7 @@
 {
   "version": 1,
   "templateOrigin": "https://mw4cheat.net",
-  "requireManifestForNewOrigins": true
+  "requireManifestForNewOrigins": true,
+  "requireSeoResearch": true,
+  "legacyResearchOrigin": "https://cheatsfortheisle.com"
 }

@@ -26,6 +26,8 @@ import { Badge } from '@/components/starwind/badge';
 import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import BlogPostCta from '../../components/BlogPostCta.astro';
+import ArchivedDiscussionNote from '../../components/ArchivedDiscussionNote.astro';
+import { discussionResources } from '../../data/discussionResources';
 import { normalizeInternalPath, ROUTES } from '../../utils/path';
 
 export function getStaticPaths() {
@@ -47,6 +49,7 @@ const breadcrumbs = [
 ];
 
 const related = getRelatedBlogPosts(post.slug, 3, locale);
+const discussionResource = discussionResources.find(resource => resource.guideSlug === post.slug);
 
 function linkify(text: string | undefined): string {
   if (!text) return '';
@@ -190,12 +193,13 @@ const headline = post.h1 ?? post.title;
                   <BlogPostCta
                     title={block.title}
                     html={linkify(block.text)}
-                    href={resolveCheckoutHref(block.href)}
+                    href={lp(resolveCheckoutHref(block.href))}
                   />
                 );
               }
               return <p set:html={linkify(block.text)} />;
             })}
+            {discussionResource && <ArchivedDiscussionNote resource={discussionResource} includeProduct />}
           </Prose>
 
           <nav class="blog-article__actions" aria-label={t.blog.articleActionsAria}>

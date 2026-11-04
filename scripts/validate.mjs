@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { elements, textContent } from './html.mjs';
 import { sourceFingerprint } from './source-fingerprint.mjs';
 import crypto from 'node:crypto';
+import { analyzeInternalLinks } from './internal-links.mjs';
 
 export function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
@@ -263,7 +264,9 @@ export function validateSite(distDir, config) {
     }
     if (/\.(webp|png|jpe?g)$/.test(file) && fs.statSync(file).size > config.maxImageBytes) warn(path.relative(distDir, file), 'large raster asset');
   }
-  return { ok: errors.length === 0, pages: pages.size, sitemapUrls: locations.length, errors: [...new Set(errors)], warnings: [...new Set(warnings)] };
+  const linkAudit = config.internalLinks?.enabled ? analyzeInternalLinks(pages, config) : null;
+  if (linkAudit) { errors.push(...linkAudit.errors); warnings.push(...linkAudit.warnings); }
+  return { ok: errors.length === 0, pages: pages.size, sitemapUrls: locations.length, errors: [...new Set(errors)], warnings: [...new Set(warnings)], ...(linkAudit ? { linkAudit } : {}) };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -271,7 +274,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     const config = JSON.parse(fs.readFileSync('.astro/validation-config.json', 'utf8'));
     if (config.sourceFingerprint !== sourceFingerprint()) throw new Error('Source/config/assets changed since the production build');
     const result = validateSite(path.resolve('dist'), config);
-    console.log(JSON.stringify(result, null, 2));
+    if (result.linkAudit) fs.writeFileSync('.astro/internal-links.json', JSON.stringify({ sourceFingerprint: config.sourceFingerprint, ...result.linkAudit }, null, 2) + '\n');
+    console.log(JSON.stringify({ ...result, ...(result.linkAudit ? { linkAudit: result.linkAudit.stats, linkReport: '.astro/internal-links.json' } : {}) }, null, 2));
     process.exitCode = result.ok ? 0 : 1;
   } catch (e) {
     console.error(`Validation could not run: ${e.message}. Run npm run build first.`);

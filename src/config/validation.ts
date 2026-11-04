@@ -51,6 +51,7 @@ export function validationConfig() {
     }
   }
   return {
+    internalLinks: { enabled: true },
     origin: SITE_URL, locales: LOCALES, defaultLocale: DEFAULT_LOCALE, languageTags: LOCALE_LANGUAGE_TAGS,
     pages, products, forumOriginalLanguages, enforceSponsoredCheckoutLinks: true, redirects: Object.fromEntries(PATH_REDIRECTS),
     checkouts: Object.fromEntries(CHECKOUT_PATH_REDIRECTS), protectedMedia, ...validationPolicy,

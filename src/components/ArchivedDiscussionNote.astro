@@ -1,0 +1,13 @@
+---
+import { useLocale } from '../i18n';
+import { discussionResourceCopy, type DiscussionResource } from '../data/discussionResources';
+interface Props { resource: DiscussionResource; includeProduct?: boolean }
+const { resource, includeProduct = false } = Astro.props;
+const { locale, lp } = useLocale(Astro.currentLocale);
+const copy = discussionResourceCopy[locale][resource.topic];
+---
+<p class="mt-6 text-sm leading-relaxed text-muted-foreground" data-editorial-discussion-link>
+  {copy.intro}{' '}<a class="text-primary hover:underline" href={lp(`/forum/${resource.forumSlug}/`)}>{copy.anchor}</a>.{' '}
+  {copy.notice}
+  {includeProduct && <>{' '}{copy.productIntro}{' '}<a class="text-primary hover:underline" href={lp(resource.productPath)}>{copy.productAnchor}</a>.</>}
+</p>

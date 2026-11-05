@@ -2,12 +2,13 @@ import net from 'node:net';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
 
-export async function withLocalServer(argsForPort, env, run) {
+export async function withLocalServer(argsForPort, env, run, options = {}) {
   const probe = net.createServer();
   probe.listen(0, '127.0.0.1'); await once(probe, 'listening');
   const port = probe.address().port;
   await new Promise(resolve => probe.close(resolve));
   const child = spawn(process.execPath, argsForPort(port), {
+    cwd: options.cwd,
     env: { ...process.env, ...env, PORT: String(port) }, stdio: ['ignore', 'pipe', 'pipe'],
   });
   let log = '';

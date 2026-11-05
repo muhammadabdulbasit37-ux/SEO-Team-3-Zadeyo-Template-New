@@ -209,7 +209,6 @@ export function productSchema(input: {
       '@type': 'Offer',
       url: offerUrl(input.offerUrl),
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
       ...(input.priceUsd != null ? { price: input.priceUsd } : {}),
     },
   };
@@ -243,6 +242,7 @@ export function articleSchema(input: {
     author: {
       '@type': 'Organization',
       name: SITE_NAME,
+      url: canonicalUrl(localizePath('/about/', input.locale ?? 'en')),
     },
     publisher: {
       '@type': 'Organization',

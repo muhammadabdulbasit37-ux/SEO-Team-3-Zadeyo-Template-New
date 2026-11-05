@@ -342,6 +342,10 @@ export interface Translations {
   pageSeo: Record<string, { title: string; description: string }>;
   ui: {
     skipLink: string;
+    primaryNavigation: string;
+    mobileNavigation: string;
+    relatedPages: string;
+    brandLogoAlt: string;
     /** Compact header CTA (fits navbar beside language + theme). */
     browseCheatsNav: string;
     /** Mobile header CTA. Must differ from `browseCheatsNav` so the two header product links are unique. */

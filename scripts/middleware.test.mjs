@@ -11,7 +11,7 @@ test('Astro development checkout middleware preserves every destination, plan an
   const source = fs.readFileSync(new URL('../src/middleware.ts', import.meta.url), 'utf8');
   const js = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText
     .replace(/^import .*;\r?\n/gm, '').replace('export const onRequest', 'const onRequest');
-  const context = { URL, Response, defineMiddleware: (handler) => handler, ...checkout, ...locale, ...paths };
+  const context = { URL, Response, Headers, defineMiddleware: (handler) => handler, ...checkout, ...locale, ...paths };
   vm.runInNewContext(js + '\nglobalThis.handler = onRequest;', context);
   for (const route of ['/go/the-isle-cheats/', '/go/wardogs/', '/go/hwid-spoofer/', '/go/ugc/', '/go/skin-changer/']) {
     for (const prefix of ['', '/es', '/de', '/fr']) for (const plan of ['monthly', 'lifetime']) {
@@ -25,5 +25,11 @@ test('Astro development checkout middleware preserves every destination, plan an
       assert.equal(response.headers.get('cache-control'), 'no-store');
       assert.equal(response.headers.get('x-robots-tag'), 'noindex, follow');
     }
+  }
+  for (const path of ['/404', '/404.html', '/es/404/', '/de/404/', '/fr/404/']) {
+    const response = await context.handler({ request: new Request(`https://example.test${path}`) }, () => new Response('<h1>Missing page</h1>'));
+    assert.equal(response.status, 404, path);
+    assert.match(response.headers.get('x-robots-tag'), /noindex/);
+    assert.match(await response.text(), /Missing page/);
   }
 });

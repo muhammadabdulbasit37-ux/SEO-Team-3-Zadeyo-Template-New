@@ -1,5 +1,19 @@
 ﻿@import './theme-switch.css';
 
+/* Pre-rendered FAQ answers remain readable when scripts are unavailable. */
+@layer base {
+  html:not(.js) [data-slot='accordion-content'] {
+    display: block !important;
+    height: auto !important;
+    overflow: visible;
+    animation: none !important;
+  }
+
+  html:not(.js) [data-slot='accordion-trigger'] > svg {
+    display: none;
+  }
+}
+
 /* Site-specific globals (Tailwind + Starwind live in starwind.css).
    Page CSS is imported only where used to keep inlined HTML smaller. */
 

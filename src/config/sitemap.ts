@@ -9,12 +9,13 @@ import { UTILITY_PRODUCT_PATHS, UTILITY_PRODUCT_SLUGS } from './catalog';
 import { canonicalUrl } from './seo';
 import { ROUTES, blogPostPath, productPath } from '../utils/path';
 import { parseBlogDate } from '../utils/schema';
+import { guideModifiedDate, archiveGuides, EDITORIAL_GUIDANCE_UPDATED } from '../data/editorialGuidance';
 
 const enabledUtilityPaths: string[] = UTILITY_PRODUCT_SLUGS.map((slug) => UTILITY_PRODUCT_PATHS[slug]);
 
 const blogLastmod = new Map(
   LOCALES.flatMap((locale) => getBlogPosts(locale).map((post) =>
-    [localizePath(`/blog/${post.slug}/`, locale), parseBlogDate(post.date)] as const)),
+    [localizePath(`/blog/${post.slug}/`, locale), guideModifiedDate(post.slug, parseBlogDate(post.date))] as const)),
 );
 
 function pathnameFromUrl(url: string): string {
@@ -49,7 +50,7 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     item.priority = path === '/forum/' ? 0.8 : 0.6;
     item.changefreq = ChangeFreqEnum.WEEKLY;
     const post = getForumPosts('en').find(p => `/forum/${p.slug}/` === path);
-    if (post) item.lastmod = parseBlogDate(post.published);
+    if (post) item.lastmod = post.slug in archiveGuides ? EDITORIAL_GUIDANCE_UPDATED : parseBlogDate(post.published);
     return item;
   }
 

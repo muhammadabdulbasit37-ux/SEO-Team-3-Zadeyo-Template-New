@@ -1,0 +1,4510 @@
+{
+  "status": "ok",
+  "audit_completed": true,
+  "site_has_findings": true,
+  "fixes_applied": true,
+  "site": "https://cheatsfortheisle.com",
+  "date": "2026-11-06",
+  "pages_audited": 148,
+  "discovered_via": "sitemap",
+  "score": 89,
+  "area_scores": {
+    "crawlability": 18.64,
+    "indexability": 19.84,
+    "on_page": 21.71,
+    "content": 12.53,
+    "structured_data": 4.84,
+    "security_mobile": 7,
+    "performance": 4.5
+  },
+  "area_max": {
+    "crawlability": 20,
+    "indexability": 20,
+    "on_page": 25,
+    "content": 15,
+    "structured_data": 5,
+    "security_mobile": 10,
+    "performance": 5
+  },
+  "score_note": "Heuristic document-oriented seven-area skill weighting, with review opportunities included. Not a Google score, ranking prediction or commerce-readiness verdict. Null-count probe/design findings are unscored; the four separately probed error documents are included as a bounded issue count. Read severity and evidence before the aggregate.",
+  "issues": [
+    {
+      "code": "LIVE_CHECKOUT_PLAN_LOST",
+      "area": "crawlability",
+      "severity": "high",
+      "pages_affected": 16,
+      "site_wide": false,
+      "fix": "Verify deployed handler, preserve incoming plan/query and encoded referral destination, and apply no-store to checkout redirects.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/go/the-isle-cheats/?plan=monthly"
+      ],
+      "tested_requests": 20,
+      "classification": "confirmed commercial fault, no ranking-loss attribution"
+    },
+    {
+      "code": "LIVE_ALIAS_HANDLER_MISMATCH",
+      "area": "crawlability",
+      "severity": "medium",
+      "pages_affected": null,
+      "site_wide": false,
+      "fix": "Restore intended deployed locale/case/English-prefix normalization after verifying the active hosting path.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/es/go/the-isle-cheats/?plan=monthly",
+        "https://cheatsfortheisle.com/en/cheats/",
+        "https://cheatsfortheisle.com/Cheats/"
+      ],
+      "localized_checkout_tests": 60,
+      "unique_localized_checkout_path_forms": 30,
+      "current_internal_links_broken": 0
+    },
+    {
+      "code": "ERROR_DOCUMENT_RETURNS_200",
+      "area": "indexability",
+      "severity": "medium",
+      "pages_affected": 4,
+      "site_wide": false,
+      "fix": "Return HTTP 404 for published error documents while preserving useful error text and noindex.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/404",
+        "https://cheatsfortheisle.com/es/404/",
+        "https://cheatsfortheisle.com/de/404/",
+        "https://cheatsfortheisle.com/fr/404/"
+      ],
+      "normal_random_missing_paths_return_404": true
+    },
+    {
+      "code": "CSP_BLOCKS_INJECTED_ANALYTICS",
+      "area": "security_mobile",
+      "severity": "medium",
+      "pages_affected": 148,
+      "site_wide": true,
+      "fix": "Decide whether to retain Cloudflare analytics; reconcile narrowly scoped CSP destinations or disable injection.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/",
+        "https://cheatsfortheisle.com/cheats/"
+      ],
+      "browser_cases": 182,
+      "classification": "measurement/security-console fault, no proven ranking penalty"
+    },
+    {
+      "code": "AVAILABILITY_EVIDENCE_GAP",
+      "area": "structured_data",
+      "severity": "medium",
+      "pages_affected": 16,
+      "site_wide": false,
+      "fix": "Record current owner/vendor availability evidence or omit the optional InStock assertion; reconcile tests and historical docs.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/cheats/",
+        "https://cheatsfortheisle.com/hwid-spoofer/"
+      ],
+      "stock_claim_proven_false": false
+    },
+    {
+      "code": "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+      "area": "content",
+      "severity": "medium",
+      "pages_affected": 48,
+      "site_wide": false,
+      "fix": "Inspect GSC language/canonical/indexing behavior; retain supplied quotations and request an explicit decision before changing indexability or quoted text.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/de/reviews/",
+        "https://cheatsfortheisle.com/es/forum/isle-aimbot-worth-it/"
+      ],
+      "classification": "owner-approved design requiring review; not a proven indexing defect"
+    },
+    {
+      "code": "GUIDE_EVIDENCE_AND_DEPTH_OPPORTUNITY",
+      "area": "content",
+      "severity": "medium",
+      "pages_affected": 32,
+      "site_wide": false,
+      "fix": "Improve distinct guide answers with confirmed equipment/edition details, authoritative citations and evidence-backed examples in all locales.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/blog/windows-and-cloud-dma/",
+        "https://cheatsfortheisle.com/blog/evrima-compatibility/"
+      ],
+      "classification": "editorial opportunity; no word-count or density target"
+    },
+    {
+      "code": "FORUM_QUERY_DUPLICATES",
+      "area": "crawlability",
+      "severity": "low",
+      "pages_affected": 4,
+      "site_wide": false,
+      "fix": "Restore intended cleanup of category/sort/page parameters, preserving unrelated campaign parameters.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/forum/?category=test&sort=recent&page=2"
+      ],
+      "correct_clean_canonical_present": true,
+      "no_expanding_internal_query_trap_detected": true
+    },
+    {
+      "code": "LOGO_FORCES_512PX",
+      "area": "performance",
+      "severity": "low",
+      "pages_affected": 148,
+      "site_wide": true,
+      "fix": "Use existing 32/64/128px brand variants for small rendered logos; preserve favicon and artwork.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/"
+      ],
+      "lighthouse_estimated_savings_kib": 18
+    },
+    {
+      "code": "OWNER_REQUESTED_IMAGE_PRESENTATION",
+      "area": "on_page",
+      "severity": "low",
+      "pages_affected": null,
+      "site_wide": false,
+      "fix": "If the owner requests a presentation change, review screenshot fit and sharper phone candidates.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/cheats/"
+      ],
+      "classification": "explicit owner presentation choice; do not auto-revert"
+    },
+    {
+      "code": "NESTED_COMPLEMENTARY_LANDMARK",
+      "area": "on_page",
+      "severity": "low",
+      "pages_affected": 84,
+      "site_wide": false,
+      "fix": "Review nested aside semantics while preserving visual structure and accessible names.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/cheats/",
+        "https://cheatsfortheisle.com/forum/",
+        "https://cheatsfortheisle.com/reviews/"
+      ],
+      "axe_rule": "landmark-complementary-is-top-level",
+      "wcag_failure": false
+    },
+    {
+      "code": "HOMEPAGE_CONTEXTUAL_EXCEPTION",
+      "area": "content",
+      "severity": "low",
+      "pages_affected": 4,
+      "site_wide": false,
+      "fix": "Retain documented exceptions unless a useful passage naturally warrants a homepage overview link.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/",
+        "https://cheatsfortheisle.com/es/",
+        "https://cheatsfortheisle.com/de/",
+        "https://cheatsfortheisle.com/fr/"
+      ],
+      "classification": "documented recommendation, not an orphan",
+      "incoming_pages_each": 34
+    },
+    {
+      "code": "RSS_ENCLOSURE_LENGTH_MISSING",
+      "area": "crawlability",
+      "severity": "low",
+      "pages_affected": 1,
+      "site_wide": false,
+      "fix": "Emit accurate enclosure byte lengths or intentionally omit optional enclosures.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/rss.xml"
+      ],
+      "feed_items_affected": 8,
+      "classification": "feed compatibility defect; page-indexing impact not demonstrated"
+    },
+    {
+      "code": "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH",
+      "area": "on_page",
+      "severity": "low",
+      "pages_affected": 111,
+      "site_wide": false,
+      "fix": "Localize site-controlled navigation/home accessible names, artwork descriptions and FAQ related-page labels through existing locale helpers.",
+      "example_urls": [
+        "https://cheatsfortheisle.com/es/",
+        "https://cheatsfortheisle.com/de/",
+        "https://cheatsfortheisle.com/fr/faq/"
+      ],
+      "english_primary_labels": 111,
+      "english_mobile_labels": 111,
+      "english_home_suffixes": 222,
+      "english_logo_alts": 222,
+      "english_related_pages_labels": 3,
+      "classification": "localization polish; no detected WCAG A/AA failure or ranking-loss attribution"
+    }
+  ],
+  "quick_wins": [
+    {
+      "code": "ERROR_DOCUMENT_RETURNS_200",
+      "fix": "Return HTTP 404 for published error documents while preserving useful error text and noindex."
+    },
+    {
+      "code": "CSP_BLOCKS_INJECTED_ANALYTICS",
+      "fix": "Decide whether to retain Cloudflare analytics; reconcile narrowly scoped CSP destinations or disable injection."
+    },
+    {
+      "code": "AVAILABILITY_EVIDENCE_GAP",
+      "fix": "Record current owner/vendor availability evidence or omit the optional InStock assertion; reconcile tests and historical docs."
+    },
+    {
+      "code": "LOGO_FORCES_512PX",
+      "fix": "Use existing 32/64/128px brand variants for small rendered logos; preserve favicon and artwork."
+    }
+  ],
+  "robots": {
+    "found": true,
+    "sitemaps_listed": [
+      "https://cheatsfortheisle.com/sitemap.xml"
+    ],
+    "googlebot_allowed_root": true
+  },
+  "sitemap": {
+    "files_read": [
+      "https://cheatsfortheisle.com/sitemap.xml"
+    ],
+    "urls_found": 140,
+    "fully_audited": true
+  },
+  "psi": {
+    "status": "unavailable",
+    "http_status": 429,
+    "reason": "Unauthenticated PageSpeed quota exhausted; field Core Web Vitals/INP not established."
+  },
+  "pages": [
+    {
+      "url": "https://cheatsfortheisle.com/blog/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/",
+      "seconds": 0.092,
+      "redirects": 0,
+      "title": "The Isle Cheats Guides | Features and EVRIMA Setup",
+      "title_chars": 50,
+      "meta_description_chars": 128,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/",
+      "seconds": 0.21,
+      "redirects": 0,
+      "title": "The Isle Cheats | ESP, Radar and Bite Assist",
+      "title_chars": 44,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/",
+      "noindex": false,
+      "schema_types": [
+        "WebSite",
+        "Organization",
+        "FAQPage"
+      ],
+      "incoming": 34,
+      "depth": 0,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/about/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/about/",
+      "seconds": 0.302,
+      "redirects": 0,
+      "title": "About CHEATS FOR THE ISLE | Products and Checkout",
+      "title_chars": 49,
+      "meta_description_chars": 141,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/about/",
+      "noindex": false,
+      "schema_types": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/bite-assist-controls/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/bite-assist-controls/",
+      "seconds": 0.358,
+      "redirects": 0,
+      "title": "The Isle Bite Assist | Range, Smoothing and Prediction",
+      "title_chars": 54,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/bite-assist-controls/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 7,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/evrima-compatibility/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/evrima-compatibility/",
+      "seconds": 0.184,
+      "redirects": 0,
+      "title": "The Isle Cheats: EVRIMA Support and Legacy Limits",
+      "title_chars": 49,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/evrima-compatibility/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/hardware-flags-and-account-appeals/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/hardware-flags-and-account-appeals/",
+      "seconds": 0.35,
+      "redirects": 0,
+      "title": "HWID Spoofer vs UGC | Hardware Flags and Account Appeals",
+      "title_chars": 56,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/hardware-flags-and-account-appeals/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/local-appearance-and-skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/local-appearance-and-skin-changer/",
+      "seconds": 0.389,
+      "redirects": 0,
+      "title": "The Isle Appearance Tool vs Skin Changer | Scope",
+      "title_chars": 48,
+      "meta_description_chars": 128,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/local-appearance-and-skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/esp-and-radar/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/esp-and-radar/",
+      "seconds": 0.472,
+      "redirects": 0,
+      "title": "The Isle ESP and Radar | Dinosaur Labels Explained",
+      "title_chars": 50,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/esp-and-radar/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 10,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/cheats/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/cheats/",
+      "seconds": 0.087,
+      "redirects": 0,
+      "title": "Buy The Isle Cheats for EVRIMA | Plans & Requirements",
+      "title_chars": 53,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/cheats/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/windows-and-cloud-dma/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/windows-and-cloud-dma/",
+      "seconds": 0.196,
+      "redirects": 0,
+      "title": "The Isle Cheats Setup | Windows and Cloud DMA",
+      "title_chars": 45,
+      "meta_description_chars": 141,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/windows-and-cloud-dma/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/monthly-and-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/monthly-and-lifetime/",
+      "seconds": 0.406,
+      "redirects": 0,
+      "title": "The Isle Cheats Pricing | 31 Days vs Lifetime Access",
+      "title_chars": 52,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/monthly-and-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/blog/resource-esp-markers/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/blog/resource-esp-markers/",
+      "seconds": 0.523,
+      "redirects": 0,
+      "title": "The Isle Resource ESP | Food, Water and Nest Markers",
+      "title_chars": 52,
+      "meta_description_chars": 150,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/blog/resource-esp-markers/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/",
+      "seconds": 0.199,
+      "redirects": 0,
+      "title": "Cheats für The Isle | ESP, Radar und Bite Assist",
+      "title_chars": 48,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/",
+      "noindex": false,
+      "schema_types": [
+        "WebSite",
+        "Organization",
+        "FAQPage"
+      ],
+      "incoming": 34,
+      "depth": 0,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/bite-assist-controls/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/bite-assist-controls/",
+      "seconds": 0.357,
+      "redirects": 0,
+      "title": "The Isle Bite Assist | Reichweite und Vorhersage",
+      "title_chars": 48,
+      "meta_description_chars": 138,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/bite-assist-controls/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 7,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/",
+      "seconds": 0.384,
+      "redirects": 0,
+      "title": "The Isle Guides | Funktionen und EVRIMA-Einrichtung",
+      "title_chars": 51,
+      "meta_description_chars": 138,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/about/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/about/",
+      "seconds": 0.424,
+      "redirects": 0,
+      "title": "Über CHEATS FOR THE ISLE | Produkte und Kaufablauf",
+      "title_chars": 50,
+      "meta_description_chars": 122,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/about/",
+      "noindex": false,
+      "schema_types": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/esp-and-radar/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/esp-and-radar/",
+      "seconds": 0.267,
+      "redirects": 0,
+      "title": "The Isle ESP und Radar | Dino-Informationen erklärt",
+      "title_chars": 51,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/esp-and-radar/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 10,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/hardware-flags-and-account-appeals/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/hardware-flags-and-account-appeals/",
+      "seconds": 0.374,
+      "redirects": 0,
+      "title": "HWID Spoofer oder UGC | Hardware und Kontoeinsprüche",
+      "title_chars": 52,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/hardware-flags-and-account-appeals/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/evrima-compatibility/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/evrima-compatibility/",
+      "seconds": 0.465,
+      "redirects": 0,
+      "title": "The Isle Cheats | EVRIMA-Unterstützung und Legacy",
+      "title_chars": 49,
+      "meta_description_chars": 124,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/evrima-compatibility/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/local-appearance-and-skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/local-appearance-and-skin-changer/",
+      "seconds": 0.529,
+      "redirects": 0,
+      "title": "The Isle Erscheinungsbild und Skin Changer | Vergleich",
+      "title_chars": 54,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/local-appearance-and-skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/resource-esp-markers/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/resource-esp-markers/",
+      "seconds": 0.5,
+      "redirects": 0,
+      "title": "The Isle Ressourcen-ESP | Nahrung, Wasser und Nester",
+      "title_chars": 52,
+      "meta_description_chars": 124,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/resource-esp-markers/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/windows-and-cloud-dma/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/windows-and-cloud-dma/",
+      "seconds": 0.515,
+      "redirects": 0,
+      "title": "The Isle Cheats einrichten | Windows und Cloud DMA",
+      "title_chars": 50,
+      "meta_description_chars": 145,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/windows-and-cloud-dma/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/blog/monthly-and-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/blog/monthly-and-lifetime/",
+      "seconds": 0.549,
+      "redirects": 0,
+      "title": "The Isle Cheats Preise | 31 Tage oder auf Lebenszeit",
+      "title_chars": 52,
+      "meta_description_chars": 147,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/blog/monthly-and-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/cheats/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/cheats/",
+      "seconds": 0.56,
+      "redirects": 0,
+      "title": "The Isle Cheats für EVRIMA kaufen | Tarife und Setup",
+      "title_chars": 52,
+      "meta_description_chars": 138,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/cheats/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/buy-the-isle-cheats-safe/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/buy-the-isle-cheats-safe/",
+      "seconds": 0.293,
+      "redirects": 0,
+      "title": "The Isle Cheats kaufen: Was prüfen? | CHEATS FOR THE ISLE",
+      "title_chars": 57,
+      "meta_description_chars": 111,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/buy-the-isle-cheats-safe/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/",
+      "seconds": 0.335,
+      "redirects": 0,
+      "title": "The Isle Cheats Forum | Einrichtung und Produkte",
+      "title_chars": 48,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/faq/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/faq/",
+      "seconds": 0.393,
+      "redirects": 0,
+      "title": "The Isle Cheats FAQ | Kompatibilität und Einrichtung",
+      "title_chars": 52,
+      "meta_description_chars": 123,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/faq/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/hwid-spoofer-step-order-cleaner/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/hwid-spoofer-step-order-cleaner/",
+      "seconds": 0.47,
+      "redirects": 0,
+      "title": "HWID Spoofer und Cleaner: Reihenfolge | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/hwid-spoofer-step-order-cleaner/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/isle-aimbot-worth-it/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/isle-aimbot-worth-it/",
+      "seconds": 0.306,
+      "redirects": 0,
+      "title": "Hilft Bite Assist in The Isle? | CHEATS FOR THE ISLE",
+      "title_chars": 52,
+      "meta_description_chars": 106,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/isle-aimbot-worth-it/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/isle-cheat-cloud-dma-setup-order/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/isle-cheat-cloud-dma-setup-order/",
+      "seconds": 0.325,
+      "redirects": 0,
+      "title": "Cloud DMA, HVCI und Secure Boot einrichten",
+      "title_chars": 42,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/isle-cheat-cloud-dma-setup-order/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/isle-cheat-after-evrima-patch/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/isle-cheat-after-evrima-patch/",
+      "seconds": 0.348,
+      "redirects": 0,
+      "title": "The Isle Cheats nach einem EVRIMA-Patch",
+      "title_chars": 39,
+      "meta_description_chars": 115,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/isle-cheat-after-evrima-patch/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/hwid-spoofer-supported-games/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/hwid-spoofer-supported-games/",
+      "seconds": 0.367,
+      "redirects": 0,
+      "title": "Unterstützte Spiele beim HWID Spoofer | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/hwid-spoofer-supported-games/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/isle-cheat-panic-key-streaming/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/isle-cheat-panic-key-streaming/",
+      "seconds": 0.324,
+      "redirects": 0,
+      "title": "Overlay-Aufnahmen und Menü-Steuerung | CHEATS FOR THE ISLE",
+      "title_chars": 58,
+      "meta_description_chars": 112,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/isle-cheat-panic-key-streaming/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/skin-changer-visible-to-others/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/skin-changer-visible-to-others/",
+      "seconds": 0.335,
+      "redirects": 0,
+      "title": "Sind Skin-Changer-Vorschauen für andere sichtbar?",
+      "title_chars": 49,
+      "meta_description_chars": 125,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/skin-changer-visible-to-others/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/isle-stash-fruit-water-esp/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/isle-stash-fruit-water-esp/",
+      "seconds": 0.462,
+      "redirects": 0,
+      "title": "Ressourcen-ESP: Wasser, Früchte und Kadaver",
+      "title_chars": 43,
+      "meta_description_chars": 119,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/isle-stash-fruit-water-esp/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/isle-cheat-monthly-vs-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/isle-cheat-monthly-vs-lifetime/",
+      "seconds": 0.513,
+      "redirects": 0,
+      "title": "The Isle Cheats: Monat oder Lifetime? | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/isle-cheat-monthly-vs-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/ugc-account-recovery-tool-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/ugc-account-recovery-tool-explained/",
+      "seconds": 0.431,
+      "redirects": 0,
+      "title": "Wofür ist das UGC-Werkzeug gedacht? | CHEATS FOR THE ISLE",
+      "title_chars": 57,
+      "meta_description_chars": 111,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/ugc-account-recovery-tool-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/skin-changer-vs-buying-skins/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/skin-changer-vs-buying-skins/",
+      "seconds": 0.441,
+      "redirects": 0,
+      "title": "Skin Changer oder Kosmetik kaufen? | CHEATS FOR THE ISLE",
+      "title_chars": 56,
+      "meta_description_chars": 110,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/skin-changer-vs-buying-skins/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/the-isle-esp-what-it-shows/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/the-isle-esp-what-it-shows/",
+      "seconds": 0.45,
+      "redirects": 0,
+      "title": "Was zeigt das ESP in The Isle? | CHEATS FOR THE ISLE",
+      "title_chars": 52,
+      "meta_description_chars": 106,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/the-isle-esp-what-it-shows/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/the-isle-cheats-evrima-support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/the-isle-cheats-evrima-support/",
+      "seconds": 0.464,
+      "redirects": 0,
+      "title": "The Isle Cheats: EVRIMA und Legacy | CHEATS FOR THE ISLE",
+      "title_chars": 56,
+      "meta_description_chars": 110,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/the-isle-cheats-evrima-support/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/hwid-spoofer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/hwid-spoofer/",
+      "seconds": 0.252,
+      "redirects": 0,
+      "title": "HWID Spoofer | Hardware-Kennungen und Spurenbereinigung",
+      "title_chars": 55,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/hwid-spoofer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/reviews/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/reviews/",
+      "seconds": 0.317,
+      "redirects": 0,
+      "title": "The Isle Cheats und Hilfsprodukte | Bewertungen",
+      "title_chars": 47,
+      "meta_description_chars": 123,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/reviews/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/products/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/products/",
+      "seconds": 0.361,
+      "redirects": 0,
+      "title": "The Isle Cheats und Hilfsprodukte vergleichen",
+      "title_chars": 45,
+      "meta_description_chars": 127,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/products/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/forum/valorant-hwid-ban-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/forum/valorant-hwid-ban-explained/",
+      "seconds": 0.383,
+      "redirects": 0,
+      "title": "HWID-Sperren: Hardware oder Konto? | CHEATS FOR THE ISLE",
+      "title_chars": 56,
+      "meta_description_chars": 110,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/forum/valorant-hwid-ban-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/",
+      "seconds": 0.207,
+      "redirects": 0,
+      "title": "Trucos para The Isle | ESP, radar y Bite Assist",
+      "title_chars": 47,
+      "meta_description_chars": 136,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/",
+      "noindex": false,
+      "schema_types": [
+        "WebSite",
+        "Organization",
+        "FAQPage"
+      ],
+      "incoming": 34,
+      "depth": 0,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/support/",
+      "seconds": 0.387,
+      "redirects": 0,
+      "title": "The Isle Cheats Support | Einrichtung und Bestellungen",
+      "title_chars": 54,
+      "meta_description_chars": 145,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/support/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/ugc/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/ugc/",
+      "seconds": 0.421,
+      "redirects": 0,
+      "title": "UGC | Vorlagen und Abläufe für Kontoeinsprüche",
+      "title_chars": 46,
+      "meta_description_chars": 147,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/ugc/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/skin-changer/",
+      "seconds": 0.691,
+      "redirects": 0,
+      "title": "Skin Changer | Lokale Kosmetikvorschau und Tarife",
+      "title_chars": 49,
+      "meta_description_chars": 147,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/bite-assist-controls/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/bite-assist-controls/",
+      "seconds": 0.326,
+      "redirects": 0,
+      "title": "Bite Assist de The Isle | Alcance, suavizado y predicción",
+      "title_chars": 57,
+      "meta_description_chars": 122,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/bite-assist-controls/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 7,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/esp-and-radar/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/esp-and-radar/",
+      "seconds": 0.418,
+      "redirects": 0,
+      "title": "ESP y radar de The Isle | Información de dinosaurios",
+      "title_chars": 52,
+      "meta_description_chars": 146,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/esp-and-radar/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 10,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/",
+      "seconds": 0.49,
+      "redirects": 0,
+      "title": "Guías de The Isle | Funciones y preparación de EVRIMA",
+      "title_chars": 53,
+      "meta_description_chars": 131,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/about/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/about/",
+      "seconds": 0.554,
+      "redirects": 0,
+      "title": "Acerca de CHEATS FOR THE ISLE | Productos y compras",
+      "title_chars": 51,
+      "meta_description_chars": 141,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/about/",
+      "noindex": false,
+      "schema_types": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/local-appearance-and-skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/local-appearance-and-skin-changer/",
+      "seconds": 0.311,
+      "redirects": 0,
+      "title": "Apariencia en The Isle y Skin Changer | Diferencias",
+      "title_chars": 51,
+      "meta_description_chars": 126,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/local-appearance-and-skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/monthly-and-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/monthly-and-lifetime/",
+      "seconds": 0.344,
+      "redirects": 0,
+      "title": "Precio de The Isle Cheats | 31 días o de por vida",
+      "title_chars": 49,
+      "meta_description_chars": 141,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/monthly-and-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/hardware-flags-and-account-appeals/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/hardware-flags-and-account-appeals/",
+      "seconds": 0.382,
+      "redirects": 0,
+      "title": "HWID Spoofer o UGC | Hardware y apelaciones de cuentas",
+      "title_chars": 54,
+      "meta_description_chars": 116,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/hardware-flags-and-account-appeals/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/evrima-compatibility/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/evrima-compatibility/",
+      "seconds": 0.429,
+      "redirects": 0,
+      "title": "The Isle Cheats | Soporte de EVRIMA y límites de Legacy",
+      "title_chars": 55,
+      "meta_description_chars": 122,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/evrima-compatibility/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/windows-and-cloud-dma/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/windows-and-cloud-dma/",
+      "seconds": 0.467,
+      "redirects": 0,
+      "title": "Preparar The Isle Cheats | Windows y Cloud DMA",
+      "title_chars": 46,
+      "meta_description_chars": 139,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/windows-and-cloud-dma/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/blog/resource-esp-markers/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/blog/resource-esp-markers/",
+      "seconds": 0.493,
+      "redirects": 0,
+      "title": "Resource ESP de The Isle | Comida, agua y nidos",
+      "title_chars": 47,
+      "meta_description_chars": 148,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/blog/resource-esp-markers/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/cheats/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/cheats/",
+      "seconds": 0.515,
+      "redirects": 0,
+      "title": "Comprar trucos para The Isle EVRIMA | Planes y requisitos",
+      "title_chars": 57,
+      "meta_description_chars": 136,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/cheats/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/faq/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/faq/",
+      "seconds": 0.577,
+      "redirects": 0,
+      "title": "FAQ de trucos para The Isle | Compatibilidad y planes",
+      "title_chars": 53,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/faq/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/hwid-spoofer-step-order-cleaner/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/hwid-spoofer-step-order-cleaner/",
+      "seconds": 0.353,
+      "redirects": 0,
+      "title": "Orden de uso de HWID Spoofer y el limpiador",
+      "title_chars": 43,
+      "meta_description_chars": 111,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/hwid-spoofer-step-order-cleaner/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/",
+      "seconds": 0.371,
+      "redirects": 0,
+      "title": "Foro de The Isle Cheats | Configuración y productos",
+      "title_chars": 51,
+      "meta_description_chars": 147,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/buy-the-isle-cheats-safe/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/buy-the-isle-cheats-safe/",
+      "seconds": 0.46,
+      "redirects": 0,
+      "title": "Comprar The Isle Cheats: qué comprobar | CHEATS FOR THE ISLE",
+      "title_chars": 60,
+      "meta_description_chars": 106,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/buy-the-isle-cheats-safe/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/hwid-spoofer-supported-games/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/hwid-spoofer-supported-games/",
+      "seconds": 0.549,
+      "redirects": 0,
+      "title": "Juegos compatibles con HWID Spoofer | CHEATS FOR THE ISLE",
+      "title_chars": 57,
+      "meta_description_chars": 103,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/hwid-spoofer-supported-games/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/isle-cheat-after-evrima-patch/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/isle-cheat-after-evrima-patch/",
+      "seconds": 0.505,
+      "redirects": 0,
+      "title": "The Isle Cheats después de un parche EVRIMA",
+      "title_chars": 43,
+      "meta_description_chars": 111,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/isle-cheat-after-evrima-patch/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/isle-cheat-monthly-vs-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/isle-cheat-monthly-vs-lifetime/",
+      "seconds": 0.519,
+      "redirects": 0,
+      "title": "The Isle Cheats: ¿mensual o vitalicio? | CHEATS FOR THE ISLE",
+      "title_chars": 60,
+      "meta_description_chars": 106,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/isle-cheat-monthly-vs-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/isle-aimbot-worth-it/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/isle-aimbot-worth-it/",
+      "seconds": 0.537,
+      "redirects": 0,
+      "title": "¿Ayuda Bite Assist en The Isle? | CHEATS FOR THE ISLE",
+      "title_chars": 53,
+      "meta_description_chars": 99,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/isle-aimbot-worth-it/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/isle-cheat-cloud-dma-setup-order/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/isle-cheat-cloud-dma-setup-order/",
+      "seconds": 0.554,
+      "redirects": 0,
+      "title": "Configuración de Cloud DMA, HVCI y Secure Boot",
+      "title_chars": 46,
+      "meta_description_chars": 114,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/isle-cheat-cloud-dma-setup-order/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/skin-changer-vs-buying-skins/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/skin-changer-vs-buying-skins/",
+      "seconds": 0.316,
+      "redirects": 0,
+      "title": "Skin Changer o comprar cosméticos | CHEATS FOR THE ISLE",
+      "title_chars": 55,
+      "meta_description_chars": 101,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/skin-changer-vs-buying-skins/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/skin-changer-visible-to-others/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/skin-changer-visible-to-others/",
+      "seconds": 0.33,
+      "redirects": 0,
+      "title": "¿Otros jugadores ven los cambios de skins?",
+      "title_chars": 42,
+      "meta_description_chars": 110,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/skin-changer-visible-to-others/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/isle-cheat-panic-key-streaming/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/isle-cheat-panic-key-streaming/",
+      "seconds": 0.343,
+      "redirects": 0,
+      "title": "Captura de overlays y controles del menú",
+      "title_chars": 40,
+      "meta_description_chars": 108,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/isle-cheat-panic-key-streaming/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/isle-stash-fruit-water-esp/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/isle-stash-fruit-water-esp/",
+      "seconds": 0.354,
+      "redirects": 0,
+      "title": "ESP de recursos: agua, fruta y cadáveres",
+      "title_chars": 40,
+      "meta_description_chars": 108,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/isle-stash-fruit-water-esp/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/ugc-account-recovery-tool-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/ugc-account-recovery-tool-explained/",
+      "seconds": 0.283,
+      "redirects": 0,
+      "title": "¿Para qué sirve la herramienta UGC? | CHEATS FOR THE ISLE",
+      "title_chars": 57,
+      "meta_description_chars": 103,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/ugc-account-recovery-tool-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/valorant-hwid-ban-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/valorant-hwid-ban-explained/",
+      "seconds": 0.342,
+      "redirects": 0,
+      "title": "Bloqueos HWID: hardware y cuentas | CHEATS FOR THE ISLE",
+      "title_chars": 55,
+      "meta_description_chars": 101,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/valorant-hwid-ban-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/the-isle-cheats-evrima-support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/the-isle-cheats-evrima-support/",
+      "seconds": 0.422,
+      "redirects": 0,
+      "title": "The Isle Cheats: EVRIMA y Legacy | CHEATS FOR THE ISLE",
+      "title_chars": 54,
+      "meta_description_chars": 100,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/the-isle-cheats-evrima-support/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/forum/the-isle-esp-what-it-shows/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/forum/the-isle-esp-what-it-shows/",
+      "seconds": 0.573,
+      "redirects": 0,
+      "title": "Qué muestra el ESP de The Isle | CHEATS FOR THE ISLE",
+      "title_chars": 52,
+      "meta_description_chars": 98,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/forum/the-isle-esp-what-it-shows/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/reviews/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/reviews/",
+      "seconds": 0.294,
+      "redirects": 0,
+      "title": "Reseñas de The Isle Cheats y herramientas",
+      "title_chars": 41,
+      "meta_description_chars": 131,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/reviews/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/skin-changer/",
+      "seconds": 0.313,
+      "redirects": 0,
+      "title": "Skin Changer | Vistas cosméticas locales y planes",
+      "title_chars": 49,
+      "meta_description_chars": 127,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/hwid-spoofer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/hwid-spoofer/",
+      "seconds": 0.35,
+      "redirects": 0,
+      "title": "HWID Spoofer | Identificadores y limpieza de rastros",
+      "title_chars": 52,
+      "meta_description_chars": 138,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/hwid-spoofer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/products/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/products/",
+      "seconds": 0.388,
+      "redirects": 0,
+      "title": "Comparar trucos para The Isle y herramientas",
+      "title_chars": 44,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/products/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/",
+      "seconds": 0.053,
+      "redirects": 0,
+      "title": "The Isle Cheats Forum | Setup and Product Discussions",
+      "title_chars": 53,
+      "meta_description_chars": 145,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/faq/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/faq/",
+      "seconds": 0.174,
+      "redirects": 0,
+      "title": "The Isle Cheats FAQ | Compatibility, Plans & Setup",
+      "title_chars": 50,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/faq/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/ugc/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/ugc/",
+      "seconds": 0.368,
+      "redirects": 0,
+      "title": "UGC | Plantillas y procesos de apelación de cuentas",
+      "title_chars": 51,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/ugc/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/support/",
+      "seconds": 0.411,
+      "redirects": 0,
+      "title": "Soporte de The Isle Cheats | Preparación y pedidos",
+      "title_chars": 50,
+      "meta_description_chars": 141,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/support/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/buy-the-isle-cheats-safe/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/buy-the-isle-cheats-safe/",
+      "seconds": 0.396,
+      "redirects": 0,
+      "title": "Buying The Isle Cheats: What to Check | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/buy-the-isle-cheats-safe/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/hwid-spoofer-step-order-cleaner/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/hwid-spoofer-step-order-cleaner/",
+      "seconds": 0.406,
+      "redirects": 0,
+      "title": "HWID Spoofer and Cleaner Setup Order | CHEATS FOR THE ISLE",
+      "title_chars": 58,
+      "meta_description_chars": 112,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/hwid-spoofer-step-order-cleaner/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/hwid-spoofer-supported-games/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/hwid-spoofer-supported-games/",
+      "seconds": 0.42,
+      "redirects": 0,
+      "title": "HWID Spoofer Supported Games | CHEATS FOR THE ISLE",
+      "title_chars": 50,
+      "meta_description_chars": 104,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/hwid-spoofer-supported-games/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/isle-aimbot-worth-it/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/isle-aimbot-worth-it/",
+      "seconds": 0.844,
+      "redirects": 0,
+      "title": "Does Bite Assist Help in The Isle? | CHEATS FOR THE ISLE",
+      "title_chars": 56,
+      "meta_description_chars": 110,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/isle-aimbot-worth-it/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/isle-cheat-monthly-vs-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/isle-cheat-monthly-vs-lifetime/",
+      "seconds": 0.293,
+      "redirects": 0,
+      "title": "The Isle Cheats: Monthly or Lifetime? | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/isle-cheat-monthly-vs-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/isle-cheat-cloud-dma-setup-order/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/isle-cheat-cloud-dma-setup-order/",
+      "seconds": 0.374,
+      "redirects": 0,
+      "title": "Cloud DMA, HVCI and Secure Boot Setup | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 113,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/isle-cheat-cloud-dma-setup-order/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/isle-cheat-panic-key-streaming/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/isle-cheat-panic-key-streaming/",
+      "seconds": 0.384,
+      "redirects": 0,
+      "title": "The Isle Overlay Capture and Menu Controls",
+      "title_chars": 42,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/isle-cheat-panic-key-streaming/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/isle-cheat-after-evrima-patch/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/isle-cheat-after-evrima-patch/",
+      "seconds": 0.406,
+      "redirects": 0,
+      "title": "The Isle Cheat After an EVRIMA Patch | CHEATS FOR THE ISLE",
+      "title_chars": 58,
+      "meta_description_chars": 112,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/isle-cheat-after-evrima-patch/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/the-isle-cheats-evrima-support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/the-isle-cheats-evrima-support/",
+      "seconds": 0.228,
+      "redirects": 0,
+      "title": "The Isle Cheats: EVRIMA and Legacy Support",
+      "title_chars": 42,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/the-isle-cheats-evrima-support/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/skin-changer-visible-to-others/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/skin-changer-visible-to-others/",
+      "seconds": 0.343,
+      "redirects": 0,
+      "title": "Are Skin Changer Previews Visible to Others?",
+      "title_chars": 44,
+      "meta_description_chars": 120,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/skin-changer-visible-to-others/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/skin-changer-vs-buying-skins/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/skin-changer-vs-buying-skins/",
+      "seconds": 0.398,
+      "redirects": 0,
+      "title": "Skin Changer or Buying Cosmetics? | CHEATS FOR THE ISLE",
+      "title_chars": 55,
+      "meta_description_chars": 109,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/skin-changer-vs-buying-skins/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/isle-stash-fruit-water-esp/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/isle-stash-fruit-water-esp/",
+      "seconds": 0.41,
+      "redirects": 0,
+      "title": "The Isle Resource ESP: Water, Fruit and Carcasses",
+      "title_chars": 49,
+      "meta_description_chars": 125,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/isle-stash-fruit-water-esp/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/",
+      "seconds": 0.19,
+      "redirects": 0,
+      "title": "Cheats The Isle | ESP, radar et Bite Assist",
+      "title_chars": 43,
+      "meta_description_chars": 137,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/",
+      "noindex": false,
+      "schema_types": [
+        "WebSite",
+        "Organization",
+        "FAQPage"
+      ],
+      "incoming": 34,
+      "depth": 0,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/ugc-account-recovery-tool-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/ugc-account-recovery-tool-explained/",
+      "seconds": 0.37,
+      "redirects": 0,
+      "title": "What Is the UGC Account Recovery Tool? | CHEATS FOR THE ISLE",
+      "title_chars": 60,
+      "meta_description_chars": 114,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/ugc-account-recovery-tool-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/valorant-hwid-ban-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/valorant-hwid-ban-explained/",
+      "seconds": 0.384,
+      "redirects": 0,
+      "title": "HWID Bans: Hardware or Account Restrictions?",
+      "title_chars": 44,
+      "meta_description_chars": 120,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/valorant-hwid-ban-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/forum/the-isle-esp-what-it-shows/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/forum/the-isle-esp-what-it-shows/",
+      "seconds": 0.419,
+      "redirects": 0,
+      "title": "What The Isle ESP Shows | CHEATS FOR THE ISLE",
+      "title_chars": 45,
+      "meta_description_chars": 99,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/forum/the-isle-esp-what-it-shows/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/esp-and-radar/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/esp-and-radar/",
+      "seconds": 0.195,
+      "redirects": 0,
+      "title": "ESP et radar The Isle | Lire les données dinosaures",
+      "title_chars": 51,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/esp-and-radar/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 10,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/bite-assist-controls/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/bite-assist-controls/",
+      "seconds": 0.313,
+      "redirects": 0,
+      "title": "Bite Assist The Isle | Portée, lissage et prédiction",
+      "title_chars": 52,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/bite-assist-controls/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 7,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/",
+      "seconds": 0.357,
+      "redirects": 0,
+      "title": "Guides The Isle | Fonctions et préparation EVRIMA",
+      "title_chars": 49,
+      "meta_description_chars": 145,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/about/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/about/",
+      "seconds": 0.433,
+      "redirects": 0,
+      "title": "À propos de CHEATS FOR THE ISLE | Produits et achats",
+      "title_chars": 52,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/about/",
+      "noindex": false,
+      "schema_types": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/hardware-flags-and-account-appeals/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/hardware-flags-and-account-appeals/",
+      "seconds": 0.424,
+      "redirects": 0,
+      "title": "HWID Spoofer ou UGC | Matériel et recours de compte",
+      "title_chars": 51,
+      "meta_description_chars": 121,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/hardware-flags-and-account-appeals/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/monthly-and-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/monthly-and-lifetime/",
+      "seconds": 0.445,
+      "redirects": 0,
+      "title": "Prix The Isle Cheats | 31 jours ou accès à vie",
+      "title_chars": 46,
+      "meta_description_chars": 146,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/monthly-and-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/local-appearance-and-skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/local-appearance-and-skin-changer/",
+      "seconds": 0.467,
+      "redirects": 0,
+      "title": "Apparence The Isle ou Skin Changer | Périmètres",
+      "title_chars": 47,
+      "meta_description_chars": 144,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/local-appearance-and-skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/evrima-compatibility/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/evrima-compatibility/",
+      "seconds": 0.486,
+      "redirects": 0,
+      "title": "The Isle Cheats | EVRIMA et limites de Legacy",
+      "title_chars": 45,
+      "meta_description_chars": 139,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/evrima-compatibility/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/cheats/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/cheats/",
+      "seconds": 0.313,
+      "redirects": 0,
+      "title": "Acheter The Isle Cheats EVRIMA | Formules et prérequis",
+      "title_chars": 54,
+      "meta_description_chars": 132,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/cheats/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/windows-and-cloud-dma/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/windows-and-cloud-dma/",
+      "seconds": 0.348,
+      "redirects": 0,
+      "title": "Installer The Isle Cheats | Windows et Cloud DMA",
+      "title_chars": 48,
+      "meta_description_chars": 137,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/windows-and-cloud-dma/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 11,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/blog/resource-esp-markers/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/blog/resource-esp-markers/",
+      "seconds": 0.369,
+      "redirects": 0,
+      "title": "Resource ESP The Isle | Nourriture, eau et nids",
+      "title_chars": 47,
+      "meta_description_chars": 145,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/blog/resource-esp-markers/",
+      "noindex": false,
+      "schema_types": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/faq/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/faq/",
+      "seconds": 0.398,
+      "redirects": 0,
+      "title": "FAQ The Isle Cheats | Compatibilité et formules",
+      "title_chars": 47,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/faq/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/hwid-spoofer-supported-games/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/hwid-spoofer-supported-games/",
+      "seconds": 0.387,
+      "redirects": 0,
+      "title": "Jeux pris en charge par HWID Spoofer | CHEATS FOR THE ISLE",
+      "title_chars": 58,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/hwid-spoofer-supported-games/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/hwid-spoofer-step-order-cleaner/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/hwid-spoofer-step-order-cleaner/",
+      "seconds": 0.398,
+      "redirects": 0,
+      "title": "HWID Spoofer et nettoyage : dans quel ordre ?",
+      "title_chars": 45,
+      "meta_description_chars": 127,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/hwid-spoofer-step-order-cleaner/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/buy-the-isle-cheats-safe/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/buy-the-isle-cheats-safe/",
+      "seconds": 0.413,
+      "redirects": 0,
+      "title": "Acheter The Isle Cheats : les points à vérifier",
+      "title_chars": 47,
+      "meta_description_chars": 129,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/buy-the-isle-cheats-safe/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/",
+      "seconds": 0.724,
+      "redirects": 0,
+      "title": "Forum The Isle Cheats | Configuration et produits",
+      "title_chars": 49,
+      "meta_description_chars": 123,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-monthly-vs-lifetime/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-monthly-vs-lifetime/",
+      "seconds": 0.273,
+      "redirects": 0,
+      "title": "The Isle Cheats : mensuel ou à vie ? | CHEATS FOR THE ISLE",
+      "title_chars": 58,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/isle-cheat-monthly-vs-lifetime/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-cloud-dma-setup-order/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-cloud-dma-setup-order/",
+      "seconds": 0.597,
+      "redirects": 0,
+      "title": "Configurer Cloud DMA, HVCI et Secure Boot",
+      "title_chars": 41,
+      "meta_description_chars": 123,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/isle-cheat-cloud-dma-setup-order/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/isle-aimbot-worth-it/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/isle-aimbot-worth-it/",
+      "seconds": 0.615,
+      "redirects": 0,
+      "title": "Bite Assist est-il utile dans The Isle ?",
+      "title_chars": 40,
+      "meta_description_chars": 122,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/isle-aimbot-worth-it/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-after-evrima-patch/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-after-evrima-patch/",
+      "seconds": 0.697,
+      "redirects": 0,
+      "title": "The Isle Cheats après un patch EVRIMA | CHEATS FOR THE ISLE",
+      "title_chars": 59,
+      "meta_description_chars": 119,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/isle-cheat-after-evrima-patch/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 4,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/skin-changer-vs-buying-skins/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/skin-changer-vs-buying-skins/",
+      "seconds": 0.482,
+      "redirects": 0,
+      "title": "Skin Changer ou achat de cosmétiques ? | CHEATS FOR THE ISLE",
+      "title_chars": 60,
+      "meta_description_chars": 120,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/skin-changer-vs-buying-skins/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/isle-stash-fruit-water-esp/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/isle-stash-fruit-water-esp/",
+      "seconds": 0.493,
+      "redirects": 0,
+      "title": "ESP des ressources : eau, fruits et carcasses",
+      "title_chars": 45,
+      "meta_description_chars": 127,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/isle-stash-fruit-water-esp/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-panic-key-streaming/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/isle-cheat-panic-key-streaming/",
+      "seconds": 0.502,
+      "redirects": 0,
+      "title": "Capture des overlays et commandes du menu",
+      "title_chars": 41,
+      "meta_description_chars": 123,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/isle-cheat-panic-key-streaming/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/skin-changer-visible-to-others/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/skin-changer-visible-to-others/",
+      "seconds": 0.511,
+      "redirects": 0,
+      "title": "Les autres voient-ils les changements de skins ?",
+      "title_chars": 48,
+      "meta_description_chars": 130,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/skin-changer-visible-to-others/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/ugc-account-recovery-tool-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/ugc-account-recovery-tool-explained/",
+      "seconds": 0.368,
+      "redirects": 0,
+      "title": "À quoi sert l’outil de récupération UGC ?",
+      "title_chars": 41,
+      "meta_description_chars": 123,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/ugc-account-recovery-tool-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 3,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/valorant-hwid-ban-explained/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/valorant-hwid-ban-explained/",
+      "seconds": 0.38,
+      "redirects": 0,
+      "title": "Bans HWID : matériel ou compte ? | CHEATS FOR THE ISLE",
+      "title_chars": 54,
+      "meta_description_chars": 114,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/valorant-hwid-ban-explained/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 2,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/the-isle-esp-what-it-shows/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/the-isle-esp-what-it-shows/",
+      "seconds": 0.391,
+      "redirects": 0,
+      "title": "Que montre l’ESP dans The Isle ? | CHEATS FOR THE ISLE",
+      "title_chars": 54,
+      "meta_description_chars": 114,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/the-isle-esp-what-it-shows/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/forum/the-isle-cheats-evrima-support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/forum/the-isle-cheats-evrima-support/",
+      "seconds": 0.408,
+      "redirects": 0,
+      "title": "The Isle Cheats : EVRIMA et Legacy | CHEATS FOR THE ISLE",
+      "title_chars": 56,
+      "meta_description_chars": 116,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/forum/the-isle-cheats-evrima-support/",
+      "noindex": false,
+      "schema_types": [
+        "DiscussionForumPosting",
+        "BreadcrumbList"
+      ],
+      "incoming": 5,
+      "depth": 2,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/reviews/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/reviews/",
+      "seconds": 0.451,
+      "redirects": 0,
+      "title": "Avis sur The Isle Cheats et les outils complémentaires",
+      "title_chars": 54,
+      "meta_description_chars": 129,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/reviews/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/hwid-spoofer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/hwid-spoofer/",
+      "seconds": 0.474,
+      "redirects": 0,
+      "title": "HWID Spoofer | Identifiants et nettoyage des traces",
+      "title_chars": 51,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/hwid-spoofer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/skin-changer/",
+      "seconds": 0.504,
+      "redirects": 0,
+      "title": "Skin Changer | Aperçus cosmétiques locaux et formules",
+      "title_chars": 53,
+      "meta_description_chars": 145,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/products/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/products/",
+      "seconds": 0.58,
+      "redirects": 0,
+      "title": "Comparer The Isle Cheats et les outils complémentaires",
+      "title_chars": 54,
+      "meta_description_chars": 138,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/products/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/products/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/products/",
+      "seconds": 0.039,
+      "redirects": 0,
+      "title": "Compare The Isle Cheats and Utility Products",
+      "title_chars": 44,
+      "meta_description_chars": 141,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/products/",
+      "noindex": false,
+      "schema_types": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/hwid-spoofer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/hwid-spoofer/",
+      "seconds": 0.19,
+      "redirects": 0,
+      "title": "HWID Spoofer | Hardware IDs and Trace Cleanup",
+      "title_chars": 45,
+      "meta_description_chars": 125,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/hwid-spoofer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/support/",
+      "seconds": 0.304,
+      "redirects": 0,
+      "title": "Assistance The Isle Cheats | Installation et commandes",
+      "title_chars": 54,
+      "meta_description_chars": 143,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/support/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/ugc/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/ugc/",
+      "seconds": 0.348,
+      "redirects": 0,
+      "title": "UGC | Modèles et procédures de recours de compte",
+      "title_chars": 48,
+      "meta_description_chars": 140,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/ugc/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/reviews/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/reviews/",
+      "seconds": 0.041,
+      "redirects": 0,
+      "title": "The Isle Cheats and Utility Reviews",
+      "title_chars": 35,
+      "meta_description_chars": 129,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/reviews/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/support/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/support/",
+      "seconds": 0.301,
+      "redirects": 0,
+      "title": "The Isle Cheats Support | Setup and Order Help",
+      "title_chars": 46,
+      "meta_description_chars": 140,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/support/",
+      "noindex": false,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/skin-changer/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/skin-changer/",
+      "seconds": 0.317,
+      "redirects": 0,
+      "title": "Skin Changer | Local Cosmetic Previews and Plans",
+      "title_chars": 48,
+      "meta_description_chars": 142,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/skin-changer/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/ugc/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/ugc/",
+      "seconds": 0.338,
+      "redirects": 0,
+      "title": "UGC Account Appeals | Templates and Workflows",
+      "title_chars": 45,
+      "meta_description_chars": 127,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/ugc/",
+      "noindex": false,
+      "schema_types": [
+        "Product",
+        "BreadcrumbList"
+      ],
+      "incoming": 34,
+      "depth": 1,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "AVAILABILITY_EVIDENCE_GAP",
+        "LIVE_CHECKOUT_PLAN_LOST",
+        "NESTED_COMPLEMENTARY_LANDMARK"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/terms/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/terms/",
+      "seconds": 0.183,
+      "redirects": 0,
+      "title": "Terms of Sale | Licenses and Refunds",
+      "title_chars": 36,
+      "meta_description_chars": 119,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/terms/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/privacy/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/privacy/",
+      "seconds": 0.195,
+      "redirects": 0,
+      "title": "Privacy Policy | Analytics, Cookies and Tickets",
+      "title_chars": 47,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/privacy/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/privacy/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/privacy/",
+      "seconds": 0.335,
+      "redirects": 0,
+      "title": "Datenschutz | Analytics, Cookies und Tickets",
+      "title_chars": 44,
+      "meta_description_chars": 105,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/privacy/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/de/terms/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/de/terms/",
+      "seconds": 0.529,
+      "redirects": 0,
+      "title": "Verkaufsbedingungen | Lizenzen und Erstattungen",
+      "title_chars": 47,
+      "meta_description_chars": 107,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/de/terms/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/privacy/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/privacy/",
+      "seconds": 0.395,
+      "redirects": 0,
+      "title": "Politique de confidentialité | Analyses, cookies et tickets",
+      "title_chars": 59,
+      "meta_description_chars": 116,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/privacy/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/privacy/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/privacy/",
+      "seconds": 0.402,
+      "redirects": 0,
+      "title": "Política de privacidad | Analítica, cookies y tickets",
+      "title_chars": 53,
+      "meta_description_chars": 107,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/privacy/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/fr/terms/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/fr/terms/",
+      "seconds": 0.407,
+      "redirects": 0,
+      "title": "Conditions de vente | Licences et remboursements",
+      "title_chars": 48,
+      "meta_description_chars": 119,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/fr/terms/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    },
+    {
+      "url": "https://cheatsfortheisle.com/es/terms/",
+      "status": 200,
+      "final_url": "https://cheatsfortheisle.com/es/terms/",
+      "seconds": 0.433,
+      "redirects": 0,
+      "title": "Condiciones de venta | Licencias y reembolsos",
+      "title_chars": 45,
+      "meta_description_chars": 118,
+      "h1_count": 1,
+      "words_note": "Main prose metric is a limited extraction; full main-container counts are in content-checks.json.",
+      "canonical": "https://cheatsfortheisle.com/es/terms/",
+      "noindex": true,
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "incoming": null,
+      "issues": [
+        "CSP_BLOCKS_INJECTED_ANALYTICS",
+        "LOGO_FORCES_512PX",
+        "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH"
+      ]
+    }
+  ],
+  "coverage": {
+    "liveHtml": 148,
+    "liveSitemap": 140,
+    "directResources": 46,
+    "additionalProbes": 397,
+    "liveBrowserCases": 182,
+    "lightThemePages": 13,
+    "localBrowserCases": 60,
+    "localNodeHttpChecks": 518,
+    "localCloudflareChecks": 597,
+    "localCloudflarePages": 152,
+    "localCloudflareAssets": 78,
+    "protectedLiveHashMatches": 20,
+    "configuredPathRedirects": 274,
+    "configuredPathRedirectFailures": []
+  },
+  "internal_links": {
+    "configuredIndexable": 140,
+    "generatedPages": 148,
+    "excludedPages": 8,
+    "uniqueEdges": 2036,
+    "contextualEdges": 188,
+    "orphans": 0,
+    "unreachable": 0
+  },
+  "lighthouse": [
+    {
+      "name": "home-mobile",
+      "url": "https://cheatsfortheisle.com/",
+      "version": "13.6.0",
+      "categories": {
+        "performance": 0.99,
+        "accessibility": 1,
+        "best-practices": 0.92,
+        "seo": 1
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1692.115,
+          "display": "1.7 s"
+        },
+        "first-contentful-paint": {
+          "value": 1692.115,
+          "display": "1.7 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 1740.5133460005613,
+          "display": "1.7 s"
+        },
+        "server-response-time": {
+          "value": 40,
+          "display": "Root document took 40 ms"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "name": "cheats-mobile",
+      "url": "https://cheatsfortheisle.com/cheats/",
+      "version": "13.6.0",
+      "categories": {
+        "performance": 0.98,
+        "accessibility": 1,
+        "best-practices": 0.85,
+        "seo": 1
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1967.8980000000001,
+          "display": "2.0 s"
+        },
+        "first-contentful-paint": {
+          "value": 1697.8980000000001,
+          "display": "1.7 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 2349.50204200027,
+          "display": "2.3 s"
+        },
+        "server-response-time": {
+          "value": 38,
+          "display": "Root document took 40 ms"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "name": "reviews-mobile",
+      "url": "https://cheatsfortheisle.com/reviews/",
+      "version": "13.6.0",
+      "categories": {
+        "performance": 0.98,
+        "accessibility": 1,
+        "best-practices": 0.92,
+        "seo": 1
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1548.7530000000002,
+          "display": "1.5 s"
+        },
+        "first-contentful-paint": {
+          "value": 1548.7530000000002,
+          "display": "1.5 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 3719.4058820003424,
+          "display": "3.7 s"
+        },
+        "server-response-time": {
+          "value": 39,
+          "display": "Root document took 40 ms"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "name": "forum-mobile",
+      "url": "https://cheatsfortheisle.com/forum/isle-aimbot-worth-it/",
+      "version": "13.6.0",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.92,
+        "seo": 1
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1535.409,
+          "display": "1.5 s"
+        },
+        "first-contentful-paint": {
+          "value": 1535.409,
+          "display": "1.5 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 1535.409,
+          "display": "1.5 s"
+        },
+        "server-response-time": {
+          "value": 41,
+          "display": "Root document took 40 ms"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "name": "home-desktop",
+      "url": "https://cheatsfortheisle.com/",
+      "version": "13.6.0",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.88,
+        "seo": 1
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 476.68600000000004,
+          "display": "0.5 s"
+        },
+        "first-contentful-paint": {
+          "value": 476.68600000000004,
+          "display": "0.5 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 490.6994571054598,
+          "display": "0.5 s"
+        },
+        "server-response-time": {
+          "value": 36,
+          "display": "Root document took 40 ms"
+        }
+      },
+      "warnings": []
+    }
+  ],
+  "preservation": {
+    "restoredBuildGeneratedFiles": [
+      {
+        "path": "public\\go\\hwid-spoofer\\index.html",
+        "lineEndingsOnly": true
+      },
+      {
+        "path": "public\\go\\skin-changer\\index.html",
+        "lineEndingsOnly": true
+      },
+      {
+        "path": "public\\go\\the-isle-cheats\\index.html",
+        "lineEndingsOnly": true
+      },
+      {
+        "path": "public\\go\\ugc\\index.html",
+        "lineEndingsOnly": true
+      },
+      {
+        "path": "public\\go\\wardogs\\index.html",
+        "lineEndingsOnly": true
+      },
+      {
+        "path": "public\\robots.txt",
+        "lineEndingsOnly": true
+      },
+      {
+        "path": "public\\_redirects",
+        "lineEndingsOnly": true
+      }
+    ],
+    "baselineFiles": 325,
+    "changed": [],
+    "missing": [],
+    "added": [],
+    "allOriginalInputsByteIdentical": true
+  },
+  "warnings": [
+    "Audit status ok means completed, not issue-free.",
+    "No Search Console, backlinks, deployed account configuration, partner fulfillment, independent product operation or field CWV verification.",
+    "No permission to fix/deploy/index has been assumed."
+  ],
+  "limits": {
+    "scope": "Known static route inventory, links/assets and explicit probes; not every possible URL on the public internet.",
+    "language": "Owner-supplied English community material intentionally retained across localized interfaces.",
+    "ranking": "No indexing/ranking guarantee or causal traffic-loss diagnosis."
+  },
+  "extended_audits": {
+    "rendering": {
+      "pages": 148,
+      "errors": [],
+      "metadataOrLinkDeltas": 0,
+      "jsonldChanges": 0,
+      "wordOrderChanges": [
+        "https://cheatsfortheisle.com/de/forum/",
+        "https://cheatsfortheisle.com/es/forum/",
+        "https://cheatsfortheisle.com/forum/",
+        "https://cheatsfortheisle.com/fr/forum/"
+      ],
+      "wordBagChanges": []
+    },
+    "images": {
+      "instances": 448,
+      "uniqueFallbackSources": 8,
+      "issueCounts": {}
+    },
+    "schema": {
+      "pages": 148,
+      "errors": 0,
+      "counts": {
+        "FAQ_GOOGLE_FEATURE_RETIRED": 12,
+        "AUTHOR_URL_RECOMMENDED": 32,
+        "UNKNOWN_SUPPLIED_AUTHOR_LABEL": 4
+      }
+    },
+    "crawlSpace": {
+      "internalLinkOccurrences": 7636,
+      "nonCheckoutQueryLinks": 0,
+      "traps": [],
+      "hitCap": false
+    },
+    "rss": {
+      "items": 8,
+      "enclosures": 8,
+      "errors": [
+        {
+          "item": 1,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 2,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 3,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 4,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 5,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 6,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 7,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        },
+        {
+          "item": 8,
+          "code": "ENCLOSURE_ATTRIBUTE_MISSING",
+          "attribute": "length"
+        }
+      ]
+    },
+    "authorUrlRecommendationPages": 32,
+    "unknownSuppliedForumAuthorPages": 4,
+    "retiredFaqFeaturePages": 12
+  },
+  "supplemental_schema_reviews": [
+    {
+      "code": "ARTICLE_AUTHOR_URL_RECOMMENDED",
+      "pages": 32,
+      "classification": "optional author identity clarity"
+    },
+    {
+      "code": "UNKNOWN_SUPPLIED_FORUM_AUTHOR",
+      "pages": 4,
+      "classification": "preserved owner-approved unknown-author fallback; no invented identity authorized"
+    },
+    {
+      "code": "FAQ_GOOGLE_FEATURE_RETIRED",
+      "pages": 12,
+      "classification": "information; not a markup/indexability defect",
+      "source": "https://developers.google.com/search/updates"
+    }
+  ],
+  "fixes_applied_scope": "repository_only",
+  "fixes_published": false,
+  "resolution": {
+    "date": "2026-11-06",
+    "report": "docs/seo/audit-fixes-2026-11-06.md",
+    "status": "repository_validated_production_recheck_pending",
+    "original_live_evidence_and_score_preserved": true,
+    "findings": {
+      "LIVE_CHECKOUT_PLAN_LOST": "repository_fixed_live_recheck_pending",
+      "LIVE_ALIAS_HANDLER_MISMATCH": "repository_fixed_live_recheck_pending",
+      "ERROR_DOCUMENT_RETURNS_200": "repository_fixed_live_recheck_pending",
+      "CSP_BLOCKS_INJECTED_ANALYTICS": "repository_fixed_live_recheck_pending",
+      "AVAILABILITY_EVIDENCE_GAP": "repository_fixed_live_recheck_pending",
+      "LOCALIZED_ORIGINAL_LANGUAGE_REVIEW": "localized_context_added_search_console_review_pending",
+      "GUIDE_EVIDENCE_AND_DEPTH_OPPORTUNITY": "concise_vendor_references_added_owner_scope_complete",
+      "FORUM_QUERY_DUPLICATES": "repository_fixed_live_recheck_pending",
+      "LOGO_FORCES_512PX": "repository_fixed_live_recheck_pending",
+      "OWNER_REQUESTED_IMAGE_PRESENTATION": "phone_candidate_improved_owner_presentation_retained",
+      "NESTED_COMPLEMENTARY_LANDMARK": "repository_fixed_live_recheck_pending",
+      "HOMEPAGE_CONTEXTUAL_EXCEPTION": "repository_fixed_live_recheck_pending",
+      "RSS_ENCLOSURE_LENGTH_MISSING": "repository_fixed_live_recheck_pending",
+      "LOCALIZED_ACCESSIBILITY_STRINGS_ENGLISH": "repository_fixed_live_recheck_pending"
+    },
+    "validation": {
+      "tests": 87,
+      "nodeHttpChecks": 526,
+      "workerChecks": 606,
+      "pagesChecks": 606,
+      "browserCases": 184,
+      "interactivePageCases": 60,
+      "interceptedCheckoutClicks": 48,
+      "noScriptFaqLocales": 4,
+      "orphanPages": 0,
+      "brokenRouteFindings": 0,
+      "protectedInputs": 68
+    }
+  }
+}

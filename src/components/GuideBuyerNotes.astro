@@ -1,0 +1,15 @@
+---
+import { useLocale } from '../i18n';
+import { editorialGuidance, MAIN_PRODUCT_REFERENCE } from '../data/editorialGuidance';
+interface Props { slug: string }
+const { slug } = Astro.props;
+const { locale } = useLocale(Astro.currentLocale);
+const copy = editorialGuidance[locale];
+const note = copy.guides[slug];
+const mainProductGuide = !['hardware-flags-and-account-appeals', 'local-appearance-and-skin-changer'].includes(slug);
+---
+{note && <section class="mt-8 border-t border-border pt-6" aria-labelledby="guide-buyer-note">
+  <h2 id="guide-buyer-note">{copy.guideHeading}</h2>
+  <p>{note}</p>
+  {mainProductGuide && <p><a href={MAIN_PRODUCT_REFERENCE} rel="sponsored">{copy.referenceLabel}</a>.</p>}
+</section>}

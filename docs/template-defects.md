@@ -92,3 +92,9 @@ The audit's repeated failed-link warnings refer to one account-recovery article.
 ## The Isle clone conversion — 2026-11-01
 
 The longer brand exposed a 390px header defect: nonshrinking brand/actions pushed the menu offscreen. Fixed with a shrinkable brand area, compact mobile wordmark sizing and concise localized plan CTAs; the full Chrome suite passed afterward. The image-pruning script also removed a brand master now legitimately referenced by editorial content; retain that referenced master and reuse existing variants. Shared palette/font/style files and protected assets remain unchanged. See [conversion report](the-isle-conversion-report.md) for current evidence and media handoff.
+
+## Live-audit remediation — 2026-11-06
+
+The [live audit](seo/full-site-audit-2026-11-06.md) found that production behaved like the limited Pages fallback rather than the full Worker. Repository fixes are documented in [the remediation report](seo/audit-fixes-2026-11-06.md): complete shared Pages routing with same-origin assets, early real-404 handling, query-safe static checkout fallback, centralized nonduplicated CSP/cache policies, removal of unverified availability, accurate RSS enclosure lengths, localized accessible names/logo descriptions, correctly sized existing logo assets and nested-landmark repairs.
+
+The historical unresolved `InStock` row above is superseded locally: availability is now omitted until sourced. The four homepage-context warnings have been resolved with useful About-to-overview links. Supplied community records, prices, destinations, media, favicon and manifest remain preserved. Existing screenshot stretching is an explicit owner presentation choice; dense menu phone candidates are sharper without changing that layout. Local evidence does not establish deployed routing, analytics collection, partner fulfillment or Google-selected language canonicals. Deployment and first-party indexing checks remain owner actions.

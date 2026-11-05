@@ -873,6 +873,10 @@
     }
   },
   "ui": {
+    "primaryNavigation": "Hauptnavigation",
+    "mobileNavigation": "Mobile Navigation",
+    "relatedPages": "Verwandte Seiten",
+    "brandLogoAlt": "Violettes Emblem mit einer scharfen Spitze und einem geschwungenen Ring auf transparentem Hintergrund.",
     "skipLink": "Zum Hauptinhalt springen",
     "browseCheatsNav": "Pläne ansehen",
     "browseCheatsNavMobile": "Pläne",

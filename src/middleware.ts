@@ -1,9 +1,9 @@
 import { defineMiddleware } from 'astro:middleware';
 import { resolveCheckoutPathRedirect } from './config/checkout-redirects.mjs';
-import { resolveForumQueryRedirect, resolveLocaleRoutingRedirect } from './config/locale-routing.mjs';
+import { isErrorDocumentPath, resolveForumQueryRedirect, resolveLocaleRoutingRedirect } from './config/locale-routing.mjs';
 import { resolvePathRedirect } from '../scripts/redirects.mjs';
 
-export const onRequest = defineMiddleware((context, next) => {
+export const onRequest = defineMiddleware(async (context, next) => {
   const url = new URL(context.request.url);
   const { pathname, search, hash } = url;
 
@@ -16,6 +16,14 @@ export const onRequest = defineMiddleware((context, next) => {
       status: 302,
       headers: { Location: destination, 'X-Robots-Tag': 'noindex, follow', 'Cache-Control': 'no-store' },
     });
+  }
+
+  if (isErrorDocumentPath(pathname)) {
+    const response = await next();
+    const headers = new Headers(response.headers);
+    headers.delete('Location');
+    headers.set('X-Robots-Tag', 'noindex, follow');
+    return new Response(response.body, { status: 404, statusText: 'Not Found', headers });
   }
 
   const forumQuery = resolveForumQueryRedirect(pathname, search);

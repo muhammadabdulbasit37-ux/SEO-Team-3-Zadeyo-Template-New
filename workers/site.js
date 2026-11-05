@@ -7,24 +7,12 @@ import { isLocalPreviewHost, parseHostname } from '../scripts/local-preview-host
 import { resolveCheckoutPathRedirect } from '../src/config/checkout-redirects.mjs';
 import { isErrorDocumentPath, resolveForumQueryRedirect, resolveLocaleRoutingRedirect } from '../src/config/locale-routing.mjs';
 import { SITE_DOMAIN } from '../src/config/site-url.mjs';
+import { SECURITY_HEADERS } from '../src/config/security-headers.mjs';
 
 const CANONICAL_HOST = SITE_DOMAIN;
 
 /** Served as static files; must not fall through to HTML index resolution. */
 const STATIC_FILE_PATH = /^\/(?:robots\.txt|sitemap\.xml|sitemap\.xsl|rss\.xml|[^/]+\.(?:xml|xsl|txt|webmanifest))$/i;
-
-const SECURITY_CSP = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com",
-  "font-src 'self'",
-  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com",
-  "frame-ancestors 'self'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "object-src 'none'",
-].join('; ');
 
 function assetsFetch(env, request, pathname) {
   return env.ASSETS.fetch(new Request(new URL(pathname, 'https://assets.local'), request));
@@ -46,11 +34,7 @@ function withHtmlCharset(response) {
 
 function withSecurityHeaders(response) {
   const headers = new Headers(response.headers);
-  headers.set('X-Frame-Options', 'SAMEORIGIN');
-  headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-  headers.set('X-Content-Type-Options', 'nosniff');
-  headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  headers.set('Content-Security-Policy', SECURITY_CSP);
+  for (const [name, value] of Object.entries(SECURITY_HEADERS)) headers.set(name, value);
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
@@ -66,10 +50,6 @@ function splitUrl(url) {
     query: search ? `?${search}` : '',
     fragment: hash ? `#${hash}` : '',
   };
-}
-
-function normalizePath(pathname) {
-  return pathname.replace(/\/+$/, '') || '/';
 }
 
 function locationPath(response) {
@@ -127,7 +107,8 @@ async function matchCachedDocument(request) {
 
 async function notFound(env, request) {
   // The flat /404.html asset's clean binding URL is /404; /404.html redirects.
-  const asset = withHtmlCharset(await assetsFetch(env, request, '/404'));
+  const locale = new URL(request.url).pathname.match(/^\/(es|de|fr)(?:\/|$)/)?.[1];
+  const asset = withHtmlCharset(await assetsFetch(env, request, locale ? `/${locale}/404/` : '/404'));
   const headers = new Headers(asset.headers);
   headers.delete('Link');
   headers.set('X-Robots-Tag', 'noindex, follow');
@@ -178,6 +159,8 @@ export default {
     } catch {
       return notFound(env, request);
     }
+    // Handle error documents before generic slash redirects and cached 200 responses.
+    if (isErrorDocumentPath(pathname)) return notFound(env, request);
     const forumQuery = resolveForumQueryRedirect(pathname, query);
     if (forumQuery) {
       return redirect(`${forumQuery}${fragment}`, 301);
@@ -234,20 +217,6 @@ export default {
         (redirectedTo === '/404' || redirectedTo === '/404.html'))
     ) {
       return notFound(env, request);
-    }
-
-    if (isErrorDocumentPath(pathname) && asset.status === 200) {
-      const headers = new Headers(withHtmlCharset(asset).headers);
-      headers.delete('Link');
-      headers.set('X-Robots-Tag', 'noindex, follow');
-      headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
-      return withSecurityHeaders(
-        new Response(asset.body, {
-          status: 404,
-          statusText: 'Not Found',
-          headers,
-        }),
-      );
     }
 
     const response = withSecurityHeaders(withHtmlCharset(asset));

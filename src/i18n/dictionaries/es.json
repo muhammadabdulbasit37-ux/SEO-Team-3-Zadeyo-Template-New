@@ -873,6 +873,10 @@
     }
   },
   "ui": {
+    "primaryNavigation": "Navegación principal",
+    "mobileNavigation": "Navegación móvil",
+    "relatedPages": "Páginas relacionadas",
+    "brandLogoAlt": "Emblema violeta con un pico afilado y un anillo curvo sobre un fondo transparente.",
     "skipLink": "Saltar al contenido principal",
     "browseCheatsNav": "Ver planes",
     "browseCheatsNavMobile": "Planes",

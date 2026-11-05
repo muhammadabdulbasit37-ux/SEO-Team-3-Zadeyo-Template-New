@@ -873,6 +873,10 @@
     }
   },
   "ui": {
+    "primaryNavigation": "Navigation principale",
+    "mobileNavigation": "Navigation mobile",
+    "relatedPages": "Pages associées",
+    "brandLogoAlt": "Emblème violet avec une pointe marquée et un anneau incurvé sur un fond transparent.",
     "skipLink": "Passer au contenu principal",
     "browseCheatsNav": "Voir les offres",
     "browseCheatsNavMobile": "Offres",

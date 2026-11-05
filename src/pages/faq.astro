@@ -56,7 +56,7 @@ const faqs = getAllFaqs(locale);
 
   <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" />
 
-  <section class="border-t border-border bg-muted/20 py-12 md:py-16" aria-label="Related pages">
+  <section class="border-t border-border bg-muted/20 py-12 md:py-16" aria-label={t.ui.relatedPages}>
     <div class="mx-auto flex max-w-6xl flex-wrap justify-center gap-3 px-5">
       <Button as="a" href={lp(ROUTES.productsHub)} variant="outline">
         {t.nav.find((l) => l.id === 'products')?.label ?? 'Products'}

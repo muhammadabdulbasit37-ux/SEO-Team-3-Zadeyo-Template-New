@@ -51,15 +51,16 @@ const { brandLogoAlt } = Astro.props;
       <a
         href={lp('/')}
         class="inline-flex min-w-0 shrink items-center justify-self-start gap-2.5 font-[family-name:var(--font-heading)] text-base font-bold sm:gap-3 sm:text-lg"
-        aria-label={`${t.site.name} home`}
+        aria-label={`${t.site.name} — ${t.common.breadcrumbHome}`}
       >
         <BrandLogo size={32} class="size-8 shrink-0 rounded-md" priority alt={brandLogoAlt} />
         <BrandWordmark class="min-w-0 text-xs leading-tight sm:text-lg" />
       </a>
 
       <nav
+        data-primary-nav
         class="hidden min-w-0 flex-wrap items-center justify-center gap-x-2.5 gap-y-1 justify-self-center lg:flex xl:gap-x-5"
-        aria-label="Primary"
+        aria-label={t.ui.primaryNavigation}
       >
         {navLinks.map((link) => {
           const headerLabel = link.shortLabel ?? link.label;
@@ -120,7 +121,7 @@ const { brandLogoAlt } = Astro.props;
             side="right"
             class="site-header-sheet w-[min(17.5rem,88vw)] gap-0 overflow-hidden rounded-none border-l p-0 sm:max-w-[17.5rem]"
           >
-            <nav class="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-4 pb-4 pt-3" aria-label="Mobile">
+            <nav data-mobile-nav class="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-4 pb-4 pt-3" aria-label={t.ui.mobileNavigation}>
               {navLinks.map((link) => (
                 <a
                   href={lp(link.href)}

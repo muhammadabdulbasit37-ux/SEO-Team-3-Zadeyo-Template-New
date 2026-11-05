@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
 import { CHECKOUT_URLS } from '../src/config/checkout-redirects.mjs';
+import { CHECKOUT_PATH_REDIRECTS } from '../src/config/checkout-redirects.mjs';
 
 const source = fs.readFileSync(new URL('../src/config/checkout.ts', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText
@@ -26,6 +27,21 @@ test('checkout normalization retains plan/query/hash for every configured produc
   }
   assert.equal(checkout.resolveCheckoutHref('/go/wardogs/?plan=monthly'), checkout.PRIMARY_CHECKOUT_PATH + '?plan=monthly');
   assert.equal(checkout.resolveCheckoutHref('https://zadeyo.com/go/BASIT?to=%2Fproducts%2Funknown&plan=monthly'), 'https://zadeyo.com/go/BASIT?to=%2Fproducts%2Funknown&plan=monthly');
+});
+
+test('static fallback preserves plan and encoded campaign values without a query-dropping _redirects rule', () => {
+  const redirects = fs.readFileSync(new URL('../public/_redirects', import.meta.url), 'utf8');
+  for (const [route, target] of CHECKOUT_PATH_REDIRECTS) {
+    assert.ok(!redirects.split(/\r?\n/).some(line => line.startsWith(route + ' ')), route);
+    if (!route.endsWith('/')) continue;
+    const html = fs.readFileSync(new URL(`../public${route}index.html`, import.meta.url), 'utf8');
+    const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+    for (const plan of ['monthly', 'lifetime']) {
+      let destination;
+      vm.runInNewContext(script, { location: { search: `?plan=${plan}&campaign=keep%2Fencoded`, replace: value => { destination = value; } } });
+      assert.equal(destination, target + `&plan=${plan}&campaign=keep%2Fencoded`);
+    }
+  }
 });
 
 test('click and keyboard plan selection update desktop/mobile checkout, total and duration', () => {

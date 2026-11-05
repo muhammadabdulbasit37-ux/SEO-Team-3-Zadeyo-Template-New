@@ -2,6 +2,7 @@
 import'../../styles/forum.css';import BaseLayout from'../../layouts/BaseLayout.astro';import Breadcrumbs from'../../components/Breadcrumbs.astro';import ForumSidebar from'../../components/ForumSidebar.astro';import Icon from'../../components/icons/Icon.astro';import{useLocale}from'../../i18n';import{getForumPost,getForumPosts,forumCategoryId}from'../../data/forum/locale';import{forumCopy}from'../../data/forum/copy';import{pageTitle}from'../../config/seo';import{breadcrumbSchema,discussionForumPostingSchema}from'../../utils/schema';
 import { discussionResources } from '../../data/discussionResources';
 import { getBlogPost } from '../../data/blog';
+import { archiveGuides, editorialGuidance } from '../../data/editorialGuidance';
 export function getStaticPaths(){return getForumPosts('en').map(post=>({params:{slug:post.slug}}));}
 const{locale,t,lp}=useLocale(Astro.currentLocale),c=forumCopy[locale],post=getForumPost(Astro.params.slug!,locale);
 if(!post)return Astro.redirect(lp('/forum/'));
@@ -12,6 +13,8 @@ const posting={...discussionForumPostingSchema({name:post.title,text:post.body.j
 const discussionResource = discussionResources.find(resource => resource.forumSlug === post.slug);
 const resourceGuide = discussionResource ? getBlogPost(discussionResource.guideSlug, locale) : undefined;
 const resourceLinks = [...(post.resourceLinks ?? [])];
+const contextGuide = getBlogPost(archiveGuides[post.slug] ?? '', locale);
+const contextCopy = editorialGuidance[locale];
 if (resourceGuide && !resourceLinks.some(link => link.href === `/blog/${resourceGuide.slug}/`)) resourceLinks.push({ href: `/blog/${resourceGuide.slug}/`, label: resourceGuide.title });
 ---
 <BaseLayout title={pageTitle(post.metaTitle??post.title,undefined,locale)} description={post.excerpt} canonicalPath={lp(path)} jsonLd={[posting,breadcrumbSchema(breadcrumbs,locale)]}>
@@ -20,6 +23,8 @@ if (resourceGuide && !resourceLinks.some(link => link.href === `/blog/${resource
    <div class="forum-vote" role="group" aria-label={`${post.commentsCount} ${c.replies}`}><Icon name="messageCircle" size={16}/><strong>{post.commentsCount}</strong></div>
    <div class="forum-detail-content"><div class="forum-post-meta"><span class="forum-community-avatar"><Icon name="users" size={15}/></span><a class="forum-community-name" href={`${lp('/forum/')}${'#'+forumCategoryId(post.category)}`}>{categoryLabel}</a><span>·</span><span>{c.archive}</span></div>
     <h1 lang="en">{post.title}</h1><span class="forum-flair">{c.closed}</span><p class="forum-archive-note">{c.notice}</p>
+    {contextGuide && <section class="forum-related-links" aria-labelledby="archive-current-guidance"><h2 id="archive-current-guidance">{contextCopy.archiveHeading}</h2><p>{contextGuide.desc}</p><p><a href={lp(`/blog/${contextGuide.slug}/`)}>{contextCopy.guideLabel}: {contextGuide.title}</a></p></section>}
+    {post.author === 'Original poster' && <p class="forum-archive-note">{contextCopy.originalAuthorUnknown}</p>}
     <div class="forum-comment__meta"><span class="forum-comment__avatar">{post.author.charAt(0).toUpperCase()}</span><b>{authorLabel}</b><span>·</span><time datetime={post.published}>{date}</time><span>· {c.originalPost}</span></div>
     <div class="forum-detail-copy" lang="en" data-original-post>{post.body.map(paragraph=><p>{paragraph}</p>)}</div>
     <div class="forum-post-actions"><a href="#comments"><Icon name="messageCircle" size={15}/>{post.commentsCount} {c.replies}</a><a href={lp('/forum/')}>{c.back}<Icon name="arrowRight" size={14}/></a></div>

@@ -3,6 +3,8 @@ import { RSS_FEED_PATH, SITE_ORIGIN, absoluteAssetUrl, canonicalUrl } from '../c
 import { SITE_DOMAIN, SITE_NAME } from '../config/site';
 import { parseBlogDate } from './schema';
 import { blogPostPath } from './path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 function escapeXml(value: string): string {
   return value
@@ -17,6 +19,10 @@ export function buildRssFeed(): string {
  const items = blogPosts.map((post) => {
  const link = canonicalUrl(blogPostPath(post.slug));
  const pubDate = new Date(parseBlogDate(post.date)).toUTCString();
+ const mediaPath = path.resolve('public', '.' + new URL(post.image, SITE_ORIGIN).pathname);
+ const publicRoot = path.resolve('public') + path.sep;
+ if (!mediaPath.startsWith(publicRoot)) throw new Error('RSS image must remain inside public/');
+ const mediaBytes = fs.statSync(mediaPath).size;
  return `
  <item>
  <title>${escapeXml(post.title)}</title>
@@ -24,7 +30,7 @@ export function buildRssFeed(): string {
  <guid isPermaLink="true">${link}</guid>
  <description>${escapeXml(post.desc)}</description>
  <pubDate>${pubDate}</pubDate>
- <enclosure url="${escapeXml(absoluteAssetUrl(post.image))}" type="image/webp" />
+ <enclosure url="${escapeXml(absoluteAssetUrl(post.image))}" length="${mediaBytes}" type="image/webp" />
  </item>`;
  }).join('');
 

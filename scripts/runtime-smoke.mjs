@@ -52,6 +52,8 @@ try {
     await request(prefix + '/forum/?category=test&sort=recent&page=2&campaign=keep', 301, prefix + '/forum/?campaign=keep');
   }
   for (const route of ['/not-a-real-page/', '/es/fr/about/', '/%ZZ/', '/..%2fdist-private/secret.txt']) await request(route, 404);
+  for (const route of ['/404', '/404/', '/es/404', '/de/404.html', '/fr/404']) await request(route, 404);
+  for (const [route, target] of [['/en/', '/'], ['/en/cheats/', '/cheats/'], ['/Cheats/', '/cheats/']]) await request(route, 301, target);
   await request('/', 200); // Malformed requests must not terminate the server.
   for (const route of ['/robots.txt', '/sitemap.xml', '/rss.xml']) await request(route, 200);
   console.log(JSON.stringify({ ok: true, localHttpChecks: checks, externalRequests: 0 }, null, 2));

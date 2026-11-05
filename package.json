@@ -13,6 +13,7 @@
     "validate:runtime": "npm run validate && node scripts/runtime-smoke.mjs",
     "validate:browser": "npm run validate && node scripts/browser-smoke.mjs",
     "validate:cloudflare": "npm run validate && node scripts/cloudflare-smoke.mjs",
+    "validate:pages": "npm run validate && node scripts/pages-smoke.mjs",
     "test": "node --test scripts/*.test.mjs",
     "typecheck": "astro check",
     "content:prepare": "node scripts/content-workflow.mjs prepare",

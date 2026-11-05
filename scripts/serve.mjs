@@ -9,6 +9,7 @@ import { isErrorDocumentPath, resolveForumQueryRedirect, resolveLocaleRoutingRed
 
 import { SITE_DOMAIN as CANONICAL_HOST } from '../src/config/site-url.mjs';
 import { resolveStaticFile } from './static-path.mjs';
+import { SECURITY_HEADERS } from '../src/config/security-headers.mjs';
 const distDir = path.resolve('dist');
 /** 4173 avoids Chrome's cached 301 from older local previews on port 3000. Production still uses PORT. */
 const port = Number(process.env.PORT) || 4173;
@@ -23,15 +24,6 @@ function envFlag(name) {
  * Never key this off NODE_ENV: local `npm start` often runs with NODE_ENV=production.
  */
 const canonicalRedirectsEnabled = envFlag('ENABLE_CANONICAL_REDIRECT');
-
-const SECURITY_HEADERS = {
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-  'X-Content-Type-Options': 'nosniff',
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
-  'X-Frame-Options': 'SAMEORIGIN',
-  'Content-Security-Policy':
-    "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
-};
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -259,6 +251,15 @@ const server = http.createServer((req, res) => {
     });
     res.end();
     return;
+  }
+
+  if (isErrorDocumentPath(pathname)) {
+    const locale = pathname.match(/^\/(es|de|fr)(?:\/|$)/)?.[1];
+    const errorFile = path.join(distDir, locale ? `${locale}/404/index.html` : '404.html');
+    if (fs.existsSync(errorFile)) {
+      sendFile(req, res, errorFile, 404);
+      return;
+    }
   }
 
   const forumQuery = resolveForumQueryRedirect(pathname, query);

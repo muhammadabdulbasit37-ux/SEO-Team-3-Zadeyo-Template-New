@@ -56,3 +56,11 @@ The values below are the same in en/es/de/fr, verified against each localized ro
 - Supplied blog/forum/review data, approved manifest, shared styles, favicon and referral mappings have no content diff.
 
 Ignored evidence: `.astro/underlinking-review/before.json`, `after.json`, `browser-results.json`, `note-390.png`, `note-1440.png`; latest complete graph: `.astro/internal-links.json`. Reports describe this local output, not live ranking or engagement improvements. No commit, push, deployment or indexing submission occurred.
+
+## Audit fixes — 2026-11-06
+
+The complete final generated graph contains 140 indexable pages, 2,084 distinct same-locale edges and 208 contextual edges, with zero errors, warnings, orphans or unreachable pages. The preceding values of 2,036/188 and four homepage exceptions remain the historical baseline.
+
+Each About page now offers a contextual starting-point link to its locale homepage. Every homepage retains 34 referring pages and now has one contextual incoming source. The link serves the About reader looking for the brand's overall product/guide entry point; no guide-wide homepage link or link-count quota was introduced. Website-owned current-reading sections on all 60 thread pages point to an appropriate localized existing guide. Article bylines link to the localized publishing-organization About page. Review context provides localized descriptions/links for the four product purposes. Contextual counts also reflect the corrected semantic markup of those existing sections; measured graph counts do not establish a ranking or engagement gain.
+
+All supplied forum/review text, approved article source files and the manifest are byte-identical. No links were inserted into quotations. Metadata URL ownership, locale routing, page inventory and existing related-content paths remain intact. Full final-state verification and retained evidence are in [the audit-fix report](audit-fixes-2026-11-06.md).

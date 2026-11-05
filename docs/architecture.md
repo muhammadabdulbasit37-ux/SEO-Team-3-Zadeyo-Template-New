@@ -2,6 +2,8 @@
 
 > Current clone status (2026-11-01): converted to CHEATS FOR THE ISLE / cheatsfortheisle.com. See [current forum restoration](forum-restoration.md), [media release audit](the-isle-deployment-readiness.md), [conversion history](the-isle-conversion-report.md), [keyword map](the-isle-keyword-map.md) and [media manifest](media-replacement-manifest.json). The MW4-specific business values below document the original master; current identity, pricing, copy and provenance are in source and content/manifest.json.
 
+> Maintenance update (2026-11-06): see [audit fixes](seo/audit-fixes-2026-11-06.md). Pages now delegates to the full Worker handler with same-origin asset adaptation. `src/config/security-headers.mjs` owns shared security headers; `generate-static-redirects.mjs` also generates `_headers`. Static checkout rules no longer bypass the query-preserving HTML fallback. Website-owned guide notes/archive reading paths and their actual revision date live in `src/data/editorialGuidance.ts`; approved article/community data and the manifest remain unchanged. `npm run validate:pages` checks the real local Pages fallback separately from the primary Worker.
+
 
 Source audit and Part 4.1 verification: 2026-10-30. This describes the current repository and conversion-only workflows, not verified vendor facts. Start with root `AGENTS.md`; use `conversion.example.json` for future intake and `template-defects.md` for follow-up issues. Current evidence and residual live-verification risks are in [part41-report.md](part41-report.md).
 

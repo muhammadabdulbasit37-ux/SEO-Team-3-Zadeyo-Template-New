@@ -1,4 +1,5 @@
 const RASTER_EXT = /\.(png|jpe?g|webp)$/i;
+const brandWidth = (width: number) => [32, 64, 128, 512].find(candidate => candidate >= width) ?? 512;
 
 /** 400w covers ~330px card slots at 1x; 640w covers 2x retina. */
 export const CARD_IMAGE_WIDTHS = [400, 640] as const;
@@ -38,13 +39,14 @@ export function stripRasterExt(src: string): string {
 export function webpSrc(src: string, width: number): string {
   const { path, query } = splitAssetQuery(src);
   // Editorial placeholders reuse supplied brand artwork without regenerating it.
-  if (path === '/images/brand/brand-logo.webp') return `/images/brand/brand-logo-512.webp${query}`;
+  if (path === '/images/brand/brand-logo.webp') return `/images/brand/brand-logo-${brandWidth(width)}.webp${query}`;
   return `${path.replace(RASTER_EXT, '')}-${width}.webp${query}`;
 }
 
 export function responsiveSrcSet(src: string, widths: readonly number[] = DEFAULT_IMAGE_WIDTHS): string {
-  if (splitAssetQuery(src).path === '/images/brand/brand-logo.webp') return `${webpSrc(src, 512)} 512w`;
-  return widths.map((width) => `${webpSrc(src, width)} ${width}w`).join(', ');
+  const candidates = splitAssetQuery(src).path === '/images/brand/brand-logo.webp'
+    ? [...new Set(widths.map(brandWidth))] : widths;
+  return candidates.map((width) => `${webpSrc(src, width)} ${width}w`).join(', ');
 }
 
 /** Smallest variant, used as img src so Lighthouse and no-srcset clients get the right size. */

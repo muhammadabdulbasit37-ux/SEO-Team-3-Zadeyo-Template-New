@@ -4,7 +4,7 @@ import { chromium } from 'playwright-core';
 import { withLocalServer } from './qa-server.mjs';
 
 const config = JSON.parse(fs.readFileSync('.astro/validation-config.json', 'utf8'));
-const results = { pages: 0, selections: 0, navigationClicks: 0, checkoutClicks: 0, errors: [], blockedExternal: [] };
+const results = { pages: 0, selections: 0, navigationClicks: 0, checkoutClicks: 0, noScriptFaqs: 0, errors: [], blockedExternal: [] };
 fs.mkdirSync('.astro/browser-qa', { recursive: true });
 process.on('uncaughtExceptionMonitor', () => {
   fs.writeFileSync('.astro/browser-qa/results.json', JSON.stringify(results, null, 2));
@@ -50,7 +50,7 @@ await withLocalServer(() => ['scripts/serve.mjs'], { ENABLE_CANONICAL_REDIRECT: 
         const prefix = locale === config.defaultLocale ? '' : '/' + locale;
         const home = prefix + '/';
         await visit(home); results.pages++;
-        const nav = width < 1024 ? page.locator('nav[aria-label="Mobile"]') : page.locator('nav[aria-label="Primary"]');
+        const nav = width < 1024 ? page.locator('nav[data-mobile-nav]') : page.locator('nav[data-primary-nav]');
         const hrefs = await nav.locator('a[data-nav-link]').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')));
         for (const href of hrefs) {
           await visit(home);
@@ -99,6 +99,17 @@ await withLocalServer(() => ['scripts/serve.mjs'], { ENABLE_CANONICAL_REDIRECT: 
       }
       await context.close();
     }
+    const noScript = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
+    const faqPage = await noScript.newPage();
+    for (const locale of config.locales) {
+      const prefix = locale === config.defaultLocale ? '' : '/' + locale;
+      await faqPage.goto(origin + prefix + '/faq/', { waitUntil: 'networkidle' });
+      const answers = faqPage.locator('[data-slot="accordion-content"]');
+      assert.ok(await answers.count(), `${locale}: FAQ answers must exist`);
+      for (const answer of await answers.all()) assert.ok(await answer.isVisible(), `${locale}: FAQ answers must remain visible without JavaScript`);
+      results.noScriptFaqs++;
+    }
+    await noScript.close();
   } finally { await browser.close(); }
 });
 results.blockedExternal = [...new Set(results.blockedExternal)];

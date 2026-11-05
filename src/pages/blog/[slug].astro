@@ -27,6 +27,8 @@ import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import BlogPostCta from '../../components/BlogPostCta.astro';
 import ArchivedDiscussionNote from '../../components/ArchivedDiscussionNote.astro';
+import GuideBuyerNotes from '../../components/GuideBuyerNotes.astro';
+import { guideModifiedDate } from '../../data/editorialGuidance';
 import { discussionResources } from '../../data/discussionResources';
 import { normalizeInternalPath, ROUTES } from '../../utils/path';
 
@@ -77,6 +79,7 @@ function slugify(text: string): string {
     .replace(/^-|-$/g, '');
 }
 const published = parseBlogDate(post.date);
+const modified = guideModifiedDate(post.slug, published);
 const documentTitle = pageTitle(post.metaTitle ?? post.title, undefined, locale);
 const documentDescription = post.metaDescription ?? post.desc;
 const heroAlt = post.imageAlt ?? post.title;
@@ -95,7 +98,7 @@ const headline = post.h1 ?? post.title;
   ogImageHeight={heroHeight}
   ogType="article"
   articlePublishedTime={published}
-  articleModifiedTime={published}
+  articleModifiedTime={modified}
   jsonLd={[
     articleSchema({
       name: headline,
@@ -103,6 +106,7 @@ const headline = post.h1 ?? post.title;
       url: canonicalUrl(lp(postPath)),
       image: post.image,
       datePublished: published,
+      dateModified: modified,
       locale,
     }),
     breadcrumbSchema(breadcrumbs, locale),
@@ -139,7 +143,7 @@ const headline = post.h1 ?? post.title;
               post.author && (
                 <p class="blog-article__byline">
                   <Icon name="users" size={14} />
-                  {post.author}
+                  <a href={lp('/about/')} class="hover:underline">{post.author}</a>
                 </p>
               )
             }
@@ -200,6 +204,7 @@ const headline = post.h1 ?? post.title;
               return <p set:html={linkify(block.text)} />;
             })}
             {discussionResource && <ArchivedDiscussionNote resource={discussionResource} includeProduct />}
+            <GuideBuyerNotes slug={post.slug} />
           </Prose>
 
           <nav class="blog-article__actions" aria-label={t.blog.articleActionsAria}>

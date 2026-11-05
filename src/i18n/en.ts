@@ -933,6 +933,10 @@ export const en: Translations = {
     }
   },
   "ui": {
+    "primaryNavigation": "Primary navigation",
+    "mobileNavigation": "Mobile navigation",
+    "relatedPages": "Related pages",
+    "brandLogoAlt": "Violet emblem with a sharp peak and curved ring on a transparent background.",
     "skipLink": "Skip to main content",
     "browseCheatsNav": "View plans",
     "browseCheatsNavMobile": "Plans",

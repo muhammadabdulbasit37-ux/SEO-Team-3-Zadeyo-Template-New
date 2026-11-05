@@ -592,7 +592,7 @@ export const en: Translations = {
       {
         "heading": "Where to get order and product help",
         "paragraphs": [
-          "Purchases are completed on the checkout partner's website through our referral links. Use the checkout support channel above for payment, delivery, activation or license questions. Keep your order confirmation available and describe the issue using the product name and order reference."
+          "For questions about payment, delivery, activation or licenses, use the support link above. Include the product name and order reference when describing the issue."
         ]
       },
       {
@@ -732,9 +732,9 @@ export const en: Translations = {
           ]
         },
         {
-          "heading": "How referral checkout works",
+          "heading": "Orders and activation",
           "paragraphs": [
-            "Browse features and compare plans here, then complete your purchase on the checkout partner's website through our referral links. We may earn a commission when you buy through those links. Keep your order confirmation and follow the instructions provided with your purchase for delivery or activation."
+            "Compare plans and check the requirements before buying. After purchase, keep your order confirmation and follow the instructions for delivery and activation."
           ]
         },
         {
@@ -783,7 +783,7 @@ export const en: Translations = {
         {
           "heading": "Agreement",
           "paragraphs": [
-            "Updated: 1 November 2026. These pages explain our website and referral checkout. Product purchases follow the terms displayed by the checkout provider."
+            "Updated: 6 November 2026. These terms explain how to use this website. Product purchases follow the terms shown at checkout."
           ]
         },
         {
@@ -795,7 +795,7 @@ export const en: Translations = {
         {
           "heading": "Checkout and delivery",
           "paragraphs": [
-            "Purchases are completed on the checkout partner's website through our referral links. We may earn a commission from those purchases. This website does not process payment card numbers.",
+            "Review your order details before paying on the checkout page. This website does not process payment card numbers.",
             "Follow the instructions supplied with your order for delivery and activation. Use the checkout support channel for order or license questions."
           ]
         },
@@ -909,7 +909,7 @@ export const en: Translations = {
     },
     "/terms/": {
       "title": "Terms of Sale | Licenses and Refunds",
-      "description": "Website information, referral checkout, license questions and order support for products listed on cheatsfortheisle.com"
+      "description": "Website information, purchase terms, license questions and order support for products listed on cheatsfortheisle.com"
     },
     "/privacy/": {
       "title": "Privacy Policy | Analytics, Cookies and Tickets",
@@ -917,7 +917,7 @@ export const en: Translations = {
     },
     "/about/": {
       "title": "About CHEATS FOR THE ISLE | Products and Checkout",
-      "description": "Meet CHEATS FOR THE ISLE: explore our product focus, buying guides and referral checkout process. Learn where to get help with product orders"
+      "description": "Explore CHEATS FOR THE ISLE, compare products and find buying guides and help with orders"
     },
     "/support/": {
       "title": "The Isle Cheats Support | Setup and Order Help",

@@ -51,7 +51,7 @@
     {
       "id": "commerce-owner-confirmed",
       "kind": "owner",
-      "reference": "Existing checkout-redirects.mjs and support links; owner confirms independent affiliate website with Zadeyo checkout in this conversation; SEO clarification authorized 2026-11-01",
+      "reference": "Existing checkout-redirects.mjs and support links; owner confirms independent affiliate website with Zadeyo checkout in this conversation; SEO clarification authorized 2026-11-01. Owner authorized a scoped public copy revision on 2026-11-06",
       "verifiedOn": "2026-11-01"
     }
   ],
@@ -2344,7 +2344,7 @@
         "8bc9ea15513d4ff94547b042f64bc7b93350981e23ba711b53f27c238e6edee3",
         "0cb6413db1da8d743444c3e670075bb1761a6d011351e9f54517c63c319c7338",
         "f4d106c8cc43fb7cdc240355508b5347afbc3cc354c3a0ff89fb4bac275623a6",
-        "65910671b19917b307190963c234b0a33b8ce9ca0e55555402afc069311dfc7a",
+        "ac35bbede1172d3377b20d7a97a412da259beeabdf76dc8d67939d6c3619e648",
         "242840b0bb33b8e0ecd84b1f290f2e25a638ad480b3ff1a6ca8d423f76aa407a",
         "7b84c44a084705e4bfdf7573408d6a39204e0e93707019dd7e0f134bc4f3b1d3"
       ],
@@ -2434,12 +2434,12 @@
       "kind": "commercial",
       "h1": "About CHEATS FOR THE ISLE",
       "title": "About CHEATS FOR THE ISLE | Products and Checkout",
-      "description": "Meet CHEATS FOR THE ISLE: explore our product focus, buying guides and referral checkout process. Learn where to get help with product orders",
+      "description": "Explore CHEATS FOR THE ISLE, compare products and find buying guides and help with orders",
       "textHashes": [
         "c33c16e6ba02677e556986a81926500a72e5f7de997447019143d63e3624d726",
         "c180ccacc2902f86699519e4ac533540b2264a70cc686df9a132aca956c53f7d",
-        "6212f673f1b479753ea3ed98026c92a50c5c5ec3084510015bdc2724d1e5dd8b",
-        "882b2f4b87baca67b98326ae3c5ef2662b7cb461192747ae9195595a06fa7e56",
+        "1f476e57069815a513dcc87a91acdec1df3179281a22bdeed67a3fa0289fa71b",
+        "0faa5999821d37cb91bf950eb3da0f6c366be9cb943f7e04b69d8581b724d706",
         "4f8144e37bcd61412cfd269efd48a73d0cf601a1a3da6e6be10c4487dbfa78fc",
         "8b50d56d64e494437023c4044b3095c1c91617ff1919223850a04c3c005c6dc8",
         "ab1c14407327261b3a168b9ebb99406663c39c08495cff931529a196137fb19f"
@@ -3887,7 +3887,7 @@
         "446fff1f458fe8ce7f1984e1d0ccb87f355d797df712774a96e38600ab889ec1",
         "57941d5d980fa7fa903d02a6c070bf79b04053e664b7881638dac2bc53d98579",
         "c6c5629c463b83f90169518af356df4aa76971c221f394bb1d2e7c33b1c447a6",
-        "eb1585b07f3889e359f6af65b9df99f9b0a859e7b34e61f8e0d9c6ddd0a90363",
+        "19381137b767fc1a6c6ed2f7a92ee811b859a4d1e2c206f0f74d97b3f3b0c9ef",
         "b082c7720597507fd7c30fad63e6ae57ad9f6191dab07f404b0b40396e905863",
         "4874b41435d1e778285300ed50467e394fa5392def49f1c55cadaad7cdfb430a"
       ],
@@ -3977,12 +3977,12 @@
       "kind": "commercial",
       "h1": "Acerca de CHEATS FOR THE ISLE",
       "title": "Acerca de CHEATS FOR THE ISLE | Productos y compras",
-      "description": "Conoce CHEATS FOR THE ISLE, sus guías y el proceso de compra mediante enlaces de referido. Descubre dónde pedir ayuda con productos y pedidos",
+      "description": "Conoce CHEATS FOR THE ISLE, compara productos y consulta las guías de compra y la asistencia con pedidos",
       "textHashes": [
         "94778ce7f2ff01270f48e9afdeb49b48ecca85e4f0dac1368e775df978488f06",
         "13f83a13864e2184b2be192337dccce0efd6f80f7cbbbb4296e943dc0df80760",
-        "25a608780e5d3e870c7098b408ff623e28450694e8832d91abba3dcf1ab50b6b",
-        "2d59e0fb7071ee24be4690ccd4fcea6b0e71989f4df47de0f043749960c771a5",
+        "aeb262d84172f7e30f37d9b7cdcada32f0cf3fb03a38eab4d27c51f5707ce29f",
+        "f8a63447b3adb8e8f7caea745eb6df32dda0de554b47f58581eb2083d300213f",
         "58f57f6c4b7bb034a6b961af4a271e9160f2aab124201e5ae601b4ac52f33285",
         "7d32b861be46cee443a1b42537590b28d2ff40e9774da3d9e0774799fbe8586d",
         "0b548b8334216fc6e9fcecfea2492c74f49fbc58a0a4e1f702e1561a9af2d2b5"
@@ -5430,7 +5430,7 @@
         "e7990cc16acba9150655587ccafa886570bc3c92e9fcfab0a07503d62f0d8a18",
         "037129159f9e9173a6a2b3906142bfb11d1eb0e8c1c3f01be60434ad4c149597",
         "2d2f4d6da7a83189f5e1fbf1acf8c1d87d16242cb9d7990713522e2eca2b74c1",
-        "ae575496d76b07c295284d4c1cb9b4a8ae21c87b2d453c6cf32074c335dc07eb",
+        "5eef4b7bc193812fa70b2177a9b346ecf034a8ff822fe3b436dcfda73f00c932",
         "2fc67b6653a930eab97dd2078399823e3ab5c78f6c15dd61bbbad39d0ae280b0",
         "469451cdaad29b6289218a286fbba38d31414622350713596e475a80fb1a0467"
       ],
@@ -5520,12 +5520,12 @@
       "kind": "commercial",
       "h1": "Über CHEATS FOR THE ISLE",
       "title": "Über CHEATS FOR THE ISLE | Produkte und Kaufablauf",
-      "description": "Lerne CHEATS FOR THE ISLE, unsere Ratgeber und den Kauf über Empfehlungslinks kennen. Erfahre, wo du Bestellhilfe erhältst",
+      "description": "Lerne CHEATS FOR THE ISLE kennen, vergleiche die Produkte und finde Ratgeber und Hilfe zu deiner Bestellung",
       "textHashes": [
         "54821a070b89ef4c2f34d8501a694a945f6a0f9b48a851d1e2108bc25c7d6127",
         "612afb4555d1679157fa119837ce0b0c1e9ff4ae25fb22704a1b5cf8426ba5ad",
-        "ebbe49e57ed5f07eccad4c15e89d621cd0d94457757ad1ea3293cd257092362d",
-        "ec71c45946e4e0b178473930e309df4d3169882e2791d1301c6664178169c220",
+        "d944b33accf827f42a515869505d67f8eeb4f280f8e4dcd84d799a7263424804",
+        "dcdc7d25065d226045eeec1f047fb1320427e92c7eaa212b266b5855da08e90b",
         "29d6f640eb42edffb6dc06a68f1e2dccb3941b301d98b506a93ce52a5959934f",
         "c3c47268f1cab2c79fe6e090eae7ba966816f15e430f9350b7cac7afb1a90d11",
         "bc6d571f294583b7b2226a01fa99b843326abac6d35eae532a0669edbc9155c9"
@@ -6973,7 +6973,7 @@
         "13976e1e2c9b99703efdbb8ef545c229b6dee0b2113c231f7777e80f90e78716",
         "91229c49d6e645c131033ab6cf6cf82b58019e3e047bccec762c279b3a737d9a",
         "4f66ac4eb0142eac98589180b60fc4eb65fbc720d64fd943b41b3b302c587c8c",
-        "e96f0933197eaefb177f17daf18e309ab378f4b0f0d2875b51d63d8d620b6b4a",
+        "b6c8e9aeaf4e27072090d96940e09eca7b705ca26cef9b0769a094b6e1c80028",
         "2fef8f565aed34bdd72150ce28622cc676069624c8b5cc530bf14e0ae0dac0dc",
         "52dcbf8df8de7d40f115ba2f2f61f64126fde4f9f8fd7aa5432b9f1a0aaeed60"
       ],
@@ -7063,12 +7063,12 @@
       "kind": "commercial",
       "h1": "À propos de CHEATS FOR THE ISLE",
       "title": "À propos de CHEATS FOR THE ISLE | Produits et achats",
-      "description": "Découvrez CHEATS FOR THE ISLE, nos guides et les achats par liens de parrainage. Consultez les démarches d'aide pour les produits et commandes",
+      "description": "Découvrez CHEATS FOR THE ISLE, comparez les produits et consultez les guides d’achat et l’assistance aux commandes",
       "textHashes": [
         "1294d16d14dd5c3d79c0a8fde418287e979a3fcde21093c5a60b2982fb29839a",
         "ce1d7f598a0737d33ccae784b482cae47effe9a8cefa0b82752e63e443d02226",
-        "eabd1a45be6321a77bc3e99c74ca9e21e715065b6cafc311aa1a4beb6b727543",
-        "09633ffbff9979085aba4042b0e28fc34d7af59d5ac6da2eaf05e90834f69af1",
+        "aa61f4bbee269b9edf5c9b143e99b2812a91fdbce2333a6894f9678e1c95a6f8",
+        "bedd47b0fabb911e2e46c8930471d275536ba42cfa24b878634c42f5d6b525d3",
         "4eb23bdcfffe1a231ae6204e1546b7a9ff271fd7f3867be1731a505ae5421e25",
         "53293128bbf68e09909d0f0d909bd70409ccf95e3b5b738b007b108b52b7f4e6",
         "39e99efd7e9963ccc41307f2b4f8fe160b0c81d92b3accdce07234fcc9eb21a5"

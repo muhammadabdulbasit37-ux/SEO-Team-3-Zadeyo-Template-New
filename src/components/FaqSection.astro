@@ -95,22 +95,23 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'aim', 'safety', 'produ
   aria-labelledby={titleId}
   data-faq-section={showFilters ? '' : undefined}
 >
-  <div class="mx-auto max-w-6xl px-5">
-    <div class:list={[contentAlign === 'center' && 'mx-auto max-w-3xl', contentAlign === 'left' && 'product-detail__narrow max-w-3xl']}>
+  <div class="site-container">
+    <div class:list={['max-w-3xl', contentAlign === 'center' && 'mx-auto']}>
     <SectionHeader
       eyebrow={eyebrow}
       title={title}
       desc={subtitle}
       titleId={titleId}
       centered={centered}
+      start={contentAlign === 'left'}
     />
 
     {
       showFilters && (
         <div
           class:list={[
-            'faq-filter-row relative z-10 mt-8 flex flex-wrap gap-x-3 gap-y-8',
-            contentAlign === 'center' ? 'justify-center' : 'justify-start',
+            'faq-filter-row relative z-10 mt-8 flex flex-wrap gap-3',
+            centered ? 'justify-center' : contentAlign === 'center' && 'lg:justify-center',
           ]}
           data-faq-filters
           data-reveal

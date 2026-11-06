@@ -54,7 +54,7 @@ const copy = localeCopy[locale];
   class="border-b border-border bg-muted/20 py-12 md:py-16"
   aria-labelledby="product-highlights-title-eyebrow product-highlights-title"
 >
-  <div class="mx-auto max-w-6xl px-5">
+  <div class="site-container">
     <SectionHeader
       eyebrow={header?.eyebrow ?? copy.eyebrow}
       title={header?.title ?? copy.title}
@@ -62,7 +62,7 @@ const copy = localeCopy[locale];
       titleId="product-highlights-title"
     />
 
-    <div class="product-detail__inline-row mt-10 flex flex-wrap gap-2.5 md:gap-3" data-reveal-stagger>
+    <div class="mt-10 flex flex-wrap gap-2.5 md:gap-3 lg:justify-center" data-reveal-stagger>
       {
         product.features.map((feature) => (
           <Badge variant="outline" size="lg" class="rounded-full px-4 py-2 text-sm font-medium leading-snug">
@@ -74,7 +74,7 @@ const copy = localeCopy[locale];
 
     {
       product.more > 0 && (
-        <p class="product-detail__text-center mt-6 text-sm text-muted-foreground" data-reveal>
+        <p class="mt-6 text-sm text-muted-foreground lg:text-center" data-reveal>
           {(moreNote ?? copy.more).replace(
             '{count}',
             String(product.more),
@@ -83,7 +83,7 @@ const copy = localeCopy[locale];
       )
     }
 
-    <div class="product-detail__inline-row mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:justify-center" data-reveal>
+    <div class="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap lg:justify-center" data-reveal>
       <Button type="button" data-scroll-target="product-features" variant="outline" size="sm" class="w-full rounded-full sm:w-auto">
         {copy.allModules}
         <Icon name="chevronDown" size={16} />

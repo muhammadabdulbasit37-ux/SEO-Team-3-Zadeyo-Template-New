@@ -7,50 +7,9 @@
   text-align: left;
 }
 
-/* Product detail: centered layout at all breakpoints */
-.product-detail .section-header,
-.product-detail .section-header--wide,
+/* The acquisition steps retain their centered presentation. */
 .product-detail .deployment-header {
   margin-inline: auto;
-  text-align: center;
-}
-
-.product-detail .section-header__subtitle {
-  margin-inline: auto;
-}
-
-.product-detail .product-detail-header {
-  text-align: center;
-}
-
-.product-detail .product-detail-header > div:first-child {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.product-detail .product-detail-header h1,
-.product-detail .product-detail-header p {
-  margin-inline: auto;
-}
-
-.product-detail .product-detail__breadcrumbs,
-.product-detail [data-slot='breadcrumb'] {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.product-detail [data-slot='breadcrumb-list'] {
-  max-width: 100%;
-  justify-content: center;
-}
-
-.product-detail .product-detail__inline-row {
-  justify-content: center;
-}
-
-.product-detail .product-detail__text-center {
   text-align: center;
 }
 
@@ -74,23 +33,9 @@
   text-align: left;
 }
 
-.product-detail .description-content {
-  text-align: center;
-}
-
-.product-detail .description-content :is(h2, h3, p, ul, ol) {
-  text-align: center;
-}
-
 .product-detail .description-content :is(h2, h3) {
   font-weight: 800;
   letter-spacing: -0.035em;
-}
-
-.product-detail__narrow {
-  width: 100%;
-  max-width: 48rem;
-  margin-inline: auto;
 }
 
 .product-detail-hero__grid {

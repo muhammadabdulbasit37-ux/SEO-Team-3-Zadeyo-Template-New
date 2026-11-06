@@ -3,10 +3,6 @@
   position: relative;
 }
 
-.support-section__header {
-  margin: 0;
-}
-
 .support-section__cards {
   display: grid;
   gap: 1.25rem;
@@ -22,10 +18,15 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) and (max-width: 767px) {
+  .support-section__cards > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 768px) {
   .support-section__cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr));
   }
 }
 

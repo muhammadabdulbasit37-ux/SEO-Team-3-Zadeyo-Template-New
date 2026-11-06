@@ -2,12 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { useLocale } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ContactSupportSection from '../components/ContactSupportSection.astro';
 import { breadcrumbSchema, webPageSchema } from '../utils/schema';
 
 const { locale, t, lp } = useLocale(Astro.currentLocale);
 const seo = resolvePageSeo('/support/', locale);
+const breadcrumbs = [
+  { name: t.common.breadcrumbHome, path: '/' },
+  { name: t.common.breadcrumbSupport, path: '/support/' },
+];
 ---
 
 <BaseLayout
@@ -20,19 +23,8 @@ const seo = resolvePageSeo('/support/', locale);
       url: lp('/support/'),
       locale,
     }),
-    breadcrumbSchema([
-      { name: t.common.breadcrumbHome, path: '/' },
-      { name: t.common.breadcrumbSupport, path: '/support/' },
-    ], locale),
+    breadcrumbSchema(breadcrumbs, locale),
   ]}
 >
-  <div class="mx-auto max-w-6xl px-5 pt-8 md:pt-10">
-    <Breadcrumbs
-      items={[
-        { name: t.common.breadcrumbHome, path: '/' },
-        { name: t.common.breadcrumbSupport, path: '/support/' },
-      ]}
-    />
-  </div>
-  <ContactSupportSection titleId="support-page-title" showTicketTips />
+  <ContactSupportSection titleId="support-page-title" breadcrumbs={breadcrumbs} showTicketTips />
 </BaseLayout>

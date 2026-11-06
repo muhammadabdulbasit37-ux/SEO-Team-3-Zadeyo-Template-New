@@ -47,8 +47,8 @@ const showDescToggle = descriptionBlocks.length > 2;
 ---
 
 <div class="product-detail">
-<section class="product-detail-hero py-8 md:py-12">
-  <div class="mx-auto max-w-6xl px-5">
+<section class="product-detail-hero pb-8 md:pb-12">
+  <div class="site-container">
     {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
 
     <div class="mt-6">
@@ -99,6 +99,7 @@ const showDescToggle = descriptionBlocks.length > 2;
 <SiteFaqSection
   id="faq"
   items={productFaqs}
+  contentAlign="left"
   titleId={`catalog-faq-${product.slug}`}
   class="border-t border-border bg-background"
 />

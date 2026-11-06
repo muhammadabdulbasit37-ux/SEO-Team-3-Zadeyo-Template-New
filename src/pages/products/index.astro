@@ -68,7 +68,7 @@ const compareRows = [copy.compareRows[0]!, priceRow, ...copy.compareRows.slice(1
   ]}
 >
   <section class="catalog-hero border-b border-border py-8 md:py-12">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="site-container">
       <Breadcrumbs items={breadcrumbs} />
       <div class="mt-6">
         <SectionHeader eyebrow={copy.eyebrow} title={copy.title} desc={copy.subtitle} titleId="catalog-title" level="h1" wide />
@@ -89,7 +89,7 @@ const compareRows = [copy.compareRows[0]!, priceRow, ...copy.compareRows.slice(1
   {
     featured && (
       <section class="py-12 md:py-16" aria-labelledby="catalog-featured-title">
-        <div class="mx-auto max-w-6xl px-5">
+        <div class="site-container">
           <article class="catalog-featured" data-reveal>
             <a href={lp(featured.path)} class="catalog-featured__media" tabindex="-1" aria-hidden="true">
               {featured.page.images[0] && (
@@ -149,7 +149,7 @@ const compareRows = [copy.compareRows[0]!, priceRow, ...copy.compareRows.slice(1
 
   {utilities.length > 0 && (
   <section class="border-t border-border bg-muted/20 py-14 md:py-18" aria-labelledby="catalog-utilities-title">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="site-container">
       <SectionHeader eyebrow={copy.utilitiesEyebrow} title={copy.utilitiesTitle} desc={copy.utilitiesDesc} titleId="catalog-utilities-title" />
       <div
         class:list={[
@@ -203,7 +203,7 @@ const compareRows = [copy.compareRows[0]!, priceRow, ...copy.compareRows.slice(1
 
   {catalog.length > 1 && (
   <section class="border-t border-border py-14 md:py-18" aria-labelledby="catalog-chooser-title-eyebrow catalog-chooser-title">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="site-container">
       <SectionHeader eyebrow={copy.chooserEyebrow} title={copy.chooserTitle} desc={copy.chooserDesc} titleId="catalog-chooser-title" />
       <ul class="fill-grid fill-grid--wide mt-10 list-none gap-3 p-0" data-reveal-stagger>
         {
@@ -232,7 +232,7 @@ const compareRows = [copy.compareRows[0]!, priceRow, ...copy.compareRows.slice(1
   )}
 
   <section class="border-t border-border bg-muted/20 py-14 md:py-18" aria-labelledby="catalog-compare-title">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="site-container">
       <SectionHeader eyebrow={copy.compareEyebrow} title={copy.compareTitle} desc={copy.compareDesc} titleId="catalog-compare-title" />
       <div class="catalog-compare mt-10" data-reveal>
         <table>
@@ -283,7 +283,7 @@ const compareRows = [copy.compareRows[0]!, priceRow, ...copy.compareRows.slice(1
   <SiteFaqSection id="faq" items={faqs} titleId="catalog-faq" class="border-t border-border bg-background" />
 
   <section class="border-t border-border py-14 md:py-16" aria-labelledby="catalog-cta-title">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="site-container">
       <div class="catalog-cta" data-reveal>
         <div>
           <h2 id="catalog-cta-title" class="catalog-cta__title">{copy.ctaTitle}</h2>

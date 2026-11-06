@@ -5,7 +5,7 @@ const breadcrumbs=[{name:t.common.breadcrumbHome,path:'/'},{name:c.label,path:'/
 const dateLabel=(date:string)=>new Intl.DateTimeFormat(locale,{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
 ---
 <BaseLayout title={seo.title} description={seo.description} canonicalPath={lp('/forum/')} jsonLd={[webPageSchema({name:c.title,description:c.intro,url:lp('/forum/'),locale}),breadcrumbSchema(breadcrumbs,locale)]}>
- <section class="forum-page py-8 md:py-12" data-forum-hub><div class="mx-auto max-w-6xl px-5">
+ <section class="forum-page py-8 md:py-12" data-forum-hub><div class="site-container">
   <Breadcrumbs items={breadcrumbs}/>
   <header class="forum-hero"><p class="forum-eyebrow">{c.archive}</p><h1>{c.title}</h1><p>{c.intro}</p><div class="forum-hero__actions"><Button as="a" href={lp('/cheats/')}>{c.products}</Button><Button as="a" href={lp('/support/')} variant="primary" class="forum-support-cta"><Icon name="headphones" size={16}/>{c.support}</Button></div></header>
   <div class="forum-layout"><div class="forum-main">

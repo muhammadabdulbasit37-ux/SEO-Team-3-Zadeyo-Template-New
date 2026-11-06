@@ -57,16 +57,16 @@ const ui = {
   class="border-t border-border bg-background py-12 md:py-16"
   aria-labelledby="product-description-title-eyebrow product-description-title"
 >
-  <div class="mx-auto max-w-6xl px-5">
+  <div class="site-container">
     <SectionHeader
       eyebrow={ui.eyebrow}
       title={overviewTitle ?? ui.fallbackTitle}
       desc={overviewSubtitle ?? ui.fallbackSubtitle}
       titleId="product-description-title"
-      wide
+      start
     />
 
-    <div class:list={['desc-wrap product-detail__narrow mt-8', showToggle && 'collapsible']} data-desc-wrap>
+    <div class:list={['desc-wrap mt-8 max-w-3xl', showToggle && 'collapsible']} data-desc-wrap>
       <Prose class="description-content max-w-none">
         {blocks.map((block) =>
           block.type === 'h2' ? <h2>{block.text}</h2> : <p set:html={linkifyMarkdown(block.text)} />,
@@ -74,7 +74,7 @@ const ui = {
       </Prose>
       {
         showToggle && (
-          <div class="mt-6 flex justify-start lg:justify-center">
+          <div class="mt-6">
             <Button
               type="button"
               variant="outline"

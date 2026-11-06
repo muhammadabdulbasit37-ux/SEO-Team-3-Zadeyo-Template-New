@@ -3,6 +3,9 @@ import '../styles/support-section.css';
 import { useLocale } from '../i18n';
 import { linkifyMarkdown } from '../utils/linkify';
 import { localizeInlineHtmlLinks } from '../utils/localizeHtmlLinks';
+import type { BreadcrumbItem } from '../utils/schema';
+import Breadcrumbs from './Breadcrumbs.astro';
+import SectionHeader from './SectionHeader.astro';
 
 const { locale, t, lp } = useLocale(Astro.currentLocale);
 import Icon from './icons/Icon.astro';
@@ -19,26 +22,26 @@ import {
 } from '@/components/starwind/card';
 
 interface Props {
+  breadcrumbs: BreadcrumbItem[];
   titleId?: string;
   showTicketTips?: boolean;
   class?: string;
 }
 
-const { titleId = 'support-title', showTicketTips = false, class: className } = Astro.props;
+const { breadcrumbs, titleId = 'support-title', showTicketTips = false, class: className } = Astro.props;
 const c = t.support;
 ---
 
 <section
   id="support"
-  class:list={['support-section border-y border-border bg-muted/20 py-16 md:py-24', className]}
+  class:list={['support-section border-b border-border bg-muted/20 pb-12 md:pb-16', className]}
   aria-labelledby={titleId}
 >
-  <div class="support-section__inner mx-auto max-w-6xl px-5">
-    <header class="section-header section-header--wide support-section__header">
-      <p class="section-header__eyebrow">{c.eyebrow}</p>
-      <h1 id={titleId} class="section-header__title text-foreground">{c.title}</h1>
-      <p class="section-header__subtitle">{c.subtitle}</p>
-    </header>
+  <div class="support-section__inner site-container">
+    <Breadcrumbs items={breadcrumbs} />
+    <div class="mt-6">
+      <SectionHeader eyebrow={c.eyebrow} title={c.title} desc={c.subtitle} titleId={titleId} level="h1" />
+    </div>
 
     <ul class="support-section__cards">
       {

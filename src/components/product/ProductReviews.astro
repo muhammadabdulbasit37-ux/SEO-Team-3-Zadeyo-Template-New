@@ -1,6 +1,11 @@
 ---
 import { getProductReviewSummary, reviewCopy } from '../../data/reviews';
 import { useLocale } from '../../i18n';
+import { ROUTES } from '../../utils/path';
+import Icon from '../icons/Icon.astro';
+import ReviewList from '../ReviewList.astro';
+import SectionHeader from '../SectionHeader.astro';
+import { Button } from '@/components/starwind/button';
 
 interface Props {
   sku: string;
@@ -9,33 +14,23 @@ interface Props {
 const { locale, lp } = useLocale(Astro.currentLocale);
 const copy = reviewCopy[locale];
 const { entries, count, average } = getProductReviewSummary(Astro.props.sku);
-const formatDate = new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'UTC' });
+const formattedAverage = new Intl.NumberFormat(locale).format(average);
 ---
 
 {count > 0 && (
-  <section class="mx-auto max-w-4xl px-5 py-12" aria-labelledby="product-reviews">
-    <h2 id="product-reviews" class="text-2xl font-bold">{copy.heading}</h2>
-    <p class="mt-2">{new Intl.NumberFormat(locale).format(average)} {copy.rating} · {count} {copy.count}</p>
-    <p class="mt-2 text-sm text-muted-foreground">{copy.note}</p>
-    <ul class="mt-6 space-y-4" role="list">
-      {entries.map((entry) => (
-        <li class="rounded-xl border border-border bg-card text-card-foreground shadow-sm">
-          <article lang="en" class="grid sm:grid-cols-[12rem_minmax(0,1fr)]">
-            <div class="space-y-2 border-b border-border px-5 py-5 sm:border-r sm:border-b-0 sm:px-6">
-              <p class="break-words font-semibold">{entry.author}</p>
-              <time class="block text-sm text-muted-foreground" datetime={entry.date} lang={locale}>{formatDate.format(new Date(entry.date))}</time>
-              <span class="block text-sm tracking-wider text-primary" role="img" aria-label={`${entry.rating} ${copy.rating}`} lang={locale}>
-                <span aria-hidden="true">{'★'.repeat(entry.rating)}{'☆'.repeat(5 - entry.rating)}</span>
-              </span>
-            </div>
-            <div class="min-w-0 px-5 py-5 sm:px-6">
-              <h3 class="text-lg font-semibold">{entry.title}</h3>
-              <blockquote class="mt-3 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{entry.text}</blockquote>
-            </div>
-          </article>
-        </li>
-      ))}
-    </ul>
-    <a class="mt-6 inline-block text-sm font-medium text-primary underline underline-offset-4" href={lp('/reviews/')}>{copy.nav}</a>
+  <section class="border-t border-border py-12 md:py-16" aria-labelledby="product-reviews">
+    <div class="site-container">
+      <SectionHeader eyebrow={copy.label} title={copy.heading} titleId="product-reviews" start />
+      <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
+        <strong class="font-semibold text-foreground">{formattedAverage} {copy.rating}</strong>
+        <span>{count} {copy.count}</span>
+      </p>
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{copy.note}</p>
+      <ReviewList entries={entries} />
+      <Button as="a" href={lp(ROUTES.reviews)} variant="outline" class="mt-6 rounded-xl">
+        {copy.nav}
+        <Icon name="arrowRight" size={16} />
+      </Button>
+    </div>
   </section>
 )}

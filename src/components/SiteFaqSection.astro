@@ -17,6 +17,7 @@ interface Props {
   /** Full /faq/ experience, all topics chip bar */
   variant?: 'full' | 'contextual';
   filterTopics?: FaqTopic[];
+  contentAlign?: 'left' | 'center';
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   class: className,
   variant = 'contextual',
   filterTopics: filterTopicsProp,
+  contentAlign,
 } = Astro.props;
 
 const { locale } = useLocale(Astro.currentLocale);
@@ -83,5 +85,6 @@ const showFilters = filterTopics.length > 1;
   titleId={titleId}
   showFilters={showFilters}
   filterTopics={filterTopics}
+  contentAlign={contentAlign}
   class={className}
 />

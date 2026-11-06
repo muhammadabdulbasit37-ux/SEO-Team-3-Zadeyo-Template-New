@@ -18,7 +18,7 @@ const contextCopy = editorialGuidance[locale];
 if (resourceGuide && !resourceLinks.some(link => link.href === `/blog/${resourceGuide.slug}/`)) resourceLinks.push({ href: `/blog/${resourceGuide.slug}/`, label: resourceGuide.title });
 ---
 <BaseLayout title={pageTitle(post.metaTitle??post.title,undefined,locale)} description={post.excerpt} canonicalPath={lp(path)} jsonLd={[posting,breadcrumbSchema(breadcrumbs,locale)]}>
- <section class="forum-page py-8 md:py-12"><div class="mx-auto max-w-6xl px-5"><Breadcrumbs items={breadcrumbs}/>
+ <section class="forum-page py-8 md:py-12"><div class="site-container"><Breadcrumbs items={breadcrumbs}/>
   <div class="forum-layout mt-6"><div class="forum-main"><article class="forum-detail-card">
    <div class="forum-vote" role="group" aria-label={`${post.commentsCount} ${c.replies}`}><Icon name="messageCircle" size={16}/><strong>{post.commentsCount}</strong></div>
    <div class="forum-detail-content"><div class="forum-post-meta"><span class="forum-community-avatar"><Icon name="users" size={15}/></span><a class="forum-community-name" href={`${lp('/forum/')}${'#'+forumCategoryId(post.category)}`}>{categoryLabel}</a><span>·</span><span>{c.archive}</span></div>

@@ -10,12 +10,6 @@
   gap: 0.5rem 1.5rem;
 }
 
-@media (min-width: 1024px) {
-  .catalog-trust {
-    justify-content: center;
-  }
-}
-
 .catalog-trust__item {
   display: inline-flex;
   align-items: center;

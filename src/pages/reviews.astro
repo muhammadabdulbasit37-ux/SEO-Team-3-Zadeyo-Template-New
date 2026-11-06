@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ReviewList from '../components/ReviewList.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 import Icon from '../components/icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
 import { useLocale } from '../i18n';
@@ -8,56 +10,70 @@ import { resolvePageSeo } from '../config/seo';
 import { breadcrumbSchema, webPageSchema } from '../utils/schema';
 import { reviews, reviewCopy } from '../data/reviews';
 import { getCatalog } from '../data/catalog';
-const {locale,t,lp}=useLocale(Astro.currentLocale);
-const copy=reviewCopy[locale];
-const contextHeading={en:'Before you choose',es:'Antes de elegir',de:'Vor deiner Wahl',fr:'Avant de choisir'}[locale];
-const seo=resolvePageSeo('/reviews/',locale);
+import { ROUTES } from '../utils/path';
+
+const { locale, t, lp } = useLocale(Astro.currentLocale);
+const copy = reviewCopy[locale];
+const contextHeading = { en: 'Before you choose', es: 'Antes de elegir', de: 'Vor deiner Wahl', fr: 'Avant de choisir' }[locale];
+const seo = resolvePageSeo(ROUTES.reviews, locale);
 const catalog = getCatalog(locale);
-const breadcrumbs=[{name:t.common.breadcrumbHome,path:'/'},{name:copy.label,path:'/reviews/'}];
-const productLinks: Record<string,string>={'The Isle Cheats':'/cheats/','HWID Spoofer':'/hwid-spoofer/','Skin Changer':'/skin-changer/','UGC':'/ugc/'};
-const formatDate=(date:string)=>new Intl.DateTimeFormat(locale,{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
+const breadcrumbs = [{ name: t.common.breadcrumbHome, path: '/' }, { name: copy.label, path: ROUTES.reviews }];
+const productLinks = {
+  'The Isle Cheats': ROUTES.productsElite,
+  'HWID Spoofer': ROUTES.hwidSpoofer,
+  'Skin Changer': ROUTES.skinChanger,
+  UGC: ROUTES.ugc,
+};
 ---
-<BaseLayout title={seo.title} description={seo.description} canonicalPath={lp('/reviews/')} jsonLd={[webPageSchema({name:copy.title,description:copy.intro,url:lp('/reviews/'),locale}),breadcrumbSchema(breadcrumbs,locale)]}>
- <section class="py-8 md:py-12">
-  <div class="mx-auto max-w-4xl px-5">
-   <Breadcrumbs items={breadcrumbs}/>
-   <header class="max-w-3xl py-10 md:py-14">
-    <p class="text-xs font-semibold uppercase tracking-widest text-primary">CHEATS FOR THE ISLE</p>
-    <h1 class="mt-4 font-[family-name:var(--font-heading)] text-3xl font-bold tracking-tight text-foreground md:text-4xl">{copy.title}</h1>
-    <p class="mt-5 text-lg text-muted-foreground">{copy.intro}</p>
-    <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-     <span>{reviews.length} {copy.count}</span>
-     <span aria-hidden="true">·</span>
-     <span class="inline-flex items-center gap-2"><Icon name="shieldCheck" size={13}/>{copy.closed}</span>
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  canonicalPath={lp(ROUTES.reviews)}
+  jsonLd={[
+    webPageSchema({ name: copy.title, description: copy.intro, url: lp(ROUTES.reviews), locale }),
+    breadcrumbSchema(breadcrumbs, locale),
+  ]}
+>
+  <section class="border-b border-border bg-muted/10 pb-8 md:pb-12" aria-labelledby="reviews-page-title">
+    <div class="site-container">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class="mt-6">
+        <SectionHeader eyebrow={t.site.name} title={copy.title} desc={copy.intro} titleId="reviews-page-title" level="h1" />
+      </div>
+      <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+        <span>{reviews.length} {copy.count}</span>
+        <span class="inline-flex items-center gap-2">
+          <Icon name="shieldCheck" size={15} />
+          {copy.closed}
+        </span>
+      </div>
     </div>
-   </header>
-   <section aria-labelledby="reviews-heading">
-    <h2 id="reviews-heading" class="font-[family-name:var(--font-heading)] text-2xl font-bold text-foreground">{copy.heading}</h2>
-    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">{copy.description}</p>
-    <p class="mt-2 text-sm text-muted-foreground">{copy.note}</p>
-    <ul class="mt-8 divide-y divide-border border-t border-border" role="list">
-     {reviews.map(review=><li data-review-row class="py-8 md:py-10">
-      <article lang="en" class="grid gap-4 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-10">
-       <div class="min-w-0 space-y-2">
-        <a href={lp(productLinks[review.product])} class="text-primary hover:underline">{review.product}</a>
-        <p class="break-words font-semibold text-foreground">{review.author}</p>
-        <time datetime={review.date} lang={locale} class="block text-xs text-muted-foreground">{formatDate(review.date)}</time>
-        <span role="img" aria-label={`${review.rating} ${copy.rating}`} lang={locale} class="block whitespace-nowrap text-sm tracking-wider text-primary"><span aria-hidden="true">{'★'.repeat(review.rating)}{'☆'.repeat(5-review.rating)}</span></span>
-       </div>
-       <div class="min-w-0">
-        <h3 class="font-[family-name:var(--font-heading)] text-lg font-semibold leading-snug text-foreground md:text-xl">{review.title}</h3>
-        <blockquote class="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">{review.text.split(/\n\s*\n/).map(paragraph=><p class="leading-relaxed">{paragraph}</p>)}</blockquote>
-       </div>
-      </article>
-     </li>)}
-    </ul>
-   </section>
-   <section class="mt-2 border-t border-border py-8 md:py-10" aria-labelledby="reviews-context-title">
-    <h2 id="reviews-context-title" class="font-[family-name:var(--font-heading)] text-xl font-semibold text-foreground">{contextHeading}</h2>
-    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">{copy.context}</p>
-    <ul class="mt-5 space-y-3 text-sm leading-relaxed text-muted-foreground">{catalog.map(product => <li><a class="font-medium text-primary underline underline-offset-4" href={lp(product.path)}>{product.shortName}</a>: {product.page.desc}</li>)}</ul>
-    <Button as="a" href={lp('/cheats/')} class="mt-5">{copy.cta}<Icon name="arrowRight" size={16}/></Button>
-   </section>
-  </div>
- </section>
+  </section>
+
+  <section class="py-12 md:py-16" aria-labelledby="reviews-heading">
+    <div class="site-container">
+      <SectionHeader title={copy.heading} desc={copy.description} titleId="reviews-heading" start />
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{copy.note}</p>
+      <ReviewList entries={reviews} productLinks={productLinks} />
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-muted/10 py-12 md:py-16" aria-labelledby="reviews-context-title">
+    <div class="site-container">
+      <SectionHeader title={contextHeading} desc={copy.context} titleId="reviews-context-title" start />
+      <ul class="mt-6 list-none divide-y divide-border border-y border-border p-0">
+        {catalog.map((product) => (
+          <li class="grid items-start gap-2 py-4 text-sm leading-relaxed md:grid-cols-[11rem_minmax(0,1fr)] md:gap-8">
+            <a class="font-medium text-primary-text underline underline-offset-4 hover:text-foreground" href={lp(product.path)}>{product.shortName}</a>
+            <p class="max-w-[72ch] text-muted-foreground">{product.page.desc}</p>
+          </li>
+        ))}
+      </ul>
+      <Button as="a" href={lp(ROUTES.productsElite)} variant="primary" class="mt-6 rounded-xl">
+        {copy.cta}
+        <Icon name="arrowRight" size={16} />
+      </Button>
+    </div>
+  </section>
 </BaseLayout>

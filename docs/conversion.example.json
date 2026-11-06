@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "purpose": "Example intake only. Copy for a future commercial game-cheats conversion, prioritizing the confirmed game's cheats keyword and product-relevant search intent while preserving the four-product architecture. Apply docs/content-workflow.md's commercial-positioning review. The website runtime does not read this file; content:prepare reads an explicitly supplied filled copy.",
+  "purpose": "Example intake for Prompt 1. Fill a copy in ignored .content/ for the new clone. The website runtime does not read this file; content:prepare reads the filled copy.",
   "approval": {
     "conversionRequested": false,
     "commit": false,
@@ -30,6 +30,10 @@
     "officialUrl": null,
     "cheatProductName": "REPLACE_WITH_PRODUCT_NAME"
   },
+  "seoIntake": {
+    "homepageH1Idea": "REPLACE_WITH_OWNER_HOMEPAGE_H1_IDEA",
+    "keywordPack": null
+  },
   "brand": {
     "logoSourcePath": null,
     "logoAlt": null,
@@ -44,9 +48,12 @@
     "preserveUtilityMediaUnlessExplicitlyReplaced": true
   },
   "referral": {
-    "partnerOrigin": "https://partner.example.invalid",
-    "code": "REPLACE_WITH_REFERRAL_CODE",
-    "urlPattern": "{partnerOrigin}/go/{code}?to={encodedProductPath}",
+    "urls": {
+      "elite": null,
+      "hwid-spoofer": null,
+      "skin-changer": null,
+      "ugc": null
+    },
     "planQueryName": "plan",
     "planIds": [
       "monthly",
@@ -62,7 +69,6 @@
       "name": "REPLACE_WITH_MAIN_PRODUCT_NAME",
       "pagePath": "/cheats/",
       "checkoutSlug": "REPLACE_WITH_NEW_GAME_CHECKOUT_SLUG",
-      "partnerProductPath": "/products/REPLACE_WITH_NEW_PRODUCT_SLUG",
       "currency": "USD",
       "plans": [
         {
@@ -93,7 +99,6 @@
       "name": "HWID Spoofer",
       "pagePath": "/hwid-spoofer/",
       "checkoutSlug": "hwid-spoofer",
-      "partnerProductPath": "/products/hwid-spoofer",
       "currency": "USD",
       "plans": [
         {
@@ -124,7 +129,6 @@
       "name": "UGC",
       "pagePath": "/ugc/",
       "checkoutSlug": "ugc",
-      "partnerProductPath": "/products/ugc",
       "currency": "USD",
       "plans": [
         {
@@ -155,7 +159,6 @@
       "name": "Skin Changer",
       "pagePath": "/skin-changer/",
       "checkoutSlug": "skin-changer",
-      "partnerProductPath": "/products/skin-changer",
       "currency": "USD",
       "plans": [
         {
@@ -183,20 +186,24 @@
   "content": {
     "rewriteHomepageAndMainProduct": true,
     "reviewUtilityCopyAndAllTranslations": true,
-    "rewriteBlogAndForumForGame": true,
+    "rewriteBlogForGame": true,
+    "importOwnerCommunityContentOnly": true,
     "slugMigrationMap": {},
     "reviewRelatedContentReferences": true,
     "reviewPageSeoSchemaHreflangSitemapRobots": true
   },
   "deployment": {
-    "target": "cloudflare-workers-static-assets",
-    "workerName": "REPLACE_WITH_WORKER_NAME",
+    "target": "cloudflare-pages",
+    "pagesProjectName": "REPLACE_WITH_PAGES_PROJECT_NAME",
+    "productionBranch": "main",
+    "rootDirectory": ".",
+    "buildCommand": "npm run build",
+    "buildOutputDirectory": "dist",
+    "nodeVersionFile": ".nvmrc",
     "domains": [
       "example.invalid",
       "www.example.invalid"
     ],
-    "assetsBinding": "ASSETS",
-    "assetsDirectory": "./dist",
     "indexNowEnabledDuringLocalBuild": false
   },
   "applyTo": {
@@ -263,19 +270,25 @@
   },
   "unresolvedInputs": [
     "All REPLACE_WITH values and .invalid URLs",
-    "All null values and empty fact/evidence arrays require confirmation, not invented defaults",
-    "Lifetime term definition and actual vendor availability",
+    "For blank support email use support@ plus the canonical hostname and report the fallback. A null keywordPack means research metadata independently.",
+    "Use the required main-product reference for features, prices, plans and durations. If access is blocked, request the owner's summary. Leave unconfirmed facts pending.",
+    "Preserve template utility names, plans, prices, durations, facts and media. Fill the four full owner-supplied referral URLs separately.",
     "Authorized brand/gameplay assets; Codex generates and reviews all four content locales",
     "Explicit action authorization for deployment or indexing, if later requested",
     "Update forbiddenReferences for the previous brand/domain; retain protected hashes unless artwork replacement is authorized",
-    "For a requested new-site conversion, enable contentWorkflow, supply evidence source records and product evidence IDs, actual publication date and the existing/rebranded forum categories; no supplied articles/threads are needed"
+    "For an authorized conversion, enable contentWorkflow and supply evidence sources, product evidence IDs, actual publication date and forum categories. Add only owner-supplied forum records in Prompt 2 and reviews in Prompt 3."
   ],
   "contentWorkflow": {
     "enabled": false,
     "generator": "codex-conversion-agent",
     "publicationDate": null,
+    "mainProductReferenceUrl": null,
+    "mainProductSummaryReference": null,
     "sources": [],
     "gameFacts": [],
-    "forumCategories": []
+    "forumEnabled": true,
+    "forumCategories": [],
+    "importedForumSourceIds": [],
+    "importedForumRecords": {}
   }
 }

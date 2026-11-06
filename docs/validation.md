@@ -76,3 +76,13 @@ The source fingerprint now includes `workers/` and `functions/`, so routing edit
 Shared CSP is generated from `src/config/security-headers.mjs` for Node, Worker, Pages and static assets. It permits the existing automatically injected Cloudflare beacon at its exact script/prefix paths and keeps collection same-origin. No beacon/token is added by the application. `_headers` declares shared security headers once instead of repeating them on overlapping resource rules. Static checkout rules are omitted from `_redirects`: the runtime handles them, or the existing noindex HTML fallback preserves the query with JavaScript. A purely static, no-JavaScript host cannot forward an unknown incoming plan query; the configured server handler is required for full parity.
 
 The historical live audit remains a snapshot. Repository-side resolution, final evidence and required post-deployment checks are recorded in [the audit-fix report](seo/audit-fixes-2026-11-06.md). No validation command deploys, submits indexing requests, follows partner checkout or certifies the deployed Cloudflare account.
+
+## Cloudflare Pages Git build
+
+Use the [Pages Git integration for Astro](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/#deploy-via-the-cloudflare-dashboard) with the repository root, production branch `main`, build command `npm run build` and output directory `dist`. The root [Node version file](../.nvmrc) selects Node 24. Check any dashboard `NODE_VERSION` override against the [Pages build image settings](https://developers.cloudflare.com/pages/configuration/build-image/#override-default-versions). Astro requires Node 22.12.0 or newer.
+
+Keep `functions/` at the project root and let Pages bundle it. The built `dist/_routes.json` sends page requests through Pages Functions and lets Cloudflare serve static images and bundled assets directly. The root `wrangler.toml` describes the separate Workers deployment and leaves Pages production settings in the dashboard.
+
+After the production build, run `npm run validate:pages` to verify Pages Functions locally. Confirm the dashboard settings before connecting a new clone. A push to the production branch can trigger a deployment if Git integration is already enabled.
+
+The shared handler sends requests from noncanonical public hosts, including Pages preview URLs, to the configured HTTPS domain. Attach the new site's custom domain before relying on a public URL for final verification. Use local Pages testing to inspect the build before the domain is attached.
